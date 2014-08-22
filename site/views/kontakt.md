@@ -4,7 +4,7 @@
 Author : Dan Lofquist
 Date: 2014-01-01
 Title: Kontakta oss
-Tags: Kontakt
+Tags: Kontakt, Karta, Adress, Telefon
 @EndTags
 
 @Section['Content']
