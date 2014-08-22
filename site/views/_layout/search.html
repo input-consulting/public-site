@@ -1,0 +1,36 @@
+@Master['_layout/master-page.html']
+
+@Section['MainContent']
+
+<section class="search">
+
+	<section class="search-query">
+		<form action="/search">
+			<input type="text" name="q" id="q" placeholder="" value="@Model.Meta.Query">
+		</form>
+	</section>
+
+	<section class="search-result">
+		@Each.Meta.QueryResult
+			<article>
+				<header>@Current.FriendlyDate</header>	
+				<nav><a href="/@Current.ResourceName">@Current.Title</a></nav>
+				<p>@Current.Abstract</p>
+				<p>@Current.TagsAsHtml</p>
+				<footer><a href="/@Current.ResourceName">Läs mer</a></footer>
+			</article>
+		@EndEach	
+	</section>
+
+	<section class="search-tags">
+		<header>Märkord</header>
+		<ul>
+		@Each.Meta.TagCloud
+			<li><a href="/search?q=@Current">@Current</a></li>
+		@EndEach
+		</ul>		
+	</section>
+
+</section>
+        
+@EndSection

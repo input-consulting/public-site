@@ -1,0 +1,108 @@
+@import "colors.less";
+
+body > .main > footer {
+    border-top: 10px solid #758694;
+    background: @footer-background;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1em;
+    padding-left: 1em;
+    max-width: 1400px;
+    display: block;
+
+     a, a:visited, a:active {
+	    text-decoration: none;
+	    -webkit-transition: color 0.2s;
+	    -moz-transition: color 0.2s;
+	    -o-transition: color 0.2s;
+	    transition: color 0.2s;
+        color: @footer-text-color;
+        font-weight: 400;
+    }
+
+    li, header {
+	    font-family: 'Gotham A', 'Gotham B', sans-serif;
+	    text-transform: uppercase;
+	    font-size: 12px;
+	    font-weight: 600;
+	    letter-spacing: 1px;
+        color: @footer-header-color;
+	    text-align: center;
+    }
+
+    li {
+        header {
+            font-weight: 800;
+        }
+    }
+
+    nav {
+        display: table;
+        width: 90%;
+        *zoom: 1;
+        max-width: 1400px;
+        min-height: 1px;
+        _width: 1400px;
+        padding-left: 2em;
+        padding-right: 2em;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+footer nav > *:not(.full-width) {
+    margin-bottom: 3em
+}
+
+@media (min-width: 19em) {
+
+	footer nav > *:not(.full-width) {
+        width: 100%;
+        float: none;
+        margin-right: 5.26316%
+    }
+
+    footer nav > *:not(.full-width):nth-child(2n) {
+        float: right;
+        margin-right: 0
+    }
+
+    footer nav > *:not(.full-width):nth-child(2n+1) {
+        clear: both
+    }
+}
+
+@media (min-width: 39em){
+
+    footer h4 {
+        text-align: left;
+    }
+
+
+	footer nav > *:not(.full-width) {
+        width: 23.07692%;
+        float: left;
+        margin-right: 2.5641%
+    }
+
+    footer nav > *:not(.full-width):nth-child(2n) {
+        float: left;
+        margin-right: 2.5641%
+    }
+
+    footer nav > *:not(.full-width):nth-child(2n+1) {
+        clear: none
+    }
+
+    footer nav > *:not(.full-width):nth-child(4) {
+        float: right;
+        margin-right: 0
+    }
+}
+
+@media (min-width: 59em){
+}
+
+@media (min-width: 79em){
+}

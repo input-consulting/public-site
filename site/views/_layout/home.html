@@ -1,0 +1,27 @@
+﻿@Master['_layout/master-page.html']
+
+@Section['MainContent']
+
+<section class="headline">                
+    @Model.Meta.Headline.Abstract
+</section>
+
+<section class="news">
+    <h2>Aktuellt</h2>
+    @Partial['_layout/partial-home-nyheter.html', Model.Meta.Articles];
+</section>
+
+<section class="articles">
+    @Partial['_layout/partial-home-artiklar.html', Model.Meta.ArticlesOne];
+</section>
+
+<section class="alla-inputtare">
+    <h2>Vilka är vi</h2>
+    @Partial['_layout/partial-inputtare.html', Model.Meta.Inputtare];    
+</section>
+
+<section class="articles">
+    @Partial['_layout/partial-home-artiklar.html', Model.Meta.ArticlesTwo];    
+    </article>
+</section>            
+@EndSection

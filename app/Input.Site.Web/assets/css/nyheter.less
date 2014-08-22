@@ -1,0 +1,124 @@
+﻿@import  "colors.less";
+@import "mixins.less";
+
+section.news-list {
+
+    header {
+        border : none;
+        margin-bottom : .3em;
+        padding-left : .4em;
+    }
+
+    article {
+        p {
+            margin-top : .2em;
+        }
+
+        header {
+            color : @header-color;
+            font-weight :100;
+            font-size : 90%;
+            border : none;
+            margin-bottom : .5em;
+            padding-left : 0;
+            border-bottom : solid 1px @header-color;
+        }
+        nav {
+            float:none;
+            padding:0;
+            margin-top : .5em;
+            .apply-link(160%);
+        }
+
+        footer {
+            float:none;
+            padding:0;
+            .apply-link(100%);
+        }
+
+    }
+
+}
+
+.news {
+
+    article {
+        header {
+            font-size: 130%;
+            font-weight : 200;
+            background: none;
+            color: @header-color;
+            margin-bottom: 1em;
+            border : none;
+        }
+
+        footer {
+            float:none;
+            padding:0;
+            .apply-link(100%);
+        }
+    }
+}
+
+
+.main {
+    section {
+        header {
+            font-size: 180%;
+            background: none;
+            color: @header-color;
+            //border-bottom: .04em solid;
+            margin-bottom: 1.4em;
+            line-height : 1.2em;
+        }
+    }
+}
+
+/* tablet and up*/
+@media (min-width: 39em) {
+   .news {
+        article {
+            width : 48%;
+            float: left;
+
+            header {
+                font-size:160%;
+            }
+        }
+
+    }
+}
+
+/* desktop and up*/
+@media (min-width: 59em) {
+
+    .news-list {
+
+        header {
+            font-size : 200%;
+        }
+
+        article:nth-child(even) {
+            margin-right:3%;
+        }
+
+        article {
+            width: 46%;
+            float: left;
+
+            nav {
+                .apply-link(200%);
+            }
+        }
+    }
+}
+
+/*large desktop and up*/
+@media (min-width: 79em){
+   .news {
+        article {
+            width: 31.2222%;
+            float: left;
+        }
+    }
+}

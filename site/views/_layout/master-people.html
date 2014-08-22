@@ -1,0 +1,37 @@
+@Master['_layout/master-page.html']
+
+@Section['MainContent']
+
+<section class="en-inputtare">	
+	<figure>
+		<img src="/static/img/inputtare/@Model.Meta.SafeTitle;.png" alt="@Model.Meta.SafeTitle;">
+		<figcaption>@Model.Meta.Title</figcaption>		
+	</figure>
+	<article>
+		@Section['Content']
+	</article>
+	<aside>
+		<nav>
+			<ul>
+				<li>Arkitekt</li>
+				<li>Utvecklare</li>
+			</ul>
+			<ul>
+				<li>C#</li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+			</ul>
+
+<!-- 			@Model.Meta.RolesAsHtml
+			@Model.Meta.TagsAsHtml
+ -->	
+ 		</nav>
+		<nav>
+			@Section['Social']
+		</nav>
+	</aside>
+
+</section>
+
+@EndSection

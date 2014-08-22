@@ -1,0 +1,129 @@
+﻿/*@footer-background:  #FCF6EC;
+@footer-text-color :   #0081a3;
+@footer-header-color : #576674;*/
+section.search .search-query form {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  width: 100%;
+  max-width: 42.5rem;
+}
+section.search .search-query input[type="text"] {
+  background: #f5f5f5 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAb0lEQVR42p2RMQ7AIAhFWXsG1h7Gtffo6urqyJGpwyetomnwJ38BH/wgfZSaS7PABbVOqkqm3Fzx6IQTatlDb5PJi21YBy1iuNgjJIgzFXqyCcXj1Z1DXNGTiw01aP252DCCgH7Fk41h8KaAGMDxADnaOPucd/m3AAAAAElFTkSuQmCC') no-repeat 7px 12px;
+  float: left;
+  outline: none;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  vertical-align: middle;
+  border-color: #ddd;
+  box-shadow: 1px 1px 0 #fff;
+  position: relative;
+  width: 100%;
+  min-height: 38px;
+  padding: 4px 20px 4px 25px;
+  font-size: 1.4em;
+}
+section.search .search-result header {
+  border: none;
+  margin-bottom: .3em;
+  padding-left: .4em;
+}
+section.search .search-result article {
+  padding: .4em;
+}
+section.search .search-result article p {
+  margin-top: .2em;
+}
+section.search .search-result article p a {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #999;
+  border-radius: 10px;
+  margin-right: .25em;
+  text-decoration: none;
+}
+section.search .search-result article p a:hover {
+  color: #fff;
+  background-color: #434a54;
+}
+section.search .search-result article header {
+  color: #0081a3;
+  font-weight: 100;
+  font-size: 90%;
+  border-bottom: solid 1px #0081a3;
+  margin-bottom: .5em;
+}
+section.search .search-result article nav {
+  float: none;
+  padding: 0;
+  margin-top: .5em;
+}
+section.search .search-result article nav a {
+  color: #0081a3;
+  font-size: 160%;
+  font-weight: 100;
+  text-decoration: none;
+}
+section.search .search-result article nav a:hover {
+  color: #00a9d6;
+}
+section.search .search-result article footer {
+  float: none;
+  padding: 0;
+}
+section.search .search-result article footer a {
+  color: #0081a3;
+  font-size: 100%;
+  font-weight: 100;
+  text-decoration: none;
+}
+section.search .search-result article footer a:hover {
+  color: #00a9d6;
+}
+section.search .search-tags ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+}
+section.search .search-tags ul li a {
+  text-decoration: none;
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #999;
+  border-radius: 10px;
+  margin-right: .25em;
+}
+section.search .search-tags ul li a:hover {
+  color: #fff;
+  background-color: #434a54;
+}
+/* tablets and up */
+@media (min-width: 39em) {
+  section.search .search-query form {
+    width: 60%;
+    max-width: 42.5rem;
+  }
+}
+/* float rigth on tablets and upp*/
+/* desktop and up */
+/* large desktop and up */
+/*# sourceMappingURL=search.css.map */

@@ -1,0 +1,17 @@
+@Master['_layout/master-page.html']
+
+
+@Section['MainContent']
+
+
+        <section>
+            <article>
+            	<header>@Model.Meta.Title</header>
+                @Section['Content']
+            </article>
+            <aside>@Section['Side']</aside>
+        </section>
+
+
+
+@EndSection

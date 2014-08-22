@@ -1,0 +1,151 @@
+﻿@import "colors.less";
+
+section {
+
+    .careers-header {
+        background-image : url(/static/img/grupp_bild.png);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-origin: padding-box;
+        background-position: 50% 50%;
+
+        header {
+            font-size : 400%;
+            font-weight : 500;
+            color :#fff;
+            text-align : center;
+            border : 0;
+            opacity: .8;
+        }
+
+        .careers {
+            background :#ffffff;
+            color : @default-text-color;
+            font-size : 120%;
+            text-align : center;
+            opacity : .7;
+
+            article {
+                opacity:1;
+
+                ul {
+                    li {
+                        line-height : 2em;
+                        a {
+                            font-size : 130%;
+                            font-weight : 400;
+                            color : inherit;
+                            text-decoration : none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+form {
+    fieldset {
+
+        border-color: #ddd;
+        box-shadow: 1px 1px 0 #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+
+        legend {
+            text-align : center;
+        }
+
+        label {
+            width : 100%;
+            float : left;
+            margin : 1%;
+            margin-bottom : 0;
+            font-size : .8em;
+            display : none;
+        }
+
+        input[type="file"] {
+            width : 100%;
+            margin : 1%;
+            margin-top : 0;
+            display : none;
+        }
+
+        input[type="text"] {
+            width : 100%;
+            margin : 1%;
+            margin-top : .25em;
+        }
+
+        input[type="submit"] {
+            float : none;
+            margin : 1%;
+            margin-top : 1em;
+            width : 100%;
+        }
+    }
+}
+
+/* tablet and up */
+@media (min-width: 39em) {
+}
+
+/* float rigth on tablets and upp*/
+@media (min-width: 49em) {
+    .career {
+        article {
+            float : left;
+            width : 48%;
+        }
+    }
+
+    form {
+        fieldset {
+
+            label {
+                display: block;
+            }
+
+            input[type="submit"] {
+                float : right;
+                margin : 1%;
+                width :auto;
+            }
+
+
+            input[type="file"] {
+                display :inline-block;
+            }
+
+            input[type="text"] {
+                margin-top : 0;
+
+                &:-moz-placeholder {
+                    text-indent: -100%;
+                }
+
+                &::-moz-placeholder {
+                    text-indent: -100%;
+                }
+
+                &:-ms-input-placeholder {
+                    text-indent: -100%;
+                }
+
+                &::-webkit-input-placeholder {
+                    text-indent: -100%;
+                }
+            }
+        }
+    }
+}
+
+/* desktop and up */
+@media (min-width: 59em) {
+}
+
+/* large desktop and up */
+@media (min-width: 79em){
+}

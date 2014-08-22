@@ -1,0 +1,10 @@
+﻿@Master['_layout/master-page.html']
+
+@Section['MainContent']
+
+        <section class="news-list">
+            <header>Nyheter</header>
+            @Partial['_layout/partial-nyheter-lista.html', Model.Meta.Articles];
+        </section>
+        
+@EndSection

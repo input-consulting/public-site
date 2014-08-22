@@ -1,0 +1,14 @@
+@Master['_layout/master-page.html']
+
+@Section['MainContent']
+
+<section class="career">
+	<article>
+	    @Section['Content']
+	</article>
+	<article>
+		@Partial['_layout/partial-career-form.html', Model.Meta];	
+	</article>
+</section>
+        
+@EndSection

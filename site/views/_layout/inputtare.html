@@ -1,0 +1,22 @@
+@Master['_layout/master-page.html']
+
+@Section['MainContent']
+
+        <section class="alla-inputtare">
+            <header>Vi som jobbar på Input</header>
+
+		    <ul>
+		        @Each.Model.Meta.Articles
+		            <li>
+		                <a href="/inputtare/@Current.SafeTitle;">
+		                    <img src="/static/img/inputtare/@Current.SafeTitle;.png" alt="@Current.Title">
+		                    <p></p>
+		                    <h3>@Current.Title</h3>
+		                </a>
+		            </li>
+		        @EndEach
+		    </ul>
+		    
+        </section>
+
+@EndSection

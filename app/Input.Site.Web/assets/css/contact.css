@@ -1,0 +1,21 @@
+﻿/* tablets and up */
+@media (min-width: 39em) {
+  section.contact article {
+    width: 48%;
+    float: left;
+  }
+  section.contact article:last-child {
+    width: 100%;
+    float: none;
+  }
+}
+/* float rigth on tablets and upp*/
+/* desktop and up */
+@media (min-width: 59em) {
+  section.contact article {
+    width: 33%;
+    float: left;
+  }
+}
+/* large desktop and up */
+/*# sourceMappingURL=contact.css.map */

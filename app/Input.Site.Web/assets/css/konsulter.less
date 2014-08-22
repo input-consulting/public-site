@@ -1,0 +1,235 @@
+﻿@import "colors.less";
+
+/* Mobile default */
+
+section.en-inputtare {
+
+    figure {
+        margin : 1%;
+        text-align : center;
+
+        figcaption {
+            color : @default-header-color;
+            font-size : 130%;
+            font-weight : 600;
+            margin-bottom : .9em;
+        }
+    }
+
+    article {
+        margin : 1%;
+        padding : 0;
+
+        p {
+            margin-top : 0;
+        }
+
+        h4 {
+            text-align : center;
+        }
+
+        ul {
+            margin-top : .7em;
+            margin-bottom : .7em;
+            li {
+                font-weight : 600;
+                ul {
+                    li {
+                        font-weight : normal;
+                    }
+                }
+            }            
+        }
+    }
+
+    aside {
+        margin : 1%;
+
+        nav {
+            margin-bottom : .9em;
+
+            ul {
+                margin-bottom : .5em;
+                
+                li {
+                    display : inline-block;
+                    color : @default-header-color;
+                    font-weight : 500;
+                    font-size : 120%;
+
+                    &:after {
+                        content : ",";
+                    }
+
+                    &:last-child:after {
+                        content : "";
+                    }
+
+                   a {
+                        text-decoration : none;
+                        display: inline-block;
+                        min-width: 10px;
+                        padding: 4px 7px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: #fff;
+                        line-height: 1;
+                        vertical-align: baseline;
+                        white-space: nowrap;
+                        text-align: center;
+                        background-color: #999;
+                        border-radius: 8px;
+                        margin-right : .25em;
+
+                        &:hover {
+                            color: #fff;
+                            background-color: #434a54;
+                        }
+                    }
+
+                }      
+            }
+        }
+    }
+
+}
+
+section.alla-inputtare {
+
+    a {
+        text-decoration : none;
+    }
+
+    p {
+        margin-left : 2%;
+    }
+
+    ul {
+        margin-right : auto;
+        margin-left : auto;
+
+        li {
+            display : inline-block;
+            text-align : center;
+            font-size : 80%;
+            background : #fff;
+            margin : 1%;
+            box-shadow: 0 0 2px 0 rgba(50, 50, 50, 0.35);
+            width : 100%;
+
+            p {
+                margin : 0;
+            }
+
+            img {
+                margin : 1em .5em 0 .5em;
+                max-width : 90%;
+            }
+        
+            h3 {
+                margin-top : .8em;
+                margin-bottom : 1em;
+                font-size : 1.5em;
+                font-weight : 600;
+            }         
+        }    
+    }
+}
+
+/* tablets and up */
+@media (min-width: 22em) {
+    section.alla-inputtare {
+        ul {
+            li{
+                width : 48%;
+                float : left;
+            }
+        }
+    }
+}
+
+/* tablets and up */
+@media (min-width: 39em) {
+    section.en-inputtare {
+    
+        figure {
+            text-align : left;
+            float : left;
+            width : auto;
+            margin-right : 4%;
+        }
+
+        article {
+            float : left;
+            width : 50%;
+        }
+
+        aside {
+            width : 100%;
+            float : none;
+            clear : both;
+        }
+
+    }
+
+    section.alla-inputtare {
+        ul {
+            li{
+                font-size : 50%;
+                width :31.33%;
+                float : left;
+            }
+        }
+    }
+}
+/* float rigth on tablets and upp*/
+@media (min-width: 51em) {
+    section.en-inputtare {
+    }
+    section.alla-inputtare {
+        ul {
+            li{
+                font-size : 55%;
+                width :23%;
+                float : left;
+            }
+        }
+    }
+}
+/* desktop and up */
+@media (min-width: 59em) {
+
+    section.en-inputtare {
+        figure {
+            width : auto;
+            float : left;
+            margin-right : 4%;
+        }
+
+        article {
+            width : 30%;
+            float : left;
+            margin-right : 4%;
+        }
+
+        aside {
+            width : 30%;
+            float : left;
+            clear : none;
+        }
+    }
+
+
+}
+/* large desktop and up */
+@media (min-width: 79em) {
+    section.alla-inputtare {
+        ul {
+            li{
+                font-size : 50%;
+                width :23%;
+                float : left;
+            }
+        }
+    }
+}

@@ -1,4 +1,3 @@
-public-site
-===========
-
-Input Consulting Public Website
+Initial documentation
+===================
+more to come
