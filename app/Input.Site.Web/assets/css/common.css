@@ -316,9 +316,17 @@ article header {
   font-weight: 200;
   background: none;
   color: #0081a3;
-  margin-bottom: 1em;
   margin-left: 0;
   border: none;
+}
+article header a {
+  color: #0081a3;
+  font-size: 100%;
+  font-weight: 100;
+  text-decoration: none;
+}
+article header a:hover {
+  color: #00a9d6;
 }
 article footer {
   float: none;
@@ -346,6 +354,10 @@ article footer a:hover {
   .news article header,
   .articles article header {
     font-size: 160%;
+  }
+  .news article header a,
+  .articles article header a {
+    font-size: 100%;
   }
   .consultants article {
     float: left;

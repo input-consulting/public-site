@@ -1,9 +1,6 @@
 @Each
 <article>
-	<header>@Current.Title</header>
-    @Current.Abstract
-	<footer>    
-		<div><a href="/@Current.ResourceName">Läs mer</a></div>
-	</footer>    
+	<header><a href="/@Current.ResourceName">@Current.Title</a></header>
+	@Current.Abstract
 </article>
 @EndEach

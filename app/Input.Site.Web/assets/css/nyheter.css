@@ -18,6 +18,15 @@ section.news-list article header {
   padding-left: 0;
   border-bottom: solid 1px #0081a3;
 }
+section.news-list article header a {
+  color: #0081a3;
+  font-size: 100%;
+  font-weight: 100;
+  text-decoration: none;
+}
+section.news-list article header a:hover {
+  color: #00a9d6;
+}
 section.news-list article nav {
   float: none;
   padding: 0;
@@ -52,6 +61,15 @@ section.news-list article footer a:hover {
   color: #0081a3;
   margin-bottom: 1em;
   border: none;
+}
+.news article header a {
+  color: #0081a3;
+  font-size: 100%;
+  font-weight: 100;
+  text-decoration: none;
+}
+.news article header a:hover {
+  color: #00a9d6;
 }
 .news article footer {
   float: none;
