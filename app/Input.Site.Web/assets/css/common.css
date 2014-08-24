@@ -322,8 +322,9 @@ article header {
 article header a {
   color: #0081a3;
   font-size: 100%;
-  font-weight: 100;
+  font-weight: 600;
   text-decoration: none;
+  letter-spacing: -1px;
 }
 article header a:hover {
   color: #00a9d6;
@@ -335,8 +336,9 @@ article footer {
 article footer a {
   color: #0081a3;
   font-size: 100%;
-  font-weight: 100;
+  font-weight: 600;
   text-decoration: none;
+  letter-spacing: -1px;
 }
 article footer a:hover {
   color: #00a9d6;
