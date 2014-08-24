@@ -1,4 +1,4 @@
-@Master['_layout/nyhet']
+@Master['_layout/artikel']
 
 @Tags
 Author : Dan Lofquist

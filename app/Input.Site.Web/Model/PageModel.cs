@@ -21,6 +21,7 @@ namespace InputSite.Model
             Meta.Title = articleModel.Title;
             Meta.SafeTitle = articleModel.SafeTitle;
             Meta.FriendlyDate = articleModel.FriendlyDate;
+            Meta.Author = articleModel.Author;
             Meta.Tags = articleModel.TagsAsHtml;
         }
     }
