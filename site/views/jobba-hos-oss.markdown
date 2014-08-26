@@ -8,7 +8,7 @@ Tags: Jobb
 @EndTags
 
 @Section['Headline']
-Vill du jobba hos oss
+Är du snygg?
 @EndSection
 
 @Section['Content']
