@@ -39,8 +39,8 @@ namespace InputSite.Services
         public ArticleParser(string markdown, string resourceName)
         {
             _markdown = markdown;
-            var metadata = _markdown.Contains("@Tags") ? markdown.Substring(markdown.IndexOf("@Tags", System.StringComparison.Ordinal) + 5,
-				                                        markdown.IndexOf("@EndTags", System.StringComparison.Ordinal) - 7)
+            var metadata = _markdown.Contains("@Tags") ? markdown.Substring(markdown.IndexOf("@Tags", StringComparison.Ordinal) + 5,
+				                                        markdown.IndexOf("@EndTags", StringComparison.Ordinal) - 7)
 			                                            : string.Empty;
 
 			var metadataSplit = metadata.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
@@ -68,7 +68,7 @@ namespace InputSite.Services
 
             if (content.Contains("@Tags"))
             {
-                content = content.Substring(content.IndexOf("@EndTags", System.StringComparison.Ordinal) + 8);
+                content = content.Substring(content.IndexOf("@EndTags", StringComparison.Ordinal) + 8);
             }
 
             return SSVESubstitution.Replace(content, "").Trim();                
@@ -129,7 +129,7 @@ namespace InputSite.Services
 
             if (content.Contains("@Tags"))
             {
-                content = content.Substring(content.IndexOf("@EndTags", System.StringComparison.Ordinal) + 8);
+                content = content.Substring(content.IndexOf("@EndTags", StringComparison.Ordinal) + 8);
             }
 
             content = SSVESubstitution.Replace(content, "").Trim();

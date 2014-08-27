@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using InputSite.Bootstrap;
 using InputSite.Interfaces;
-using InputSite.Model;
 using Nancy;
 
 namespace InputSite.Services

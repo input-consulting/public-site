@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web.Configuration;
-using Nancy.Routing;
 
 namespace InputSite.Bootstrap
 {

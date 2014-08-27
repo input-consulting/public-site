@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using MarkdownSharp;
 
 namespace InputSite.Model
 {
@@ -64,8 +59,6 @@ namespace InputSite.Model
                 return res;
             }
         } 
-
-		public string Slug { get; private set; }
 
         public string ResourceName { get; private set; }
 

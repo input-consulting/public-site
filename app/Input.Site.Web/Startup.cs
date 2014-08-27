@@ -1,6 +1,5 @@
 ﻿using Microsoft.Owin.Extensions;
 using Owin;
-using System;
 
 namespace InputSite
 {

@@ -7,7 +7,7 @@ namespace InputSite.Bootstrap
         public bool Ensure(FileInfo fileInfo)
         {
             int a;
-            return int.TryParse(fileInfo.Directory.Name, out a);
+            return fileInfo.Directory != null && int.TryParse(fileInfo.Directory.Name, out a);
         }
     }
 }

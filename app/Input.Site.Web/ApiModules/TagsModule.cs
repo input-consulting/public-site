@@ -1,5 +1,4 @@
-﻿using System.Collections.Specialized;
-using System.Linq;
+﻿using System.Linq;
 using InputSite.Interfaces;
 using Nancy;
 using Nancy.Helpers;
