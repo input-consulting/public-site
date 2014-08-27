@@ -144,7 +144,16 @@ namespace InputSite.Services
 
         public IEnumerable<ArticleModel> ArticlesByAuthor(string author)
         {
-            throw new System.NotImplementedException();
+            var reader = _indexWriter.GetReader();
+            using (var searcher = new IndexSearcher(reader))
+            {
+                var parser = new QueryParser(Version.LUCENE_30, "author", _standardAnalyzer);
+
+                var query = parser.Parse(author);
+                var hits = searcher.Search(query, 100);
+
+                return BuildResult(hits, searcher);
+            }
         }
 
         public IEnumerable<string> TagCloud()
