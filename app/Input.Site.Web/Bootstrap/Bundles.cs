@@ -16,6 +16,7 @@ namespace InputSite.Bootstrap
             new BundleFile { Url = "~/assets/js/jquery.js", Minify = true },
             new BundleFile { Url = "~/assets/js/jquery.sidr.min.js", Minify = true },
             new BundleFile { Url = "~/assets/js/input-common-init.js", Minify = true },
+            new BundleFile { Url = "~/assets/js/articles.js", Minify = true },
         };
 
         public static List<BundleFile> PublicCss = new List<BundleFile>

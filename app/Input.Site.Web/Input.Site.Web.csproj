@@ -114,6 +114,9 @@
     <Content Include="Assets\css\article.css">
       <DependentUpon>article.less</DependentUpon>
     </Content>
+    <Content Include="Assets\css\article.min.css">
+      <DependentUpon>article.less</DependentUpon>
+    </Content>
     <Content Include="Assets\css\career.css">
       <DependentUpon>career.less</DependentUpon>
     </Content>
@@ -156,9 +159,16 @@
     <Content Include="Assets\css\nyheter.css">
       <DependentUpon>nyheter.less</DependentUpon>
     </Content>
+    <Content Include="Assets\css\nyheter.min.css">
+      <DependentUpon>nyheter.less</DependentUpon>
+    </Content>
     <Content Include="Assets\css\search.css">
       <DependentUpon>search.less</DependentUpon>
     </Content>
+    <Content Include="Assets\css\search.min.css">
+      <DependentUpon>search.less</DependentUpon>
+    </Content>
+    <Content Include="Assets\js\articles.js" />
     <Content Include="Assets\js\input-common-init.js" />
     <Content Include="Assets\js\jquery.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

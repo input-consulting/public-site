@@ -12,7 +12,7 @@
 
 	<section class="search-result">
 		@Each.Meta.QueryResult
-			<article>
+			<article data-href="/@Current.ResourceName">
 				<header>@Current.FriendlyDate</header>	
 				<nav><a href="/@Current.ResourceName">@Current.Title</a></nav>
 				<p>@Current.Abstract</p>
