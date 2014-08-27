@@ -1,4 +1,4 @@
-﻿/*@footer-background:  #FCF6EC;
+/*@footer-background:  #FCF6EC;
 @footer-text-color :   #0081a3;
 @footer-header-color : #576674;*/
 section.search .search-query form {
@@ -31,6 +31,7 @@ section.search .search-result header {
 }
 section.search .search-result article {
   padding: .4em;
+  cursor: pointer;
 }
 section.search .search-result article p {
   margin-top: .2em;
@@ -128,4 +129,3 @@ section.search .search-tags ul li a:hover {
 /* float rigth on tablets and upp*/
 /* desktop and up */
 /* large desktop and up */
-/*# sourceMappingURL=search.css.map */

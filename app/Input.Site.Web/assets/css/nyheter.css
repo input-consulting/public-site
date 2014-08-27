@@ -1,10 +1,13 @@
-﻿/*@footer-background:  #FCF6EC;
+/*@footer-background:  #FCF6EC;
 @footer-text-color :   #0081a3;
 @footer-header-color : #576674;*/
 section.news-list header {
   border: none;
   margin-bottom: .3em;
   padding-left: .4em;
+}
+section.news-list article {
+  cursor: pointer;
 }
 section.news-list article p {
   margin-top: .2em;
@@ -56,6 +59,9 @@ section.news-list article footer a {
 }
 section.news-list article footer a:hover {
   color: #00a9d6;
+}
+.news article {
+  cursor: pointer;
 }
 .news article header {
   font-size: 130%;
@@ -135,4 +141,3 @@ section.news-list article footer a:hover {
     float: left;
   }
 }
-/*# sourceMappingURL=nyheter.css.map */
