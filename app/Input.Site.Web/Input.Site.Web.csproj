@@ -168,6 +168,7 @@
     <Content Include="Assets\css\search.min.css">
       <DependentUpon>search.less</DependentUpon>
     </Content>
+    <Content Include="Assets\js\articles.js" />
     <Content Include="Assets\js\input-common-init.js" />
     <Content Include="Assets\js\jquery.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
