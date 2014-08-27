@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using InputSite.Extensions;
 using InputSite.Interfaces;
+using Nancy;
 
 namespace InputSite.WebModules
 {
@@ -18,7 +19,10 @@ namespace InputSite.WebModules
 			    PageModel.Meta.ArticlesOne = articles.Take(2);
                 PageModel.Meta.ArticlesTwo = articles.Skip(2).Take(2);
 
-                return View["_layout/home", PageModel];
+                return Negotiate
+                       .WithView("_layout/home")
+                       .WithModel(PageModel)
+                       .WithMediaRangeModel("application/json", PageModel);
 			};
         }
     }

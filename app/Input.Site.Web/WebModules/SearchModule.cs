@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using InputSite.Interfaces;
 using InputSite.Model;
+using Nancy;
 using Nancy.Helpers;
 
 namespace InputSite.WebModules
@@ -23,8 +24,12 @@ namespace InputSite.WebModules
                 }
 
                 PageModel.Meta.TagCloud = articleReader.TagCloud();
-                
-                return View["_layout/search", PageModel];
+               
+                return Negotiate
+                       .WithView("_layout/search")
+                       .WithModel(PageModel)
+                       .WithMediaRangeModel("application/json", PageModel);
+
             };
 
         }
