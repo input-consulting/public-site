@@ -1,0 +1,11 @@
+@Master['_layout/master-page.html']
+
+@Section['MainContent']
+
+<section>
+	<h4>@Model.Meta.Author; Blog</h4>
+	@Partial['_layout/partial-blog-lista.html', Model.Meta.Articles];	
+</section>
+
+
+@EndSection

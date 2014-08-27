@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using InputSite.Extensions;
 using InputSite.Interfaces;
 using InputSite.Model;
 
@@ -38,7 +37,9 @@ namespace InputSite.Services
 
         public IEnumerable<ArticleModel> ArticlesByAuthor(string author)
         {
-            throw new System.NotImplementedException();
+            return _articleStorage.ArticlesByAuthor(author)
+                        .Where(a => a.BlogDate.Date <= DateTime.Today)
+                        .OrderByDescending(d => d.BlogDate);
         }
 
         public IEnumerable<string> TagCloud()

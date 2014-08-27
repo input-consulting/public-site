@@ -244,7 +244,6 @@
     <Compile Include="Interfaces\IArticleStorage.cs" />
     <Compile Include="Model\PageModel.cs" />
     <Compile Include="Model\ArticleModel.cs" />
-    <Compile Include="Model\PostModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ArticleLocator.cs" />
     <Compile Include="Services\ArticleParser.cs" />
@@ -252,6 +251,7 @@
     <Compile Include="Services\ArticleStorage.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="WebModules\AssetsModule.cs" />
+    <Compile Include="WebModules\BlogModule.cs" />
     <Compile Include="WebModules\ConfigurableModule.cs" />
     <Compile Include="WebModules\HomeModule.cs" />
     <Compile Include="WebModules\BaseModule.cs" />

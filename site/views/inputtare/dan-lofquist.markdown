@@ -27,4 +27,5 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, aspernatur, volu
 - [Blog](/blog/dan-lofquist)
 - [Twitter](http://twitter.com/danlofquist)
 - [GitHub](http://github.com/danlofquist)
+
 @EndSection
