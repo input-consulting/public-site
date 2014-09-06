@@ -113,68 +113,94 @@
   <ItemGroup>
     <Content Include="Assets\css\article.css">
       <DependentUpon>article.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\article.min.css">
       <DependentUpon>article.less</DependentUpon>
     </Content>
     <Content Include="Assets\css\career.css">
       <DependentUpon>career.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\colors.css">
       <DependentUpon>colors.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\common.css">
       <DependentUpon>common.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\contact.css">
       <DependentUpon>contact.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\css\fonts.css" />
+    <Content Include="Assets\css\fonts.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\css\footer.css.map">
       <DependentUpon>footer.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\article.less" />
     <Content Include="Assets\css\article.css.map">
       <DependentUpon>article.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Assets\css\footer.less" />
     <Content Include="Assets\css\footer.css">
       <DependentUpon>footer.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\css\jquery.sidr.dark.css" />
-    <Content Include="Assets\css\jquery.sidr.light.css" />
+    <Content Include="Assets\css\jquery.sidr.dark.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\css\jquery.sidr.light.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\css\konsulter.css">
       <DependentUpon>konsulter.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\menu.css">
       <DependentUpon>menu.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\mixins.css">
       <DependentUpon>mixins.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\mobile-menu.css">
       <DependentUpon>mobile-menu.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\css\normalize.css" />
+    <Content Include="Assets\css\normalize.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\css\nyheter.css">
       <DependentUpon>nyheter.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\nyheter.min.css">
       <DependentUpon>nyheter.less</DependentUpon>
     </Content>
     <Content Include="Assets\css\search.css">
       <DependentUpon>search.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\search.min.css">
       <DependentUpon>search.less</DependentUpon>
     </Content>
-    <Content Include="Assets\js\articles.js" />
-    <Content Include="Assets\js\input-common-init.js" />
+    <Content Include="Assets\js\articles.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\js\input-common-init.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\js\jquery.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\js\jquery.sidr.min.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="packages.config">
       <SubType>Designer</SubType>
@@ -182,42 +208,52 @@
     <Content Include="Assets\css\nyheter.less" />
     <Content Include="Assets\css\nyheter.css.map">
       <DependentUpon>nyheter.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\colors.less" />
     <Content Include="Assets\css\mixins.less" />
     <Content Include="Assets\css\mobile-menu.less" />
     <Content Include="Assets\css\mobile-menu.css.map">
       <DependentUpon>mobile-menu.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\colors.css.map">
       <DependentUpon>colors.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\mixins.css.map">
       <DependentUpon>mixins.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\career.less" />
     <Content Include="Assets\css\career.css.map">
       <DependentUpon>career.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\menu.less" />
     <Content Include="Assets\css\menu.css.map">
       <DependentUpon>menu.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\search.less" />
     <Content Include="Assets\css\search.css.map">
       <DependentUpon>search.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\common.less" />
     <Content Include="Assets\css\common.css.map">
       <DependentUpon>common.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\contact.less" />
     <Content Include="Assets\css\contact.css.map">
       <DependentUpon>contact.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\css\konsulter.less" />
     <Content Include="Assets\css\konsulter.css.map">
       <DependentUpon>konsulter.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -267,10 +303,7 @@
     <Compile Include="WebModules\BaseModule.cs" />
     <Compile Include="WebModules\SearchModule.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\fonts\" />
-    <Folder Include="Assets\img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

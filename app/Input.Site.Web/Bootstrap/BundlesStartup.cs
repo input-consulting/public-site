@@ -17,11 +17,11 @@ namespace InputSite.Bootstrap
             BasePathForTesting = rootPathProvider != null ? rootPathProvider.GetRootPath() : string.Empty;
 
             // CSS
-            BuildCssBundle(Bundles.PublicCss).ForceRelease().AsCached("public-css", "~/assets/css/public-css");
+            BuildCssBundle(Bundles.PublicCss).ForceRelease().AsCached("public-css", "/assets/css/public-css");
             BuildCssBundle(Bundles.PublicCss).ForceDebug().AsNamed("public-css-debug", "");
 
             // JS
-            BuildJavaScriptBundle(Bundles.PublicJavaScript).ForceRelease().AsCached("public-js", "~/assets/js/public-js");
+            BuildJavaScriptBundle(Bundles.PublicJavaScript).ForceRelease().AsCached("public-js", "/assets/js/public-js");
             BuildJavaScriptBundle(Bundles.PublicJavaScript).ForceDebug().AsNamed("public-js-debug", "");
         }
 

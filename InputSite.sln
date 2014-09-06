@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Input.Site.Web", "app\Input
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Input.Site.Tests", "app\Input.Site.Tests\Input.Site.Tests.csproj", "{0E1C979D-89D4-4405-907E-D5A9A2ED7172}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Input.Site.Web.Console", "app\Input.Site.Web.Console\Input.Site.Web.Console.csproj", "{5100DF02-970B-4580-A723-DD3920D85CCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{0E1C979D-89D4-4405-907E-D5A9A2ED7172}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E1C979D-89D4-4405-907E-D5A9A2ED7172}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E1C979D-89D4-4405-907E-D5A9A2ED7172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5100DF02-970B-4580-A723-DD3920D85CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5100DF02-970B-4580-A723-DD3920D85CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5100DF02-970B-4580-A723-DD3920D85CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5100DF02-970B-4580-A723-DD3920D85CCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
