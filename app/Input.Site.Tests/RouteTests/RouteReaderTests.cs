@@ -17,7 +17,7 @@ namespace Input.Site.Tests.RouteTests
         public void Setup()
         {
             var blackList = new List<string> { @"views"};
-            _rootPath = new TestRootPathProvider().GetRootPath() + "\\Views";
+            _rootPath = new TestRootPathProvider().GetRootPath() + "/views";
 
             var staticEvaluators = new List<IRouteEvaluator>
             {

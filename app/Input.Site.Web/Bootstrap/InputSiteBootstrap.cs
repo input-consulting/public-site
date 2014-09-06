@@ -18,8 +18,8 @@ namespace InputSite.Bootstrap
 
         protected override void ConfigureConventions(NancyConventions nancyConventions)
         {
-            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("static", "bin/static"));
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("static", "static"));
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("static", "bin/static"));
 
             nancyConventions.ViewLocationConventions.Add((viewName, model, context) => string.Concat("bin/views/", viewName));
             nancyConventions.ViewLocationConventions.Add((viewName, model, context) => string.Concat("bin/views/", context.ModuleName, "/", viewName));

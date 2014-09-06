@@ -11,7 +11,7 @@ namespace InputSite.Services
 
         public ArticleLocator(IRootPathProvider rootPathProvider)
         {
-            _rootPath = rootPathProvider.GetRootPath() + "\\Views";
+            _rootPath = rootPathProvider.GetRootPath() + "/views";
         }
         
         public IEnumerable<string> Articles()

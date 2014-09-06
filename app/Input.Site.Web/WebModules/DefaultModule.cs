@@ -10,13 +10,13 @@ using Nancy.ViewEngines;
 
 namespace InputSite.WebModules
 {
-    public class ConfigurableModule : BaseModule
+    public class DefaultModule : BaseModule
     {
         private readonly IArticleReader _articleReader;
         private readonly IRouteLocatorProvider _routeLocatorProvider;
         private readonly IViewLocationProvider _viewLocationProvider;
 
-        public ConfigurableModule(IArticleReader articleReader, IRouteLocatorProvider routeLocatorProvider, IViewLocationProvider viewLocationProvider)
+        public DefaultModule(IArticleReader articleReader, IRouteLocatorProvider routeLocatorProvider, IViewLocationProvider viewLocationProvider)
         {
             _articleReader = articleReader;
             _routeLocatorProvider = routeLocatorProvider;

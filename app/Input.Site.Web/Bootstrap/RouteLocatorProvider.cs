@@ -7,20 +7,18 @@ namespace InputSite.Bootstrap
     public class RouteLocatorProvider : IRouteLocatorProvider
     {
         private readonly IEnumerable<string> _blackListedRoutes = new List<string> { @"views" };
-        private readonly IRootPathProvider _rootPathProvider;
         private static  IEnumerable<string> _staticRoutes = new List<string>();
-        private static  IEnumerable<string> _dateRoutes = new List<string>(); 
+        private static  IEnumerable<string> _dateRoutes = new List<string>();
+        private readonly string _rootPath;
 
         public RouteLocatorProvider(IRootPathProvider rootPathProvider)
         {
-            _rootPathProvider = rootPathProvider;
+            _rootPath = rootPathProvider.GetRootPath() + "/views";
         }
 
         public IEnumerable<string> StaticRoutes()
         {
-            if (_staticRoutes.Any()) return _staticRoutes;
-
-            var rootPath = _rootPathProvider.GetRootPath() + "\\Views";
+            if (_staticRoutes.Any()) return _staticRoutes;            
 
             var staticEvaluators = new List<IRouteEvaluator>
             {
@@ -31,7 +29,7 @@ namespace InputSite.Bootstrap
             };
 
             var routeReader = new RouteReader(staticEvaluators);
-            _staticRoutes = routeReader.Routes(rootPath);           
+            _staticRoutes = routeReader.Routes(_rootPath);           
 
             return _staticRoutes;
         }
@@ -39,8 +37,6 @@ namespace InputSite.Bootstrap
         public IEnumerable<string> DateRoutes()
         {
             if (_dateRoutes.Any()) return _dateRoutes;
-
-            var rootPath = _rootPathProvider.GetRootPath() + "\\Views";
 
             var dateEvaluators = new List<IRouteEvaluator>
             {
@@ -51,7 +47,7 @@ namespace InputSite.Bootstrap
             };
 
             var routeReader = new RouteReader(dateEvaluators);
-            _dateRoutes = routeReader.Routes(rootPath);
+            _dateRoutes = routeReader.Routes(_rootPath);
 
             return _dateRoutes;
         }

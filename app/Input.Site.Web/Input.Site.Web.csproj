@@ -262,7 +262,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="WebModules\AssetsModule.cs" />
     <Compile Include="WebModules\BlogModule.cs" />
-    <Compile Include="WebModules\ConfigurableModule.cs" />
+    <Compile Include="WebModules\DefaultModule.cs" />
     <Compile Include="WebModules\HomeModule.cs" />
     <Compile Include="WebModules\BaseModule.cs" />
     <Compile Include="WebModules\SearchModule.cs" />
