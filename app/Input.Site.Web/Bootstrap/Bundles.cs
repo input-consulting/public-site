@@ -34,6 +34,7 @@ namespace InputSite.Bootstrap
             new BundleFile { Url = "~/assets/css/contact.css", Minify = true },
             new BundleFile { Url = "~/assets/css/konsulter.css", Minify = true },
             new BundleFile { Url = "~/assets/css/article.css", Minify = true },
+            new BundleFile { Url = "~/assets/css/blog.css", Minify = true },
         };
 
     }

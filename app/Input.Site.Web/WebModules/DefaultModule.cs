@@ -34,9 +34,11 @@ namespace InputSite.WebModules
             Get["/{article}"] = parameters =>
             {
                 /* Need to know if it is a article or not */
-                var isArticle = _viewLocationProvider.GetLocatedViews(new[] {"md", "markdown"}).Count(w => w.Name.ToLower().Equals(parameters.article)) == 1;
+                var isArticle = _viewLocationProvider.GetLocatedViews(new[] {"md", "markdown"}).Count(w => w.Name.ToLower().Contains(parameters.article)) == 1;
                 if (isArticle) {
-                    return FetchArticle((string)parameters.article);
+                    var article = _articleReader.ArticlesByCategory((string)parameters.article).FirstOrDefault();
+                    if (article == null) return 404;
+                    return RenderView(article.ResourceName, new PageModel(article));
                 }
 
                 /* TODO : This route setup interfears with the root route in date routes, need to sort it, its anoying */
@@ -44,7 +46,6 @@ namespace InputSite.WebModules
                 PageModel.Meta.Articles = _articleReader.ArticlesByCategory(path);
                 return RenderView(string.Concat("_layout/", Request.Path), PageModel);
             };
-
         }
 
         private void SetupDateRoutes()

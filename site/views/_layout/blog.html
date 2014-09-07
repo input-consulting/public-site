@@ -1,11 +1,14 @@
 @Master['_layout/master-page.html']
 
-
 @Section['MainContent']
 
-        <section class="blog-list">
-            <header>Bloggar</header>
-            @Partial['_layout/partial-blog-lista.html', Model.Meta.Articles];
-        </section>
+<section class="blog-header">
+    <header>Bloggar</header>
+</section>
+
+<section class="blog-list">
+    @Partial['_layout/partial-blog-lista.html', Model.Meta.Articles];
+</section>
+
 
 @EndSection

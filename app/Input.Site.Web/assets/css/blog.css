@@ -1,0 +1,31 @@
+﻿section.blog-header {
+  background-color: #2F83A3;
+  padding-right: 0;
+  padding-left: 0;
+}
+section.blog-header header {
+  color: #fff;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+  max-width: 1400px;
+}
+section.blog-list article {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+  max-width: 600px;
+}
+section.blog-list article header {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+section.blog-list article nav {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  font-size: 90%;
+}
+/*# sourceMappingURL=blog.css.map */

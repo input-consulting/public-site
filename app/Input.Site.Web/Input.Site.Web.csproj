@@ -118,6 +118,10 @@
     <Content Include="Assets\css\article.min.css">
       <DependentUpon>article.less</DependentUpon>
     </Content>
+    <Content Include="Assets\css\blog.css">
+      <DependentUpon>blog.less</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\css\career.css">
       <DependentUpon>career.less</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -144,6 +148,11 @@
     <Content Include="Assets\css\article.less" />
     <Content Include="Assets\css\article.css.map">
       <DependentUpon>article.css</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\css\blog.less" />
+    <Content Include="Assets\css\blog.css.map">
+      <DependentUpon>blog.css</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Assets\css\footer.less" />
