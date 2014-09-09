@@ -237,6 +237,9 @@ body {
 section:nth-child(2n+3) {
   background: #f6f8f8;
 }
+section:first-child {
+  margin-top: 5.6em;
+}
 /* article styling */
 article {
   -webkit-transition-property: height, width;

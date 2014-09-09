@@ -7,6 +7,11 @@
   -o-background-size: contain;
   -webkit-background-size: contain;
   background-size: contain;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 1px 10px #5E5E5E;
 }
 section.main nav.menu section {
   float: left;
