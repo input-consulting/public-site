@@ -4,8 +4,12 @@
 
 <section>
 	<h4>@Model.Meta.Author; Blog</h4>
-	@Partial['_layout/partial-blog-lista.html', Model.Meta.Articles];	
+	@Each.Meta.Articles
+	<article>    
+	    <header><a href="/@Current.ResourceName">@Current.Title</a></header>
+	    <nav>Av @Current.Author den @Current.FriendlyDate</nav>
+	</article>
+	@EndEach	
 </section>
-
 
 @EndSection

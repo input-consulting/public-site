@@ -15,14 +15,12 @@
 </head>
 <body>
         <section class="main">
-
-            @Partial['_layout/partial-menu.html', Model.Meta];
+            @Partial['_layout/partial/partial-menu.html', Model.Meta];
             @Section['MainContent'];
-            @Partial['_layout/partial-footer.html', Model.Meta];
-
+            @Partial['_layout/partial/partial-footer.html', Model.Meta];
         </section>
 
-        @Partial['_layout/partial-mobile-menu.html', Model.Meta];
+        @Partial['_layout/partial/partial-mobile-menu.html', Model.Meta];
 
     @Model.PublicJavaScript
 

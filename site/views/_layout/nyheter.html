@@ -4,7 +4,15 @@
 
         <section class="news-list">
             <header>Nyheter</header>
-            @Partial['_layout/partial-nyheter-lista.html', Model.Meta.Articles];
+
+			@Each.Meta.Articles
+			<article data-href="/@Current.ResourceName">
+				<header>@Current.FriendlyDate</header>	
+				<nav><a href="/@Current.ResourceName">@Current.Title</a></nav>
+				<p>@Current.Abstract</p>
+			</article>
+			@EndEach
+			
         </section>
         
 @EndSection

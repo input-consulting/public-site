@@ -1,14 +1,13 @@
 @Master['_layout/master-page.html']
 
-
 @Section['MainContent']
-        <section class="article">
-            <article>
-            	<nav>@Model.Meta.Tags</nav>
-            	<time>@Model.Meta.Author - @Model.Meta.FriendlyDate</time>
-            	<header>@Model.Meta.Title</header>
-                @Section['Content']
-            </article>
-            <aside>@Section['Side']</aside>
-        </section>
+    <section class="article">
+        <article>
+        	<nav>@Model.Meta.Tags</nav>
+        	<time>@Model.Meta.Author - @Model.Meta.FriendlyDate</time>
+        	<header>@Model.Meta.Title</header>
+            @Section['Content']
+        </article>
+        <aside>@Section['Side']</aside>
+    </section>
 @EndSection

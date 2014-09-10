@@ -1,4 +1,4 @@
-@Master['_layout/career-master.html']
+@Master['_layout/master-career.html']
 
 @Tags
 Author : Dan Lofquist
