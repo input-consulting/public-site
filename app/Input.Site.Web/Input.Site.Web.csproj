@@ -346,7 +346,7 @@
   <Target Name="AfterBuild">
     <Message Text="== AfterBuild ==" />
     <ItemGroup>
-      <AdditionalFiles Include="..\..\site\**\*.md; ..\..\site\**\*.markdown; ..\..\site\**\*.html; ..\..\site\**\*.png" />
+      <AdditionalFiles Include="..\..\site\**\*.md; ..\..\site\**\*.markdown; ..\..\site\**\*.html; ..\..\site\**\*.png; ..\..\site\**\*.jpg" />
     </ItemGroup>
     <Message Text="$(WebProjectOutputDir)" />
     <Message Text="Files to copy: @(AdditionalFiles)" />
