@@ -201,3 +201,6 @@ section.logo {
 .visible{
     opacity:1;
 }
+.frontpicture{
+    width: 100%;
+}

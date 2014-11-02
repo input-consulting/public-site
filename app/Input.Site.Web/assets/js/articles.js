@@ -58,9 +58,8 @@ $(window).scroll(function () {
 
 jQuery(document).ready(function() {
     jQuery('.post').addClass("hidden").viewportChecker({
-        classToAdd: 'visible animated bounceInLeft',
-        offset: 200,
-        fade:233
+        classToAdd: 'visible animated bounceInLeft fadeIn',
+        offset: 200
     });
 });
 
