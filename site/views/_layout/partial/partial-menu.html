@@ -3,10 +3,12 @@
         <section class="mobile">
             <a id="mobile-menu-action" href="#">&#9776;</a>
         </section>
-        <section class="logo">
-            <a href="/"><img src="@Path['~/static/img/logo.png']"></img></a>
-        </section>
-        <section class="desktop">
+    </nav>
+    <div class="navbar">
+        <div class="mobilelogo">
+            <div><a href="/"><img src="@Path['~/static/img/logo.png']"></img></a></div>
+        </div>
+        <div class="desktop">
             <ul>
                 <li><a href="#">Om oss</a></li>
                 <li><a href="/nyheter">Nyheter</a></li>
@@ -15,6 +17,12 @@
                 <li><a href="/kontakt">Kontakt</a></li>
                 <li><a href="/search">Sök</a></li>
             </ul>
-        </section>
-    </nav>
+        </div>
+    </div>
+    <div class="content">
+        <div id="container">
+            <div id="navi"><img src="@Path['~/static/img/anders.png']"></img></div>
+            <div id="infoi"><a href="/"><img src="@Path['~/static/img/logo.png']"></img></a></div>
+        </div>
+    </div>
 </section>
