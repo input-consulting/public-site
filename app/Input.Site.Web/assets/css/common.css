@@ -3877,3 +3877,7 @@ article footer a:hover {
 .fullScaledPicture{
   width: 100%;
 }
+
+.post{
+    height: 100vh !important;
+}

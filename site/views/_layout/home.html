@@ -2,25 +2,35 @@
 
 @Section['MainContent']
 
-<section class="headline">                
+<div class="post">
+<section class="headline">
     @Model.Meta.Headline.Abstract
 </section>
+</div>
 
+<div class="post">
 <section class="news">
     <h2>Aktuellt</h2>
     @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.Articles];
 </section>
+</div>
 
+<div class="post">
 <section class="articles">
     @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.ArticlesOne];
 </section>
+</div>
 
+<div class="post">
 <section class="alla-inputtare">
     <h2>Vilka är vi</h2>
     @Partial['_layout/partial/partial-inputtare.html', Model.Meta.Inputtare];    
 </section>
+</div>
 
+<div class="post">
 <section class="articles">
     @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.ArticlesTwo];    
-</section>            
+</section>
+</div>
 @EndSection
