@@ -177,12 +177,13 @@ section.logo {
 }
 
 .navbar {
-    width: 100%;
+    width: 70%;
     height: 10%;
-    background-color: white;
-    z-index:1;
-    display:none;
-    box-shadow: 0px 3px 5px #888888;
+    background-color: #FFF;
+    z-index: 1;
+    display: none;
+    box-shadow: 0px 3px 5px #888;
+    margin-left: 15%;
 }
 .fixed {
     display: block;

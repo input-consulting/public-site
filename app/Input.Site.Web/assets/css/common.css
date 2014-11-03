@@ -72,7 +72,15 @@ header {
   font-weight: 600;
 }
 .quote{
-  font-family: cursive;
+  text-align: left;
+  position: absolute;
+  width: 50%;
+  top: 20%;
+}
+
+.quote > p{
+    font-family: cursive;
+    font-size: 20px;
 }
 blockquote {
   font-family: Garamond, "Apple Garamond", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
@@ -3884,3 +3892,7 @@ article footer a:hover {
 .post{
     height: 100vh !important;
 }
+#alla-inputtare{
+    width: 50%;
+}
+
