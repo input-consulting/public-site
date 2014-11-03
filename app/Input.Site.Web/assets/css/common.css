@@ -307,7 +307,7 @@ body section.main section {
   margin-left: auto;
   padding-right: 1em;
   padding-left: 1em;
-  max-width: 1400px;
+  max-width: 100%;
 }
 body section.main section h2 {
   text-align: center;
