@@ -203,4 +203,5 @@ section.logo {
 }
 .frontpicture{
     width: 100%;
+    display: none;
 }

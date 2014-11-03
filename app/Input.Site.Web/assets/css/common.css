@@ -71,6 +71,9 @@ h6,
 header {
   font-weight: 600;
 }
+.quote{
+  font-family: cursive;
+}
 blockquote {
   font-family: Garamond, "Apple Garamond", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }

@@ -9,6 +9,12 @@
 </div>
 
 <div class="post">
+    <section class="alla-inputtare">
+        @Partial['_layout/partial/partial-inputtare.html', Model.Meta.Inputtare];
+    </section>
+</div>
+
+<div class="post">
 <section class="news">
     <h2>Aktuellt</h2>
     @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.Articles];
@@ -18,13 +24,6 @@
 <div class="post">
 <section class="articles">
     @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.ArticlesOne];
-</section>
-</div>
-
-<div class="post">
-<section class="alla-inputtare">
-    <h2>Vilka är vi</h2>
-    @Partial['_layout/partial/partial-inputtare.html', Model.Meta.Inputtare];    
 </section>
 </div>
 
