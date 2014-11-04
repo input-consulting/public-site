@@ -79,7 +79,7 @@ section.logo {
 }
 @media (min-width: 39em) {
   section {
-    font-size: 100%;
+    font-size: 95%;
   }
   section.mobile {
     display: none;
@@ -197,8 +197,9 @@ section.logo {
     height: 6%;
     background-color: #FFF;
     z-index: 1;
-    box-shadow: 0px 3px 5px #888;
+    box-shadow: 0px 3px 3px #888;
     display:none;
+    background-color: #D0E1E9;
 }
 .fixed {
     display:none;
@@ -234,6 +235,7 @@ section.logo {
     transform: translateX(-50%) translateY(-50%);
     font-family: cursive;
     overflow:scroll;
+    font-size: 16px;
 }
 
 #mobilelogo{
