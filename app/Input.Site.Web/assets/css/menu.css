@@ -80,6 +80,7 @@ section.logo {
 @media (min-width: 39em) {
   section {
     font-size: 95%;
+    padding-top: 5%;
   }
   section.mobile {
     display: none;
@@ -225,17 +226,7 @@ section.logo {
     width: 100%;
     display: none;
     position: absolute;
-    top: -5%;
-}
-
-#quote{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-family: cursive;
-    overflow:scroll;
-    font-size: 16px;
+    top: -10%;
 }
 
 #mobilelogo{
@@ -246,7 +237,6 @@ section.logo {
 }
 
 #news{
-    padding-top: 10%;
     width: 85%;
 }
 #footer{

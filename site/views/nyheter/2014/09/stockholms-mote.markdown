@@ -3,13 +3,11 @@
 @Tags
 Author : Hndril Ellert
 Date: 2014-09-03
-Title: Vi möttes i Stockholm
+Title: Management
 Tags: Nyhet, Hendrik
 @EndTags
 
 @Section['Content']
-
-### På kontoret
 
 och pratade :-)
 

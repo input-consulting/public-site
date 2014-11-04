@@ -75,7 +75,11 @@ header {
   text-align: left;
   position: absolute;
   width: 50%;
-  top: 10%;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-family: cursive;
+  font-size: 16px;
 }
 
 .quote > p{
@@ -3905,4 +3909,12 @@ article footer a:hover {
     color: #758694;
 }
 
+#block_container
+{
+    text-align:center;
+}
+#bloc1, #bloc2
+{
+    display:inline;
+}
 
