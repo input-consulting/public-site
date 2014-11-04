@@ -9,27 +9,21 @@
 </div>
 
 <div class="post">
+    <section class="articles scrollsection" id="articles">
+        @Partial['_layout/partial/partial-home-quote.html', Model.Meta];
+    </section>
+</div>
+
+<div class="post">
     <section class="alla-inputtare scrollsection" id="alla-inputtare">
         @Partial['_layout/partial/partial-inputtare.html', Model.Meta.Inputtare];
     </section>
 </div>
 
 <div class="post">
-<section class="news scrollsection">
+<section class="news scrollsection" id="news">
     <h2>Aktuellt</h2>
     @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.Articles];
-</section>
-</div>
-
-<div class="post">
-<section class="articles scrollsection">
-    @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.ArticlesOne];
-</section>
-</div>
-
-<div class="post">
-<section class="articles scrollsection">
-    @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.ArticlesTwo];    
 </section>
 </div>
 @EndSection

@@ -1,21 +1,21 @@
-<section class="header scrollsection">
+<section class="header scrollsection" id="header">
     <nav class="menu">
         <section class="mobile">
             <a id="mobile-menu-action" href="#">&#9776;</a>
         </section>
     </nav>
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <div class="mobilelogo">
             <div><a href="/"><img src="@Path['~/static/img/logo.png']"></img></a></div>
         </div>
         <div class="desktop">
             <ul>
-                <li><a href="#">Om oss</a></li>
-                <li><a href="/nyheter">Nyheter</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/jobba-hos-oss">Jobba hos oss</a></li>
-                <li><a href="/kontakt">Kontakt</a></li>
-                <li><a href="/search">Sök</a></li>
+                <li><a href="#" class="scroll-link" data-id="header">Om oss</a></li>
+                <li><a href="#" class="scroll-link" data-id="news">Aktuellt</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Jobba hos oss</a></li>
+                <li><a href="#" class="scroll-link" data-id="footer">Kontakt</a></li>
+                <li><a href="#">Sök</a></li>
             </ul>
         </div>
     </div>
@@ -23,3 +23,4 @@
         <div><img u="image" class="frontpicture" src="@Path['~/static/img/anders.png']" /></div>
     </div>
 </section>
+

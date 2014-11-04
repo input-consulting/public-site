@@ -75,7 +75,7 @@ header {
   text-align: left;
   position: absolute;
   width: 50%;
-  top: 20%;
+  top: 10%;
 }
 
 .quote > p{
@@ -3895,4 +3895,14 @@ article footer a:hover {
 #alla-inputtare{
     width: 50%;
 }
+
+.menu-link {
+    color: black;
+    cursor: pointer;
+}
+
+.menu-link:hover{
+    color: #758694;
+}
+
 

@@ -72,6 +72,11 @@ section.logo {
     margin-left: 35%;
 }
 /* tablet and up */
+@media only screen and (max-width: 40em){
+    .mobilelogo{
+        display: none;
+    }
+}
 @media (min-width: 39em) {
   section {
     font-size: 100%;
@@ -79,6 +84,18 @@ section.logo {
   section.mobile {
     display: none;
   }
+  
+  #mobilelogo{
+      display: block;
+  }
+
+  .navbar{
+    display: none;
+  }
+  .fixed{
+    display: none;
+  }
+
   .mobilelogo{
     display: none;
   }
@@ -128,7 +145,6 @@ section.logo {
     text-align: left;
   }
 .desktop {
-    margin-top: 1em;
     margin-bottom: 1em;
     width: 100%;
     float: left;
@@ -149,7 +165,7 @@ section.logo {
 /*# sourceMappingURL=menu.css.map */
 
 
-/* clean this up when haveing new branch */
+/* clean this up when having new branch */
 
 #container {
     width: 100%;
@@ -178,15 +194,18 @@ section.logo {
 
 .navbar {
     width: 100%;
-    height: 10%;
+    height: 6%;
     background-color: #FFF;
     z-index: 1;
-    display: none;
     box-shadow: 0px 3px 5px #888;
+    display:none;
 }
 .fixed {
-    display: block;
+    display:none;
     position:fixed;
+    width: 70%;
+    margin: 0 0 0 -35%;
+    left: 50%;
 }
 .content {
     width: 100%;
@@ -204,4 +223,39 @@ section.logo {
 .frontpicture{
     width: 100%;
     display: none;
+    position: absolute;
+    top: -5%;
 }
+
+#quote{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: cursive;
+    overflow:scroll;
+}
+
+#mobilelogo{
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    display: none;
+}
+
+#news{
+    padding-top: 10%;
+    width: 85%;
+}
+#footer{
+    padding-top: 10%;
+    width: 85%;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1em;
+    padding-left: 1em;
+    max-width: 100%;
+}
+
+
