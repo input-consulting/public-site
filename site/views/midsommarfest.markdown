@@ -10,6 +10,7 @@ Tags: Oktoberfest
 @Section['Content']
 
 ## Japp, det blir en i år med !
+Hurra
 
 
 :-)
