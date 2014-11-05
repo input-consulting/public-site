@@ -70,7 +70,7 @@
       <HintPath>..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
     </Reference>
     <Reference Include="SquishIt.Framework">
-      <HintPath>..\packages\SquishIt.0.9.5.4\lib\SquishIt.Framework.dll</HintPath>
+      <HintPath>..\packages\SquishIt.0.9.6.1\lib\SquishIt.Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +95,6 @@
     </ItemGroup>
     <Message Text="$(WebProjectOutputDir)" />
     <Message Text="Files to copy: @(AdditionalFiles)" />
-    <Copy SourceFiles="@(AdditionalFiles)" DestinationFiles="@(AdditionalFiles->'$(WebProjectOutputDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(AdditionalFiles)" DestinationFiles="@(AdditionalFiles-&gt;'$(WebProjectOutputDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
   </Target>
 </Project>
