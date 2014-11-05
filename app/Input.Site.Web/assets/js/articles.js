@@ -28,7 +28,7 @@ Articles.articleLists = (function () {
 
 $(document).ready(function () {
     Articles.articleLists.init();
-    $(".frontpicture").fadeIn(1000);
+    $(".frontpicture").fadeIn(500);
 });
 
 //TODO clean this up when haveing new branch
