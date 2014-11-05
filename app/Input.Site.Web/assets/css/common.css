@@ -305,6 +305,9 @@ footer:after {
 }
 body section.main {
   padding: 0;
+  border-right: 10px solid #758694;
+  border-left: 10px solid #758694;
+  border-top: 10px solid #758694;
 }
 body section.main section {
   margin-right: auto;
@@ -3917,4 +3920,10 @@ article footer a:hover {
 {
     display:inline;
 }
+
+
+
+
+
+
 
