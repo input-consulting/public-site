@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product">
 <head>
-    <title>Input Consulting AB</title>
-
     <meta charset="utf-8">
+    <title>Input Consulting AB</title>
+   
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="title" content="Input Consulting" />
     <meta name="description" content="Input Consulting Stockholm AB" />
@@ -11,18 +11,19 @@
     <meta name="Copyright" content="Input Consulting" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    @Model.PublicCss
+    <link href="@Path['~/assets/css/site.css']" rel="stylesheet"/>
 </head>
 <body>
-        <section class="main">
-            @Partial['_layout/partial/partial-menu.html', Model.Meta];
+    <div id="wrap">
+        @Partial['_layout/partial/partial-menu.html', Model.Meta];
+        
+        <div class="container">
             @Section['MainContent'];
-            @Partial['_layout/partial/partial-footer.html', Model.Meta];
-        </section>
+        </div>    
+        
+         @Partial['_layout/partial/partial-footer.html', Model.Meta];
+    </div>
 
-        @Partial['_layout/partial/partial-mobile-menu.html', Model.Meta];
-
-    @Model.PublicJavaScript
-
+     <script src="@Path['~/assets/js/site.js']"></script>
 </body>
 </html>

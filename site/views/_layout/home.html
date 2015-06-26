@@ -1,50 +1,55 @@
-﻿@Master['_layout/master-page.html']
-
-@Section['MainContent']
-
-<div class="post">
-<section class="headline">
-    @Model.Meta.Headline.Abstract
-</section>
+﻿@Master['_layout/master-page.html'] @Section['MainContent']
+<div class="divider" id="home"></div>
+<div class="row">
+    <div class="col-md-12">@Model.Meta.Headline.Abstract</div>
 </div>
 
-<div class="post">
-    <section class="articles scrollsection" id="articles">
+<div class="divider" id="about"></div>
+<div class="row">
+    <div class="col-md-12">
+        <h2></h2>
         @Partial['_layout/partial/partial-home-quote.html', Model.Meta];
-    </section>
+    </div>
 </div>
 
-<div class="post">
-    <section class="alla-inputtare scrollsection" id="alla-inputtare">
+<div class="divider" id="culture"></div>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Kultur</h2>
         @Partial['_layout/partial/partial-inputhistory.html', Model.Meta.Inputtare];
-    </section>
+    </div>
 </div>
 
-<div class="post">
-<section class="news scrollsection" id="vara-tjanster">
-    <h2>Våra tjänster</h2>
-    @Partial['_layout/partial/partial-vara-tjanster.html', Model.Meta];
-</section>
+<div class="divider" id="services"></div>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Tjänster</h2>
+        @Partial['_layout/partial/partial-vara-tjanster.html', Model.Meta];
+    </div>
 </div>
 
-<div class="post">
-<section class="news scrollsection" id="salj">
-    <h2>Sälj</h2>
-    @Partial['_layout/partial/partial-salj.html', Model.Meta];
-</section>
+<div class="divider" id="sales"></div>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Sälj</h2>
+        @Partial['_layout/partial/partial-salj.html', Model.Meta];
+    </div>
 </div>
 
-<div class="post">
-<section class="news scrollsection" id="inputtare">
-    <h2>Inputtare</h2>
-    @Partial['_layout/partial/partial-inputtare.html', Model.Meta];
-</section>
+<div class="divider" id="crew"></div>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Inputtare</h2>
+        @Partial['_layout/partial/partial-inputtare.html', Model.Meta];
+    </div>
 </div>
 
-<div class="post">
-<section class="news scrollsection" id="referensuppdrag">
-    <h2>Referensuppdrag</h2>
-    @Partial['_layout/partial/partial-referensuppdrag.html', Model.Meta];
-</section>
+<div class="divider" id="contact"></div>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Kontakt</h2>
+        @Partial['_layout/partial/partial-referensuppdrag.html', Model.Meta];
+    </div>
 </div>
+
 @EndSection

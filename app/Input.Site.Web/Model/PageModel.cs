@@ -6,13 +6,9 @@ namespace InputSite.Model
     public class PageModel
     {
         public dynamic Meta { get; private set; }
-        public string PublicCss { get; private set; }
-        public string PublicJavaScript { get; private set; }
 
         public PageModel()
         {
-            PublicCss = Bundle.Css().RenderCachedAssetTag("public-css");
-            PublicJavaScript = Bundle.JavaScript().RenderCachedAssetTag("public-js");
             Meta = new ExpandoObject();
         }
 

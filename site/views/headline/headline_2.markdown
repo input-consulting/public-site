@@ -1,2 +1,2 @@
-## Vi har en ny hemsida ##
-Du kan följa arbetet på vår [blog](/blog)
+## Snorkel !! Vi har en ny bortasida ##
+Du kan inte följa arbetet på vår [blog](/blog)
