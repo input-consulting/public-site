@@ -10,6 +10,11 @@ app/Input.Site.Web/[Ss]tatic/*
 [Bb]in/
 [Oo]bj/
 
+# package managers
+node_modules/
+bower_components/
+packages/
+
 # mstest test results
 TestResults
 
@@ -99,12 +104,6 @@ csx
 
 # Windows Store app package directory
 AppPackages/
-
-# NuGet packages
-packages/
-
-# NodeJs modules
-node_modules/
 
 # Others
 [Bb]in
