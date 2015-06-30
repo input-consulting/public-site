@@ -1,4 +1,4 @@
-﻿html,
+html,
 body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
@@ -31,58 +31,104 @@ body {
   padding-bottom:20px;
 }
 
-#nav {
-  width: 100%;
-  position:static;
-  top:-32px;
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .credit {
+  margin: 20px 0;
 }
 
-#nav.affix {
-   position: fixed;
-   top: 0;
-   z-index:10;
-   -webkit-transition: all .6s ease-in-out;
+article {
+    font-size: 1.5em;
+    
+    header {
+        font-size: 2em;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: left;
+        margin-bottom: 20px;
+    }
 }
 
-@media (min-width: 767px) {
-  .navbar-nav.nav-justified > li{
-      float:none;
-  }
-}
-  
-.navbar-nav {
-  margin: 1px 1px; 
-}  
-  
-/* customize nav style */
-.navbar-custom {
-    background-color: #2e2e2e;
-	font-weight:700;
-    text-transform:uppercase;
-    border-width:0;
-}
-.navbar-custom  .navbar-nav>li>a {
-	color: #ddd;
-}
-.navbar-custom  .dropdown-menu li>a:hover {
-	color: #eee;
-}
-.navbar-custom  .navbar-nav li>a:hover, .navbar-nav li .open, .navbar-custom .navbar-nav .active a  {
-	background-color: #000;
-}
-.navbar-custom .navbar-nav>.dropdown>a .caret {
-	border-top-color: #999;
-	border-bottom-color: #999;
+/* Since positioning the image, we need to help out the caption */
+/* Declare heights because of positioning of img element */
+#input-header {
+    position: relative;
+    height: 600px;
+    
+    &.item {
+        background-color:#bbb;
+    }
+    
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      max-height: 600px;
+    }
+    
+    blockquote {
+        font-family: 'Bree Serif', serif;
+        font-size: 26px;
+    }
 }
 
-.navbar-collapse.in { /*3.0.2 bug workaround*/
-    overflow-y: visible;
+.header-caption {
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    bottom: 20px;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);    
 }
 
-.navbar-toggle {
-	outline:0;
+
+section {
+    margin : 0;
+    padding: 0;
+    min-height: 500px;
+    height: auto !important;
+    height: 100%;
+    padding-top:100px;
 }
 
-.divider {
-	height:50px;
+header {
+    &.hendrik {
+        background: url('/assets/img/hendrik-header.jpg'); 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position : top;
+    }
 }
+
+.team-input-1 {
+	background: url('/assets/img/team-input-1.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;    
+}
+.team-input-2 {
+	background: url('/assets/img/team-input-2.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+.team-input-3 {
+	background: url('/assets/img/team-input-3.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+
+

@@ -4,26 +4,21 @@
     <meta charset="utf-8">
     <title>Input Consulting AB</title>
    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="title" content="Input Consulting" />
     <meta name="description" content="Input Consulting Stockholm AB" />
     <meta name="author" content="Input Consulting" />
     <meta name="Copyright" content="Input Consulting" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
     <link href="@Path['~/assets/css/site.css']" rel="stylesheet"/>
+    
 </head>
 <body>
     <div id="wrap">
-        @Partial['_layout/partial/partial-menu.html', Model.Meta];
-        
-        <div class="container">
-            @Section['MainContent'];
-        </div>    
-        
-         @Partial['_layout/partial/partial-footer.html', Model.Meta];
+        @Partial['_layout/partial/partial-header.html', Model];
+        @Partial['_layout/partial/partial-menu.html', Model];
+        @Section['MainContent'];
     </div>
-
-     <script src="@Path['~/assets/js/site.js']"></script>
+    <script src="@Path['~/assets/js/site.js']"></script>
 </body>
 </html>

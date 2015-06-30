@@ -39,10 +39,15 @@ gulp.task('build-content', function () {
     .pipe(gulp.dest(paths.content.output));
 });
 
+gulp.task('copy-images', function () {
+  return gulp.src(paths.images.source)
+    .pipe(gulp.dest(paths.images.output));
+});
+
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-styles', 'build-fonts', 'build-views', 'build-content'],
+    ['build-system', 'build-styles', 'build-fonts', 'build-views', 'build-content', 'copy-images'],
     callback
   );
 });

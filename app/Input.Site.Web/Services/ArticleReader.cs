@@ -42,6 +42,11 @@ namespace InputSite.Services
                         .OrderByDescending(d => d.BlogDate);
         }
 
+        public ArticleModel ArticleById(string id)
+        {
+            return _articleStorage.ArticleById(id);
+        }
+
         public IEnumerable<string> TagCloud()
         {
             return _articleStorage.TagCloud();

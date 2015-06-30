@@ -15,5 +15,6 @@ namespace InputSite.Interfaces
 
         IEnumerable<string> TagCloud();
 
+        ArticleModel ArticleById(string id);
     }
 }

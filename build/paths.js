@@ -4,6 +4,7 @@ var project = 'Input.Site.Web/'
 var appRoot = 'app/';
 var siteRoot = 'site/';
 var views = siteRoot + '/views';
+var images = siteRoot + '/static/img';
 
 module.exports = {
   root: appRoot,
@@ -37,6 +38,10 @@ module.exports = {
   content : {
       source : [ views + '/**/*.markdown', views + '/**/*.md' ],
       output : appRoot + project + 'views/', 
+  },
+  images : {
+      source : images + '/**/*.*' ,
+      output : appRoot + project + 'assets/img', 
   },
 
   output: appRoot + project + 'assets',

@@ -35,22 +35,36 @@ namespace InputSite.Services
         public IEnumerable<string> Roles { get; private set; }
 
         public string ResourceName { get; private set; }
+        public string Id { get; private set; }
+
+        private const string Meta = "@Meta";
+        private const string EndMeta = "@EndMeta";
 
         public ArticleParser(string markdown, string resourceName)
         {
             _markdown = markdown;
-            var metadata = _markdown.Contains("@Tags") ? markdown.Substring(markdown.IndexOf("@Tags", StringComparison.Ordinal) + 5,
-				                                        markdown.IndexOf("@EndTags", StringComparison.Ordinal) - 7)
-			                                            : string.Empty;
+
+            var metadata = string.Empty;
+            if (_markdown.Contains(Meta))
+            {
+                metadata = Regex.Match(_markdown, @"@Meta(.*?)@EndMeta", RegexOptions.Singleline).Groups[1].Value;
+            } 
 
 			var metadataSplit = metadata.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
 			foreach (var item in metadataSplit)
 			{
 				var itemdata = item.Split(new[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
 				if (itemdata.Length < 2) continue;
-				_metaData.Add(itemdata[0].Trim(), itemdata[1].Trim());
+
+			    var key = itemdata[0].Trim();
+			    var value = itemdata[1].Trim();
+			    if (itemdata.Length > 2)
+                    value = string.Join(":", itemdata.Skip(1));
+
+				_metaData.Add(key, value);
 			}
 
+            Id = GetId();
             Author = GetAuthor();
 			BlogDate = GetBlogDate();
 			Title = GetTitle();
@@ -61,24 +75,32 @@ namespace InputSite.Services
             ResourceName = resourceName;
 		}
 
+        private string GetId()
+        {
+            if (_metaData.All(x => x.Key != "Id")) return string.Empty;
+
+            return _metaData.FirstOrDefault(x => x.Key == "Id").Value.Trim();
+        }
+
         private string GetBody()
         {
             var content = _markdown;
             if (string.IsNullOrWhiteSpace(content)) return string.Empty;
 
-            if (content.Contains("@Tags"))
+            if (content.Contains(Meta))
             {
-                content = content.Substring(content.IndexOf("@EndTags", StringComparison.Ordinal) + 8);
+                content = content.Substring(content.IndexOf(EndMeta, StringComparison.Ordinal) + 8);
             }
 
-            return SSVESubstitution.Replace(content, "").Trim();                
+            content = SSVESubstitution.Replace(content, "").Trim();
+            return TransformContentToHtml(content);
         }
 
         private IEnumerable<string> GetTags()
 		{
-			if (_metaData.All(x => x.Key != "Tags")) return Enumerable.Empty<string>();
+			if (_metaData.All(x => x.Key != Meta)) return Enumerable.Empty<string>();
 
-			var csv = _metaData.FirstOrDefault(x => x.Key == "Tags").Value;
+			var csv = _metaData.FirstOrDefault(x => x.Key == "Meta").Value;
 			return csv.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim());
 		}
 
@@ -103,7 +125,9 @@ namespace InputSite.Services
 			if (_metaData.All(x => x.Key != "Date")) return DateTime.MinValue;
 
 			var kvp = _metaData.FirstOrDefault(x => x.Key == "Date");
-            var blogDateTime = DateTime.ParseExact(kvp.Value, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+
+		    DateTime blogDateTime;
+		    DateTime.TryParse(kvp.Value, CultureInfo.InvariantCulture, DateTimeStyles.None, out blogDateTime);
 
 			return blogDateTime;
 		}
@@ -127,9 +151,9 @@ namespace InputSite.Services
 		    var content = _markdown;
             if (string.IsNullOrWhiteSpace(content)) return string.Empty;
 
-            if (content.Contains("@Tags"))
+            if (content.Contains(Meta))
             {
-                content = content.Substring(content.IndexOf("@EndTags", StringComparison.Ordinal) + 8);
+                content = content.Substring(content.IndexOf(EndMeta, StringComparison.Ordinal) + 8);
             }
 
             content = SSVESubstitution.Replace(content, "").Trim();

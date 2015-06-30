@@ -2,7 +2,7 @@
 
 :: ----------------------
 :: KUDU Deployment Script
-:: Version: 0.1.13
+:: Version: 0.1.10
 :: ----------------------
 
 :: Prerequisites
@@ -68,8 +68,8 @@ IF NOT DEFINED MSBUILD_PATH (
 echo Handling .NET Web Application deployment.
 
 :: 1. Restore NuGet packages
-IF /I "Bilprovningen.PremieKund.sln" NEQ "" (
-  call :ExecuteCmd nuget restore "%DEPLOYMENT_SOURCE%\src\Bilprovningen.PremieKund.sln"
+IF /I "InputSite.sln" NEQ "" (
+  call :ExecuteCmd nuget restore "%DEPLOYMENT_SOURCE%\app\InputSite.sln"
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
@@ -105,16 +105,21 @@ IF /I "gulpfile.js" NEQ "" (
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
-:: 5. Build to the temporary path
+:: 3. Build to the temporary path
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
-  call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\src\PremieKund.Web\PremieKund.Web.Public.csproj" /t:TransformWebConfig /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="%DEPLOYMENT_TEMP%";AutoParameterizationWebConfigConnectionStrings=false;Configuration=Deploy%BRANCH% /p:SolutionDir="%DEPLOYMENT_SOURCE%\.\\" %SCM_BUILD_ARGS%
+  call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\app/Input.Site.Web/Input.Site.Web.csproj" /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="%DEPLOYMENT_TEMP%";AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release /p:SolutionDir="%DEPLOYMENT_SOURCE%\.\\" %SCM_BUILD_ARGS%
 ) ELSE (
-  call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\src\PremieKund.Web\PremieKund.Web.Public.csproj" /t:TransformWebConfig /nologo /verbosity:m /t:Build /p:AutoParameterizationWebConfigConnectionStrings=false;Configuration=Deploy%BRANCH% /p:SolutionDir="%DEPLOYMENT_SOURCE%\.\\" %SCM_BUILD_ARGS%
+  call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\app/Input.Site.Web/Input.Site.Web.csproj" /nologo /verbosity:m /t:Build /p:AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release /p:SolutionDir="%DEPLOYMENT_SOURCE%\.\\" %SCM_BUILD_ARGS%
 )
 
 IF !ERRORLEVEL! NEQ 0 goto error
 
-:: 6. KuduSync
+:: 2. Copy site assets !
+call xcopy %DEPLOYMENT_SOURCE%\\site %DEPLOYMENT_TARGET% /Y /s /i
+
+:: 3. Run tests
+
+:: 4. KuduSync
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_TEMP%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
   IF !ERRORLEVEL! NEQ 0 goto error
@@ -122,11 +127,8 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 
 :: 7. Copy site assets, thanks to solution files we cant have addhoc files
 SET DEPLOYMENT_HOME=D:\\home\\site\\wwwroot
-call xcopy %DEPLOYMENT_SOURCE%\\src\\PremieKund.Web\\assets %DEPLOYMENT_HOME%\\assets /Y /s /i
+call xcopy %DEPLOYMENT_SOURCE%\\src\\Input.Site.Web\\assets %DEPLOYMENT_HOME%\\assets /Y /s /i
 
-echo transforming %DEPLOYMENT_SOURCE%\src\PremieKund.Web\log4net.deploy%BRANCH%.config
-echo to %DEPLOYMENT_HOME%\log4net.config
-call xcopy %DEPLOYMENT_SOURCE%\src\PremieKund.Web\log4net.deploy%BRANCH%.config %DEPLOYMENT_HOME%\log4net.config /Y
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -1,55 +1,83 @@
-﻿@Master['_layout/master-page.html'] @Section['MainContent']
-<div class="divider" id="home"></div>
-<div class="row">
-    <div class="col-md-12">@Model.Meta.Headline.Abstract</div>
-</div>
+@Master['_layout/master-page.html'] 
+
+@Section['MainContent']
 
 <div class="divider" id="about"></div>
-<div class="row">
-    <div class="col-md-12">
-        <h2></h2>
-        @Partial['_layout/partial/partial-home-quote.html', Model.Meta];
-    </div>
+<div class="container">
+    <section class="row">
+        <article>
+            <header>@Model.Meta.AboutArticle.Title</header>
+            @Model.Meta.AboutArticle.Body
+        </article>
+    </section>
 </div>
+<div class="divider"></div>
+
+<section class="team-input-1">
+  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+</section>
 
 <div class="divider" id="culture"></div>
-<div class="row">
-    <div class="col-md-12">
-        <h2>Kultur</h2>
-        @Partial['_layout/partial/partial-inputhistory.html', Model.Meta.Inputtare];
-    </div>
+<div class="container">
+    <section class="row">
+        <article>
+            <header>@Model.Meta.CultureArticle.Title</header>
+            @Model.Meta.CultureArticle.Body
+        </article>
+    </section>
 </div>
+<div class="divider"></div>
+
+<section class="team-input-2">
+  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+</section>
 
 <div class="divider" id="services"></div>
-<div class="row">
-    <div class="col-md-12">
-        <h2>Tjänster</h2>
-        @Partial['_layout/partial/partial-vara-tjanster.html', Model.Meta];
-    </div>
+<div class="container">
+    <section class="row">
+        <article>
+            <header>@Model.Meta.ServicesArticle.Title</header>
+            @Model.Meta.ServicesArticle.Body
+        </article>
+    </section>
 </div>
+<div class="divider"></div>
 
 <div class="divider" id="sales"></div>
-<div class="row">
-    <div class="col-md-12">
-        <h2>Sälj</h2>
-        @Partial['_layout/partial/partial-salj.html', Model.Meta];
-    </div>
+<div class="container">
+    <section class="row">
+        <article>
+            <header>@Model.Meta.SalesArticle.Title</header>
+            @Model.Meta.SalesArticle.Body
+        </article>
+    </section>
 </div>
+<div class="divider"></div>
+
+<section class="team-input-3">
+  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+</section>
 
 <div class="divider" id="crew"></div>
-<div class="row">
-    <div class="col-md-12">
-        <h2>Inputtare</h2>
-        @Partial['_layout/partial/partial-inputtare.html', Model.Meta];
-    </div>
+<div class="container">
+    <section class="row">
+        <article>
+            <header>@Model.Meta.CrewArticle.Title</header>
+            @Model.Meta.CrewArticle.Body
+        </article>
+    </section>
 </div>
+<div class="divider"></div>
 
 <div class="divider" id="contact"></div>
-<div class="row">
-    <div class="col-md-12">
-        <h2>Kontakt</h2>
-        @Partial['_layout/partial/partial-referensuppdrag.html', Model.Meta];
-    </div>
+<div class="container">
+    <section class="row">
+        <article>
+            <header>Just imagine how amazing this contact information will look</header>
+        </article>
+    </section>
 </div>
+<div class="divider"></div>
+
 
 @EndSection

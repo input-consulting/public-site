@@ -1,5 +1,4 @@
 ﻿using System.Dynamic;
-using SquishIt.Framework;
 
 namespace InputSite.Model
 {

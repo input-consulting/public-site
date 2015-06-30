@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using InputSite.Extensions;
 using InputSite.Interfaces;
 using Nancy;
@@ -11,13 +11,13 @@ namespace InputSite.WebModules
         {
 			Get["/"] = parameters =>
 			{
-                PageModel.Meta.Articles = articleReader.ArticlesByCategory(@"nyheter").Take(3);
-			    PageModel.Meta.Headline = articleReader.ArticlesByCategory(@"headline").Random().FirstOrDefault();
-			    PageModel.Meta.Inputtare = articleReader.ArticlesByCategory(@"inputtare").Random().Take(4);
-
-			    var articles = articleReader.ArticlesByCategory(@"artiklar").Random().Take(4).ToList();
-			    PageModel.Meta.ArticlesOne = articles.Take(2);
-                PageModel.Meta.ArticlesTwo = articles.Skip(2).Take(2);
+                PageModel.Meta.HomeArticle = articleReader.ArticleById("home");
+                PageModel.Meta.AboutArticle = articleReader.ArticleById("about");
+                PageModel.Meta.CultureArticle = articleReader.ArticleById("culture");
+                PageModel.Meta.ServicesArticle = articleReader.ArticleById("services");
+                PageModel.Meta.SalesArticle = articleReader.ArticleById("sales");
+                PageModel.Meta.ContactArticle = articleReader.ArticleById("contact");
+                PageModel.Meta.CrewArticle = articleReader.ArticleById("crew");
 
                 return Negotiate
                        .WithView("_layout/home")
