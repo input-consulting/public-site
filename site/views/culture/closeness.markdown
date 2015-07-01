@@ -1,7 +1,9 @@
+@Master['_layout/article-page.html'] 
+
 @Meta
-Title: NÄRHET
+Title: Närhet
 Date: 2014-08-01 00:01
-Tags: NÄRHET
+Tags: Närhet
 BgImage : /assets/images/bg1.jpg
 Image : /assets/imgages/article.jpg
 @EndMeta

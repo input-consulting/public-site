@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product">
+<head>
+    <meta charset="utf-8">
+    <title>Input Consulting AB - @Model.Meta.Title </title>
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="Input Consulting" />
+    <meta name="description" content="Input Consulting Stockholm AB" />
+    <meta name="author" content="Input Consulting" />
+    <meta name="Copyright" content="Input Consulting" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link href="@Path['~/assets/css/site.css']" rel="stylesheet"/>
+    
+</head>
+<body>
+    <div id="wrap">
+        <div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> Hem</a>
+                </div>
+            </div>
+        </div>      
+        
+        <div class="container">
+            <section class="row">
+               <article>
+                   <header>@Model.Meta.Title</header>
+                   @Section['Content']; 
+               </article>               
+            </section>
+        </div>            
+    </div>
+    <script src="@Path['~/assets/js/site.js']"></script>
+</body>
+</html>

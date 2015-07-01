@@ -3,7 +3,7 @@ body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
   -webkit-font-smoothing: antialiased;
-  font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 .row {
@@ -48,6 +48,37 @@ article {
         text-align: left;
         margin-bottom: 20px;
     }
+
+    nav {
+        
+        div {
+            
+            .thumbnail {
+                width: 220px;
+                height: 220px;
+                                                
+                &.thumbnail:hover {
+                    border-width: 10px;
+                    border-color: #2e2e2e;
+                }
+                
+                h3 {
+                    font-size: 16px;
+                }
+            }
+                    
+            a {
+                color :#333333;
+                
+                &:hover {
+                    color : #333333;
+                    text-decoration: none;
+                }
+            }
+        }
+        
+    }
+
 }
 
 /* Since positioning the image, we need to help out the caption */
@@ -95,6 +126,24 @@ section {
     height: auto !important;
     height: 100%;
     padding-top:100px;
+    
+}
+
+.bg-color-one {
+    background: #BF8D63;
+}
+
+.bg-color-two {
+    background: #3D8FA8;
+}
+
+.bg-color-three {
+    background: #F5F7F7;
+}
+
+.bg-color-four {
+    background: #4B2F1F;
+    color : #D4DDE0;
 }
 
 header {
@@ -130,5 +179,12 @@ header {
   	background-size: cover;
 }
 
+.gotham {
+    font-family: 'Gotham A', 'Gotham B', sans-serif;
+    font-weight: 500
+}
 
-
+.gotham-rounded {
+    font-family: 'Gotham Rounded A', 'Gotham Rounded B';
+    font-weight: 300
+}

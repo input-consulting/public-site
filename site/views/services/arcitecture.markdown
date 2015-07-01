@@ -1,3 +1,5 @@
+@Master['_layout/article-page.html'] 
+
 @Meta
 Title: Arkitektur
 Date: 2014-08-01 00:01

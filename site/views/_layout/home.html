@@ -2,82 +2,91 @@
 
 @Section['MainContent']
 
-<div class="divider" id="about"></div>
-<div class="container">
-    <section class="row">
+<div class="row">
+   <div class="divider" id="about"></div>
+    <section class="container">
         <article>
             <header>@Model.Meta.AboutArticle.Title</header>
             @Model.Meta.AboutArticle.Body
         </article>
     </section>
+    <div class="divider"></div>
 </div>
-<div class="divider"></div>
 
 <section class="team-input-1">
   <div class="col-sm-6 col-sm-offset-3 text-center"></div>
 </section>
 
-<div class="divider" id="culture"></div>
-<div class="container">
-    <section class="row">
+<div class="row bg-color-one">
+   <div class="divider" id="culture"></div>
+    <section class="container">
         <article>
             <header>@Model.Meta.CultureArticle.Title</header>
             @Model.Meta.CultureArticle.Body
+            <nav>
+                @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.CultureArticles];                
+            </nav>
         </article>
     </section>
+    <div class="divider"></div>
 </div>
-<div class="divider"></div>
 
 <section class="team-input-2">
   <div class="col-sm-6 col-sm-offset-3 text-center"></div>
 </section>
 
-<div class="divider" id="services"></div>
-<div class="container">
-    <section class="row">
+<div class="row bg-color-two">
+    <div class="divider" id="services"></div>
+    <section class="container">
         <article>
             <header>@Model.Meta.ServicesArticle.Title</header>
             @Model.Meta.ServicesArticle.Body
+            <nav>
+                @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.ServicesArticles];
+            </nav>
         </article>
+        
     </section>
+    <div class="divider"></div>
 </div>
-<div class="divider"></div>
 
-<div class="divider" id="sales"></div>
-<div class="container">
-    <section class="row">
+<div class="row bg-color-four">
+    <div class="divider" id="sales"></div>
+    <section class="container">
         <article>
             <header>@Model.Meta.SalesArticle.Title</header>
             @Model.Meta.SalesArticle.Body
+            <nav>
+                @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.SalesArticles];
+            </nav>
         </article>
     </section>
+    <div class="divider"></div>
 </div>
-<div class="divider"></div>
 
 <section class="team-input-3">
   <div class="col-sm-6 col-sm-offset-3 text-center"></div>
 </section>
 
-<div class="divider" id="crew"></div>
-<div class="container">
-    <section class="row">
+<div class="row bg-color-three">
+    <div class="divider" id="crew"></div>
+    <section class="container">
         <article>
             <header>@Model.Meta.CrewArticle.Title</header>
             @Model.Meta.CrewArticle.Body
         </article>
     </section>
+    <div class="divider"></div>
 </div>
-<div class="divider"></div>
 
-<div class="divider" id="contact"></div>
-<div class="container">
-    <section class="row">
+<div class="row">
+    <div class="divider" id="contact"></div>
+    <section class="container">
         <article>
             <header>Just imagine how amazing this contact information will look</header>
         </article>
     </section>
+    <div class="divider"></div>
 </div>
-<div class="divider"></div>
-
 
 @EndSection

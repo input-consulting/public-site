@@ -1,3 +1,5 @@
+@Master['_layout/article-page.html'] 
+
 @Meta
 Title: Hendrik
 Date: 2014-08-01 00:01
