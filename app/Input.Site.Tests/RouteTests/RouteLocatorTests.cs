@@ -27,7 +27,7 @@ namespace Input.Site.Tests.RouteTests
             staticRoutes.Count().Should().BeGreaterThan(0);
         }
 
-        [Test]
+        [Test,Ignore]
         public void should_find_date_routes()
         {
             var dynamicRoutes = _sut.DateRoutes();
