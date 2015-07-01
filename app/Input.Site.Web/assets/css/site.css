@@ -6877,6 +6877,12 @@ body {
 #wrap > .container {
   padding: 60px 15px 0;
 }
+#map-canvas {
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  padding: 15px;
+}
 .container .credit {
   margin: 20px 0;
 }
@@ -6958,8 +6964,7 @@ section {
   background: #F5F7F7;
 }
 .bg-color-four {
-  background: #4B2F1F;
-  color: #D4DDE0;
+  background: #DAAC79;
 }
 header.hendrik {
   background: url('/assets/img/hendrik-header.jpg');
