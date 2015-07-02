@@ -1,26 +1,107 @@
-﻿@Master['_layout/master-page.html']
+@Master['_layout/master-page.html'] 
 
 @Section['MainContent']
 
-<section class="headline">                
-    @Model.Meta.Headline.Abstract
+<div class="row">
+   <div class="divider" id="about"></div>
+    <section class="container">
+        <article>
+            <header>@Model.Meta.AboutArticle.Title</header>
+            @Model.Meta.AboutArticle.Body
+        </article>
+    </section>
+    <div class="divider"></div>
+</div>
+
+<section class="team-input-1">
+  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
 </section>
 
-<section class="news">
-    <h2>Aktuellt</h2>
-    @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.Articles];
+<div class="row bg-color-one">
+   <div class="divider" id="culture"></div>
+    <section class="container">
+        <article>
+            <header>@Model.Meta.CultureArticle.Title</header>
+            @Model.Meta.CultureArticle.Body
+            <nav>
+                @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.CultureArticles];    
+            </nav>
+        </article>
+    </section>
+    <div class="divider"></div>
+</div>
+
+<section class="team-input-2">
+  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
 </section>
 
-<section class="articles">
-    @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.ArticlesOne];
+<div class="row bg-color-two">
+    <div class="divider" id="services"></div>
+    <section class="container">
+        <article>
+            <header>@Model.Meta.ServicesArticle.Title</header>
+            @Model.Meta.ServicesArticle.Body
+            <nav>
+                @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.ServicesArticles];
+            </nav>
+        </article>
+        
+    </section>
+    <div class="divider"></div>
+</div>
+
+<div class="row bg-color-four">
+    <div class="divider" id="sales"></div>
+    <section class="container">
+        <article>
+            <header>@Model.Meta.SalesArticle.Title</header>
+            @Model.Meta.SalesArticle.Body
+            <nav>
+                @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.SalesArticles];
+            </nav>
+        </article>
+    </section>
+    <div class="divider"></div>
+</div>
+
+<section class="team-input-3">
+  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
 </section>
 
-<section class="alla-inputtare">
-    <h2>Vilka är vi</h2>
-    @Partial['_layout/partial/partial-inputtare.html', Model.Meta.Inputtare];    
-</section>
+<div class="row bg-color-three">
+    <div class="divider" id="crew"></div>
+    <section class="container">
+        <article>
+            <header>@Model.Meta.CrewArticle.Title</header>
+            @Model.Meta.CrewArticle.Body
+        </article>
+    </section>
+    <div class="divider"></div>
+</div>
 
-<section class="articles">
-    @Partial['_layout/partial/partial-home-artiklar.html', Model.Meta.ArticlesTwo];    
-</section>            
+<div class="row" id="contact">
+    <section class="container">
+        <article>
+            <header>kontakta oss</header>
+            <div id="map-canvas"></div>
+            <div class="divider"></div>    
+        </article>
+    </section>
+    <div class="col-sm-8"></div>
+      <div class="col-sm-3 pull-right">
+          <address>
+           <span id="map-input">
+            Input Consulting Stockholm AB<br>
+            Kungsgatan 62<br>
+            111 22 Stockholm</span><br>
+            +46 (8) 700 00 80
+          </address>
+
+          <address>
+            <strong>E-Post</strong><br>
+            <a href="mailto:#">info@input-consulting.se</a>
+          </address>
+      </div>    
+</div>
+
 @EndSection

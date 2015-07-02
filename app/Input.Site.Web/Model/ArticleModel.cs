@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Nancy.ModelBinding;
 
 namespace InputSite.Model
 {
     public class ArticleModel
     {
+        public string Body { get; private set; }
+
         public string Category { get; private set; }
 
         public string Author { get; private set; }
@@ -62,8 +65,9 @@ namespace InputSite.Model
 
         public string ResourceName { get; private set; }
 
-        public ArticleModel(string category, string author, string title, string ingress, IEnumerable<string> tags, IEnumerable<string> roles, string resourceName, DateTime date)
+        public ArticleModel(string category, string author, string title, string ingress, IEnumerable<string> tags, IEnumerable<string> roles, string resourceName, DateTime date, string body)
         {
+            Body = body;
             Category = category;
             Author = author;
             Title = title;
@@ -71,7 +75,7 @@ namespace InputSite.Model
             Tags = tags;
             Roles = roles;
             ResourceName = resourceName;
-            BlogDate = date;
+            BlogDate = date;            
         }
 
     }

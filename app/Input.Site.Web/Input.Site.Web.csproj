@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -75,12 +75,7 @@
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
-    <Reference Include="SquishIt.Framework, Version=0.9.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SquishIt.0.9.8\lib\SquishIt.Framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -95,173 +90,17 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="AjaxMin">
-      <HintPath>..\packages\AjaxMin.4.48.4489.28432\lib\net20\AjaxMin.dll</HintPath>
-    </Reference>
-    <Reference Include="EcmaScript.NET">
-      <HintPath>..\packages\YUICompressor.NET.2.0.0.0\lib\NET20\EcmaScript.NET.dll</HintPath>
-    </Reference>
-    <Reference Include="Iesi.Collections">
-      <HintPath>..\packages\YUICompressor.NET.2.0.0.0\lib\NET20\Iesi.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="Yahoo.Yui.Compressor">
-      <HintPath>..\packages\YUICompressor.NET.2.0.0.0\lib\NET20\Yahoo.Yui.Compressor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\css\article.css">
-      <DependentUpon>article.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\article.min.css">
-      <DependentUpon>article.less</DependentUpon>
-    </Content>
-    <Content Include="Assets\css\blog.css">
-      <DependentUpon>blog.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\career.css">
-      <DependentUpon>career.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\colors.css">
-      <DependentUpon>colors.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\common.css">
-      <DependentUpon>common.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\contact.css">
-      <DependentUpon>contact.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\fonts.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\footer.css.map">
-      <DependentUpon>footer.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\article.less" />
-    <Content Include="Assets\css\article.css.map">
-      <DependentUpon>article.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\blog.less" />
-    <Content Include="Assets\css\blog.css.map">
-      <DependentUpon>blog.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="Assets\css\footer.less" />
-    <Content Include="Assets\css\footer.css">
-      <DependentUpon>footer.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\jquery.sidr.dark.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\jquery.sidr.light.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\konsulter.css">
-      <DependentUpon>konsulter.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\menu.css">
-      <DependentUpon>menu.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\mixins.css">
-      <DependentUpon>mixins.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\mobile-menu.css">
-      <DependentUpon>mobile-menu.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\normalize.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\nyheter.css">
-      <DependentUpon>nyheter.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\nyheter.min.css">
-      <DependentUpon>nyheter.less</DependentUpon>
-    </Content>
-    <Content Include="Assets\css\search.css">
-      <DependentUpon>search.less</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\search.min.css">
-      <DependentUpon>search.less</DependentUpon>
-    </Content>
-    <Content Include="Assets\js\articles.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\js\input-common-init.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\js\jquery.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\js\jquery.sidr.min.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Assets\css\nyheter.less" />
-    <Content Include="Assets\css\nyheter.css.map">
-      <DependentUpon>nyheter.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\colors.less" />
-    <Content Include="Assets\css\mixins.less" />
-    <Content Include="Assets\css\mobile-menu.less" />
-    <Content Include="Assets\css\mobile-menu.css.map">
-      <DependentUpon>mobile-menu.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\colors.css.map">
-      <DependentUpon>colors.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\mixins.css.map">
-      <DependentUpon>mixins.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\career.less" />
-    <Content Include="Assets\css\career.css.map">
-      <DependentUpon>career.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\menu.less" />
-    <Content Include="Assets\css\menu.css.map">
-      <DependentUpon>menu.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\search.less" />
-    <Content Include="Assets\css\search.css.map">
-      <DependentUpon>search.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\common.less" />
-    <Content Include="Assets\css\common.css.map">
-      <DependentUpon>common.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\contact.less" />
-    <Content Include="Assets\css\contact.css.map">
-      <DependentUpon>contact.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\css\konsulter.less" />
-    <Content Include="Assets\css\konsulter.css.map">
-      <DependentUpon>konsulter.css</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="src\less\bootstrap.less" />
+    <Content Include="src\less\site-fonts.less" />
+    <Content Include="src\less\site-form.less" />
+    <Content Include="src\less\site-general.less" />
+    <Content Include="src\less\site.less" />
+    <Content Include="src\less\variables.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -276,8 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiModules\TagsModule.cs" />
-    <Compile Include="Bootstrap\Bundles.cs" />
-    <Compile Include="Bootstrap\BundlesStartup.cs" />
     <Compile Include="Bootstrap\EnsureThatDocumentIsValidMarkdown.cs" />
     <Compile Include="Bootstrap\EnsureThatRouteContainDateParts.cs" />
     <Compile Include="Bootstrap\EnsureThatRouteContainMarkupDocument.cs" />
@@ -303,14 +140,15 @@
     <Compile Include="Services\ArticleReader.cs" />
     <Compile Include="Services\ArticleStorage.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="WebModules\AssetsModule.cs" />
     <Compile Include="WebModules\BlogModule.cs" />
     <Compile Include="WebModules\DefaultModule.cs" />
     <Compile Include="WebModules\HomeModule.cs" />
     <Compile Include="WebModules\BaseModule.cs" />
     <Compile Include="WebModules\SearchModule.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="src\js\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -336,24 +174,12 @@
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
-    <MonoDevelop>
-      <Properties>
-        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
-      </Properties>
-    </MonoDevelop>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
-  </Target> -->
-  <Target Name="AfterBuild" Condition=" '$(OS)' == 'Windows_NT' ">
-    <Message Text="== AfterBuild ==" />
-    <ItemGroup>
-      <AdditionalFiles Include="..\..\site\**\*.md; ..\..\site\**\*.markdown; ..\..\site\**\*.html; ..\..\site\**\*.png; ..\..\site\**\*.jpg" />
-    </ItemGroup>
-    <Message Text="$(WebProjectOutputDir)" />
-    <Message Text="Files to copy: @(AdditionalFiles)" />
-    <!-- <Copy SoureFiles="@(AdditionalFiles)" DestinationFolder="%(RecursiveDir)%(Filename)%(Extension)"/> -->
-    <Copy SourceFiles="@(AdditionalFiles)" DestinationFiles="@(AdditionalFiles->'$(WebProjectOutputDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target> 
+  <Target Name="AfterBuild">
   </Target>
+  -->
 </Project>

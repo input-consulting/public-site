@@ -66,6 +66,9 @@ namespace InputSite.Services
             if (!string.IsNullOrEmpty(parser.Category))
                 doc.Add(new Field("category", parser.Category, Field.Store.YES, Field.Index.ANALYZED));
 
+            if ( !string.IsNullOrEmpty(parser.Id))
+                doc.Add(new Field("id", parser.Id, Field.Store.YES, Field.Index.ANALYZED));
+
             doc.Add(new Field("author", parser.Author, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("title", parser.Title, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("body", parser.Body, Field.Store.YES, Field.Index.ANALYZED));
@@ -130,7 +133,6 @@ namespace InputSite.Services
             var reader = _indexWriter.GetReader();
             using (var searcher = new IndexSearcher(reader))
             {
-//                var parser = new QueryParser(Version.LUCENE_30, "tags", _standardAnalyzer);
                 var parser = new MultiFieldQueryParser(Version.LUCENE_30, new[] { "tags", "roles" }, _standardAnalyzer);                
 
                 var baked = string.Join(" or ", tags);
@@ -169,7 +171,21 @@ namespace InputSite.Services
                 yield return terms.Term.Text;
                 if (!terms.Next()) break;
             }
-        } 
+        }
+
+        public ArticleModel ArticleById(string id)
+        {
+            var reader = _indexWriter.GetReader();
+            using (var searcher = new IndexSearcher(reader))
+            {
+                var parser = new QueryParser(Version.LUCENE_30, "id", _standardAnalyzer);
+
+                var query = parser.Parse(id);
+                var hits = searcher.Search(query, 100);
+
+                return BuildResult(hits, searcher).FirstOrDefault();
+            }
+        }
 
         private static IEnumerable<ArticleModel> BuildResult(TopDocs hits, IndexSearcher searcher)
         {
@@ -183,7 +199,7 @@ namespace InputSite.Services
                 var resource = string.Join("/", aDock.GetValues("resource"));
 
                 yield return
-                    new ArticleModel(aDock.Get("category"), aDock.Get("author"), aDock.Get("title"), aDock.Get("abstract"), tags, roles, resource, date);
+                    new ArticleModel(aDock.Get("category"), aDock.Get("author"), aDock.Get("title"), aDock.Get("abstract"), tags, roles, resource, date, aDock.Get("body"));
             }
         }
 

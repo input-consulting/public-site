@@ -9,6 +9,7 @@ namespace InputSite.Interfaces
         IEnumerable<ArticleModel> ArticlesByCategory(string categoryName);
         IEnumerable<ArticleModel> ArticlesByTags(IEnumerable<string> tags);
         IEnumerable<ArticleModel> ArticlesByAuthor(string author);
+        ArticleModel ArticleById(string id);
         IEnumerable<string> TagCloud();
     }
 }

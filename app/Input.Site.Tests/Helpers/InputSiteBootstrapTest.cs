@@ -52,8 +52,6 @@ namespace Input.Site.Tests.Helpers
             StaticConfiguration.DisableErrorTraces = false;
 
             base.ApplicationStartup(container, pipelines);
-
-            BundlesStartup.Setup(RootPathProvider);
         }
 
         protected override void ConfigureApplicationContainer(TinyIoCContainer container)
