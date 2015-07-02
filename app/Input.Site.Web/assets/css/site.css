@@ -1072,7 +1072,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #f1cda2;
+  background-color: #fdeea8;
 }
 input,
 button,
@@ -1117,7 +1117,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857143;
-  background-color: #f1cda2;
+  background-color: #fdeea8;
   border: 1px solid #dddddd;
   border-radius: 2px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2277,7 +2277,7 @@ th {
   border-top: 2px solid #dddddd;
 }
 .table .table {
-  background-color: #f1cda2;
+  background-color: #fdeea8;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -4062,7 +4062,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #f1cda2;
+  background-color: #fdeea8;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -4108,7 +4108,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs.nav-justified > .active > a,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #f1cda2;
+    border-bottom-color: #fdeea8;
   }
 }
 .nav-pills > li {
@@ -4176,7 +4176,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs-justified > .active > a,
   .nav-tabs-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus {
-    border-bottom-color: #f1cda2;
+    border-bottom-color: #fdeea8;
   }
 }
 .tab-content > .tab-pane {
@@ -5025,7 +5025,7 @@ a.badge:focus {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857143;
-  background-color: #f1cda2;
+  background-color: #fdeea8;
   border: 1px solid #dddddd;
   border-radius: 2px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -6955,16 +6955,17 @@ section {
   padding-top: 100px;
 }
 .bg-color-one {
-  background: #BF8D63;
+  background: #fdeea8;
 }
 .bg-color-two {
-  background: #3D8FA8;
+  background: #fdaf48;
 }
 .bg-color-three {
-  background: #F5F7F7;
+  background: #8c290c;
+  color: #fdeea8;
 }
 .bg-color-four {
-  background: #DAAC79;
+  background: #488766;
 }
 header.hendrik {
   background: url('/assets/img/hendrik-header.jpg');
