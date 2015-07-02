@@ -105,7 +105,7 @@ IF /I "gulpfile.js" NEQ "" (
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
-:: 3. Build to the temporary path
+:: 5. Build to the temporary path
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\app/Input.Site.Web/Input.Site.Web.csproj" /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="%DEPLOYMENT_TEMP%";AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release /p:SolutionDir="%DEPLOYMENT_SOURCE%\.\\" %SCM_BUILD_ARGS%
 ) ELSE (
@@ -114,21 +114,20 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 
 IF !ERRORLEVEL! NEQ 0 goto error
 
-:: 2. Copy site assets !
+:: 6. Copy site assets !
 call xcopy %DEPLOYMENT_SOURCE%\\site %DEPLOYMENT_TARGET% /Y /s /i
 
-:: 3. Run tests
+:: 7. Run tests
 
-:: 4. KuduSync
+:: 8. KuduSync
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_TEMP%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
-:: 7. Copy site assets, thanks to solution files we cant have addhoc files
+:: 9. Copy site assets, thanks to solution files we cant have addhoc files
 SET DEPLOYMENT_HOME=D:\\home\\site\\wwwroot
-call xcopy %DEPLOYMENT_SOURCE%\\src\\Input.Site.Web\\assets %DEPLOYMENT_HOME%\\assets /Y /s /i
-
+call xcopy %DEPLOYMENT_SOURCE%\\app\\src\\Input.Site.Web\\assets %DEPLOYMENT_HOME%\\assets /Y /s /i
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
