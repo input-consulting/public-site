@@ -1,9 +1,9 @@
 @Master['_layout/article-page.html'] 
 
 @Meta
-Title: MERVÄRDE
+Title: Mervärde
 Date: 2014-08-01 00:01
-Tags: MERVÄRDE
+Tags: Mervärde
 BgImage : /assets/images/bg1.jpg
 Image : /assets/imgages/article.jpg
 @EndMeta

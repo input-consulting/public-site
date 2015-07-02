@@ -1,9 +1,9 @@
 @Master['_layout/article-page.html'] 
 
 @Meta
-Title: LYHÖRDA
+Title: Lyhörda
 Date: 2014-08-01 00:01
-Tags: LYHÖRDA
+Tags: Lyhörda
 BgImage : /assets/images/bg1.jpg
 Image : /assets/imgages/article.jpg
 @EndMeta
