@@ -127,7 +127,7 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 
 :: 9. Copy site assets, thanks to solution files we cant have addhoc files
 SET DEPLOYMENT_HOME=D:\\home\\site\\wwwroot
-call xcopy %DEPLOYMENT_SOURCE%\\app\\src\\Input.Site.Web\\assets %DEPLOYMENT_HOME%\\assets /Y /s /i
+call xcopy %DEPLOYMENT_SOURCE%\\app\\Input.Site.Web\\assets %DEPLOYMENT_HOME%\\assets /Y /s /i
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
