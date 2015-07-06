@@ -13,7 +13,5 @@ Image : /assets/imgages/article.jpg
  
 IT-chef en av nordens största mediehus
  
-
-Input är uppbyggt på goda relationer
-och närhet mellan kundansvariga, kunder och konsulter.
+Vår organisation bygger på närhet mellan kundansvariga och konsulter, men även konsulter sinsemellan. Detta tillsammans med närheten till våra kunder gör att vi kan matcha rätt konsult till kundernas behov samt att våra konsulter kan använda sig av sina kollegors kompetens i sina respektive uppdrag. Vi jobbar tillsammans.  
 @EndSection 
