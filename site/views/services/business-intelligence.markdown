@@ -5,7 +5,7 @@ Title: Business Intelligence
 Date: 2014-08-01 00:01
 Tags: BI, Business Intelligence
 BgImage : /assets/images/bg1.jpg
-Image : /assets/imgages/article.jpg
+Image : http://placehold.it/340x206
 @EndMeta
 
 @Section['Content']

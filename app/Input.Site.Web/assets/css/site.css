@@ -7130,7 +7130,7 @@ button span.glyphicon {
 }
 .clickables article a {
   text-decoration: none;
-  color: #193251;
+  color: #fff;
 }
 .clickables article a:hover {
   color: #ff7f07;
@@ -7140,9 +7140,12 @@ button span.glyphicon {
   width: 100%;
 }
 .clickables article h2 {
+  font-size: 20px;
   text-align: center;
-  background: #fff;
+  background: #395d7f;
+  opacity: .6;
   height: 1.3em;
+  margin-top: -1.3em;
 }
 @media (max-width: 1000px) {
   .clickables article {

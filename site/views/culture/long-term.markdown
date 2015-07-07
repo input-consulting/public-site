@@ -5,7 +5,7 @@ Title: Hållbarhet
 Date: 2014-08-01 00:01
 Tags: Hållbarhet
 BgImage : /assets/images/bg1.jpg
-Image : /assets/imgages/article.jpg
+Image : http://placehold.it/340x206
 @EndMeta
 
 @Section['Content']
