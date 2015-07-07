@@ -1,0 +1,16 @@
+
+ @Each
+    <article>
+        <a href="@Current.ResourceName"  data-toggle="modal" data-target="#sale-heroes-@Current.SafeTitle">
+            <img src="@Current.Image" alt="">
+            <h2>@Current.Title</h2>    
+        </a>
+    </article>
+    
+    <div class="modal" id="sale-heroes-@Current.SafeTitle" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"></div>
+      </div>
+    </div>
+    
+@EndEach  

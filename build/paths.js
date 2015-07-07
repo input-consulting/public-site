@@ -4,7 +4,7 @@ var project = 'Input.Site.Web/'
 var appRoot = 'app/';
 var siteRoot = 'site/';
 var views = siteRoot + '/views';
-var images = siteRoot + '/static/img';
+var staticContent = siteRoot + '/static';
 
 module.exports = {
   root: appRoot,
@@ -39,9 +39,9 @@ module.exports = {
       source : [ views + '/**/*.markdown', views + '/**/*.md' ],
       output : appRoot + project + 'views/', 
   },
-  images : {
-      source : images + '/**/*.*' ,
-      output : appRoot + project + 'assets/img', 
+  static : {
+      source : staticContent + '/**/*.*' ,
+      output : appRoot + project + 'static', 
   },
 
   output: appRoot + project + 'assets',

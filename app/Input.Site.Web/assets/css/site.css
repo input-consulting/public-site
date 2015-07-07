@@ -6498,7 +6498,9 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+.sales-team:before,
+.sales-team:after {
   content: " ";
   display: table;
 }
@@ -6516,7 +6518,8 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+.sales-team:after {
   clear: both;
 }
 .center-block {
@@ -6970,7 +6973,7 @@ section {
   color: #e0e5f8;
 }
 header.hendrik {
-  background: url('/assets/img/hendrik-header.jpg');
+  background: url('/static/img/hendrik-header.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -6978,21 +6981,21 @@ header.hendrik {
   background-position: top;
 }
 .team-input-1 {
-  background: url('/assets/img/team-input-1.jpg') no-repeat center center fixed;
+  background: url('/static/img/team-input-1.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .team-input-2 {
-  background: url('/assets/img/team-input-2.jpg') no-repeat center center fixed;
+  background: url('/static/img/team-input-2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .team-input-3 {
-  background: url('/assets/img/team-input-3.jpg') no-repeat center center fixed;
+  background: url('/static/img/team-input-3.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7107,3 +7110,162 @@ button span.glyphicon {
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
+.clickables .modal {
+  padding: 0 !important;
+}
+.clickables .modal .modal-dialog {
+  width: 100% !important;
+  margin: 0px auto !important;
+  height: 100%;
+}
+.clickables article {
+  width: 30.3333%;
+  float: left;
+  height: 5em;
+  margin-top: 0;
+  margin-bottom: 4.063em;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  background-color: #abc7e0 !important;
+}
+.clickables article a {
+  text-decoration: none;
+  color: #193251;
+}
+.clickables article a:hover {
+  color: #ff7f07;
+}
+.clickables article img {
+  max-width: 100%;
+  width: 100%;
+}
+.clickables article h2 {
+  text-align: center;
+  background: #fff;
+  height: 1.3em;
+}
+@media (max-width: 1000px) {
+  .clickables article {
+    width: 45%;
+  }
+}
+@media (max-width: 650px) {
+  .clickables article {
+    width: 100%;
+    float: none;
+  }
+}
+.sales-hero {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+  z-index: 999;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.sales-hero article {
+  height: 100% !important;
+  width: 100% !important;
+  color: #333333;
+  margin: 0 !important;
+}
+.sales-hero article .avatar {
+  width: 50%;
+  display: block;
+  position: absolute;
+  left: 1.250em;
+  top: 1.250em;
+  height: 100%;
+  padding: 0.625em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+.sales-hero article .profile {
+  height: 100%;
+  padding: 0 20px 0 1.563em;
+  width: 50%;
+  float: right;
+  overflow-y: auto;
+}
+.sales-hero article .profile .content {
+  width: 99.9%;
+}
+.sales-hero article .profile .content.content:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-left: -0.25em;
+}
+.sales-hero article .profile .content .align {
+  display: inline-block;
+  vertical-align: middle;
+}
+.sales-hero article h4 {
+  color: #ff7f07;
+}
+.sales-hero article p {
+  font-size: 1em;
+}
+.sales-hero nav button {
+  position: absolute;
+  right: -0.063em;
+  top: 0;
+  display: block;
+  height: 3.538em;
+  width: 3.538em;
+  background: #fff;
+  border: solid 1px #ff7f07;
+  border-right: none;
+  border-top: none;
+  padding-top: 0.438em;
+  margin-right: 0;
+  color: #ff7f07;
+}
+.sales-hero nav button span {
+  color: #ff7f07 !important;
+}
+.sales-team {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.sales-team .modal {
+  padding: 0 !important;
+}
+.sales-team .modal .modal-dialog {
+  width: 100% !important;
+  margin: 0px auto !important;
+  height: 100%;
+}
+.sales-team article {
+  width: 30.3333%;
+  float: left;
+  height: 10em;
+  margin-top: 0;
+  margin-bottom: 4.063em;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  background-color: inherit;
+}
+.sales-team article a {
+  text-decoration: none;
+  color: #fff;
+}
+.sales-team article a:hover {
+  color: #ff7f07;
+}
+.sales-team article img {
+  max-width: 100%;
+  width: 100%;
+}
+.sales-team article h2 {
+  text-align: center;
+  background: #fff;
+  height: 1.3em;
+  margin-top: -2em;
+}

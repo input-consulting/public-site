@@ -73,6 +73,8 @@ namespace InputSite.Services
             doc.Add(new Field("title", parser.Title, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("body", parser.Body, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("abstract", parser.Abstract, Field.Store.YES, Field.Index.ANALYZED));
+            doc.Add(new Field("image", parser.Image, Field.Store.YES, Field.Index.ANALYZED));
+            doc.Add(new Field("bgimage", parser.BgImage, Field.Store.YES, Field.Index.ANALYZED));
 
             foreach (var tag in parser.Tags)
             {
@@ -199,7 +201,18 @@ namespace InputSite.Services
                 var resource = string.Join("/", aDock.GetValues("resource"));
 
                 yield return
-                    new ArticleModel(aDock.Get("category"), aDock.Get("author"), aDock.Get("title"), aDock.Get("abstract"), tags, roles, resource, date, aDock.Get("body"));
+                    new ArticleModel(aDock.Get("category"), 
+                        aDock.Get("author"), 
+                        aDock.Get("title"), 
+                        aDock.Get("abstract"), 
+                        tags, 
+                        roles, 
+                        resource, 
+                        date, 
+                        aDock.Get("body"),
+                        aDock.Get("image"),
+                        aDock.Get("bgimage")
+                        );
             }
         }
 

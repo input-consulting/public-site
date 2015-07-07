@@ -1,0 +1,143 @@
+.sales-hero {
+
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
+    z-index: 999;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;    
+
+    article {
+
+        height: 100% !important;
+        width: 100% !important;
+        color: #333333;
+        margin: 0 !important;
+        
+        .avatar {
+            width: 50%;
+            display: block;
+            position: absolute;
+            left: 1.250em;
+            top: 1.250em;
+            height: 100%;
+            padding: 0.625em;
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: auto 100%;            
+        }
+
+        .profile {
+            height: 100%;
+            padding: 0 20px 0 1.563em;
+            width: 50%;
+            float: right;
+            overflow-y: auto;
+
+            .content {
+                width: 99.9%;
+
+                &.content:before {
+                  content: '';
+                  display: inline-block;
+                  height: 100%;
+                  vertical-align: middle;
+                  margin-left: -0.25em;                
+                }
+
+                .align {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+        }
+        
+        h4 {
+            color : @highlight-text-color;
+        }
+        
+        p {
+            font-size: 1em;
+        }
+    }
+    
+    nav {
+        button {
+            position: absolute;
+            right: -0.063em;
+            top: 0;
+
+            display: block;
+            height: 3.538em;
+            width: 3.538em;
+            background: #fff;
+            border: solid 1px @highlight-text-color;
+            border-right: none;
+            border-top: none;
+            padding-top: 0.438em;
+            margin-right: 0;
+            color: @highlight-text-color;        
+
+            span {
+                color:  @highlight-text-color !important;
+            }
+        }
+    }
+}
+
+
+.sales-team {
+    .make-row();
+    
+    .modal {
+        
+        padding: 0 !important;
+        
+        .modal-dialog {
+          width: 100% !important;
+          margin: 0px auto !important;
+          height : 100%;
+        }
+    }
+    
+    article {
+
+        width: 30.3333%;
+        float: left;
+        height: 10em;
+        margin-top: 0;
+        margin-bottom: 4.063em;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+
+        background-color: inherit;
+                
+        a {
+            text-decoration: none;
+            color: #fff;
+
+            &:hover {
+                color: #ff7f07;
+            }
+        }
+        
+        
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+            
+        h2 {
+            text-align: center;
+            background: #fff;
+            height: 1.3em;
+            margin-top: -2em;
+        }
+    }    
+}

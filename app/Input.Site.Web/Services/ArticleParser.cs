@@ -37,6 +37,9 @@ namespace InputSite.Services
         public string ResourceName { get; private set; }
         public string Id { get; private set; }
 
+        public string Image { get; private set; }
+        public string BgImage { get; private set; }
+
         private const string Meta = "@Meta";
         private const string EndMeta = "@EndMeta";
 
@@ -64,22 +67,24 @@ namespace InputSite.Services
 				_metaData.Add(key, value);
 			}
 
-            Id = GetId();
-            Author = GetAuthor();
+            Id = GetMetaValue("Id");
+            Author = GetMetaValue("Author");
 			BlogDate = GetBlogDate();
-			Title = GetTitle();
+            Title = GetMetaValue("Title");
 			Abstract = GetAbstract();
 			Tags = GetTags();
             Roles = GetRoles();
             Body = GetBody();
+            Image = GetMetaValue("Image");
+            BgImage = GetMetaValue("BgImage");
+
             ResourceName = resourceName;
 		}
 
-        private string GetId()
+        private string GetMetaValue(string key)
         {
-            if (_metaData.All(x => x.Key != "Id")) return string.Empty;
-
-            return _metaData.FirstOrDefault(x => x.Key == "Id").Value.Trim();
+            if (_metaData.All(x => x.Key != key)) return string.Empty;
+            return _metaData.FirstOrDefault(x => x.Key == key).Value.Trim();
         }
 
         private string GetBody()
@@ -97,48 +102,27 @@ namespace InputSite.Services
         }
 
         private IEnumerable<string> GetTags()
-		{
-			if (_metaData.All(x => x.Key != Meta)) return Enumerable.Empty<string>();
-
-			var csv = _metaData.FirstOrDefault(x => x.Key == "Meta").Value;
+        {
+            var csv = GetMetaValue("Meta");
 			return csv.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim());
 		}
 
         private IEnumerable<string> GetRoles()
         {
-            if (_metaData.All(x => x.Key != "Roles")) return Enumerable.Empty<string>();
-
-            var csv = _metaData.FirstOrDefault(x => x.Key == "Roles").Value;
+            var csv = GetMetaValue("Roles");
             return csv.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim());
         }
 
-        private string GetAuthor()
-        {
-            if (_metaData.All(x => x.Key != "Author")) return string.Empty;
-
-            return _metaData.FirstOrDefault(x => x.Key == "Author").Value;
-        }
-
-
 		private DateTime GetBlogDate()
 		{
-			if (_metaData.All(x => x.Key != "Date")) return DateTime.MinValue;
-
-			var kvp = _metaData.FirstOrDefault(x => x.Key == "Date");
+		    var date = GetMetaValue("Date");
+			if (string.IsNullOrEmpty(date)) return DateTime.MinValue;
 
 		    DateTime blogDateTime;
-		    DateTime.TryParse(kvp.Value, CultureInfo.InvariantCulture, DateTimeStyles.None, out blogDateTime);
+		    DateTime.TryParse(date, CultureInfo.InvariantCulture, DateTimeStyles.None, out blogDateTime);
 
 			return blogDateTime;
 		}
-
-		private string GetTitle()
-		{
-			if (_metaData.All(x => x.Key != "Title")) return string.Empty;
-
-			return _metaData.FirstOrDefault(x => x.Key == "Title").Value;
-		}
-
 
         private string TransformContentToHtml(string content)
         {

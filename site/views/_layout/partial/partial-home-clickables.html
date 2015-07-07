@@ -1,16 +1,8 @@
-
-<div class="row">
  @Each
-  <div class="col-sm-4 col-xs-6">
-    <div class="thumbnail">
-<!--        <img src="" alt="...">-->
-
-        <a href="@Current.ResourceName">  
-          <div class="caption">
-            <h3 class="text-center">@Current.Title</h3>
-          </div>
-        </a>      
-    </div>
-  </div>
-@EndEach  
-</div>
+    <article>
+        <a href="/@Current.ResourceName">
+<!--            <img src="@Current.Image" alt="">-->
+            <h2>@Current.Title</h2>
+        </a>
+    </article>
+@EndEach

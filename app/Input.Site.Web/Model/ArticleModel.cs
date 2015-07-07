@@ -7,6 +7,9 @@ namespace InputSite.Model
 {
     public class ArticleModel
     {
+        public string Image { get; private set; }
+        public string BgImage { get; private set; }
+
         public string Body { get; private set; }
 
         public string Category { get; private set; }
@@ -65,8 +68,10 @@ namespace InputSite.Model
 
         public string ResourceName { get; private set; }
 
-        public ArticleModel(string category, string author, string title, string ingress, IEnumerable<string> tags, IEnumerable<string> roles, string resourceName, DateTime date, string body)
+        public ArticleModel(string category, string author, string title, string ingress, IEnumerable<string> tags, IEnumerable<string> roles, string resourceName, DateTime date, string body, string image, string bgImage)
         {
+            Image = image;
+            BgImage = bgImage;
             Body = body;
             Category = category;
             Author = author;

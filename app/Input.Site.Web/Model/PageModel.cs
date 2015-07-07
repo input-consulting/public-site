@@ -18,6 +18,8 @@ namespace InputSite.Model
             Meta.FriendlyDate = articleModel.FriendlyDate;
             Meta.Author = articleModel.Author;
             Meta.Tags = articleModel.TagsAsHtml;
+            Meta.Image = articleModel.Image;
+            Meta.BgImage = articleModel.BgImage;
         }
     }
 }
