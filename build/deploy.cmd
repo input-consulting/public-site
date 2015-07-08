@@ -114,6 +114,14 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 
 IF !ERRORLEVEL! NEQ 0 goto error
 
+
+SET DEPLOYMENT_HOME=D:\\home\\site\\wwwroot
+
+:: Remove files on deploy
+call rmdir %DEPLOYMENT_HOME%\\assets /s /q
+call rmdir %DEPLOYMENT_HOME%\\static /s /q
+call rmdir %DEPLOYMENT_HOME%\\views /s /q
+
 :: 6. Copy site assets !
 call xcopy %DEPLOYMENT_SOURCE%\\site %DEPLOYMENT_TARGET% /Y /s /i
 
@@ -126,7 +134,6 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 )
 
 :: 9. Copy site assets, thanks to solution files we cant have addhoc files
-SET DEPLOYMENT_HOME=D:\\home\\site\\wwwroot
 call xcopy %DEPLOYMENT_SOURCE%\\app\\Input.Site.Web\\assets %DEPLOYMENT_HOME%\\assets /Y /s /i
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
