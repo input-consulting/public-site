@@ -5,6 +5,7 @@
 app/Input.Site.Web/[Vv]iews/*
 app/Input.Site.Web/[Cc]ontent/*
 app/Input.Site.Web/[Ss]tatic/*
+app/Input.Site.Web/[Aa]ssets/
 
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
