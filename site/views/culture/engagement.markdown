@@ -5,7 +5,7 @@ Title: Engagemang
 Date: 2014-08-01 00:01
 Tags: Engagemang
 BgImage : /assets/images/bg1.jpg
-Image : http://placehold.it/340x206
+Image : /static/img/thumbs/input-7.jpg
 @EndMeta
 
 @Section['Content']

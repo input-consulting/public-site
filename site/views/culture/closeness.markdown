@@ -5,8 +5,8 @@ Title: Närhet
 Date: 2014-08-01 00:01
 Tags: Närhet
 BgImage : /assets/images/bg1.jpg
-Image : http://placehold.it/340x206
-@EndMeta
+Image : /static/img/thumbs/input-1.jpg
+@EndMetas
 
 @Section['Content']
 ”Dialogen med både konsulten och input har varit kontinuerlig och vi har arbetat nära varandra”

@@ -5,7 +5,7 @@ Title: Kompetens
 Date: 2014-08-01 00:01
 Tags: Kompetens
 BgImage : /assets/images/bg1.jpg
-Image : http://placehold.it/340x206
+Image : /static/img/thumbs/input-2.jpg
 @EndMeta
 
 @Section['Content']
