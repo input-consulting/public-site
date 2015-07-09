@@ -8,7 +8,7 @@ Image : http://placehold.it/340x206
 @EndMeta
 
 @Section['Content']
-Vilka är vi?
+####Vilka är vi?
 
 Inputs vision är att vara det ledande IT-bolaget inom Stockholmsregionen. För att vara ledande, behöver man inte vara störst, däremot måste man vara bäst. Genom lyhördhet för kundernas behov och spetskompetens inom såväl branscher som ny teknik och effektiva metoder; stöttar, vägleder och genomför Input projekt som genererar ett mervärde för kunderna och ökar deras konkurrenskraft. 
 
