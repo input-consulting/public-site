@@ -41,6 +41,10 @@
 
             .content {
                 width: 99.9%;
+                
+                h1 {
+                    font-size: 6rem;
+                }
 
                 &.content:before {
                   content: '';
@@ -125,6 +129,30 @@
             &:hover {
                 color: #ff7f07;
             }
+
+        h2 {
+            font-size: 4rem;
+            text-align: center;
+            height: 1.4em;
+            margin-top: -1.4em;
+            position: relative;
+            z-index: 1;
+            
+            &::after {
+              content: "";
+              background: #000;
+              opacity: 0.5;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              position: absolute;
+              z-index: -1;   
+            }
+            
+        }
+            
+            
         }
         
         
@@ -133,11 +161,5 @@
             width: 100%;
         }
             
-        h2 {
-            text-align: center;
-            background: #fff;
-            height: 1.3em;
-            margin-top: -2em;
-        }
     }    
 }
