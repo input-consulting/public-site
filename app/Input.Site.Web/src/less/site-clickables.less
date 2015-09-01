@@ -22,10 +22,21 @@
             
         a {
             text-decoration: none;
-            color: #fff;
+            color: @theme-color-4;
+            background: @theme-color-3;
+            
+            border: solid 1px @theme-color-5;
+            
+            text-align: center;
+            display: block;
+            margin-bottom: 10px;
+            padding: 30px;
+
+            z-index: 1;
 
             &:hover {
-                color: @highlight-text-color;
+                color: @theme-color-3;
+                background: @theme-color-4;
             }
         }
         
