@@ -1,8 +1,24 @@
  @Each
+<!--
     <article>
         <a href="/@Current.ResourceName">
             <img src="@Current.Image" alt="">
             <h2>@Current.Title</h2>
         </a>
     </article>
+-->
+    
+    <article>
+        <a href="@Current.ResourceName"  data-toggle="modal" data-target="#clickables-@Current.SafeTitle">
+            <h2>@Current.Title</h2>    
+        </a>
+    </article>
+    
+    <div class="modal" id="clickables-@Current.SafeTitle" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"></div>
+      </div>
+    </div>    
+    
+    
 @EndEach

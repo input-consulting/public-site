@@ -1,7 +1,7 @@
 @Master['_layout/article-page.html'] 
 
 @Meta
-Title: Ledning & Styrning
+Title: Ledning och Styrning
 Date: 2014-08-01 00:01
 Tags: Services, BI, Business Intelligence
 BgImage : /assets/images/bg1.jpg
@@ -17,6 +17,7 @@ Med ledning och styrning som ser till helheten finns goda förutsättningar för
 Ledning enligt Input handlar om att säkerställa tillgången till tillräckliga styrmedel. Vidare handlar det om att förstå och kommunicera vilka målen är och se till att skapa de förutsättningar som krävs för att uppnå dessa mål. Det handlar om att få varje individ att prestera det bästa den kan utifrån varje individs respektive förutsättningar genom att stödja och stärka medarbetaren. Det handlar om ett ledarskap som är situations- och individanpassat. Samma budskap behöver kommuniceras på olika sätt eftersom budskap tas emot på olika sätt av olika människor. Ska man ta med något om teamet här? Vidare handlar ett gott ledarskap om att förstå och anpassa sitt eget ledarskap till den organisationskultur som utövas.
 
 Input erbjuder kompetenskonsulter inom:
+
 - Förändringsledning
 - Förvaltningsledning
 - Projektledning

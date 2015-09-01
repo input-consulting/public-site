@@ -1,0 +1,125 @@
+.site-pop-up {
+
+    background: @body-bg;
+    color :  @theme-color-1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
+    z-index: 999;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    padding-top: 50px !important;
+
+    article {
+
+        height: 100% !important;
+        width: 100% !important;
+        color: #333333;
+        margin: 0 !important;
+        
+        .avatar {
+            width: 50%;
+            display: block;
+            position: absolute;
+            left: 1.250em;
+            top: 1.250em;
+            height: 100%;
+            padding: 0.625em;
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: auto 100%;            
+        }
+
+        .profile {
+            height: 100%;
+            padding: 0 20px 0 1.563em;
+            float: right;
+            overflow-y: auto;
+
+            .content {
+                width: 99.9%;
+                display: inline-block;
+                vertical-align: middle;
+                
+                h1 {
+                    color:@theme-color-5;
+                    font-size: 2.5em;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    text-align: left;
+                    margin-bottom: 20px;                    
+                }
+                
+                h4 {
+                    color : @highlight-text-color;
+                }
+
+                &.content:before {
+                  content: '';
+                  display: inline-block;
+                  height: 100%;
+                  vertical-align: middle;
+                  margin-left: -0.25em;                
+                }
+                    
+                .text-block {
+                    color : @theme-color-5;
+                    background: @theme-color-2;
+                    padding: 20px;;
+                    
+                    p {
+                        color : @theme-color-5;
+                        font-size: 1em;
+                    }
+                    
+                    blockquote {
+                        color : #fff;
+                        font-size: 1em;
+                        background: @theme-color-4;
+                        border: none;
+                        border-bottom : solid 10px @theme-color-5;
+                        margin-bottom : 1em;
+
+                        p {
+                            color : #fff;
+                            background: @theme-color-4;
+                            padding: 0;
+                        }
+                    }
+                    
+                    
+                }
+
+            }
+
+        }
+        
+    }
+    
+    nav {
+        button {
+            position: absolute;
+            right: -0.063em;
+            top: 0;
+
+            display: block;
+            height: 3.538em;
+            width: 3.538em;
+            background: @theme-color-5;
+            border: solid 1px @theme-color-1;
+            border-right: none;
+            border-top: none;
+            padding-top: 0.438em;
+            margin-right: 0;
+            color: @theme-color-1;        
+
+            span {
+                color:  @theme-color-1 !important;
+            }
+        }
+    }
+}

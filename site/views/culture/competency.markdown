@@ -10,11 +10,9 @@ Image : /static/img/thumbs/input-2.jpg
 
 @Section['Content']
 
-"Inputs kunsult kom in och lyfte hela teamet, både när det gäller sammanhållningen i teamet men också den tekniska kompetensen då alla plötsligt steppade upp en nivå"
+>"Inputs kunsult kom in och lyfte hela teamet, både när det gäller sammanhållningen i teamet men också den tekniska kompetensen då alla plötsligt steppade upp en nivå"
+#####Verksamhetschef, Transportbolag
  
-Verksamhetschef, Transportbolag
- 
-På Input förstår vi att
-för att snabbt kunna bidra och ha en kort leveranssträcka behöver vi både teknisk expertis och verksamhetsförståelse. Vi vårdar och investerar kontinuerligt i vår yrkesskicklighet genom att ständigt vässa vår kompetens som IT-verksamma generellt men också inom våra kunskapsområden specifikt. Vi kompetensutvecklar kontinuerligt våra medarbetare, både i grupp och individuellt inom respektive specialistområden.
+På Input förstår vi att för att snabbt kunna bidra och ha en kort leveranssträcka behöver vi både teknisk expertis och verksamhetsförståelse. Vi vårdar och investerar kontinuerligt i vår yrkesskicklighet genom att ständigt vässa vår kompetens som IT-verksamma generellt men också inom våra kunskapsområden specifikt. Vi kompetensutvecklar kontinuerligt våra medarbetare, både i grupp och individuellt inom respektive specialistområden.
 
 @EndSection

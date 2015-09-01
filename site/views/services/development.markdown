@@ -21,6 +21,7 @@ Input omsätter våra kunders idéer till hållbara produkter och tjänster som 
 Vi får förtroende från våra kunder att vägleda dem från traditionella till agila utvecklingsmetoder som möjliggör snabbare och tätare leveranser.
 
 Våra roller
+
 * Webbutvecklare 
 * Systemutvecklare - Native OS/Mobil Webb
 * Lead Developer .NET

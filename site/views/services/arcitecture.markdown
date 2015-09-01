@@ -17,6 +17,7 @@ Vi på Input förstår våra kunders affärsutmaningar och vet hur dessa ska oms
 
 IASA
 På Input arbetar vi med arkitektur enligt IASAs definition för samordning av arkitekturarbete i följande kompetensroller:
+
 - Verksamhetsarkitekter
 - Lösningsarkitekter
 - Mjukvaruarkitekter
