@@ -8,7 +8,7 @@ Image : http://placehold.it/340x206
 @EndMeta
 
 @Section['Content']
-####Kundfokus
+###Kundfokus
 
 På Input är det våra konsultchefer och kundansvariga som jobbar med försäljningen. För att skapa och bygga på långsiktiga samarbeten behöver man göra en så bra matchning som möjligt mellan kund och konsult. Därför är våra kundansvariga även konsultchefer. 
 

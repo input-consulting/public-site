@@ -25,8 +25,7 @@ Vi på Input har lång erfarenhet av Business Intelligence i dess olika former. 
 
 Vi låser oss inte till någon specifik teknik. Valet av teknik skall stötta dina BI processer och där lämpar sig olika verktyg olika väl för olika ändamål.
 
-Några av de BI verktyg vi är duktiga på är:
-
+###Några av de BI verktyg vi är duktiga på är:
 - Qlikview
 - Cognos
 - Microsofts BI plattform
