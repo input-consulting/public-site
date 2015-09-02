@@ -13,8 +13,7 @@ Input kravställde, ledde och implementerade en Qlikview lösning till en stor k
 
 Vi på Input hjälper Er med att bygga och förädla Er BI lösning vilket leder till effektivisering av Er verksamhet och vägledning till rätt affärsbeslut.
  
-Business Intelligence är
-färdigheter, teknologier, applikationer, processer och metoder som hjälper dig att förstå din verksamhet och omvärld.
+Business Intelligence är färdigheter, teknologier, applikationer, processer och metoder som hjälper dig att förstå din verksamhet och omvärld.
 Vi på Input har lång erfarenhet av Business Intelligence i dess olika former. Vi hjälper dig som kund att tänka strategiskt kring vilken BI lösning som passar just Er.
 
 - Vilken information önskar ni få ut om er verksamhet?
