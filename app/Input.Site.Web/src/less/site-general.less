@@ -4,7 +4,6 @@ body {
   /* The html and body elements cannot have any padding or margin. */
   -webkit-font-smoothing: antialiased;
     font-weight: 300;
-    -webkit-background-size: 1200px 800px; 
 }
 
 a:focus { 
@@ -200,31 +199,38 @@ header {
     background-position : top;
 }
 
-
 .team-input-1 {
-	background: url('/static/img/team-input-2.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
+	background: url('/static/img/team-input-2.jpg') no-repeat center center; 
+    -webkit-background-size: cover; 
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;    
 }
 .team-input-2 {
-	background: url('/static/img/team-input-4.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
+	background: url('/static/img/team-input-4.jpg') no-repeat center center;
+    -webkit-background-size: cover; 
   	-moz-background-size: cover;
   	-o-background-size: cover;
-
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0;    
+    background-position: 0;
 }
 .team-input-3 {
-	background: url('/static/img/team-input-3.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
+	background: url('/static/img/team-input-3.jpg') no-repeat center center; 
+    -webkit-background-size: cover; 
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 }
+
+@media (min-width: 49em) {
+    .team-input-1,
+    .team-input-2,
+    .team-input-3 {
+        display: block;
+        background-attachment: fixed;
+    }
+}
+
 
 .gotham {
     font-family: 'Gotham A', 'Gotham B', sans-serif;
