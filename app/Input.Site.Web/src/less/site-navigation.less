@@ -11,10 +11,29 @@
    -webkit-transition: all .6s ease-in-out;
 }
 
+.navbar-text {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    border-radius: 2px;
+    color: #fff;    
+    display: block;
+}
+
 @media (min-width: 767px) {
-  .navbar-nav.nav-justified > li{
+    .navbar-nav.nav-justified > li{
       float:none;
-  }
+    }
+    
+    .navbar-text {
+        display: none;
+    }
 }
   
 .navbar-nav {

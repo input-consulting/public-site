@@ -24,10 +24,11 @@
             <header>@Model.Meta.CultureArticle.Title</header>
             @Model.Meta.CultureArticle.Body
         </article>
-        <section class="clickables">
-            @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.CultureArticles];
-        </section>
     </section>
+    <section class="container clickables">
+        @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.CultureArticles];
+    </section>
+    
     <div class="divider"></div>
 </div>
 
@@ -42,10 +43,9 @@
             <header>@Model.Meta.ServicesArticle.Title</header>
             @Model.Meta.ServicesArticle.Body
         </article>
-        <section class="clickables">
-            @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.ServicesArticles];
-        </section>
-        <div class="divider"></div>
+    </section>
+    <section class="container clickables">
+        @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.ServicesArticles];
     </section>
     <div class="divider"></div>
 </div>
