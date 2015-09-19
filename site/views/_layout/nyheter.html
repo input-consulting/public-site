@@ -1,0 +1,18 @@
+@Master['_layout/master-nyheter-list.html'] 
+
+@Section['MainContent']
+
+<div class="news-page header">
+    <section class="container">
+        <header>Aktuellt på Input</header>
+    </section>
+</div>
+
+<div class="news-page list">
+    <section class="container">
+        @Partial['_layout/partial/partial-news-article.html', Model.Meta.Articles];
+    </section>
+    <div class="divider"></div>
+</div>
+
+@EndSection

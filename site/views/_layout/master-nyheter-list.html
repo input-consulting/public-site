@@ -2,10 +2,10 @@
 <html class="no-js" lang="sv" itemscope itemtype="http://schema.org/Product">
 <head>
     <meta charset="utf-8">
-    <title>Input Consulting AB</title>
+    <title>Input Consulting AB - Nyheter</title>
    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="title" content="Input Consulting" />
+    <meta name="title" content="Input Consulting - Nyheter" />
     <meta name="description" content="Input Consulting Stockholm AB" />
     <meta name="author" content="Input Consulting" />
     <meta name="Copyright" content="Input Consulting" />
@@ -22,13 +22,8 @@
         appInsights.trackPageView();
     </script>    
 </head>
-<body>
-    <div id="wrap">
-        @Partial['_layout/partial/partial-header.html', Model];
-        @Partial['_layout/partial/partial-menu.html', Model];
-        @Section['MainContent'];
-    </div>
-    <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
-    <script async src="@Path['~/assets/js/site.js']"></script>
-</body>
+    <body>
+        @Partial['_layout/partial/partial-news-menu.html', Model];
+        @Section['MainContent'];        
+    </body>
 </html>
