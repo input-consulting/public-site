@@ -2,15 +2,20 @@
 
 @Meta
 Author : Dan Lofquist
-Title: Input har en ny hemsida
+Title: Superurgent
 Date: 2014-09-19
 Tags: Nyheter
-BgImage : /assets/images/bg1.jpg
+BgImage : /static/img/bg1.jpg
 Image : /static/img/thumbs/input-6.jpg
 @EndMeta
 
 @Section['Content']
 
-df df df sdafds fsd fafd sdaf sdaf sda fsda fsda fsd 
+Om du vet hur man kommer vidare i minecraft, hör av dig omedelbart till oss!
+
+![image alt](/static/img/team-input-2.jpg)
+
+Maila ASAP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 @EndSection

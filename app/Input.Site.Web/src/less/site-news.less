@@ -7,18 +7,34 @@ section {
             color: #333333;
             width: 100%;
             text-decoration: none;
-            
+            margin-top: 10px;
+            margin-bottom: 10px;
+                        
             > .news-item {
                 margin: 4px;
                 padding: 8px;
-                //background: rgba(51, 51, 51, 0.65);
-                background: @theme-color-4;
-                min-height: 200px;                                
+                //background: @theme-color-4;
+                background: #f8f8f8;
+                min-height: 150px;
+                border-left: solid 8px @theme-color-5;
+                
+                &::hover {
+                    background: #fff;
+                }                
+                
+                h4 {
+                    color: @theme-color-5;
+                }
+                
+                img {
+                    display: none;
+                }
             }
+            
         }
         
+        
         padding-top: 0;
-                
     }
     
 }
@@ -31,12 +47,17 @@ section {
         font-size: 1.2em;
         margin-bottom: 10px;
         background: @theme-color-4;
-        //background:  rgba(51, 51, 51, 0.65);
         color: #333333;
         padding: 20px;
         
         header {
             font-size: 2em;
+        }
+        
+        img {
+            max-width: 100%;
+            margin-bottom: .5em;
+            margin-top: .5em;
         }
     }
 
