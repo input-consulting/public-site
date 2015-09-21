@@ -13,17 +13,16 @@ section {
             > .news-item {
                 margin: 4px;
                 padding: 8px;
-                //background: @theme-color-4;
                 background: #f8f8f8;
                 min-height: 150px;
-                border-left: solid 8px @theme-color-5;
+                //border-left: solid 8px @theme-color-1;
                 
                 &::hover {
                     background: #fff;
                 }                
                 
                 h4 {
-                    color: @theme-color-5;
+                    color: @theme-color-1;
                 }
                 
                 img {
@@ -39,6 +38,21 @@ section {
     
 }
 
+.container {
+    
+    &.with {
+        
+        &.logo {
+            width: 100%;
+            background: #f8f8f8;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            text-align: center;            
+        }
+    }
+    
+}
+
 .news-page {    
     font-size: 1em;
         
@@ -46,7 +60,7 @@ section {
         border-radius: 4px;
         font-size: 1.2em;
         margin-bottom: 10px;
-        background: @theme-color-4;
+        background: #f8f8f8;
         color: #333333;
         padding: 20px;
         
@@ -64,14 +78,13 @@ section {
     &.header {
         font-size: 2.5em;
         font-weight: 500;
-        color:#333333;
+        color: #f8f8f8;
         text-align: center;
         padding-bottom: 30px;
-        //color: #F8F8FF; 
     }
 
     &.list {
-        background: @theme-color-3;
+  //      background: @theme-color-3;
     }
 
 }

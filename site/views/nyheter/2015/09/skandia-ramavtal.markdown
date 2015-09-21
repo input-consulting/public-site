@@ -11,7 +11,7 @@ Image : /static/img/thumbs/input-6.jpg
 
 @Section['Content']
 
-![image alt](/static/img/nyheter/logo_skandia.png)
+![image alt](/static/img/nyheter/skandia-logga.png)
 
 
 Skandia har beslutat att teckna ramavtal med Input gällande systemutveckling inom .NET. 

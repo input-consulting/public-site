@@ -1,10 +1,10 @@
 @Each
    
-    <article>
+    <div class="box">
         <a href="@Current.ResourceName"  data-toggle="modal" data-target="#clickables-@Current.SafeTitle">
             @Current.Title
         </a>
-    </article>
+    </div>
     
     <div class="modal" id="clickables-@Current.SafeTitle" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
