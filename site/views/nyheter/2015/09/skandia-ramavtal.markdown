@@ -3,7 +3,7 @@
 @Meta
 Author : Dan Lofquist
 Title: Skandia har tecknat ramavtal
-Date: 2014-09-16
+Date: 2016-09-16
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /static/img/thumbs/input-6.jpg

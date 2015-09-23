@@ -4,7 +4,7 @@
 Title: Sanaz
 Date: 2014-08-01 00:01
 Tags: Sälj, Sanaz
-BgImage : /static/img/sales/sanaz_profile_big.jpg
+BgImage : /static/img/sales/sanaz_profile_1_big.jpg
 Image : /static/img/sales/sanaz_profile_small.jpg
 @EndMeta
 
