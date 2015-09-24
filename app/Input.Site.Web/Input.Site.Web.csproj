@@ -122,7 +122,7 @@
     <Compile Include="Bootstrap\RouteReader.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\StringExtension.cs" />
-    <Compile Include="Handlers\NotFoundHandler.cs" />
+    <Compile Include="Handlers\PageNotFoundHandler.cs" />
     <Compile Include="Interfaces\IArticleLocator.cs" />
     <Compile Include="Interfaces\IArticleReader.cs" />
     <Compile Include="Interfaces\IArticleStorage.cs" />

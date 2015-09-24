@@ -1,11 +1,16 @@
-﻿using Nancy;
+using Nancy;
 using Nancy.ErrorHandling;
 using Nancy.Responses;
+using Nancy.ViewEngines;
 
 namespace InputSite.Handlers
 {
-    public class NotFoundHandler : IStatusCodeHandler
+    public class PageNotFoundHandler : DefaultViewRenderer, IStatusCodeHandler
     {
+        public PageNotFoundHandler(IViewFactory factory) : base(factory)
+        {
+        }
+
         public bool HandlesStatusCode(HttpStatusCode statusCode, NancyContext context)
         {
             return statusCode == HttpStatusCode.NotFound;
@@ -23,13 +28,11 @@ namespace InputSite.Handlers
             }
             else
             {
-                context.Response = new TextResponse("<h1>Oh noo !!<h1/>")
-                {
-                    StatusCode = statusCode,
-                    ContentType = "text/html"
-                };
-
+                var response = RenderView(context, "_layout/PageNotFound");
+                response.StatusCode = HttpStatusCode.NotFound;
+                context.Response = response;
             }
         }
+
     }
 }
