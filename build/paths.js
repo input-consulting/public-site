@@ -12,13 +12,17 @@ module.exports = {
   	source : [ 
   		'bower_components/jquery/dist/jquery.js',
   		'bower_components/bootstrap/dist/js/bootstrap.js',
-      appRoot + project + 'src/js/**/*.js/'
+        'bower_components/wow/dist/wow.js',
+        appRoot + project + 'src/js/**/*.js/'
   	],
   	output : appRoot + project + 'assets/js',
   },
 
   styles : {
-  	source : [appRoot + '**/site.less'],
+  	source : [
+        'bower_components/animate.css/animate.css',
+        appRoot + '**/site.less'
+    ],
   	output : appRoot + project + 'assets/css',
   },
 

@@ -1,7 +1,7 @@
 .site-pop-up {
 
     font-size: 1rem;
-    background: #f8f8f8;
+    background: @theme-color-1;
     position: fixed;
     top: 0;
     left: 0;
@@ -12,6 +12,15 @@
     -moz-transition: 0.3s;
     transition: 0.3s;
     padding-top: 50px !important;
+    
+    .popup-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f8f8f8;
+        width: 100%;
+        text-align: center;        
+    }
 
     article {
 
@@ -33,7 +42,7 @@
                 vertical-align: middle;
                 
                 h1 {
-                    color:@theme-color-1;
+                    color:#f8f8f8;
                     font-size: 1.5em;
                     font-weight: 600;
                     text-transform: uppercase;
@@ -42,7 +51,7 @@
                 }
                 
                 h4 {
-                    color : @theme-color-1;
+                    color : #f8f8f8;
                 }
 
                 &.content:before {
@@ -55,8 +64,9 @@
                     
                 .text-block {
                     //color : @theme-color-5;
-                    background: @theme-color-4;
+                    background: #f8f8f8;
                     padding: 20px;;
+                    border-radius: 4px;
                     
                     p {
                         //color : @theme-color-5;
@@ -69,7 +79,7 @@
                         font-style: normal;
                         background: @theme-color-1;
                         border: none;
-                        border-bottom : solid 10px @theme-color-4;
+                        border-left : solid 10px @theme-color-4;
                         margin-bottom : 1em;
                         
                         h5 {
@@ -100,18 +110,19 @@
             top: 0;
 
             display: block;
-            height: 3.538em;
-            width: 3.538em;
-            background: #fff;
+            height: 5.1em;
+            width: 5.1em;
+            background: #f8f8f8;
             border: solid 1px @theme-color-1;
             border-right: none;
             border-top: none;
             padding-top: 0.438em;
             margin-right: 0;
-            color: @theme-color-1;
+            color: @theme-color-1;            
 
             span {
                 color:  @theme-color-1 !important;
+                font-size: 20px;
             }
         }
     }
