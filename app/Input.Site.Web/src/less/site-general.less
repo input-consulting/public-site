@@ -113,19 +113,20 @@ article {
     }
     
     blockquote {
-        font-size: 14px;
+        font-size: 12px;
         border: 0;
+        padding : 40px 17px;
         
         &::after {
-          content: "";
-          background: @theme-color-1;
-          opacity: 0.5;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          position: absolute;
-          z-index: -1;   
+            content: "";
+            background: #0284a6;
+            opacity: 0.5;
+            top: 50px;
+            left: 0;
+            bottom: 10px;
+            right: 0;
+            position: absolute;
+            z-index: -1;            
         }
     }
 }
@@ -136,6 +137,19 @@ article {
         
         blockquote {
             font-size: 16px;
+            padding : 8.5px 17px;
+            
+            &::after {
+              content: "";
+              background: @theme-color-1;
+              opacity: 0.5;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              position: absolute;
+              z-index: -1;   
+            }
         }
     }
 }

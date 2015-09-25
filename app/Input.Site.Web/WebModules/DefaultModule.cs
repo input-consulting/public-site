@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using InputSite.Bootstrap;
 using InputSite.Extensions;
@@ -29,7 +29,7 @@ namespace InputSite.WebModules
         private void SetupStaticRoutes()
         {
             var routes = _routeLocatorProvider.StaticRoutes();
-            routes.Map(route => Get[route + "/{article}"] = parameters => FetchArticle((string) parameters.article));
+            routes.Map(route => Get[route + "/{article}"] = parameters => FetchArticle(Request.Path.TrimStart('/')));
             
             Get["/{article}"] = parameters =>
             {
