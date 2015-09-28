@@ -12,7 +12,29 @@
     -moz-transition: 0.3s;
     transition: 0.3s;
     padding-top: 50px !important;
+        
+    -webkit-background-size: cover; 
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 20;
     
+    &::after {
+        content: attr(bg);
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;          
+       -webkit-filter: blur(2px); 
+        -moz-filter: blur(2px); 
+        filter: blur(2px);         
+    }
+    
+        
     .popup-header {
         position: absolute;
         top: 0;
@@ -78,7 +100,7 @@
                         font-style: normal;
                         background: @theme-color-1;
                         border: none;
-                        border-left : solid 10px @theme-color-4;
+                        border-left : solid 4px @theme-color-5;
                         margin-bottom : 1em;
                         
                         h5 {
