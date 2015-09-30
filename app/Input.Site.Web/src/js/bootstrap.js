@@ -33,28 +33,29 @@ $(document).ready(function () {
     });
 
 
-    var isMobile = isMobile(navigator.userAgent);
-    var news = $(".news-item");
-    
-    if ( isMobile ) {
-        for (ii = 0, len = news.length; ii < len; ii++) {
-            news.eq(ii).css("visibility","visible");
-        }
-    } else {
-        if (news.length > 0) {
-            news.eq(0).addClass("wow fadeInLeft");
-            if (news.length === 2) {
-                news.eq(1).addClass("wow fadeInRight");
-            }
-        }
-    }
-    
-    new WOW({
-          boxClass:     'wow',      // default
-          animateClass: 'animated', // default
-          offset:       0,          // default
-          mobile:       false,       // default
-          live:         true        // default
-    }).init();
+// No moving parts atm.
+//    var isMobile = isMobile(navigator.userAgent);
+//    var news = $(".news-item");
+//    
+//    if ( isMobile ) {
+//        for (ii = 0, len = news.length; ii < len; ii++) {
+//            news.eq(ii).css("visibility","visible");
+//        }
+//    } else {
+//        if (news.length > 0) {
+//            news.eq(0).addClass("wow fadeInLeft");
+//            if (news.length === 2) {
+//                news.eq(1).addClass("wow fadeInRight");
+//            }
+//        }
+//    }
+//    
+//    new WOW({
+//          boxClass:     'wow',      // default
+//          animateClass: 'animated', // default
+//          offset:       0,          // default
+//          mobile:       false,       // default
+//          live:         true        // default
+//    }).init();
     
 });
