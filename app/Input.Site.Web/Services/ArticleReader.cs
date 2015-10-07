@@ -21,9 +21,9 @@ namespace InputSite.Services
                         .Where(a => a.BlogDate.Date <= DateTime.Today);
         }
 
-        public IEnumerable<ArticleModel> ArticlesByCategory(string categoryName)
+        public IEnumerable<ArticleModel> ArticlesByRoute(string categoryName)
         {
-            return _articleStorage.ArticlesByCategory(categoryName)
+            return _articleStorage.ArticlesByRoute(categoryName)
                         .Where( a=> a.BlogDate.Date <= DateTime.Today)
                         .OrderByDescending(d => d.BlogDate);
         }

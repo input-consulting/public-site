@@ -36,14 +36,14 @@ namespace InputSite.WebModules
                 /* Need to know if it is a article or not */
                 var isArticle = _viewLocationProvider.GetLocatedViews(new[] {"md", "markdown"}).Count(w => w.Name.ToLower().Contains(parameters.article)) == 1;
                 if (isArticle) {
-                    var article = _articleReader.ArticlesByCategory((string)parameters.article).FirstOrDefault();
+                    var article = _articleReader.ArticlesByRoute((string)parameters.article).FirstOrDefault();
                     if (article == null) return 404;
                     return RenderView(article.ResourceName, new PageModel(article));
                 }
 
                 /* TODO : This route setup interfears with the root route in date routes, need to sort it, its anoying */
                 var path = Request.Path.Replace("/", "");
-                PageModel.Meta.Articles = _articleReader.ArticlesByCategory(path);
+                PageModel.Meta.Articles = _articleReader.ArticlesByRoute(path);
                 return RenderView(string.Concat("_layout/", Request.Path), PageModel);
             };
         }
@@ -61,7 +61,7 @@ namespace InputSite.WebModules
                 Get[category] = parameters =>
                 {
                     var path = Request.Path.Replace("/", "");
-                    PageModel.Meta.Articles = _articleReader.ArticlesByCategory(path);
+                    PageModel.Meta.Articles = _articleReader.ArticlesByRoute(path);
                     return RenderView(string.Concat("_layout/", Request.Path), PageModel);
                 };
 
@@ -82,7 +82,7 @@ namespace InputSite.WebModules
 
         private Negotiator FetchArticle(string routeToArticle)
         {
-            var article = _articleReader.ArticlesByCategory(routeToArticle).FirstOrDefault();
+            var article = _articleReader.ArticlesByRoute(routeToArticle).FirstOrDefault();
             if (article == null) return Negotiate.WithStatusCode(404);
             return RenderView(article.ResourceName, new PageModel(article));
         }
@@ -90,7 +90,7 @@ namespace InputSite.WebModules
         private Negotiator FetchArticles(string configuredRoute, dynamic parameters)
         {
             var path = ConstructSearchPath(configuredRoute, parameters);
-            PageModel.Meta.Articles = _articleReader.ArticlesByCategory(path);
+            PageModel.Meta.Articles = _articleReader.ArticlesByRoute(path);
             return RenderView(string.Concat("_layout/", configuredRoute), PageModel);
         }
 

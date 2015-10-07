@@ -7,7 +7,7 @@ namespace InputSite.Interfaces
     {
         IEnumerable<ArticleModel> ArticlesByFreeText(string search);
 
-        IEnumerable<ArticleModel> ArticlesByCategory(string category);
+        IEnumerable<ArticleModel> ArticlesByRoute(string category);
 
         IEnumerable<ArticleModel> ArticlesByTags(IEnumerable<string> tags);
 

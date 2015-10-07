@@ -11,7 +11,6 @@ using Lucene.Net.Index;
 using Lucene.Net.QueryParsers;
 using Lucene.Net.Search;
 using Lucene.Net.Store;
-using Nancy.ViewEngines;
 using Version = Lucene.Net.Util.Version;
 
 namespace InputSite.Services
@@ -112,7 +111,7 @@ namespace InputSite.Services
             }
         }
 
-        public IEnumerable<ArticleModel> ArticlesByCategory(string category)
+        public IEnumerable<ArticleModel> ArticlesByRoute(string category)
         {
             var reader = _indexWriter.GetReader();
             using (var searcher = new IndexSearcher(reader))
