@@ -9,6 +9,11 @@ namespace InputSite.Bootstrap
     {
         private readonly IList<IRouteEvaluator> _routeEvaluators;
 
+        public RouteReader()
+        {
+            _routeEvaluators = null;
+        }
+
         public RouteReader(IList<IRouteEvaluator> routeEvaluators)
         {
             _routeEvaluators = routeEvaluators;
@@ -20,7 +25,7 @@ namespace InputSite.Bootstrap
 
             if (transformToRoutes)
             {
-                findings = TransformToRoutes(findings, startFromHere);
+                findings = MakeRoutes(findings, startFromHere);
             }
  
             return findings.Distinct();
@@ -36,24 +41,26 @@ namespace InputSite.Bootstrap
             return MakeRoute(rootPath, path);
         }
 
-        private static IEnumerable<string> TransformToRoutes(IEnumerable<string> dirtyRoutes, string startFromHere)
+        private static IEnumerable<string> MakeRoutes(IEnumerable<string> dirtyRoutes, string startFromHere)
         {
             return dirtyRoutes.Select(route => MakeRoute(startFromHere, route));
         }
         private static string MakeRoute(string rootPath, string path)
         {
-            var cleanRoute = path.Replace(rootPath, "").Replace(@"\", @"/");
+            var cleanRoute = path.Replace(rootPath, "")
+                                 .Replace(@"\", @"/");
             return cleanRoute.Substring(0, cleanRoute.LastIndexOf(@"/", StringComparison.Ordinal));            
         }
 
-        private static IEnumerable<string> TransformToResources(IEnumerable<string> dirtyRoutes, string startFromHere)
+        private static IEnumerable<string> MakeResources(IEnumerable<string> dirtyRoutes, string startFromHere)
         {
             return dirtyRoutes.Select(route => MakeResource(startFromHere, route));
         }
 
         private static string MakeResource(string startFromHere, string route)
         {
-            var resource = route.Replace(startFromHere, "").Replace(@"\", @"/");
+            var resource = route.Replace(startFromHere, "")
+                                .Replace(@"\", @"/");
             if (resource.StartsWith(@"/")) resource = resource.Remove(0, 1);
             return resource.Remove(resource.LastIndexOf(".", StringComparison.Ordinal));
         }

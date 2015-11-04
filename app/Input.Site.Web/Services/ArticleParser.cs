@@ -35,6 +35,7 @@ namespace InputSite.Services
         public IEnumerable<string> Roles { get; private set; }
 
         public string ResourceName { get; private set; }
+        public string AbsoluteResourceName { get; private set; }
         public string Id { get; private set; }
 
         public string Image { get; private set; }
@@ -78,7 +79,17 @@ namespace InputSite.Services
             Image = GetMetaValue("Image");
             BgImage = GetMetaValue("BgImage");
 
+            AbsoluteResourceName = resourceName;
             ResourceName = resourceName;
+
+            var reg = new Regex(@"(\d+)[-](\d+)[-](\d+)[-]", RegexOptions.Compiled);
+            if (reg.IsMatch(resourceName))
+            {                
+                var result = reg.Replace(resourceName, m => m.Groups[0].Value.Replace("-", "/"));
+                ResourceName = result;
+                AbsoluteResourceName = resourceName;
+            }
+            
 		}
 
         private string GetMetaValue(string key)

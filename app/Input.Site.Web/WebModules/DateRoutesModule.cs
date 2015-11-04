@@ -1,51 +1,24 @@
 using System;
 using System.Linq;
 using InputSite.Bootstrap;
-using InputSite.Extensions;
 using InputSite.Interfaces;
 using InputSite.Model;
 using Nancy;
 using Nancy.Responses.Negotiation;
-using Nancy.ViewEngines;
 
 namespace InputSite.WebModules
 {
-    public class DefaultModule : BaseModule
+    public class DateRoutesModule : BaseModule
     {
         private readonly IArticleReader _articleReader;
         private readonly IRouteLocatorProvider _routeLocatorProvider;
-        private readonly IViewLocationProvider _viewLocationProvider;
 
-        public DefaultModule(IArticleReader articleReader, IRouteLocatorProvider routeLocatorProvider, IViewLocationProvider viewLocationProvider)
+        public DateRoutesModule(IArticleReader articleReader, IRouteLocatorProvider routeLocatorProvider)
         {
             _articleReader = articleReader;
             _routeLocatorProvider = routeLocatorProvider;
-            _viewLocationProvider = viewLocationProvider;
 
             SetupDateRoutes();
-            SetupStaticRoutes();
-        }
-
-        private void SetupStaticRoutes()
-        {
-            var routes = _routeLocatorProvider.StaticRoutes();
-            routes.Map(route => Get[route + "/{article}"] = parameters => FetchArticle(Request.Path.TrimStart('/')));
-            
-            Get["/{article}"] = parameters =>
-            {
-                /* Need to know if it is a article or not */
-                var isArticle = _viewLocationProvider.GetLocatedViews(new[] {"md", "markdown"}).Count(w => w.Name.ToLower().Contains(parameters.article)) == 1;
-                if (isArticle) {
-                    var article = _articleReader.ArticlesByRoute((string)parameters.article).FirstOrDefault();
-                    if (article == null) return 404;
-                    return RenderView(article.ResourceName, new PageModel(article));
-                }
-
-                /* TODO : This route setup interfears with the root route in date routes, need to sort it, its anoying */
-                var path = Request.Path.Replace("/", "");
-                PageModel.Meta.Articles = _articleReader.ArticlesByRoute(path);
-                return RenderView(string.Concat("_layout/", Request.Path), PageModel);
-            };
         }
 
         private void SetupDateRoutes()
@@ -71,21 +44,11 @@ namespace InputSite.WebModules
                 var categoryAndYearAndMonth = string.Format(@"/{0}/{{year:int}}/{{month}}", root);
                 Get[categoryAndYearAndMonth] = parameters => FetchArticles(configuredRoute, parameters);
 
-                var categoryAndYearAndMonthAndArticle = string.Format(@"/{0}/{{year:int}}/{{month}}/{{article}}", root);
-                Get[categoryAndYearAndMonthAndArticle] = parameters =>
-                {
-                    var path = ConstructSearchPath(configuredRoute, parameters);
-                    return FetchArticle(path);
-                };
+                var categoryAndYearAndMonthAndDay = string.Format(@"/{0}/{{year:int}}/{{month}}/{{day}}", root);
+                Get[categoryAndYearAndMonthAndDay] = parameters => FetchArticles(configuredRoute, parameters);
             }
         }
 
-        private Negotiator FetchArticle(string routeToArticle)
-        {
-            var article = _articleReader.ArticlesByRoute(routeToArticle).FirstOrDefault();
-            if (article == null) return Negotiate.WithStatusCode(404);
-            return RenderView(article.ResourceName, new PageModel(article));
-        }
 
         private Negotiator FetchArticles(string configuredRoute, dynamic parameters)
         {

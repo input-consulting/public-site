@@ -4,7 +4,7 @@ namespace InputSite.Interfaces
 {
     public interface IArticleLocator
     {
-        IEnumerable<string> Articles();
+        IEnumerable<string> GetAllArticles();
         string PathToResource(string path);
     }
 }

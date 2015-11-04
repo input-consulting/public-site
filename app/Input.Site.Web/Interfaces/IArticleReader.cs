@@ -11,5 +11,6 @@ namespace InputSite.Interfaces
         IEnumerable<ArticleModel> ArticlesByAuthor(string author);
         ArticleModel ArticleById(string id);
         IEnumerable<string> TagCloud();
+        IEnumerable<string> AllArticleRoutes();
     }
 }

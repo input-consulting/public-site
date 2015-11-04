@@ -34,7 +34,7 @@ namespace InputSite.Services
         {
             EnsureStorage();
 
-            var articles = _articleLocator.Articles();
+            var articles = _articleLocator.GetAllArticles();
             foreach (var article in articles)
             {
                 using (var sr = new StreamReader(article))
@@ -91,11 +91,28 @@ namespace InputSite.Services
             {
                 doc.Add(new Field("resource", part, Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.YES));
             }
-
+            doc.Add(new Field("absoluteResourceName", parser.AbsoluteResourceName, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("date", DateTools.DateToString(parser.BlogDate, DateTools.Resolution.DAY), Field.Store.YES, Field.Index.ANALYZED));
             
             _indexWriter.AddDocument(doc);
             _indexWriter.Optimize();
+        }
+
+        public IEnumerable<ArticleLocation> AllArticleRoutes()
+        {
+            var reader = _indexWriter.GetReader();
+            var count = reader.NumDocs();
+            for ( var ii = 0; ii < count; ii++)
+            {
+                if ( !reader.IsDeleted(ii) )
+                {
+                    var doc = reader.Document(ii);
+                    var resource = string.Join("/", doc.GetValues("resource"));
+                    var pathName = doc.Get("absoluteResourceName");
+
+                    yield return new ArticleLocation(resource, pathName);
+                }
+            }
         }
 
         public IEnumerable<ArticleModel> ArticlesByFreeText(string search)
@@ -210,7 +227,8 @@ namespace InputSite.Services
                         date, 
                         aDock.Get("body"),
                         aDock.Get("image"),
-                        aDock.Get("bgimage")
+                        aDock.Get("bgimage"),
+                        aDock.Get("absoluteResourceName")
                         );
             }
         }

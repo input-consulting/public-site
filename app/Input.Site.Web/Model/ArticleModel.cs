@@ -67,8 +67,9 @@ namespace InputSite.Model
         } 
 
         public string ResourceName { get; private set; }
+        public string AbsolutePath { get; private set; }
 
-        public ArticleModel(string category, string author, string title, string ingress, IEnumerable<string> tags, IEnumerable<string> roles, string resourceName, DateTime date, string body, string image, string bgImage)
+        public ArticleModel(string category, string author, string title, string ingress, IEnumerable<string> tags, IEnumerable<string> roles, string resourceName, DateTime date, string body, string image, string bgImage, string absolutePath)
         {
             Image = image;
             BgImage = bgImage;
@@ -80,7 +81,8 @@ namespace InputSite.Model
             Tags = tags;
             Roles = roles;
             ResourceName = resourceName;
-            BlogDate = date;            
+            BlogDate = date;
+            AbsolutePath = absolutePath;
         }
 
     }

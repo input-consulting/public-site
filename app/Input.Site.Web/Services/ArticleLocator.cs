@@ -14,7 +14,7 @@ namespace InputSite.Services
             _rootPath = rootPathProvider.GetRootPath() + "/views";
         }
         
-        public IEnumerable<string> Articles()
+        public IEnumerable<string> GetAllArticles()
         {
             var articleEvaluators = new List<IRouteEvaluator>
             {
@@ -29,7 +29,7 @@ namespace InputSite.Services
 
         public string PathToResource(string path)
         {
-            var routeReader = new RouteReader(null);
+            var routeReader = new RouteReader();
             return routeReader.TransformToResource(_rootPath, path);
         }
     }

@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using InputSite.Model;
+using InputSite.Services;
 
 namespace InputSite.Interfaces
 {
     public interface IArticleStorage
     {
+        IEnumerable<ArticleLocation> AllArticleRoutes();
         IEnumerable<ArticleModel> ArticlesByFreeText(string search);
 
         IEnumerable<ArticleModel> ArticlesByRoute(string category);

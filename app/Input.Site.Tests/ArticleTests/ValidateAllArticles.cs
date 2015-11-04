@@ -17,7 +17,7 @@ namespace Input.Site.Tests.ArticleTests
 
         public IEnumerable<string> TestCases()
         {            
-            return _articleLocator.Articles();
+            return _articleLocator.GetAllArticles();
         }
 
         [Test, TestCaseSource(typeof(ValidateAllArticles), "TestCases")]

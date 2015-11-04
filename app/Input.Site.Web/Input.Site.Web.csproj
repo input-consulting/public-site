@@ -18,6 +18,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -132,16 +133,18 @@
     <Compile Include="Model\PageModel.cs" />
     <Compile Include="Model\ArticleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ArticleLocation.cs" />
     <Compile Include="Services\ArticleLocator.cs" />
     <Compile Include="Services\ArticleParser.cs" />
     <Compile Include="Services\ArticleReader.cs" />
     <Compile Include="Services\ArticleStorage.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="WebModules\BlogModule.cs" />
-    <Compile Include="WebModules\DefaultModule.cs" />
+    <Compile Include="WebModules\DateRoutesModule.cs" />
     <Compile Include="WebModules\HomeModule.cs" />
     <Compile Include="WebModules\BaseModule.cs" />
     <Compile Include="WebModules\SearchModule.cs" />
+    <Compile Include="WebModules\StaticRoutesModule.cs" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

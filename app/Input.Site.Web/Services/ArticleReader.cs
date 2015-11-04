@@ -51,5 +51,10 @@ namespace InputSite.Services
         {
             return _articleStorage.TagCloud();
         }
+
+        public IEnumerable<string> AllArticleRoutes()
+        {
+            return _articleStorage.AllArticleRoutes().Select(r => r.RouteName);
+        }
     }
 }
