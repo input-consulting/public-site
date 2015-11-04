@@ -1,0 +1,24 @@
+@Master['_layout/article-page.html']
+
+@Meta
+Author : Dan Lofquist
+Title: Nyhet med datum
+Date: 2015-10-03
+Tags: Nyheter
+BgImage : /assets/images/bg1.jpg
+Image : /static/img/thumbs/input-6.jpg
+@EndMeta
+
+@Section['Content']
+
+Est quis fidelissimae, laboris esse lorem quamquam elit. Cernantur ipsum quae 
+non eram quo dolor laboris imitarentur a quo quis vidisse consequat, a cillum 
+labore hic occaecat, ullamco nisi do deserunt illustriora, e fore mentitum 
+incididunt, cernantur firmissimum si commodo, o dolor nisi amet fabulas. Aliqua 
+aut expetendis ut eu ab summis expetendis, ut multos aut nulla, quamquam eram 
+eiusmod pariatur, irure ullamco imitarentur an do officia domesticarum aut hic 
+anim transferrem est iis ut noster eram quem. Hic officia o singulis. Ea magna 
+quem sed aliquip. O nescius ad laborum in incurreret minim laborum officia te 
+ita nostrud familiaritatem, voluptate praetermissum sed vidisse.
+
+@EndSection

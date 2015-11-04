@@ -1,0 +1,23 @@
+@Master['_layout/article-page.html']
+
+@Meta
+Author : Dan Lofquist
+Title: Nyhet med datum
+Date: 2015-10-03
+Tags: Nyheter
+BgImage : /assets/images/bg1.jpg
+Image : /static/img/thumbs/input-6.jpg
+@EndMeta
+
+@Section['Content']
+
+Anim litteris arbitrantur, nam a aute aute sunt. Arbitror te minim se arbitror 
+fore voluptate excepteur o enim proident familiaritatem do quid probant 
+fidelissimae, irure consequat te relinqueret, velit se laborum ut elit probant 
+ab exquisitaque, quis qui litteris an dolor. Te est dolore legam varias ex 
+proident legam voluptate, ea dolor arbitror nescius aut eu deserunt transferrem. 
+Deserunt eram ipsum se lorem. Ab lorem appellat quibusdam. Ne possumus 
+domesticarum, labore concursionibus excepteur enim laboris. Officia quae 
+singulis iis quem eiusmod an dolor esse.
+
+@EndSection

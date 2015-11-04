@@ -1,0 +1,21 @@
+@Master['_layout/article-page.html']
+
+@Meta
+Author : Dan Lofquist
+Title: Nyhet med datum
+Date: 2015-10-03
+Tags: Nyheter
+BgImage : /assets/images/bg1.jpg
+Image : /static/img/thumbs/input-6.jpg
+@EndMeta
+
+@Section['Content']
+
+Lorem aut excepteur ut possumus de nostrud ab ut culpa proident quo eu malis 
+esse ne voluptate. Officia aliqua incididunt commodo. E duis philosophari. Iis 
+aliqua incurreret offendit. Fugiat incididunt et aliquip. Do malis est duis ne 
+velit consequat ex arbitrantur, an se ipsum eram cillum de et cupidatat te 
+laboris se laboris legam excepteur probant ad laborum tamen elit ullamco quorum 
+hic cillum se qui cillum proident eu ne dolore arbitror cernantur.
+
+@EndSection
