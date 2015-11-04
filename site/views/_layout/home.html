@@ -2,121 +2,27 @@
 
 @Section['MainContent']
 
-<div class="row bg-color-two">
-    <section class="container with news">
-        @Partial['_layout/partial/partial-home-nyheter.html', Model.Meta.LatestNews];
-    </section>
-</div>
-
-<div class="row bg-color-one">
-   <div class="divider" id="about"></div>
-    <section class="container">
-        <article>
-            <header>@Model.Meta.AboutArticle.Title</header>
-            @Model.Meta.AboutArticle.Body
-        </article>
-    </section>
-    <div class="divider"></div>
-</div>
-
-<section class="team-input-1">
-  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
-</section>
-
-<div class="row bg-color-four">
-   <div class="divider" id="culture"></div>
-    <section class="container">
-        <article>
-            <header>@Model.Meta.CultureArticle.Title</header>
-            @Model.Meta.CultureArticle.Body
-        </article>
-    </section>
-    <section class="container clickables">
-        @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.CultureArticles];
-    </section>
+    @Partial['_layout/home/home-section-input-news.html'];
+    @Partial['_layout/home/home-section-about-us.html'];
     
-    <div class="divider"></div>
-</div>
-
-<section class="team-input-2">
-  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
-</section>
-
-<div class="row bg-color-one">
-    <div class="divider" id="services"></div>
-    <section class="container">
-        <article>
-            <header>@Model.Meta.ServicesArticle.Title</header>
-            @Model.Meta.ServicesArticle.Body
-        </article>
-    </section>
-    <section class="container clickables">
-        @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.ServicesArticles];
-    </section>
-    <div class="divider"></div>
-</div>
-
-<div class="row bg-color-four">
-    <div class="divider" id="sales"></div>
-    <section class="container">
-        <article>
-            <header>@Model.Meta.SalesArticle.Title</header>
-            @Model.Meta.SalesArticle.Body
-        </article>
-        <section class="sales-team">
-            @Partial['_layout/partial/partial-home-sales-hero.html', Model.Meta.SalesArticles];
-        </section>
-        <div class="divider"></div>
-    </section>
-    <div class="divider"></div>
-</div>
-
-<section class="team-input-3">
-  <div class="col-sm-6 col-sm-offset-3 text-center"></div>
-</section>
-
-<div class="row bg-color-two">
-    <div class="divider" id="crew"></div>
-    <section class="container">
-        <article>
-            <header>@Model.Meta.CrewArticle.Title</header>
-            @Model.Meta.CrewArticle.Body
-        </article>
-    </section>
-    <div class="divider"></div>
-</div>
-
-<div class="row bg-color-four" id="contact">
-   
-    <section class="container">
-        <article>
-            <header>kontakta oss</header>
-            <div id="map-canvas"></div>
-            <div class="divider"></div>
-        </article>
+    <section class="team-input-1">
+      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
     </section>
 
-    <div class="container">
-        <div class="col-sm-9 pull-left">
-            <a href="https://www.linkedin.com/company/input-consulting-stockholm-ab" target="_blank">
-               <img src="/static/img/social/li.png" alt="Linkedin">
-            </a>
-        </div>
-        <div class="col-sm-3 pull-right">
-            <address>
-               <span id="map-input">
-                Input Consulting Stockholm AB<br>
-                Kungsgatan 62<br>
-                111 22 Stockholm</span><br>
-                +46 (8) 700 00 80
-            </address>
-            <address>
-                <strong>E-Post</strong><br>
-                <a href="mailto:info@input-consulting.se">info@input-consulting.se</a>
-            </address>
-        </div>
-    </div>
-    
-</div>
+    @Partial['_layout/home/home-section-culture.html'];
+
+    <section class="team-input-2">
+      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+    </section>
+
+    @Partial['_layout/home/home-section-services.html'];
+    @Partial['_layout/home/home-section-input-sales-team.html'];
+
+    <section class="team-input-3">
+      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+    </section>
+
+    @Partial['_layout/home/home-section-input-crew.html'];
+    @Partial['_layout/home/home-section-contact-us.html'];
 
 @EndSection

@@ -1,0 +1,14 @@
+<section class="input-culture">
+   <div class="divider" id="culture"></div>
+    <section class="container">
+        <article>
+            <header>@Model.Meta.CultureArticle.Title</header>
+            @Model.Meta.CultureArticle.Body
+        </article>
+    </section>
+    <section class="container clickables">
+        @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.CultureArticles];
+    </section>
+    
+    <div class="divider"></div>
+</section>

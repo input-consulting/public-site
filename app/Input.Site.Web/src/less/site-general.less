@@ -11,20 +11,27 @@ a:focus {
     outline: none;
 }
 
+.full-height {
+    height: 100% !important;
+}
+
 .row {
   margin-left:0px;
   margin-right:0px;
 }
 
 /* Wrapper for page content to push down footer */
-#wrap {
+#input-site {
   min-height: 100%;
-//  height: auto !important;
   height: 100%;
   /* Negative indent footer by its height */
   margin: 0 auto -60px;
   /* Pad bottom by footer height */
   padding: 0 0 60px;
+}
+
+#input-site > .container {
+  padding: 60px 15px 0;
 }
 
 /* Set the fixed height of the footer here */
@@ -34,10 +41,6 @@ a:focus {
   margin-top:50px;
   padding-top:20px;
   padding-bottom:20px;
-}
-
-#wrap > .container {
-  padding: 60px 15px 0;
 }
 
 #map-canvas {
@@ -127,7 +130,6 @@ article {
             right: 0;
             position: absolute;
             z-index: -1;       
-            border-radius: 10px;
         }
     }
 }
@@ -187,7 +189,6 @@ article {
 }
 
 
-
 section {
     margin : 0;
     padding: 0;
@@ -195,27 +196,6 @@ section {
     height: 100%;
     padding-top:30px;    
 }
-
-.bg-color-one {
-    background: @theme-color-1;
-}
-
-.bg-color-two {
-    background: @theme-color-3;
-}
-
-.bg-color-three {
-    background: @theme-color-2;
-}
-
-.bg-color-four {
-    background: @theme-color-4;
-}
-
-.bg-color-five {
-    background: @theme-color-5;
-}
-
 
 header {
     &.hendrik {

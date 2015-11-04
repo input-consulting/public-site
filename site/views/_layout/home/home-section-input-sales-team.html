@@ -1,0 +1,14 @@
+<section class="input-sales-team">
+    <div class="divider" id="sales"></div>
+    <section class="container">
+        <article>
+            <header>@Model.Meta.SalesArticle.Title</header>
+            @Model.Meta.SalesArticle.Body
+        </article>
+        <section class="sales-team">
+            @Partial['_layout/partial/partial-home-sales-hero.html', Model.Meta.SalesArticles];
+        </section>
+        <div class="divider"></div>
+    </section>
+    <div class="divider"></div>
+</section>

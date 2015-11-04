@@ -1,4 +1,4 @@
-@Master['_layout/article-page.html'] 
+@Master['_layout/article-popup-page.html'] 
 
 @Meta
 Title: Lyhörda

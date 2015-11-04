@@ -2,17 +2,14 @@
 
 @Section['MainContent']
 
-<div class="news-page header">
-    <section class="container">
-        <header>Aktuellt på Input</header>
-    </section>
-</div>
+    <section class="input-news">
 
-<div class="news-page list">
-    <section class="container">
-        @Partial['_layout/partial/partial-news-article.html', Model.Meta.Articles];
+        <section class="container list-of-news">
+            <header>Aktuellt på Input</header>
+            @Partial['_layout/partial/partial-news-article.html', Model.Meta.Articles];
+            <div class="divider"></div>
+        </section>
+
     </section>
-    <div class="divider"></div>
-</div>
 
 @EndSection

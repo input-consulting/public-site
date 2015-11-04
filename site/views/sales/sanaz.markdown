@@ -1,4 +1,4 @@
-@Master['_layout/sales-hero-page.html']
+@Master['_layout/sales-popup-page.html'] 
 
 @Meta
 Title: Sanaz

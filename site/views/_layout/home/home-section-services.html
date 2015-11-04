@@ -1,0 +1,13 @@
+<section class="input-services">
+    <div class="divider" id="services"></div>
+    <section class="container">
+        <article>
+            <header>@Model.Meta.ServicesArticle.Title</header>
+            @Model.Meta.ServicesArticle.Body
+        </article>
+    </section>
+    <section class="container clickables">
+        @Partial['_layout/partial/partial-home-clickables.html', Model.Meta.ServicesArticles];
+    </section>
+    <div class="divider"></div>
+</section>

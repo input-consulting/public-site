@@ -1,0 +1,24 @@
+<section class="site-pop-up" style="background-image:url('@Model.Meta.BgImage');">
+        
+   <div class="popup-header">
+        <img src="/static/img/logo/logo_3.png" alt="">
+   </div>
+ 
+  <article>
+       <div class="profile">
+            <div class="content">
+              <h1>@Model.Meta.Title</h1>
+               
+               <div class="text-block">
+                    @Section['Content'];
+               </div>
+            </div>
+       </div>
+  </article>
+  
+  <nav class="close-sales-hero">
+    <button type="button" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+    </button>
+  </nav>
+</section>
