@@ -123,7 +123,8 @@ call rmdir %DEPLOYMENT_HOME%\\static /s /q
 call rmdir %DEPLOYMENT_HOME%\\views /s /q
 
 :: 6. Copy site assets !
-call xcopy %DEPLOYMENT_SOURCE%\\site %DEPLOYMENT_TARGET% /Y /s /i
+call xcopy %DEPLOYMENT_SOURCE%\\site\\views %DEPLOYMENT_TARGET%\\views /Y /s /i
+call xcopy %DEPLOYMENT_SOURCE%\\site\\static %DEPLOYMENT_TARGET%\\static /Y /s /i
 
 :: 7. Run tests
 

@@ -13,7 +13,7 @@ module.exports = {
   		'bower_components/jquery/dist/jquery.js',
   		'bower_components/bootstrap/dist/js/bootstrap.js',
         'bower_components/wow/dist/wow.js',
-        appRoot + project + 'src/js/**/*.js/'
+        siteRoot + 'source/js/**/*.js/'
   	],
   	output : appRoot + project + 'assets/js',
   },
@@ -21,7 +21,7 @@ module.exports = {
   styles : {
   	source : [
         'bower_components/animate.css/animate.css',
-        appRoot + '**/site.less'
+        siteRoot + 'source/less/site.less'
     ],
   	output : appRoot + project + 'assets/css',
   },
@@ -29,7 +29,7 @@ module.exports = {
   fonts : {
       source : [
           'bower_components/bootstrap/dist/fonts/*.*',
-          appRoot + project + 'src/fonts/*.*',
+          siteRoot + 'source/fonts/*.*',
       ],
     output : appRoot + project + 'assets/fonts'
   },
@@ -50,8 +50,8 @@ module.exports = {
 
   output: appRoot + project + 'assets',
 
-  source: appRoot + '**/*.js',
-  html: appRoot + '**/*.html',
+  source: siteRoot + '**/*.js',
+  html: siteRoot + '**/*.html',
   style: 'styles/**/*.css',
  
 };
