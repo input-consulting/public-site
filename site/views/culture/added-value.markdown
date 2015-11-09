@@ -1,11 +1,11 @@
-@Master['_layout/article-popup-page.html'] 
+@Master['_layout/article-cultures-popup-page.html'] 
 
 @Meta
 Title: Mervärde
 Date: 2014-08-01 00:01
 Tags: Mervärde
-BgImage : /static/img/team-input-4.jpg
-Image : /static/img/thumbs/input-6.jpg
+BgImage : 
+Image : 
 @EndMeta
 
 @Section['Content']

@@ -1,4 +1,4 @@
-@Master['_layout/master-nyheter-list.html'] 
+@Master['_layout/master-news-page.html'] 
 
 @Section['MainContent']
 
@@ -6,7 +6,16 @@
 
         <section class="container list-of-news">
             <header>Aktuellt på Input</header>
-            @Partial['_layout/partial/partial-news-article.html', Model.Meta.Articles];
+                        
+            @Each.Model.Meta.Articles
+            <article>
+               <a href="/@Current.ResourceName">
+                    <time>@Current.FriendlyDate</time>
+                    <header>@Current.Title</header>
+                    @Current.Abstract
+               </a>
+             </article>
+             @EndEach
             <div class="divider"></div>
         </section>
 

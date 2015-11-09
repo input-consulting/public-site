@@ -21,18 +21,16 @@
     </script>
 </head>
     <body>
-        @Partial['_layout/partial/partial-news-menu.html', Model];
+        @Partial['_layout/partial/partial-news-top-header.html'];
         
-        <section class="input-news full-height">
-              
+        <section class="input-news full-height">              
             <section class="container single-article">
                 <article>
                     <time>@Model.Meta.FriendlyDate</time>
                     <header>@Model.Meta.Title</header>
                     @Section['Content'];
                 </article>
-            </section>
-                
+            </section>                
         </section>
         
     </body>

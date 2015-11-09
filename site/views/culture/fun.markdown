@@ -1,4 +1,4 @@
-@Master['_layout/article-popup-page.html'] 
+@Master['_layout/article-cultures-popup-page.html']
 
 @Meta
 Title: Vi har kul
