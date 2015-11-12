@@ -5,6 +5,8 @@ using InputSite.Interfaces;
 using InputSite.Model;
 using Nancy;
 using Nancy.Responses.Negotiation;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace InputSite.WebModules
 {
@@ -23,7 +25,22 @@ namespace InputSite.WebModules
 
         private void SetupDateRoutes()
         {
-            var routes = _routeLocatorProvider.DateRoutes();
+            // quick fix
+            var dateRoutesFromStorage = new List<string>();
+            var articles = _articleReader.AllArticleRoutes().ToList();
+            var reg = new Regex(@"[/](\d+)[/](\d+)[/](\d+)[/]", RegexOptions.Compiled);
+
+            foreach ( var article in articles) {
+                var match = reg.Match(article);
+                if (match.Success)
+                {
+                    var r = reg.Match(article);
+                    dateRoutesFromStorage.Add( article.Substring(0, r.Index ) );
+                }
+            }
+            // quick fix
+
+            var routes = _routeLocatorProvider.DateRoutes().Concat(dateRoutesFromStorage).Distinct();
             var roots = routes.Select(r => r.Split(new[] { @"/" }, StringSplitOptions.RemoveEmptyEntries).First()).Distinct();
 
             foreach (var root in roots)

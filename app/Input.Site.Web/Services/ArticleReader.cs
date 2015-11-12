@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using InputSite.Interfaces;
 using InputSite.Model;
+using System.Text.RegularExpressions;
 
 namespace InputSite.Services
 {
