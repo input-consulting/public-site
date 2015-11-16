@@ -21,7 +21,9 @@
     </script>    
 </head>
     <body>
-        @Partial['_layout/partial/partial-news-top-header.html', Model];
-        @Section['MainContent'];
+       <section class="full-page input-news">
+            @Partial['_layout/partial/partial-news-top-header.html', Model];
+            @Section['MainContent'];
+        </section>
     </body>
 </html>

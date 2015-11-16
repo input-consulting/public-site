@@ -2,23 +2,19 @@
 
 @Section['MainContent']
 
-    <section class="input-news">
+<section class="container list-of-news">
+    <header>Aktuellt på Input</header>
 
-        <section class="container list-of-news">
-            <header>Aktuellt på Input</header>
-                        
-            @Each.Model.Meta.Articles
-            <article>
-               <a href="/@Current.ResourceName">
-                    <time>@Current.FriendlyDate</time>
-                    <header>@Current.Title</header>
-                    @Current.Abstract
-               </a>
-             </article>
-             @EndEach
-            <div class="divider"></div>
-        </section>
-
-    </section>
+    @Each.Model.Meta.Articles
+    <article>
+       <a href="/@Current.ResourceName">
+            <time>@Current.FriendlyDate</time>
+            <header>@Current.Title</header>
+            @Current.Abstract
+       </a>
+     </article>
+     @EndEach
+    <div class="divider"></div>
+</section>
 
 @EndSection
