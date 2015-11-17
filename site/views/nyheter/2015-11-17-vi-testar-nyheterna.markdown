@@ -11,6 +11,8 @@ Tags: Nyheter
 
 ### Input testar nyheterna
 
+![image alt](/static/img/nyheter/wtfomg.png)
+
 Detta borde visas som vanlig text och det ovanför är fettext !!!
 
 
