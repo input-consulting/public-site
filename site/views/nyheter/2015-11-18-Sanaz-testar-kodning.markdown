@@ -6,8 +6,6 @@ Date: 2015-11-18 Tags: Nyheter BgImage : /assets/images/bg1.jpg Image : /static/
 
 @Section['Content']
 
-image alt
-
 Sanaz testar igen. Tex-mex-fest på fredag.
 
 @EndSection
