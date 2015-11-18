@@ -1,6 +1,6 @@
 @Master['_layout/article-page.html']
 
-@Meta Author : David Lundequist: Input har tecknat ramavtal med hela Mexico! Date: 2015-09-18 Tags: Nyheter @EndMeta
+@Meta Author : David Lundequist: Input har tecknat ramavtal med hela Mexico! Date: 2015-11-18 Tags: Nyheter @EndMeta
 
 @Section['Content']
 
