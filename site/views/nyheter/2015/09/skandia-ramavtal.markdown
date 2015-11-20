@@ -1,9 +1,9 @@
-@Master['_layout/news-page.html'] 
+@Master['_layout/article-page.html']
 
 @Meta
-Author : Dan Lofquist
-Title: Skandia har tecknat ramavtal
-Date: 2016-09-16
+Author : Hendrik Ellert
+Title: Skandia & Input har tecknat ramavtal
+Date: 2015-09-07
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /static/img/thumbs/input-6.jpg
