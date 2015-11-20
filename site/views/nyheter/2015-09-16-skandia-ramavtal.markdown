@@ -2,7 +2,7 @@
 
 @Meta
 Author : Dan Lofquist
-Title: Skandia har tecknat ramavtal
+Title: Skandia & Input har tecknat ramavtal
 Date: 2015-09-16
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
