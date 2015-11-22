@@ -29,6 +29,11 @@
                     <time>@Model.Meta.FriendlyDate</time>
                     <header>@Model.Meta.Title</header>
                     @Section['Content'];
+                    <footer>
+                        @Partial['_layout/partial/share-article-linkedin.html'];
+                        @Partial['_layout/partial/share-article-twitter.html'];
+                        @Partial['_layout/partial/share-article-facebook.html'];
+                    </footer>
                 </article>
             </section>                
         </section>

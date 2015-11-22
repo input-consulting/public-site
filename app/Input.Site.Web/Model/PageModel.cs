@@ -20,6 +20,7 @@ namespace InputSite.Model
             Meta.Tags = articleModel.TagsAsHtml;
             Meta.Image = articleModel.Image;
             Meta.BgImage = articleModel.BgImage;
+            Meta.ResourceName = articleModel.ResourceName;
         }
     }
 }
