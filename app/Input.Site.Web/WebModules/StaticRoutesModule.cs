@@ -4,6 +4,7 @@ using InputSite.Model;
 using Nancy;
 using Nancy.Responses.Negotiation;
 using System.Linq;
+using Nancy.Helpers;
 
 namespace InputSite.WebModules
 {
@@ -26,6 +27,10 @@ namespace InputSite.WebModules
             if (article == null) return Negotiate.WithStatusCode(404);
 
             var model = new PageModel(article);
+
+            model.Meta.ResourceName = string.Concat(Request.Url.SiteBase,"/", model.Meta.ResourceName);
+            model.Meta.SafeTitle = HttpUtility.UrlEncode(model.Meta.Title);
+
             return Negotiate
                 .WithView(article.AbsolutePath)
                 .WithModel(model)
