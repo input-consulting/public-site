@@ -21,6 +21,7 @@ namespace InputSite.Model
             Meta.Image = articleModel.Image;
             Meta.BgImage = articleModel.BgImage;
             Meta.ResourceName = articleModel.ResourceName;
+            Meta.Abstract = articleModel.Abstract;
         }
     }
 }
