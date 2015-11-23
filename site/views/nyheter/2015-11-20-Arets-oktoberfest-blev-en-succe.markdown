@@ -2,7 +2,7 @@
 
 @Meta
 Author : Hendrik Ellert
-Title: Årets Oktoberfest blev en succé!
+Title: Inputs Oktoberfest - Årets höjdpunkt!
 Date: 2015-10-16
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
