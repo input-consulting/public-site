@@ -28,17 +28,24 @@
 </head>
     <body>
         @Partial['_layout/partial/partial-news-top-header.html'];
-        
-        <section class="full-page input-news">              
+                
+        <section class="full-page input-news">
+           
             <section class="container single-article">
                 <article>
                     <time>@Model.Meta.FriendlyDate</time>
                     <header>@Model.Meta.Title</header>
                     @Section['Content'];
                     <footer>
-                        @Partial['_layout/partial/share-article-linkedin.html'];
-                        @Partial['_layout/partial/share-article-twitter.html'];
-                        @Partial['_layout/partial/share-article-facebook.html'];
+                       <nav>
+                            <a href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
+                            <a href="/nyheter"><span class="glyphicon glyphicon-th-list"></span> Mer nyheter</a>            
+                       </nav>
+                       <nav>
+                            @Partial['_layout/partial/share-article-linkedin.html'];
+                            @Partial['_layout/partial/share-article-twitter.html'];
+                            @Partial['_layout/partial/share-article-facebook.html'];
+                       </nav>
                     </footer>
                 </article>
             </section>                
