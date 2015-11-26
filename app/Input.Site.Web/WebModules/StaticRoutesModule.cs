@@ -17,7 +17,7 @@ namespace InputSite.WebModules
             _articleReader = articleReader;
 
             var articles = _articleReader.AllArticleRoutes();
-            articles.Select(r => "/" + r).Map(route => Get[route] = parameters => FetchArticle(Request.Path.TrimStart('/')));
+            articles.Select(r => $"/{r}").Map(route => Get[route] = parameters => FetchArticle(Request.Path.TrimStart('/')));
         }
 
 
@@ -28,7 +28,7 @@ namespace InputSite.WebModules
 
             var model = new PageModel(article);
 
-            model.Meta.ResourceName = string.Concat(Request.Url.SiteBase,"/", model.Meta.ResourceName);
+            model.Meta.ResourceName = $"{Request.Url.SiteBase}/{model.Meta.ResourceName}";
             model.Meta.SafeTitle = HttpUtility.UrlEncode(model.Meta.Title);
 
             return Negotiate

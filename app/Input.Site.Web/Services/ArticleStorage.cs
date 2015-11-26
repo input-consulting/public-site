@@ -135,7 +135,7 @@ namespace InputSite.Services
             {
                 var parser = new QueryParser(Version.LUCENE_30, "resource", _standardAnalyzer);
 
-                var parts = category.Split('/').Select(s => string.Concat((string) "+",(string) s)).ToArray();
+                var parts = category.Split('/').Select(s => $"+{s}").ToArray();
                 var baked = string.Join(" ", parts);
 
                 var query = parser.Parse(baked);
@@ -144,7 +144,6 @@ namespace InputSite.Services
                 return BuildResult(hits, searcher);
             } 
         }
-
 
         public IEnumerable<ArticleModel> ArticlesByTags(IEnumerable<string> tags)
         {
