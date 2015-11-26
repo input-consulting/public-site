@@ -12,7 +12,7 @@ module.exports = {
   	source : [ 
   		'bower_components/jquery/dist/jquery.js',
   		'bower_components/bootstrap/dist/js/bootstrap.js',
-        'bower_components/wow/dist/wow.js',
+//        'bower_components/wow/dist/wow.js',
         siteRoot + 'source/js/**/*.js/'
   	],
   	output : appRoot + project + 'assets/js',
@@ -20,7 +20,7 @@ module.exports = {
 
   styles : {
   	source : [
-        'bower_components/animate.css/animate.css',
+//        'bower_components/animate.css/animate.css',
         siteRoot + 'source/less/site.less'
     ],
   	output : appRoot + project + 'assets/css',
