@@ -13,7 +13,6 @@ Image : /static/img/thumbs/input-6.jpg
 
 ![image alt](/static/img/nyheter/skandia-logga.png)
 
-
 Skandia har beslutat att teckna ramavtal med Input gällande systemutveckling inom .NET. 
 Detta är ett exklusivt ramavtal som innebär att Input som enda leverantör kommer att förse Skandia med .NET konsulter under resten av 2015 och hela 2016. Vi på Input är mycket glada och väldigt stolta över att Skandia valt oss som ensam leverantör. 
 
