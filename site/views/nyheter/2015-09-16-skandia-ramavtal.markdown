@@ -18,6 +18,7 @@ Detta är ett exklusivt ramavtal som innebär att Input som enda leverantör kom
 
 Inputs anbud vann i konkurrens med många anbud från såväl traditionella konsultbolag som mäklare. Detta innebär att samarbetet mellan Skandia och Input stärks ytterligare.
 
+
 Tack Skandia och våra fantastiska konsulter som tillsammans gör detta möjligt!
 
 @EndSection
