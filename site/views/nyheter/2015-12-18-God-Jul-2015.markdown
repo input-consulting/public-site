@@ -1,0 +1,21 @@
+@Master['_layout/article-page.html']
+
+@Meta
+Author : Hendrik Ellert
+Title: God Jul & Gott Nytt År!
+Date: 2015-12-18
+Tags: Nyheter
+BgImage : /assets/images/bg1.jpg
+Image : /static/img/thumbs/input-6.jpg
+@EndMeta
+
+@Section['Content']
+
+![image alt](/static/img/nyheter/julhalsning2015.png)
+
+Vännerna på Input önskar Er, våra kunder, partners och kollegor God Jul & Gott Nytt År! 
+Vi ser fram emot ett fortsatt gott samarbete under 2016!
+
+I år skänker vi en extra tanke till de ensamkommande flyktingbarn som firar Jul i Sverige för första gången.
+
+@EndSection
