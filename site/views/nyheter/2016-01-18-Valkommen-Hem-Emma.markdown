@@ -16,7 +16,7 @@ Image : /static/img/thumbs/input-6.jpg
 Vi välkomnar vår nästa superstjärna, Emma Carlström, till Input-familjen!
 
 Emma är en grymt duktig javautvecklare som "har det i blodet". Närmast kommer hon från Nexus där hon har arbetat med utveckling av identitets- och accesshantering.
-Emma har ett genuint teknikintresse och gillar problemlösning. Hon är vetgirig och söker ständigt efter ny kunskap. Med sitt öppna och diplomatiska sätt är hon den perfekta lagspelaren
+Emma har ett genuint teknikintresse och gillar problemlösning. Hon är vetgirig och söker ständigt efter ny kunskap. Med sitt öppna och diplomatiska sätt är hon den perfekta lagspelaren.
 
 Om du är nyfiken på vad Emma kan hjälpa ditt företag med, ta kontakt med någon av våra säljare så berättar vi mer.
 
