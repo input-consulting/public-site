@@ -2,7 +2,7 @@
 
 @Meta
 Author : Hendrik Ellert
-Title: Triss i Ess
+Title: Triss i Ess!
 Date: 2016-02-22
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
@@ -13,7 +13,7 @@ Image : /static/img/thumbs/input-6.jpg
 
 ![image alt](/static/img/nyheter/FredrikFilmis.png) ![image alt](/static/img/nyheter/JennyFilmis.png) ![image alt](/static/img/nyheter/MatsHFilmis.png)
 
-Vi välkomnar en triss i ess till Input-familjen!
+Vi välkomnar en triss i ess till Input-familjen! Det är med stor glädje vi nu presenterar 3 högkvalitativa nyförvärv.
 
 Fredrik är en riktigt vass javautvecklare med stenkoll på transaktionsintensiva lösningar, en kunskap som han förvärvat från bl.a Nasdaq och Orc. Fredrik är en jäkligt ödmjuk och trevlig kille ständigt på jakt efter ny kunskap. 
 
