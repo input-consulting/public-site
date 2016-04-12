@@ -8,6 +8,16 @@ namespace InputSite.WebModules
     {
         public BlogModule(IArticleReader articleReader) : base("/blog")
         {
+            Get["/"] = _ => {
+
+                PageModel.Meta.Articles = articleReader.ArticlesByRoute("blog");
+
+                return Negotiate
+                       .WithView("_layout/blog")
+                       .WithModel(PageModel)
+                       .WithMediaRangeModel("application/json", PageModel);
+            };
+
             Get["/{firstname}-{surname}"] = parameters =>
             {
                 string author = string.Concat(parameters.firstname, " ", parameters.surname);
