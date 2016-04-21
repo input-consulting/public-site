@@ -13,7 +13,7 @@
         {
             if (string.IsNullOrEmpty(content)) return string.Empty;
 
-            if (content.Length < maxLength) return content;
+            if (content.Length <= maxLength) return content;
 
             var ii = maxLength;
             while (ii > 0)
