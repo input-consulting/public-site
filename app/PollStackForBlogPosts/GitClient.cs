@@ -20,7 +20,7 @@ namespace Input.Site.WebJob
             public const string blobspecifyingpathofsymlink = "120000";
         }
         private enum CreateTreeType { blob, tree, commit };
-        private readonly string baseuri, branch, owner, repo, fileprefix, blogpath;
+        private readonly string baseuri, branch, owner, repo, fileprefix, blogpath, gittoken;
         private string headsha, headurl, commitsha, treesha, treeurl, fileblobsha, newtreesha, newcommitsha;
         private HttpClient client;
 
@@ -28,7 +28,8 @@ namespace Input.Site.WebJob
         {
             client = new HttpClient();
             client.DefaultRequestHeaders.Add("user-agent", "custom");
-            client.DefaultRequestHeaders.Add("Authorization", "token " + CloudConfigurationManager.GetSetting("git-token"));
+            gittoken = CloudConfigurationManager.GetSetting("git-token");
+            client.DefaultRequestHeaders.Add("Authorization", "token " + gittoken);
             branch = CloudConfigurationManager.GetSetting("git-branch");
             owner = CloudConfigurationManager.GetSetting("git-owner");
             repo = CloudConfigurationManager.GetSetting("git-repo");
