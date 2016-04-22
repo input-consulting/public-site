@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
+using System.IO;
 
 namespace Input.Site.WebJob
 {
@@ -12,7 +13,10 @@ namespace Input.Site.WebJob
         static void Main()
         {
             // For testing locally, could not get the azure queue thing to work :(
-            //Functions.PollSlackCommitGit().Wait();
+            //StreamWriter sw = new StreamWriter(Console.OpenStandardOutput());
+            //sw.AutoFlush = true;
+            //Console.SetOut(sw);
+            //Functions.PollSlackCommitGit(sw).Wait();
             //return;
 
             var host = new JobHost();
@@ -24,8 +28,5 @@ namespace Input.Site.WebJob
             callTask.Wait();
             Console.WriteLine("Task completed: " + callTask.Status);
         }
-
-
-       
     }
 }

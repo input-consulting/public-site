@@ -15,14 +15,17 @@ namespace Input.Site.WebJob
             log.WriteLine("Function is invoked with value={0}", value);
             message = value.ToString();
             log.WriteLine("Following message will be written on the Queue={0}", message);
-            PollSlackCommitGit().Wait();
+            PollSlackCommitGit(log).Wait();
         }
 
-        public async static Task PollSlackCommitGit()
+        public async static Task PollSlackCommitGit(TextWriter log)
         {
+            log.Write("Creating Slack Client... ");
             SlackClient slackClient = new SlackClient();
+            log.WriteLine("Created");
+            log.Write("Creating Git Client... ");
             GitClient gitClient = new GitClient();
-
+            log.WriteLine("Created");
             ChannelHistory siteHistory;
             string latest = await gitClient.GetLastBlogPostTimeStamp();
             do

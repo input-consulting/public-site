@@ -60,6 +60,10 @@ namespace Input.Site.WebJob
                     }
                 }
             }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                Console.WriteLine("Could not authorize request to git. Wrong Token or repo?");
+            }
             string lastcommitedblogpoststring = lastcommitedblogpost.ToString().Insert(10, ".");
             return lastcommitedblogpoststring;
         }
@@ -67,13 +71,21 @@ namespace Input.Site.WebJob
         // Inspired by this blogpost http://www.levibotelho.com/development/commit-a-file-with-the-github-api
         public async Task CommitFile(Message message)
         {
+            string filename = CloudConfigurationManager.GetSetting("git-filenamestructure").ToString().Replace("[ts]", message.ts.Replace(".", ""));
+            Console.WriteLine($"Commiting file {filename} ");
             await GetReferenceToHead();
+            Console.WriteLine($"Got reference to head, {headurl}");
             await GrabCommitThatHeadPointsTo();
+            Console.WriteLine($"Got reference to head, {commitsha} and tree url {treeurl}");
             await PostBlob(message);
+            Console.WriteLine($"Posted File Blob {fileblobsha}");
             //await GetTreeThatCommitPointsTo();    //we alreade have this sha
-            await CreateTreeContainingNewFile(CloudConfigurationManager.GetSetting("git-filenamestructure").ToString().Replace("[ts]", message.ts.Replace(".", "")));
+            await CreateTreeContainingNewFile(filename);
+            Console.WriteLine($"Created the new tree {newtreesha}");
             await CreateNewCommit(CloudConfigurationManager.GetSetting("git-commitmessage").ToString().Replace("[ts]", message.ts.Replace(".", "")));
+            Console.WriteLine($"Created new commit, {newcommitsha}");
             await UpdateHead();
+            Console.WriteLine($"Moved head...");
         }
         
         private async Task GetReferenceToHead()

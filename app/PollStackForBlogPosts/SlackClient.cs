@@ -27,7 +27,6 @@ namespace Input.Site.WebJob
         
         private async Task<string> GetChannelId()
         {
-            
             Uri uri = SlackUri("channels.list", null);
             HttpResponseMessage response = await client.GetAsync(uri);
 
@@ -42,7 +41,10 @@ namespace Input.Site.WebJob
                              where chan.name == channelname
                              select chan.id;
                     return id.FirstOrDefault<string>();
-
+                }
+                else
+                {
+                    Console.WriteLine($"Could not get id for Slackchannel {channelname}, wrong auth token?");
                 }
             }
             return "";
