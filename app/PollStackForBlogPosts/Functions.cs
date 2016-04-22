@@ -28,9 +28,11 @@ namespace Input.Site.WebJob
             log.WriteLine("Created");
             ChannelHistory siteHistory;
             string latest = await gitClient.GetLastBlogPostTimeStamp();
+            log.WriteLine($"Last Commited Timestamp is {latest} ");
             do
             {
                 siteHistory = await slackClient.GetSiteHistory(latest);
+                log.WriteLine($"Found {siteHistory.messages.Count} new messages...");
                 if (siteHistory.messages.Count > 0)
                 {
                     latest = siteHistory.messages.First().ts;
