@@ -2,8 +2,8 @@
   "$schema": "http://schemastore.org/schemas/json/webjob-publish-settings.json",
   "webJobName": "PollStackForBlogPosts",
   "startTime": "2016-04-01T00:00:00+01:00",
-  "endTime": null,
-  "jobRecurrenceFrequency": "Minute",
-  "interval": 15,
+  "endTime": "2099-04-01T00:00:00+01:00",
+  "jobRecurrenceFrequency": "Hour",
+  "interval": 1,
   "runMode": "Scheduled"
 }
