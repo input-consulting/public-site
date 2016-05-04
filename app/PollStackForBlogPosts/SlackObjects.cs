@@ -26,6 +26,13 @@ namespace Input.Site.WebJob
         public string has_more { get; set; }
     }
 
+    public class FileList
+    {
+        public string ok { get; set; }
+        public List<File> files { get; set; }
+        public Paging paging { get; set; }
+    }
+
     public class Channel
     {
         public string id { get; set; }
@@ -40,6 +47,14 @@ namespace Input.Site.WebJob
         public Topic topic { get; set; }
         public Purpose purpose { get; set; }
         public int num_member { get; set; }
+    }
+
+    public class Paging
+    {
+        public int count { get; set; }
+        public int total { get; set; }
+        public int page { get; set; }
+        public int pages { get; set; }
     }
 
     public class Purpose
@@ -65,6 +80,72 @@ namespace Input.Site.WebJob
         public string ts { get; set; }
         public string subtype { get; set; }
     }
-    
+
+    public class FileResponse
+    {
+        public bool ok { get; set; }
+        public File file { get; set; }
+        public string content_html { get; set; }
+        public object comments { get; set; }
+        public object paging { get; set; }
+    }
+
+    public class File
+    {
+        public string id { get; set; }
+        public int created { get; set; }
+        public int timestamp { get; set; }
+        public string name { get; set; }
+        public string title { get; set; }
+        public string mimetype { get; set; }
+        public string filetype { get; set; }
+        public string pretty_type { get; set; }
+        public string user { get; set; }
+        public string mode { get; set; }
+        public bool editable { get; set; }
+        public bool is_external { get; set; }
+        public string external_type { get; set; }
+        public string username { get; set; }
+        public int size { get; set; }
+        public string url_private { get; set; }
+        public string url_private_download { get; set; }
+        public string thumb_64 { get; set; }
+        public string thumb_80 { get; set; }
+        public string thumb_360 { get; set; }
+        public string thumb_360_gif { get; set; }
+        public int thumb_360_w { get; set; }
+        public int thumb_360_h { get; set; }
+        public string thumb_480 { get; set; }
+        public int thumb_480_w { get; set; }
+        public int thumb_480_h { get; set; }
+        public string thumb_160 { get; set; }
+        public string permalink { get; set; }
+        public string permalink_public { get; set; }
+        public string edit_link { get; set; }
+        public string preview { get; set; }
+        public string preview_highlight { get; set; }
+        public int lines { get; set; }
+        public int lines_more { get; set; }
+        public bool is_public { get; set; }
+        public bool public_url_shared { get; set; }
+        public bool display_as_bot { get; set; }
+        public List<string> channels { get; set; }
+        public List<string> groups { get; set; }
+        public List<string> ims { get; set; }
+        public string initial_comment { get; set; }
+        public int num_stars { get; set; }
+        public bool is_starred { get; set; }
+        public List<string> pinned_to { get; set; }
+        public List<Reaction> reactions { get; set; }
+        public string comments_count { get; set; }
+
+    }
+
+    public class Reaction
+    {
+        public string name { get; set; }
+        public int count { get; set; }
+        public List<string> users { get; set; }
+    }
 }
 

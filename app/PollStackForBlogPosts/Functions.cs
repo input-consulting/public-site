@@ -26,25 +26,41 @@ namespace Input.Site.WebJob
             log.Write("Creating Git Client... ");
             GitClient gitClient = new GitClient();
             log.WriteLine("Created");
-            ChannelHistory siteHistory;
+            //ChannelHistory siteHistory;
+            FileList filelist;
             string latest = await gitClient.GetLastBlogPostTimeStamp();
             log.WriteLine($"Last Commited Timestamp is {latest} ");
-            do
-            {
-                siteHistory = await slackClient.GetSiteHistory(latest);
-                log.WriteLine($"Found {siteHistory.messages.Count} new messages...");
-                if (siteHistory.messages.Count > 0)
+            //do
+            //{
+            //    siteHistory = await slackClient.GetSiteHistory(latest);
+            //    log.WriteLine($"Found {siteHistory.messages.Count} new messages...");
+            //    if (siteHistory.messages.Count > 0)
+            //    {
+            //        latest = siteHistory.messages.First().ts;
+            //        foreach (Message mess in siteHistory.messages)
+            //        {
+            //            if (mess.text != "" && mess.subtype == "file_share")
+            //            {
+            //                string response = await slackClient.GetFileBlogPost(mess);
+            //                await gitClient.CommitFile(mess);
+            //            }
+            //        }
+            //    }
+            //} while (siteHistory.has_more == "true");
+
+            // files haves regular timestamp (without .xxxxxx endeing)
+            // TODO Paging and many files?
+                filelist = await slackClient.GetChannelFiles(latest);
+                log.WriteLine($"Found {filelist.files.Count} new files...");
+                if (filelist.files.Count > 0)
                 {
-                    latest = siteHistory.messages.First().ts;
-                    foreach (Message mess in siteHistory.messages)
-                    {
-                        if (mess.text != "" && mess.subtype == null)
-                        {
-                            await gitClient.CommitFile(mess);
-                        }
+                    latest = filelist.files.First().timestamp + ".000000";
+                    foreach (File file in filelist.files)
+                    {                       
+                        await gitClient.CommitFile(file);                        
                     }
                 }
-            } while (siteHistory.has_more == "true");
+            
         }
     }
 }

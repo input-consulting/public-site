@@ -35,5 +35,15 @@ namespace Input.Site.WebJob
             dtDateTime = dtDateTime.AddSeconds(timestamp).ToLocalTime();
             return dtDateTime;
         }
+
+        public static DateTime? UnixTimeStampToDateTime(int ts)
+        {
+
+            double timestamp = Convert.ToDouble(ts);
+            // Unix timestamp is seconds past epoch
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(timestamp).ToLocalTime();
+            return dtDateTime;
+        }
     }
 }

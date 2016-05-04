@@ -75,6 +75,49 @@ namespace Input.Site.WebJob
             return null;         
         }
 
+        public async Task<string> GetFileBlogPost(Message mess)
+        {
+            Uri uri = SlackUri("files.info", new NameValueCollection { { "channel", InputSitenId },                                          
+                                            { "file" , "F13BUCU94" }                                            
+                                            });
+            HttpResponseMessage response = await client.GetAsync(uri);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                string str = await response.Content.ReadAsStringAsync();
+                FileResponse slackfileresponse = JsonConvert.DeserializeObject<FileResponse>(str);
+                if (slackfileresponse.ok)
+                {
+                    return slackfileresponse.content_html;
+                }
+            }
+            return null;
+        }
+
+        public async Task<FileList> GetChannelFiles(string lastFetchedTimeStamp)
+        {
+            Uri uri = SlackUri("files.list",
+                new NameValueCollection { { "channel", InputSitenId },                                          
+                                            { "ts_from" , lastFetchedTimeStamp != string.Empty ? lastFetchedTimeStamp : "" },
+                                            { "types" , "Post" },
+                                            //{ "count" , "10" },
+                                            //{ "page" , "0" }
+                                            });
+            HttpResponseMessage response = await client.GetAsync(uri);
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+
+                string str = await response.Content.ReadAsStringAsync();
+
+                FileList filelist = JsonConvert.DeserializeObject<FileList>(str);
+                if (Convert.ToBoolean(filelist.ok))
+                {
+                    return filelist;
+                }
+            }
+            return null;
+        }
+
         private Uri SlackUri(string method, NameValueCollection parameters)
         {            
             return new Uri(baseuri + method)

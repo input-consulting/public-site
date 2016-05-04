@@ -88,7 +88,26 @@ namespace Input.Site.WebJob
             await UpdateHead();
             Console.WriteLine($"Moved head...");
         }
-        
+        // Inspired by this blogpost http://www.levibotelho.com/development/commit-a-file-with-the-github-api
+        public async Task CommitFile(File file)
+        {
+            string filename = CloudConfigurationManager.GetSetting("git-filenamestructure").ToString().Replace("[ts]", file.timestamp.ToString() );
+            Console.WriteLine($"Commiting file {filename} ");
+            await GetReferenceToHead();
+            Console.WriteLine($"Got reference to head, {headurl}");
+            await GrabCommitThatHeadPointsTo();
+            Console.WriteLine($"Got reference to head, {commitsha} and tree url {treeurl}");
+            await PostBlob(file);
+            Console.WriteLine($"Posted File Blob {fileblobsha}");
+            //await GetTreeThatCommitPointsTo();    //we alreade have this sha
+            await CreateTreeContainingNewFile(filename);
+            Console.WriteLine($"Created the new tree {newtreesha}");
+            await CreateNewCommit(CloudConfigurationManager.GetSetting("git-commitmessage").ToString().Replace("[ts]", file.timestamp.ToString()));
+            Console.WriteLine($"Created new commit, {newcommitsha}");
+            await UpdateHead();
+            Console.WriteLine($"Moved head...");
+        }
+
         private async Task GetReferenceToHead()
         {
             Uri reqUri = new Uri($"{baseuri}/repos/{owner}/{repo}/git/refs/heads/{branch}");
@@ -122,6 +141,27 @@ namespace Input.Site.WebJob
             {
                 content = FormatBlogPostMarkdown(message),
                 Encoding =   "utf-8"            // "base64"
+            });
+            string stri = jobj.ToString();
+            var stringContent = new StringContent(jobj.ToString());
+
+            HttpResponseMessage response = await client.PostAsync(uri, stringContent);
+            if (response.StatusCode == System.Net.HttpStatusCode.Created)
+            {
+                string jsonstring = await response.Content.ReadAsStringAsync();
+                JObject jobj2 = JObject.Parse(jsonstring);
+                fileblobsha = (string)jobj2["sha"];
+            }
+        }
+
+        private async Task PostBlob(File file)
+        {
+            Uri uri = new Uri($"{baseuri}/repos/{owner}/{repo}/git/blobs");
+            //string posttext = GetPostFileContent(file.url_private_download);
+            JObject jobj = JObject.FromObject(new
+            {
+                content = FormatBlogPostMarkdown(file, file.preview),
+                Encoding = "utf-8"            // "base64"
             });
             string stri = jobj.ToString();
             var stringContent = new StringContent(jobj.ToString());
@@ -235,19 +275,34 @@ namespace Input.Site.WebJob
         }
 
         private string FormatBlogPostMarkdown(Message message)
+        {            
+            return FormatBlogPostMarkdown(message.user, SlackHelper.SlackTimeStampToDateTime(message.ts).ToString(), message.text);
+        }
+
+        private string FormatBlogPostMarkdown(File file, string content)
+        {                       
+            return FormatBlogPostMarkdown(file.username, SlackHelper.UnixTimeStampToDateTime(file.timestamp).ToString(), content);
+        }
+
+        private string FormatBlogPostMarkdown(string author, string datestring, string content)
         {
             string str = $@"@Master['_layout/article-page.html']
 
-@Meta Author : {message.user}
-Title: Blog Post Date: {SlackHelper.SlackTimeStampToDateTime(message.ts)} Tags: Blog 
+@Meta Author : {author}
+Title: Blog Post Date: {datestring} Tags: Blog 
 @EndMeta
 
 @Section['Content']
 
-{message.text}
+{content}
 
 @EndSection";
             return str;
+        }
+
+        private string GetPostFileContent(string url)
+        {
+            return "här ska du skriva något som hämtar från urlen...";
         }
 
         // The easy way replacing tree in git
