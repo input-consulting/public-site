@@ -91,7 +91,7 @@ namespace Input.Site.WebJob
         // Inspired by this blogpost http://www.levibotelho.com/development/commit-a-file-with-the-github-api
         public async Task CommitFile(File file)
         {
-            string filename = CloudConfigurationManager.GetSetting("git-filenamestructure").ToString().Replace("[ts]", file.timestamp.ToString() );
+            string filename = CloudConfigurationManager.GetSetting("git-filenamestructure").ToString().Replace("[ts]", file.timestamp.ToString() + ".999999" );
             Console.WriteLine($"Commiting file {filename} ");
             await GetReferenceToHead();
             Console.WriteLine($"Got reference to head, {headurl}");
@@ -102,7 +102,7 @@ namespace Input.Site.WebJob
             //await GetTreeThatCommitPointsTo();    //we alreade have this sha
             await CreateTreeContainingNewFile(filename);
             Console.WriteLine($"Created the new tree {newtreesha}");
-            await CreateNewCommit(CloudConfigurationManager.GetSetting("git-commitmessage").ToString().Replace("[ts]", file.timestamp.ToString()));
+            await CreateNewCommit(CloudConfigurationManager.GetSetting("git-commitmessage").ToString().Replace("[ts]", file.timestamp.ToString() + ".999999"));
             Console.WriteLine($"Created new commit, {newcommitsha}");
             await UpdateHead();
             Console.WriteLine($"Moved head...");

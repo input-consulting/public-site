@@ -54,7 +54,7 @@ namespace Input.Site.WebJob
                 log.WriteLine($"Found {filelist.files.Count} new files...");
                 if (filelist.files.Count > 0)
                 {
-                    latest = filelist.files.First().timestamp + ".000000";
+                    latest = filelist.files.First().timestamp + ".999999";
                     foreach (File file in filelist.files)
                     {                       
                         await gitClient.CommitFile(file);                        
