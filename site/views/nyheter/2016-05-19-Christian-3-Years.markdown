@@ -11,7 +11,7 @@ Image : /static/img/thumbs/input-6.jpg
 
 @Section['Content']
 
-Tidigare i veckan hade vi 3-års kalas på kontoret. Vår fantastiske Christian Paulin har fyllt 3 år. Detta firades självklart med tårta!
+Tidigare i veckan hade vi 3-årskalas på kontoret. Vår fantastiske Christian Paulin har fyllt 3 år. Detta firades självklart med tårta!
 
 ![image alt](/static/img/nyheter/ChristianPaulin.jpg)
 
@@ -23,7 +23,7 @@ Tiden har gått otroligt fort samtidigt som det känns som jag jobbat mycket lä
 
 **Vad skulle du vilja ge för råd till en nybliven Inputtare?**
 
-Även om en del Input:are sitter tillsammans ute på uppdrag träffar man de flesta av sina kollegor endast på månadsmötena och på våra konferensresor. Ta dessa tillfällen i akt och prata med allt och alla då Inputs största styrka är vår gemenskap och alla vill att de nya skall få vara med. Inputs modell innebär mycket frihet, använd denna frihet till att vara din egen lyckas smed genom att ha koll på horisonten vart ditt område är på väg och agera där efter.
+Även om en del Inputtare sitter tillsammans ute på uppdrag träffar man de flesta av sina kollegor endast på månadsmötena och på våra konferensresor. Ta dessa tillfällen i akt och prata med allt och alla då Inputs största styrka är vår gemenskap och alla vill att de nya skall få vara med. Inputs modell innebär mycket frihet, använd denna frihet till att vara din egen lyckas smed genom att ha koll på horisonten vart ditt område är på väg och agera där efter.
 
 **Vad är enligt dig den viktigaste ingrediensen i Tacos?**
 
@@ -31,6 +31,6 @@ Om man bortser från köttfärsen + såsen som är ett måste så får jag nog l
 
 ![image alt](/static/img/nyheter/ChristianFest.jpg)       ![image alt](/static/img/nyheter/ChristianPaulinCake.jpg)
 
-Grattis Christian!
+####Grattis Christian!
 
 @EndSection
