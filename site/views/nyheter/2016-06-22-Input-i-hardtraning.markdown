@@ -17,7 +17,7 @@ I år ställer vi dessutom upp med ett rekordstort antal lag, hela 4 st eller 20
 ![image alt](/static/img/nyheter/Teknik.jpg)
 
 Som lite extra motivation inför semesterträningen så har vi anlitat ett riktigt löparproffs för att coacha oss och lära oss löpteknik och ge oss råd kring träningsupplägg.
-Karolin Ohlsson tävlar i svenska landslaget i orientering och har bl.a ett EM-silver på meritlistan. Nyligen vann hon även sin första deltävling i sin första deltävling i Swedish League.
+Karolin Ohlsson tävlar i svenska landslaget i orientering och har bl.a ett EM-silver på meritlistan. Nyligen vann hon även sin första deltävling i Swedish League.
 
 ![image alt](/static/img/nyheter/Hoppsa.jpg)       ![image alt](/static/img/nyheter/Hendrik.jpg)
 
