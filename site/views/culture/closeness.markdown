@@ -1,9 +1,9 @@
 @Master['_layout/article-cultures-popup-page.html'] 
 
 @Meta
-Title: Närhet
+Title: Gemenskap
 Date: 2014-08-01 00:01
-Tags: Närhet
+Tags: Gemenskap
 BgImage :
 Image : /static/img/thumbs/input-1.jpg
 @EndMeta
