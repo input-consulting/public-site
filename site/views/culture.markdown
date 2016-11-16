@@ -10,8 +10,8 @@ Image : http://placehold.it/340x206
 @Section['Content']
 ###KULTUR OCH VÄRDERINGAR
 
-Att prata om värderingar är i sig ganska enkelt men det som skiljer lyckade uttalanden från mindre lyckade åt är den gemensamma förståelsen. På Input delar alla medarbetare samma vision och värderingar vilket resulterar i vår kultur.
+Till det yttre liknar vi kanske många andra konsultbolag. Det är först när du kommer på "insidan" som skillnaden blir tydlig och som gör oss unika.
 
-Input kan mer och vill mer! Input gör skillnad!
+Vår kultur grundar sig i några enkla värderingar som för oss på Input är självklara. Dessa värderingar präglar vår vardag och är något som också visar sig väldigt tydligt i det arbete som vi gör ute hos våra kunder. På Input delar alla medarbetare samma vision och värderingar vilket resulterar i Inputkulturen.
 
 @EndSection
