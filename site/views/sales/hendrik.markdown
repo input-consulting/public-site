@@ -5,7 +5,7 @@ Title: Hendrik
 Date: 2014-08-01 00:01
 Tags: Sälj, Hendrik
 Image : /static/img/sales/hendrik_profile_small.jpg
-BgImage : /static/img/sales/hendrik_profile_big.jpg
+BgImage : /static/img/sales/hendrik_profile_big_1.jpg
 @EndMeta
 
 @Section['Content']
