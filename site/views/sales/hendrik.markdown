@@ -9,7 +9,7 @@ BgImage : /static/img/sales/hendrik_profile_big_1.jpg
 @EndMeta
 
 @Section['Content']
-#### VD/Konsultchef
+#### VD
 En hockeyspelare som fortfarande väntar på sitt kontrakt och under tiden sysselsätter sig med något otroligt kul.
 
 Jag hittade ”hem” till Input 2004 och då i rollen som konsult där jag började som utvecklare. Efter några år gick jag över till att arbeta mer med projektledning för att sen engagera mig i försäljning i rollen som säljchef. September 2014 utsågs jag till inputs nya VD. 
