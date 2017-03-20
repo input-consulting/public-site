@@ -26,6 +26,6 @@ Lina är en mycket skicklig javautvecklare som gärna arbetar både back- och fr
 
 Lena är en väldigt kompetent kravanalytiker och verksamhetsarkitekt med ett mycket inspirerande driv och engagemang. Hon är skarpsinnig och är en kreativ ledare som får medarbetare att växa. Lena levererar med hög kvalitet och effektivitet. Hon förstår och konkretiserar verksamhetens krav och har förmågan att kommunicera dem framgångsrikt till utvecklade och testare.
 
-Välkommen hem Lina & Lena!
+####Välkommen hem Lina & Lena!
 
 @EndSection
