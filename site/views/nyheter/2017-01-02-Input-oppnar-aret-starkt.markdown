@@ -13,7 +13,7 @@ Image : /static/img/thumbs/input-6.jpg
 
 Att IT-branschen är full av män är ingen hemlighet.
 
-På Input arbetar vi aktivt för att locka till oss fler kvinnor inom samtliga roller; ledning & styrning, systemuveckling, krav, test, business intelligence mm.
+På Input arbetar vi aktivt för att bli fler kvinnor inom samtliga roller; ledning & styrning, systemuveckling, krav, test, business intelligence mm.
 
 Utan våra fantastiska kvinnor på Input skulle vi inte vara i närheten av den starka kultur som vi har idag eller få samma fina omdömen från våra kunder.
 Många IT-konsultbolag påstår att man arbetar med jämställdhetsmål. Vi gör det på riktigt! I dagsläget är vi 36% kvinnor, men vi är inte nöjda!
