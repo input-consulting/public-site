@@ -9,6 +9,7 @@ Image : http://placehold.it/340x206
 @EndMeta
 
 @Section['Content']
+
 Som en modern systemutvecklare förväntas man ha koll på fler beståndsdelar i en applikation än vad som någonsin ställts krav på tidigare. Man skall kunna både webbgränssnitt, flertalet databaser och hur olika teknikplattformar kan kommunicera med varandra via webtjänster eller olika typer av ESB lösningar – Enterprise Service Bus.
 
 
