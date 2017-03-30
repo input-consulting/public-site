@@ -13,7 +13,7 @@ Image : /static/img/thumbs/input-6.jpg
 
 ![image alt](/static/img/nyheter/GPTW_SBA2017.png)
 
-###Input dansar rätt in på listan över Sveriges bästa arbetsplatser.
+####Input dansar rätt in på listan över Sveriges bästa arbetsplatser.
 
 Under en gala på Cirkus i Stockholm utsåg Great Place To Work för femtonde året i rad Sveriges bästa arbetsplatser. Input blev där utsedd till Sveriges sjunde bästa arbetsplats i kategorin små organisationer (20-49 medarbetare). 
 
@@ -29,9 +29,7 @@ På påståendet "Allt sammantaget, skulle jag säga att det här är en mycket 
 
 Mer information om Sveriges Bästa Arbetsplatser 2017 finns på [http://www.greatplacetowork.se](http://)
 
-Om du är nyfiken på hur det är att arbeta på Input, kontakta Hendrik Ellert för ett förutsättningslöst möte. 
-
-(fornamn.efternamn@input-consulting.se)
+Om du är nyfiken på hur det är att arbeta på Input, kontakta oss för ett förutsättningslöst möte, inputinfo@input.nu
 
 ![image alt](/static/img/nyheter/Lagbild_GPTW.jpg)
 
