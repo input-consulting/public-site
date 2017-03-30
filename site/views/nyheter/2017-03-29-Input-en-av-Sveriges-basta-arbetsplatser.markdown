@@ -13,7 +13,7 @@ Image : /static/img/thumbs/input-6.jpg
 
 ![image alt](/static/img/nyheter/GPTW_SBA2017.png)
 
-####Input dansar rätt in på listan över Sveriges bästa arbetsplatser.
+Input dansar rätt in på listan över Sveriges bästa arbetsplatser.
 
 Under en gala på Cirkus i Stockholm utsåg Great Place To Work för femtonde året i rad Sveriges bästa arbetsplatser. Input blev där utsedd till Sveriges sjunde bästa arbetsplats i kategorin små organisationer (20-49 medarbetare). 
 
