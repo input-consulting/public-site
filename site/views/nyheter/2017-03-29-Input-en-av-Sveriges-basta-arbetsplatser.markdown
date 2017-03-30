@@ -24,11 +24,14 @@ Inputs fina resultat grundar sig i en enormt stark sammanhållning och gemenskap
 På Input uppskattar vi våra medarbetare för den man ÄR och inte för det man gör. Vi uppskattar mångfald och tycker att detta berikar oss som företag och gör oss till en mer intressant arbetsplats. 
 
 GPTW genomför årligen världens största arbetsplatsstudie. Utvärderingen av organisationer görs utifrån både medarbetarperspektivet, genom en omfattande medarbetarundersökning, och arbetsgivarperspektivet, där en genomlysning av verksamheten görs genom en culture audit. 
+
 På påståendet "Allt sammantaget, skulle jag säga att det här är en mycket bra arbetsplats" svarade 100 procent JA.
 
 Mer information om Sveriges Bästa Arbetsplatser 2017 finns på [http://www.greatplacetowork.se](http://)
 
-Om du är nyfiken på hur det är att arbeta på Input, kontakta Hendrik Ellert för ett förutsättningslöst möte. (fornamn.efternamn@input-consulting.se)
+Om du är nyfiken på hur det är att arbeta på Input, kontakta Hendrik Ellert för ett förutsättningslöst möte. 
+
+(fornamn.efternamn@input-consulting.se)
 
 ![image alt](/static/img/nyheter/Lagbild_GPTW.jpg)
 
