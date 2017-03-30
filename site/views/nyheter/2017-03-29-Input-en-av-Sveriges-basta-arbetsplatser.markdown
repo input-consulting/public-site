@@ -29,7 +29,7 @@ På påståendet "Allt sammantaget, skulle jag säga att det här är en mycket 
 
 Mer information om Sveriges Bästa Arbetsplatser 2017 finns på [http://www.greatplacetowork.se](http://)
 
-Om du är nyfiken på hur det är att arbeta på Input, kontakta oss för ett förutsättningslöst möte, inputinfo@input.nu
+Om du är nyfiken på hur det är att arbeta på Input, kontakta oss för ett förutsättningslöst möte, inputinfo@input-consulting.se
 
 ![image alt](/static/img/nyheter/Lagbild_GPTW.jpg)
 
