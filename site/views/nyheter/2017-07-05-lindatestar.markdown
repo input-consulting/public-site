@@ -14,6 +14,7 @@ Image : /static/img/thumbs/input-6.jpg
 
 linda testar
 
+![image alt](/static/img/nyheter/ChristianPaulinlindatestar.jpg)
 
 bla bla
 
