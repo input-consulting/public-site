@@ -109,7 +109,7 @@ popd
 
 :: 2. Run build command
 pushd "%DEPLOYMENT_SOURCE%"
-  call :ExecuteCmd !GULP_CMD! build
+  call :ExecuteCmd !NPM_CMD! run build
   IF !ERRORLEVEL! NEQ 0 goto error
 popd
 
