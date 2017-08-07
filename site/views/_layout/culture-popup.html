@@ -1,0 +1,20 @@
+<section class="article-popup culture" style="background-image:url('{{page.bgImage}}');">
+    <div class="popup-header">
+        <img src="/img/logo/logo_3.png" alt="">
+    </div>
+    <article>
+        <div class="profile">
+            <div class="content">
+                <h1>{{ page.title }}</h1>
+                <div class="text-block">
+                    {{ page.body | md }}
+                </div>
+            </div>
+        </div>
+    </article>
+    <nav class="close-sales-hero">
+        <button type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+        </button>
+    </nav>                 
+</section>

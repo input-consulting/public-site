@@ -1,4 +1,4 @@
-@Master['_layout/article-page.html']
+@Master['_layout/article-page']
 
 @Meta
 Author : Hendrik Ellert
@@ -6,12 +6,12 @@ Title: Input väntar tillökning
 Date: 2015-11-25
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
-Image : /static/img/thumbs/input-6.jpg
+Image : /img/thumbs/input-6.jpg
 @EndMeta
 
 @Section['Content']
 
-![image alt](/static/img/nyheter/valkommen-hem.png)
+![image alt](/img/nyheter/valkommen-hem.png)
 
 Vi hälsar 3 nya Inputtare välkomna, samt en återvändare välkommen tillbaka till vårt fantastiska gäng!
 

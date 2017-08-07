@@ -1,0 +1,36 @@
+
+section {
+    
+    margin-left:0px;
+    margin-right:0px;
+
+    &.input-news {
+        background: $theme-color-3;        
+    }
+    
+    &.about {        
+        background: $theme-color-1;
+    }    
+    
+    &.culture {
+        background: $theme-color-4;
+    }
+    
+    &.services {
+        background: $theme-color-1;
+    }
+    
+    &.input-crew {
+        background: $theme-color-3;
+    }
+    
+    &.input-sales-team {
+        background: $theme-color-4;
+    }
+    
+    &.contact-us {
+        background: $theme-color-4;
+    }
+    
+}
+

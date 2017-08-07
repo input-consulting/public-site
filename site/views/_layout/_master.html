@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <meta name="title" content="{{ title }}" />
+    <meta name="description" content="Input Consulting Stockholm AB" />
+    <meta name="author" content="Input Consulting" />
+    <meta name="Copyright" content="Input Consulting" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link href="/css/site.css" rel="stylesheet"/>
+    {% include "_layout/_app-insight.html" %}
+</head>
+<body>
+    {% block body %}
+    <div id="input-site">
+        {% include "_layout/_header.html" %}
+        {% include "_layout/_menu.html" %}
+        {% block content %}{% endblock %}
+    </div>
+    {% endblock %}
+    <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+    <script async src="/js/site.js"></script>
+</body>
+</html>

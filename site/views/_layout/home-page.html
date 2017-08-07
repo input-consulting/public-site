@@ -1,0 +1,182 @@
+{% extends "_layout/_master.html" %}
+
+{% block content %}
+
+    {# Nyheter  #}
+    <section class="input-news">
+        <section class="container with award">
+            <a href="nyheter/2017/03/29/Input-en-av-Sveriges-basta-arbetsplatser">
+                <img src="/img/awards/gptw_2017.png" alt="">
+            </a>
+        </section>
+        <section class="container with news">
+            {% for item in news %}
+                <a href="/nyheter">
+                  <div class="news-item">
+                        <h5>{{ item.date | date }}</h5>
+                        <h4>{{ item.title }}</h4>
+                        {{ item.body | md | truncate(200, false, ' ...') }}
+                    </div>
+                </a>        
+            {% endfor %}
+        </section>
+    </section>
+
+    {# Om input #}
+    <section class="about">
+      <div class="divider" id="about"></div>
+      <div class="container">
+        <article>
+            <header>{{ about.title }}</header>
+            {{ about.body | md }}
+        </article>
+      </div>
+      <div class="divider"></div>
+    </section>    
+    
+    {# divider  #}
+    <section class="team-input-1">
+      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+    </section>
+
+    {# Kultur #}
+    <section class="culture">
+      <div class="divider" id="culture"></div>
+      <div class="container">
+        <article>
+            <header>{{ culture.title }}</header>
+            {{ culture.body | md }}
+        </article>
+      </div>
+      <section class="container clickables">
+      {% for item in cultures %}
+          <div class="box">
+              <a href="{{item.route}}" data-toggle="modal" data-target="#clickables-{{item.title | replace(' ','-') }}">
+                  {{ item.title }}
+              </a>
+          </div>
+          <div class="modal" id="clickables-{{item.title | replace(' ','-') }}" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content"></div>
+            </div>
+          </div>    
+      {% endfor %}
+      </section>
+      <div class="divider"></div>
+    </section>
+
+    {# divider #}
+    <section class="team-input-2">
+      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+    </section>
+
+    {# Tjänster #}
+    <section class="services">
+        <div class="divider" id="services"></div>
+        <div class="container">
+          <article>
+              <header>{{service.title}}</header>
+              {{ service.body | md }}
+          </article>
+        </div>
+        <section class="container clickables">
+        {% for item in services %}
+            <div class="box">
+                <a href="{{item.route}}" data-toggle="modal" data-target="#clickables-{{item.title | replace(' ','-') }}">
+                    {{ item.title }}
+                </a>
+            </div>
+            <div class="modal" id="clickables-{{item.title | replace(' ','-') }}" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content"></div>
+              </div>
+            </div>    
+        {% endfor %}        
+        </section>
+        <div class="divider"></div>
+    </section>
+
+    {# Sälj #}
+    <section class="input-sales-team">
+        <div class="divider" id="sales"></div>
+        <section class="container">
+            <article>
+                <header>{{sale.title}}</header>
+                {{ sale.body | md }}
+            </article>
+            <section class="sales-team">
+            {% for item in sales %}
+              <article>
+                  <a href="{{item.route}}"  data-toggle="modal" data-target="#sale-heroes-{{item.title | replace(' ','-') }}">
+                      <img src="{{item.image}}" alt="">
+                      <h2>{{item.title}}</h2>    
+                  </a>
+              </article>
+              
+              <div class="modal" id="sale-heroes-{{item.title | replace(' ','-') }}" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content"></div>
+                </div>
+              </div>
+            {% endfor %}
+            </section>
+            <div class="divider"></div>
+        </section>
+        <div class="divider"></div>
+    </section>
+    
+    {# divider  #}
+    <section class="team-input-3">
+      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+    </section>
+
+    {# Inputtare  #}
+    <section class="input-crew">
+        <div class="divider" id="crew"></div>
+        <section class="container">
+            <article>
+                <header>{{crew.title}}</header>
+                {{crew.body | md}}
+            </article>
+        </section>
+        <div class="divider"></div>
+    </section>
+
+    {# Kontakta oss  #}
+    <section class="contact-us" id="contact">
+      
+        <section class="container">
+            <article>
+                <header>kontakta oss</header>
+                <div id="map-canvas"></div>
+                <div class="divider"></div>
+            </article>
+        </section>
+
+        <div class="container">
+            <div class="col-sm-9 pull-left social-media">
+                <a href="https://www.linkedin.com/company/input-consulting-stockholm-ab" target="_blank">
+                  <img src="/img/social/li.png" alt="Linkedin">
+                </a>
+                <a href="https://www.instagram.com/inputconsulting/" target="_blank">
+                  <img src="/img/social/ig.png" alt="Instagram">
+                </a>
+            </div>
+            <div class="col-sm-3 pull-right">
+                <address>
+                  <span id="map-input">
+                    Input Consulting Stockholm AB<br>
+                    Kungsgatan 62<br>
+                    111 22 Stockholm</span><br>
+                    +46 (8) 700 00 80
+                </address>
+                <address>
+                    <strong>E-Post</strong><br>
+                    <a href="mailto:inputinfo@input-consulting.se">inputinfo@input-consulting.se</a>
+                </address>
+            </div>
+        </div>
+        
+    </section>    
+
+{% endblock %}

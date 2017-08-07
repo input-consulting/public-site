@@ -1,4 +1,4 @@
-@Master['_layout/article-page.html']
+@Master['_layout/article-page']
 
 @Meta
 Author : Hendrik Ellert
@@ -6,7 +6,7 @@ Title: Kurs i Agil Projektledning
 Date: 2015-11-11
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
-Image : /static/img/thumbs/input-6.jpg
+Image : /img/thumbs/input-6.jpg
 @EndMeta
 
 @Section['Content']

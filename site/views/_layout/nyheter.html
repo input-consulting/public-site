@@ -1,22 +1,31 @@
-@Master['_layout/master-news-page.html'] 
+{% set title = title + ' - Nyheter ' %}
+{% extends "_layout/_master.html" %}
 
-@Section['MainContent']
+{% block body %}
+<section class="full-page input-news">
 
-<section class="full-page container list-of-news">
-    <header>Aktuellt på Input</header>
-    @Each.Model.Meta.Articles
-    <article>
-       <a href="/@Current.ResourceName">
-            <time>@Current.FriendlyDate</time>
-            <header>@Current.Title</header>
-            @Current.Abstract
-       </a>
-        <footer>
-            <a href="/@Current.ResourceName">Läs mer <span class="glyphicon glyphicon-play"></span></a>
-        </footer>
-     </article>
-     @EndEach
-    <div class="divider"></div>
+    <div class="container with logo">
+        <a href="/">
+            <img src="/img/logo/logo_3.png" alt="">
+        </a>
+    </div>
+
+    <section class="full-page container list-of-news">
+        <header>Aktuellt på Input</header>
+        {% for page in pages %}
+        <article>
+        <a href="{{ page.route }}">
+                <time>{{ page.date | date }}</time>
+                <header>{{ page.title }}</header>
+                {{ page.body | md | truncate(200, true, ' ...') }}
+        </a>
+            <footer>
+                <a href="{{ page.route }}">Läs mer <span class="glyphicon glyphicon-play"></span></a>
+            </footer>
+        </article>
+        {% endfor  %}
+        <div class="divider"></div>
+    </section>
+
 </section>
-
-@EndSection
+{% endblock %}
