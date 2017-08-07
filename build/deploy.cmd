@@ -49,6 +49,16 @@ IF NOT DEFINED KUDU_SYNC_CMD (
 )
 goto Deployment
 
+IF NOT DEFINED GULP_CMD (
+  :: Install gulp
+  echo Installing Gulp
+  call npm --registry "http://registry.npmjs.org/" install gulp -g --silent
+  IF !ERRORLEVEL! NEQ 0 goto error
+
+  :: Locally just running "gulp" would also work
+  SET GULP_CMD="%appdata%\npm\gulp.cmd"
+)
+
 :: Utility Functions
 :: -----------------
 
@@ -92,23 +102,24 @@ echo Handling node.js deployment.
 call :SelectNodeVersion
 
 :: 3. Install npm packages
-IF EXIST "%DEPLOYMENT_SOURCE%\package.json" (
+IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
+  pushd "%DEPLOYMENT_TARGET%"
   call :ExecuteCmd !NPM_CMD! config set progress=false
   call :ExecuteCmd !NPM_CMD! install --only=prod
   call :ExecuteCmd !NPM_CMD! install --only=dev
   call :ExecuteCmd !NPM_CMD! run deploy:prod
   IF !ERRORLEVEL! NEQ 0 goto error
+  popd
 )
 
-::IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
-::  pushd "%DEPLOYMENT_TARGET%"
-::  call :ExecuteCmd !NPM_CMD! config set progress=false
-::  call :ExecuteCmd !NPM_CMD! install --only=prod
-::  call :ExecuteCmd !NPM_CMD! install --only=dev
-::  call :ExecuteCmd !NPM_CMD! run deploy:prod
-::  IF !ERRORLEVEL! NEQ 0 goto error
-::  popd
-::)
+:: 3. Install npm packages
+echo "Execute Gulp"
+IF EXIST "%DEPLOYMENT_TARGET%\gulpfile.js" (
+  pushd "%DEPLOYMENT_TARGET%"
+  call :ExecuteCmd !GULP_CMD! build
+  IF !ERRORLEVEL! NEQ 0 goto error
+  popd
+)
 
 :: 1. KuduSync
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (

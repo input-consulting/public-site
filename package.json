@@ -4,8 +4,7 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node server/app.js",
-    "deploy:prod": "gulp build"
+    "start": "node server/app.js"
   },
   "engines": {
     "node": "8.1.4"
