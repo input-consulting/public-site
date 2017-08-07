@@ -128,7 +128,6 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   call :ExecuteCmd !NPM_CMD! config set progress=false
   call :ExecuteCmd !NPM_CMD! install --only=prod
   call :ExecuteCmd !NPM_CMD! install --only=dev
-  call :ExecuteCmd !NPM_CMD! run deploy:prod
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
