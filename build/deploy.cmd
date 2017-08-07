@@ -98,6 +98,21 @@ goto :EOF
 :Deployment
 echo Handling node.js deployment.
 
+:: 0. Select node version for build
+call :SelectNodeVersion
+
+:: 1. Install build dependencies
+pushd "%DEPLOYMENT_SOURCE%"
+  call :ExecuteCmd !NPM_CMD! install --production
+  IF !ERRORLEVEL! NEQ 0 goto error
+popd
+
+:: 2. Run build command
+pushd "%DEPLOYMENT_SOURCE%"
+  call :ExecuteCmd !GULP_CMD! build
+  IF !ERRORLEVEL! NEQ 0 goto error
+popd
+
 :: 1. KuduSync
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_SOURCE%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
@@ -114,15 +129,6 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   call :ExecuteCmd !NPM_CMD! install --only=prod
   call :ExecuteCmd !NPM_CMD! install --only=dev
   call :ExecuteCmd !NPM_CMD! run deploy:prod
-  IF !ERRORLEVEL! NEQ 0 goto error
-  popd
-)
-
-:: 3. Install npm packages
-echo "Execute Gulp"
-IF EXIST "%DEPLOYMENT_TARGET%\gulpfile.js" (
-  pushd "%DEPLOYMENT_TARGET%"
-  call :ExecuteCmd !GULP_CMD! build
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
