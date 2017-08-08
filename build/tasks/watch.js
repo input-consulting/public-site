@@ -26,14 +26,14 @@ gulp.task('browser-sync',
     function () {
         browserSync.init(null, {
             proxy: {
-                target: "http://localhost:8000",
+                target: "http://localhost:3000",
                 // middleware: function (req, res, next) {
                 //     console.log(req.url);
                 //     next();
                 // }
             },
             browser: 'google chrome',
-            port: 8001
+            port: 3001
         });
     }
 );

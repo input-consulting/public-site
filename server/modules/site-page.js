@@ -51,10 +51,13 @@ module.exports = class SitePage {
                         kv.shift();
                         value = kv.join(':');
                     }
-                    if ( key === 'date' ) {
-                        prev[key] = new Date(value.trim());
-                    } else {
-                        prev[key] = value.trim();
+
+                    if ( key && value ) {
+                        if ( key === 'date' ) {
+                            prev[key] = new Date(value.trim());
+                        } else {
+                            prev[key] = value.trim();
+                        }
                     }
                     return prev;
                 }, {});
