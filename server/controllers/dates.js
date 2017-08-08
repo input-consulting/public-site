@@ -3,13 +3,14 @@ const sb = require('../modules/site-builder')
 
 let found = [];
 sb.pages.forEach(p => {
-    let x = p.route.match(/[/](\d+)[-](\d+)[-](\d+)/) || p.route.match(/[/](\d+)[/](\d+)[/](\d+)/);
-    if (x) {
-        found.push(p.route.substring(0, x.index));
+    let dateMatch = p.route.match(/[/](\d+)[/](\d+)[/](\d+)/);
+    if (dateMatch) {
+        found.push(p.route.substring(0, dateMatch.index));
     }
 });
 
 [...new Set(found)].forEach(route => {
+
     router.get(`${route}`, async (ctx, next) => {
         const pages = sb.getPagesByRoute(ctx.url).sort((a, b) => -1 * ((a.date > b.date) - (a.date < b.date)));
         if (pages.length > 0) {

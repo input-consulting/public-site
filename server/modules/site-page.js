@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 
 module.exports = class SitePage {
 
@@ -30,7 +29,7 @@ module.exports = class SitePage {
             this.readMeta(content);
             this.readContent(content);
 
-            this._meta.route = this.file.replace(this.root, '');
+            this._meta.route = this.file.replace(this.root.toLowerCase(), '');
             this._meta.route = this._meta.route.substring(0, this._meta.route.lastIndexOf('.'));
             this._meta.route = this._meta.route.replace(/[/](\d+)[-](\d+)[-](\d+)[-]/, (m) => m.replace(/\-/g, '/') );
         } catch (error) {

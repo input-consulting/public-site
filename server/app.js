@@ -1,3 +1,4 @@
+const path = require('path');
 const Koa = require('koa');
 const helmet = require('koa-helmet');
 const compress = require('koa-compress');
@@ -20,14 +21,12 @@ const app = new Koa();
 
 app.use(helmet());
 app.use(compress());
-
-app.use(serve(__dirname + '/public'));
-//app.use(serve('./server/public'));
+app.use(serve(path.join(__dirname,'/public')));
 
 const nunjucksOptions = {
     opts: {
         autoescape: false,
-        noCache: false,
+        noCache: true,
         throwOnUndefined: false
     },
     filters: {
@@ -41,10 +40,11 @@ const nunjucksOptions = {
     },
     ext: '.html'
 };
-app.use(nunjucks('site/views', nunjucksOptions));
+
+app.use(nunjucks(path.join(path.resolve("."), 'site/views'), nunjucksOptions));
 
 app.use(require('./controllers/home').routes());
 app.use(require('./controllers/default').routes());
 app.use(require('./controllers/dates').routes());
 
-app.listen(process.env.SERVICE_PORT || 8000);
+module.exports = app;

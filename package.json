@@ -2,9 +2,9 @@
   "name": "public-site-next",
   "version": "0.0.1",
   "private": true,
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server/app.js",
+    "start": "node index.js",
     "build": "gulp build"
   },
   "engines": {

@@ -10,8 +10,9 @@ class SiteBuilder {
         this.pages = [];
 
         this.options = {
-            root: 'site/views'
+            root: path.join(path.resolve("."), 'site/views')
         };
+
         this.build(this.options);
         this.created = true;
     }

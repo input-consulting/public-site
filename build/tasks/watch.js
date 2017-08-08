@@ -51,8 +51,8 @@ gulp.task('nodemon',
         var running = false;
 
         return nodemon({
-            script: 'server/app.js',
-            watch: [ '!server/public/js/*.js', 'server/**/*.js', 'site/views/**/*.*']
+            script: 'index.js',
+            watch: [ 'index.js', '!server/public/js/*.js', 'server/**/*.js', 'site/views/**/*.*']
         })
             .on('start', function () {
                 if (!running) {
