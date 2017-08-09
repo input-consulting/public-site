@@ -1,5 +1,7 @@
 const path = require('path');
 const Koa = require('koa');
+const conditional = require('koa-conditional-get');
+const etag = require('koa-etag');
 const helmet = require('koa-helmet');
 const compress = require('koa-compress');
 const nunjucks = require('koa-nunjucks-async');
@@ -18,9 +20,12 @@ const app = new Koa();
 //     const ms = new Date() - start;
 //     console.log(`${ctx.status} - ${ctx.method} ${ctx.url} - ${ms}`);
 // });
-
 app.use(helmet());
 app.use(compress());
+
+app.use(conditional());
+app.use(etag());
+
 app.use(serve(path.join(__dirname,'/public')));
 
 const nunjucksOptions = {
