@@ -1,14 +1,9 @@
 const path = require('path');
 const Koa = require('koa');
-const conditional = require('koa-conditional-get');
-const etag = require('koa-etag');
-const helmet = require('koa-helmet');
-const compress = require('koa-compress');
-const nunjucks = require('koa-nunjucks-async');
-const serve = require('koa-static');
 const sb = require('./modules/site-builder');
 const md = require('marked');
 const moment = require('moment');
+const nunjucks = require('koa-nunjucks-async');
 
 moment.locale('sv-SE');
 
@@ -20,22 +15,22 @@ const app = new Koa();
 //     const ms = new Date() - start;
 //     console.log(`${ctx.status} - ${ctx.method} ${ctx.url} - ${ms}`);
 // });
-app.use(helmet());
-app.use(compress());
 
-app.use(conditional());
-app.use(etag());
-
-app.use(serve(path.join(__dirname,'/public')));
+app.use(require('./modules/handle-error')());
+app.use(require('koa-helmet')());
+app.use(require('koa-compress')());
+app.use(require('koa-conditional-get')());
+app.use(require('koa-etag')());
+app.use(require('koa-static')(path.join(__dirname, '/public')));
 
 const nunjucksOptions = {
     opts: {
         autoescape: false,
-        noCache: true,
+        noCache: false,
         throwOnUndefined: false
     },
     filters: {
-        date : d => moment(d).format('LL'),
+        date: d => moment(d).format('LL'),
         md: x => md(x),
         json: x => JSON.stringify(x, null, 2),
         ucfirst: e => typeof e === 'string' && e.toLowerCase() && e[0].toUpperCase() + e.slice(1)
