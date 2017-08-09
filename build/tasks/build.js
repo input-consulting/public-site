@@ -5,17 +5,6 @@ var runSequence = require('run-sequence');
 
 //var paths = require('../paths');
 
-
-// gulp.task('copy:views', function () {
-//   return gulp.src(paths.views.source)
-//     .pipe(gulp.dest(paths.views.output));
-// });
-
-// gulp.task('copy:content', function () {
-//   return gulp.src(paths.content.source)
-//     .pipe(gulp.dest(paths.content.output));
-// });
-
 gulp.task('build:static', function () {
     return gulp.src('site/static/**/*.*')
         .pipe(gulp.dest('server/public'));

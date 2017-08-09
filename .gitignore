@@ -3,3 +3,6 @@
 
 # package managers
 node_modules/
+
+# generated code
+server/public
