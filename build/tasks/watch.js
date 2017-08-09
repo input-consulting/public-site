@@ -40,12 +40,7 @@ gulp.task('browser-sync',
 
 gulp.task('nodemon',
     [
-        //    'eslint',
-        'build:sass',
-        'build:js',
-        'build:static'
-        //    'ngtemplate',
-        //    'karma'
+        'build'
     ],
     function (done) {
         var running = false;
