@@ -25,13 +25,13 @@
     {# Om input #}
     <section class="about">
       <div class="divider" id="about"></div>
-      <div class="container">
+      <section class="container">
         {% set about = sb.getPageById('about') %}
         <article>
             <header>{{ about.title }}</header>
             {{ about.body | md }}
         </article>
-      </div>
+      </section>
       <div class="divider"></div>
     </section>    
     
@@ -43,13 +43,13 @@
     {# Kultur #}
     <section class="culture">
       <div class="divider" id="culture"></div>
-      <div class="container">
+      <section class="container">
         {% set culture = sb.getPageById('culture') %}
         <article>
             <header>{{ culture.title }}</header>
             {{ culture.body | md }}
         </article>
-      </div>
+      </section>
       <section class="container clickables">
       {% for item in sb.getPagesByRoute('culture/') %}
           <div class="box">
@@ -75,13 +75,13 @@
     {# Tjänster #}
     <section class="services">
         <div class="divider" id="services"></div>
-        <div class="container">
+        <section class="container">
           {% set service = sb.getPageById('services') %}
           <article>
               <header>{{service.title}}</header>
               {{ service.body | md }}
           </article>
-        </div>
+        </section>
         <section class="container clickables">
         {% for item in sb.getPagesByRoute('services/') %}
             <div class="box">
