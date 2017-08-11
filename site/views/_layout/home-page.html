@@ -10,7 +10,7 @@
             </a>
         </section>
         <section class="container with news">
-            {% for item in news %}
+            {% for item in sb.getPagesByRoute('nyheter/').slice(0,2) %}
                 <a href="/nyheter">
                   <div class="news-item">
                         <h5>{{ item.date | date }}</h5>
@@ -26,6 +26,7 @@
     <section class="about">
       <div class="divider" id="about"></div>
       <div class="container">
+        {% set about = sb.getPageById('about') %}
         <article>
             <header>{{ about.title }}</header>
             {{ about.body | md }}
@@ -43,13 +44,14 @@
     <section class="culture">
       <div class="divider" id="culture"></div>
       <div class="container">
+        {% set culture = sb.getPageById('culture') %}
         <article>
             <header>{{ culture.title }}</header>
             {{ culture.body | md }}
         </article>
       </div>
       <section class="container clickables">
-      {% for item in cultures %}
+      {% for item in sb.getPagesByRoute('culture/') %}
           <div class="box">
               <a href="{{item.route}}" data-toggle="modal" data-target="#clickables-{{item.title | replace(' ','-') }}">
                   {{ item.title }}
@@ -74,13 +76,14 @@
     <section class="services">
         <div class="divider" id="services"></div>
         <div class="container">
+          {% set service = sb.getPageById('services') %}
           <article>
               <header>{{service.title}}</header>
               {{ service.body | md }}
           </article>
         </div>
         <section class="container clickables">
-        {% for item in services %}
+        {% for item in sb.getPagesByRoute('services/') %}
             <div class="box">
                 <a href="{{item.route}}" data-toggle="modal" data-target="#clickables-{{item.title | replace(' ','-') }}">
                     {{ item.title }}
@@ -100,12 +103,13 @@
     <section class="input-sales-team">
         <div class="divider" id="sales"></div>
         <section class="container">
+           {% set sale = sb.getPageById('sales') %}
             <article>
                 <header>{{sale.title}}</header>
                 {{ sale.body | md }}
             </article>
             <section class="sales-team">
-            {% for item in sales %}
+            {% for item in sb.getPagesByRoute('sales/') %}
               <article>
                   <a href="{{item.route}}"  data-toggle="modal" data-target="#sale-heroes-{{item.title | replace(' ','-') }}">
                       <img src="{{item.image}}" alt="">
@@ -134,6 +138,7 @@
     <section class="input-crew">
         <div class="divider" id="crew"></div>
         <section class="container">
+            {% set crew = sb.getPageById('crew') %}
             <article>
                 <header>{{crew.title}}</header>
                 {{crew.body | md}}

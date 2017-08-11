@@ -6,6 +6,8 @@ const sitePublic = 'server/public';
 
 module.exports = {
 
+    title: 'Input Consulting Stockholm AB',
+
     /* */
     root: siteRoot,
     public: sitePublic,

@@ -37,7 +37,8 @@ const nunjucksOptions = {
         ucfirst: e => typeof e === 'string' && e.toLowerCase() && e[0].toUpperCase() + e.slice(1)
     },
     globals: {
-        title: 'Input Consulting Stockholm AB'
+        title: config.title,
+        sb : sb
     },
     ext: '.html'
 };

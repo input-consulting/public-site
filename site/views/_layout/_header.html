@@ -2,6 +2,7 @@
     <div id="input-header">
         <img src="/img/logo/logo_3.png" alt="">    
         <div class="container">
+            {% set quote = sb.getPageById('quote') %}
             <div class="header-caption">
                 {{ quote.body | md }}
             </div>

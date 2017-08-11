@@ -30,11 +30,13 @@ class SiteBuilder {
     }
 
     getPageById(id) {
-        return this.pages.find( p => p.id === id );
+        return this.pages.find(p => p.id === id);
     }
 
     getPagesByRoute(route) {
-        return this.pages.filter( p => p.route.includes(route) );
+        return this.pages
+            .filter(p => p.route.includes(route))
+            .sort((a, b) => -1 * ((a.date > b.date) - (a.date < b.date)));
     }
 
     createSite(site) {
