@@ -2,6 +2,7 @@ const router = require('koa-router')();
 const fs = require('fs');
 const path = require('path');
 const SitePage = require('./site-page');
+const config = require('../../config');
 
 class SiteBuilder {
 
@@ -10,7 +11,7 @@ class SiteBuilder {
         this.pages = [];
 
         this.options = {
-            root: path.join(path.resolve("."), 'site/views')
+            root: path.join(path.resolve("."), `${config.root}/views`)
         };
 
         this.build(this.options);

@@ -4,6 +4,7 @@ const sb = require('./modules/site-builder');
 const md = require('marked');
 const moment = require('moment');
 const nunjucks = require('koa-nunjucks-async');
+const config = require('../config');
 
 moment.locale('sv-SE');
 
@@ -41,7 +42,7 @@ const nunjucksOptions = {
     ext: '.html'
 };
 
-app.use(nunjucks(path.join(path.resolve("."), 'site/views'), nunjucksOptions));
+app.use(nunjucks(path.join(path.resolve("."), `${config.root}/views`), nunjucksOptions));
 
 app.use(require('./controllers/home').routes());
 app.use(require('./controllers/default').routes());

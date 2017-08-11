@@ -1,8 +1,9 @@
 'use strict';
 
-var browserSync = require('browser-sync').create(),
+const browserSync = require('browser-sync').create(),
     gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
+    config = require('../../config'),
     reload = browserSync.reload;
 
 gulp.task('watch',
@@ -10,12 +11,11 @@ gulp.task('watch',
         'browser-sync'
     ],
     function () {
-        gulp.watch('site/src/js/**/*.js', ['build:js', reload] );
-        gulp.watch('site/src/scss/*.scss', ['build:sass', reload]);
+        gulp.watch(config.root + '/src/js/**/*.js', ['build:js', reload]);
+        gulp.watch(config.root + '/src/scss/*.scss', ['build:sass', reload]);
 
-        gulp.watch('server/public/js/site.js').on('change', reload);
-        gulp.watch('server/public/style.css').on('change', reload);
-
+        gulp.watch(config.public + '/js/site.js').on('change', reload);
+        gulp.watch(config.public + '/style.css').on('change', reload);
     }
 );
 
@@ -47,18 +47,18 @@ gulp.task('nodemon',
 
         return nodemon({
             script: 'index.js',
-            watch: [ 'index.js', '!server/public/js/*.js', 'server/**/*.js', 'site/views/**/*.*']
+            watch: ['index.js', 'config.js', `!${config.public}/js/*.js`, 'server/**/*.js', `${config.root}/views/**/*.*`]
         })
-            .on('start', function () {
-                if (!running) {
-                    done();
-                }
-                running = true;
-            })
-            .on('restart', function () {
-                setTimeout(function () {
-                    reload();
-                }, 500);
-            });
+        .on('start', function () {
+            if (!running) {
+                done();
+            }
+            running = true;
+        })
+        .on('restart', function () {
+            setTimeout(function () {
+                reload();
+            }, 500);
+        });
     }
 );

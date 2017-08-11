@@ -2,30 +2,31 @@ var gulp = require('gulp');
 var concat = require("gulp-concat");
 var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
+var sass = require('gulp-sass');
 
-//var paths = require('../paths');
+const config = require('../../config');
 
-gulp.task('build:static', function () {
-    return gulp.src('site/static/**/*.*')
-        .pipe(gulp.dest('server/public'));
+gulp.task('build:sass', function () {
+    return gulp.src(config.build.styles.source)
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(gulp.dest(config.build.styles.target));
 });
 
+gulp.task('build:static', function () {
+    return gulp.src(config.build.static.source)
+        .pipe(gulp.dest(config.build.static.target));
+});
 
 gulp.task('build:js', function () {
-  return gulp.src([
-      './node_modules/jquery/dist/jquery.min.js',
-      './node_modules/tether/dist/js/tether.js',
-      './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
-      'site/src/js/*.js'
-  ])
-    .pipe(plumber())
-    .pipe(concat('site.js'))
-    .pipe(gulp.dest('server/public/js'));
+    return gulp.src(config.build.js.source)
+        .pipe(plumber())
+        .pipe(concat('site.js'))
+        .pipe(gulp.dest(config.build.js.target));
 });
 
 gulp.task('build:fonts', function () {
-  return gulp.src('./node_modules/bootstrap-sass/assets/fonts/bootstrap/*.*')
-    .pipe(gulp.dest('server/public/fonts'));
+    return gulp.src(config.build.fonts.source)
+        .pipe(gulp.dest(config.build.fonts.target));
 });
 
 gulp.task('build', function (callback) {
