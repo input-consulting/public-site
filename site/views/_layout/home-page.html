@@ -5,7 +5,8 @@
     {# Nyheter  #}
     <section class="input-news">
         <section class="container with award">
-            <a href="nyheter/2017/03/29/Input-en-av-Sveriges-basta-arbetsplatser">
+           {% set gptw = sb.getPageById('gptw-2017') %}
+            <a href="{{ gptw.route }}">
                 <img src="/img/awards/gptw_2017.png" alt="">
             </a>
         </section>

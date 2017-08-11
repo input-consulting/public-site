@@ -1,6 +1,7 @@
 @Master['_layout/article-page']
 
 @Meta
+id: gptw-2017
 Author : Hendrik Ellert
 Title: Input - en av Sveriges bästa arbetsplatser
 Date: 2017-03-29
