@@ -13,7 +13,7 @@ Image : /img/thumbs/input-6.jpg
 
 Tidigare i veckan hade vi 3-årskalas på kontoret. Vår fantastiske Christian Paulin har fyllt 3 år. Detta firades självklart med tårta!
 
-![image alt](/img/nyheter/ChristianPaulin.jpg)
+![image](/img/nyheter/ChristianPaulin.jpg)
 
 Vi passade även på att ställa 3 frågor till Christian.
 
@@ -29,8 +29,8 @@ Tiden har gått otroligt fort samtidigt som det känns som jag jobbat mycket lä
 
 Om man bortser från köttfärsen + såsen som är ett måste så får jag nog lägga min röst på majs. Det är nog en av de få maträtter där jag käkar majs men just i tacos så lyfter det rätten till nya höjder. En sak är dock säkert och det är att ananas inte har något att göra i Tacos oavsett vad som sägs :) 
 
-![image alt](/img/nyheter/ChristianFest.jpg)       ![image alt](/img/nyheter/ChristianPaulinCake.jpg)
+![image](/img/nyheter/ChristianFest.jpg) ![image](/img/nyheter/ChristianPaulinCake.jpg)
 
-####Grattis Christian!
+#### Grattis Christian!
 
 @EndSection
