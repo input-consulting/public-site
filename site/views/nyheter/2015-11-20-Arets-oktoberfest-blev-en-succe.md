@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
 Title: Inputs Oktoberfest - Årets höjdpunkt!
 Date: 2015-10-16
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 ![image alt](/img/nyheter/Oktoberfesten2015Collage.png)
 
@@ -18,5 +15,3 @@ Den 15 oktober gick Inputs berömda Oktoberfest av stapeln. I år liksom tidigar
 Ca 350 kunder, kollegor, medarbetare och Input-alumnis rockade lös till Inputs egna band, Conput Insulting, och festen pågick långt in på småtimmarna.
 
 Tack alla för en fantastiskt rolig kväll!
-
-@EndSection

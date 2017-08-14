@@ -1,13 +1,12 @@
-@Meta
+---
 Title: Hendrik
 Layout: _layout/sales-popup
 Date: 2014-08-01 00:01
 Tags: Sälj, Hendrik
 Image : /img/sales/hendrik_profile_small.jpg
 BgImage : /img/sales/hendrik_profile_big_1.jpg
-@EndMeta
+---
 
-@Section['Content']
 #### VD
 En hockeyspelare som fortfarande väntar på sitt kontrakt och under tiden sysselsätter sig med något otroligt kul.
 
@@ -20,4 +19,3 @@ Med min tekniska bakgrund ligger min styrka i att jag förstår våra kunders ve
 Anledningen till att jag, likt många av mina kollegor valt att stanna på Input så länge är för att det aldrig har funnits anledning till att se om gräset är grönare på andra sidan. På Input har man fantastiska kollegor och vänner och en sammanhållning utöver det vanliga.
 
 Undrar du hur det skulle vara att ta hjälp av våra konsulter eller kanske funderar du över hur det skulle vara att arbeta på Input? Hör gärna av dig så berättar jag mer.
-@EndSection

@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
 Title: Input öppnar det nya året starkt!
 Date: 2017-01-02
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 Att IT-branschen är full av män är ingen hemlighet.
 
@@ -27,5 +24,3 @@ Lina är en mycket skicklig javautvecklare som gärna arbetar både back- och fr
 Lena är en väldigt kompetent kravanalytiker och verksamhetsarkitekt med ett mycket inspirerande driv och engagemang. Hon är skarpsinnig och är en kreativ ledare som får medarbetare att växa. Lena levererar med hög kvalitet och effektivitet. Hon förstår och konkretiserar verksamhetens krav och har förmågan att kommunicera dem framgångsrikt till utvecklare och testare.
 
 ####Välkommen hem Lina & Lena!
-
-@EndSection

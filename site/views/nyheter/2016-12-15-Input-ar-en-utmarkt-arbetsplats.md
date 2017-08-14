@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
 Title: Input är en utmärkt arbetsplats!
 Date: 2016-12-15
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 ![image alt](/img/nyheter/GPTW.png)
 
@@ -19,5 +16,3 @@ Endast verksamheter som är certifierade kan delta i rankningsprocessen för Sve
 Nu håller vi tummarna för att vi kommer med på denna lista som publiceras i slutet av mars 2017.
 
 ![image alt](/img/nyheter/Ledningsgrupp.png) 
-
-@EndSection

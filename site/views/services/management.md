@@ -1,13 +1,12 @@
-@Meta
+---
 Title: Ledning och Styrning
 Layout: _layout/services-popup
 Date: 2014-08-01 00:01
 Tags: Services, BI, Business Intelligence
 BgImage : /assets/images/bg1.jpg
 Image : http://placehold.it/340x206
-@EndMeta
+---
 
-@Section['Content']
 Ledning en förutsättning för ett effektivt ledarskap
 är att det finns styrmedel i form av strategier, tydligt definierade arbetsprocesser, ansvarsfördelning, rutiner, policies och metodik för bl.a projektarbete eller förvaltningsarbete.
 
@@ -30,4 +29,3 @@ Ledning enligt Input handlar om att säkerställa tillgången till tillräckliga
 
 ### Uppdrag
 Input utformade en projektmodell och projektstyrning för systemutveckling med processer, mallar och checklistor till en stor aktör inom betalningslösningar för handel.
-@EndSection

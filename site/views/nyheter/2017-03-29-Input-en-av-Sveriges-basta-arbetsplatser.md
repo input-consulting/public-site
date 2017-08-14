@@ -1,6 +1,5 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 id: gptw-2017
 Author : Hendrik Ellert
 Title: Input - en av Sveriges bästa arbetsplatser
@@ -8,9 +7,7 @@ Date: 2017-03-29
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 ![image alt](/img/nyheter/GPTW_SBA2017.png)
 
@@ -33,6 +30,3 @@ Mer information om Sveriges Bästa Arbetsplatser 2017 finns på [http://www.grea
 Om du är nyfiken på hur det är att arbeta på Input, kontakta oss för ett förutsättningslöst möte, inputinfo@input-consulting.se
 
 ![image alt](/img/nyheter/Lagbild_GPTW.jpg)
-
-
-@EndSection

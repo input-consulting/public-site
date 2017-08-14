@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
 Title: Välkommen åter Lasse!
 Date: 2016-01-01
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 Input hälsar Lars Wellner välkommen åter. 
 
@@ -18,5 +15,3 @@ Lasse återvänder till Input efter några år som IT arkitekt, Projektledare oc
 Om du är nyfiken på vad Lasse kan hjälpa ditt företag med, ta kontakt med någon av våra säljare så berättar vi mer.
 
 Välkommen hem Lasse!
-
-@EndSection

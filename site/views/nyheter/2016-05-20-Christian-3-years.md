@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
 Title: 3 frågor till en 3-åring
 Date: 2016-05-20
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 Tidigare i veckan hade vi 3-årskalas på kontoret. Vår fantastiske Christian Paulin har fyllt 3 år. Detta firades självklart med tårta!
 
@@ -32,5 +29,3 @@ Om man bortser från köttfärsen + såsen som är ett måste så får jag nog l
 ![image](/img/nyheter/ChristianFest.jpg) ![image](/img/nyheter/ChristianPaulinCake.jpg)
 
 #### Grattis Christian!
-
-@EndSection

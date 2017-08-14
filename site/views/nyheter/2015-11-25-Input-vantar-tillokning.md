@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
 Title: Input väntar tillökning
 Date: 2015-11-25
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 ![image alt](/img/nyheter/valkommen-hem.png)
 
@@ -25,5 +22,3 @@ Vi kommer att börja 2016 på bästa möjliga sätt med fyra mycket kvalificerad
 Välkomna hem!
 
 Om du är nyfiken på vad någon av dessa kan göra för Ditt företag, kontakta någon av våra duktiga säljare!
-
-@EndSection

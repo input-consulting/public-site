@@ -1,17 +1,14 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
 Title: Välkommen hem Andreas!
 Date: 2017-02-07
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
+---
 
-@Section['Content']
-
-![image alt](/img/nyheter/AndreasLunderhage.jpg) 
+![image](/img/nyheter/AndreasLunderhage.jpg) 
 
 Vi välkomnar Andreas till Input-familjen! 
 
@@ -23,5 +20,3 @@ Med lång erfarenhet från bland annat telekom och att ha utvecklat transaktions
 Om du är nyfiken på vad Andreas eller Input kan hjälpa ditt företag med, ta kontakt med någon av våra säljare så berättar vi mer.
 
 Välkommen hem Andreas!
-
-@EndSection

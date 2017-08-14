@@ -39,7 +39,7 @@ const nunjucksOptions = {
   },
   globals: {
     title: config.title,
-    sb : sb
+    sb: sb
   },
   ext: '.html'
 };

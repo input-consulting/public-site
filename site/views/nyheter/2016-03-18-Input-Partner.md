@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
 Title: Låt oss presentera Input Partner!
 Date: 2016-03-18
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 ![image alt](/img/nyheter/Input-Partner-500x223.png)
 
@@ -27,6 +24,3 @@ Via Input Partner får Du som kund kunnandet, erfarenheten, engagemanget, ansvar
 
 Vill du veta mer?
 Kontakta Sanaz på sanaz.bakhtiari@input-consulting.se
-
-
-@EndSection

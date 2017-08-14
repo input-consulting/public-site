@@ -1,13 +1,12 @@
-@Meta
+---
 Title: Business Intelligence
 Layout: _layout/services-popup
 Date: 2014-08-01 00:01
 Tags: BI, Business Intelligence
 BgImage : /assets/images/bg1.jpg
 Image : http://placehold.it/340x206
-@EndMeta
+---
 
-@Section['Content']
 Input kravställde, ledde och implementerade en Qlikview lösning till en stor kund inom finanssektorn. En lösning innehållande Qlikview dashboards för kommersiell, sälj, pricing, risk samt avstämningsrapportering för finansiella bokslut på europeisk nivå.
 
 Vi på Input hjälper Er med att bygga och förädla Er BI lösning vilket leder till effektivisering av Er verksamhet och vägledning till rätt affärsbeslut.
@@ -29,4 +28,3 @@ Vi låser oss inte till någon specifik teknik. Valet av teknik skall stötta di
 - Cognos
 - Microsofts BI plattform
 - Business Objects
-@EndSection

@@ -1,13 +1,11 @@
-@Meta
+---
 Title: Gemenskap
 Layout: _layout/culture-popup
 Date: 2014-08-01 00:01
 Tags: Gemenskap
-BgImage :
 Image : /img/thumbs/input-1.jpg
-@EndMeta
+---
 
-@Section['Content']
 >”Input är en stor familj där alla får chansen att höras. Här är vi alla ledare. På Input har vi högt till tak där allas åsikter är lika mycket värda. Jag trivs på Input då jag inte kan tänka mig en annan arbetsplats. Jag har fantastiska kollegor som alla är hjälpsamma. Mina tidigare arbetsplatser har varit precis som det låter -en arbetsplats. Input är något extra. Plötsligt blev det roligt att jobba :)”
 ##### -Inputtare från medarbetarundersökning, Great Place To Work 2016
 
@@ -33,6 +31,3 @@ För Dig som Kund innebär vår gemenskap att:
 - Vi bidrar till god sammanhållning och ett positivt arbetsklimat
 - Vi är lojala
 - Med en Inputkonsult hos Dig har du hjälp av hela Inputs samlade kompetens
-
-
-@EndSection

@@ -1,13 +1,11 @@
-@Meta
+---
 Title: Systemutveckling
 Layout: _layout/services-popup
 Date: 2014-08-01 00:01
 Tags: Services, Systemutveckling
 BgImage : /assets/images/bg1.jpg
 Image : http://placehold.it/340x206
-@EndMeta
-
-@Section['Content']
+---
 
 Som en modern systemutvecklare förväntas man ha koll på fler beståndsdelar i en applikation än vad som någonsin ställts krav på tidigare. Man skall kunna både webbgränssnitt, flertalet databaser och hur olika teknikplattformar kan kommunicera med varandra via webtjänster eller olika typer av ESB lösningar – Enterprise Service Bus.
 
@@ -34,10 +32,10 @@ Vi får förtroende från våra kunder att vägleda dem från traditionella till
 
 
 ### Tekniker/plattformar 
-* Sharepoint
-* Enterprise Service Bus – Mule/Red Hat/Oracle WLI
 * MS Azure
 * Amazon EC
+* Enterprise Service Bus – Mule/Red Hat/Oracle WLI
+* Sharepoint
 
 ### Uppdrag
 För en av Sveriges snabbast växande banker bistår Input med systemutveckling samt införande av agil metodik i kundens utvecklingsteam. Gammal teknisk arkitektur byts ut och ersätts med nya komponenter för att bättre svara mot kundens behov av att på ett effektivt sätt kunna erbjuda sina kunder moderna banktjänster.
@@ -47,4 +45,3 @@ För en av Sveriges snabbast växande banker bistår Input med systemutveckling 
 * Bank
 * Försäkring
 * Leasing
-@EndSection

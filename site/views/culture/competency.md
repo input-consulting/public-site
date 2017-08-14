@@ -1,13 +1,11 @@
-@Meta
+---
 Title: Kompetens
 Layout: _layout/culture-popup
 Date: 2014-08-01 00:01
 Tags: Kompetens
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-2.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 >"Inputs kunsult kom in och lyfte hela teamet, både när det gäller sammanhållningen i teamet men också den tekniska kompetensen då alla plötsligt steppade upp en nivå"
 ##### -Verksamhetschef, Transportbolag
@@ -30,5 +28,3 @@ För Dig som Kund innebär vår Kompetens att:
 - Det är en trygghet att vi alltid levererar lösningar med mycket hög kvalitet
 - Vi bidrar med spetskunskap 
 - Vi delar med oss av vår kunskap till Ditt företag
-
-@EndSection

@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
 Title: Triss i Ess!
 Date: 2016-02-22
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 ![image alt](/img/nyheter/FredrikFilmis.png) ![image alt](/img/nyheter/JennyFilmis.png) ![image alt](/img/nyheter/MatsHFilmis.png)
 
@@ -24,5 +21,3 @@ Mats är även han en enormt vass .NET utvecklare. Han har konsultat inom flerta
 Om du är nyfiken på vad någon av dessa utvecklarstjärnor kan hjälpa ditt företag med, ta kontakt med någon av våra säljare så berättar vi mer.
 
 Välkommen hem Fredrik, Jenny och Mats!
-
-@EndSection

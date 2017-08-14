@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Dan Lofquist
 Title: Skandia & Input har tecknat ramavtal
 Date: 2015-09-07
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 ![image alt](/img/nyheter/skandia-logga.png)
 
@@ -20,5 +17,3 @@ Detta är ett exklusivt ramavtal som innebär att Input som enda leverantör kom
 Inputs anbud vann i konkurrens med många anbud från såväl traditionella konsultbolag som mäklare. Detta innebär att samarbetet mellan Skandia och Input stärks ytterligare.
 
 Tack Skandia och våra fantastiska konsulter som tillsammans gör detta möjligt!
-
-@EndSection

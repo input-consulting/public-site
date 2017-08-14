@@ -1,13 +1,12 @@
-@Meta
+---
 Title: Linda
 Layout: _layout/sales-popup
 Date: 2017-03-27 00:01
 Tags: Sälj, Linda
 Image : /img/sales/linda_profile_small.jpg
 BgImage : /img/sales/linda_profile_big.jpg
-@EndMeta
+---
 
-@Section['Content']
 #### Konsultchef/Kundansvarig
 Jag gillar människor.
 
@@ -18,5 +17,3 @@ Jag brinner även för att få hjälpa kunder att hitta rätt konsulter, utifrå
 Med en bakgrund som lärare, säljare av affärssystem, headhunter och konsultchef - passar den breda rollen på Input mig bra. Att dessutom få arbeta med några av de vassaste konsulterna och kollegorna i Stockholm, gör att jag själv ständigt växer och utmanas i min roll här på Input.
 
 Vid sidan av Input gosar jag gärna med katt, hänger med vänner och tar en promenad genom stan.
-
-@EndSection

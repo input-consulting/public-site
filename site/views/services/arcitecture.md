@@ -1,13 +1,12 @@
-@Meta
+---
 Title: Arkitektur
 Layout: _layout/services-popup
 Date: 2014-08-01 00:01
 Tags: Services, Arkitektur
 BgImage : /assets/images/bg1.jpg
 Image : http://placehold.it/340x206
-@EndMeta
+---
 
-@Section['Content']
 ### Input/Arkitektur
 Moderna organisationer idag stödjer sig på verksamhetsnära IT-system. Komplexiteten i dessa system kräver i allt högre utsträckning ett strategiskt kunnande och en djup och bred erfarenhet av hur systemen hänger ihop för att på bästa sätt förstå hur de ska användas och förbättras på det mest effektiva sättet. IT-arkitektur innebär att koppla samman ovanstående med en förståelse för kundernas verksamhetsprocesser och kunskap om hur dessa skall utvecklas för att generera maximal affärsnytta.
 
@@ -25,4 +24,3 @@ På Input arbetar vi med arkitektur enligt IASAs definition för samordning av a
 
 ### Uppdrag
 Input var med och tog fram en ny produktfamilj för en av de största reseleverantörerna i Norden och integrerade denna i kundens befintliga produkthanteringssystem.
-@EndSection

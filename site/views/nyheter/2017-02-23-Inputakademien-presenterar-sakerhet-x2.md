@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
-Title:Input Akademien presenterar - Säkerhet x2
+Title: Input Akademien presenterar - Säkerhet x2
 Date: 2017-02-23
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 Input Akademien bjöd under februari in till två kompetenskvällar på temat säkerhet.
 
@@ -34,5 +31,3 @@ Mer från Jonas http://techworld.idg.se/2.2524/1.673425/sakerhetshot-2017
  
 
 Stort tack till Anders och Jonas för två mycket lärorika seminarier!
-
-@EndSection

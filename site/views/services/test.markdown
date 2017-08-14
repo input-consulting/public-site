@@ -1,13 +1,12 @@
-@Meta
+---
 Title: Test
 Layout: _layout/services-popup
 Date: 2014-08-01 00:01
 Tags: Services, Test
 BgImage : /assets/images/bg1.jpg
 Image : http://placehold.it/340x206
-@EndMeta
+---
 
-@Section['Content']
 Dagens och morgondagens företag inser att system kommunicerar, integrerar med varandra och är därmed beroende av varandra.
 
 
@@ -46,4 +45,3 @@ Input bistod med teststrategi och testledning i samband med byte av kärnsystem 
 * Bank 
 * Försäkring
 * Leasing
-@EndSection

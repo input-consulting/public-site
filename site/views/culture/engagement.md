@@ -1,13 +1,12 @@
-@Meta
+---
 Title: Engagemang
 Layout: _layout/culture-popup
 Date: 2014-08-01 00:01
 Tags: Engagemang
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-7.jpg
-@EndMeta
+---
 
-@Section['Content']
 >”Konsulten har på mycket kort tid satt sig in i ett komplext system med höga krav exakthet och tillförlitlighet. Han är engagerad, ansvarstagande, kompetent och positiv och därför väldigt lätt att samarbeta med. Som vår projektledare uttryckte det: Han är bara så bra!”
 ##### -Utvecklingschef, Finans- och Produktbolag
 
@@ -30,6 +29,3 @@ För Dig som Kund innebär vårt Engagemang att:
 - Vi tar ansvar för vårt åtagande
 - Vi är proaktiva
 - Vi är positiva i vårt bemötande med andra
-
-
-@EndSection

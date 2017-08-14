@@ -1,15 +1,12 @@
-@Master['_layout/article-page']
-
-@Meta
+---
+layout: _layout/article-page
 Author : Hendrik Ellert
 Title: Input on tour - Annecy 22-25 september 2016
 Date: 2016-09-26
 Tags: Nyheter
 BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
-@EndMeta
-
-@Section['Content']
+---
 
 Inputs höstkonferens 2016 ägde rum i den lilla medeltida staden Annecy i Frankrike. Vid stranden av en gnistrande blågrön sjö och omgiven av höga alptoppar fanns alla förutsättningar för härliga naturupplevelser och kreativ och aktiv konferens.
 
@@ -24,5 +21,3 @@ Sammantaget rankas denna konferensen in som en av de absolut bästa i Inputs his
 Många pratar om att de har en stark kultur på sin arbetsplats. Då har de inte upplevt hur det är att arbeta på Input…
 
 ![image alt](/img/nyheter/GruppbildAnnecy.jpg) 
-
-@EndSection
