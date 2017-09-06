@@ -89,14 +89,16 @@ module.exports = class SitePage {
   }
 
   makePageRoute() {
-    // remove absolute path
-    this._meta.route = this.file.replace(this.root.toLowerCase(), '');
-    // remove file ext
-    this._meta.route = this._meta.route.substring(0, this._meta.route.lastIndexOf('.'));
-    // win fix, change pesky \ to / 
-    this._meta.route = this._meta.route.replace(/\\/g, '/');
-    // make composite routes into 'real' ones
-    this._meta.route = this._meta.route.replace(/[/](\d+)[-](\d+)[-](\d+)[-]/, (m) => m.replace(/\-/g, '/'));
+    if ( !this._meta.route ) {
+      // remove absolute path
+      this._meta.route = this.file.replace(this.root.toLowerCase(), '');
+      // remove file ext
+      this._meta.route = this._meta.route.substring(0, this._meta.route.lastIndexOf('.'));
+      // win fix, change pesky \ to / 
+      this._meta.route = this._meta.route.replace(/\\/g, '/');
+      // make composite routes into 'real' ones
+      this._meta.route = this._meta.route.replace(/[/](\d+)[-](\d+)[-](\d+)[-]/, (m) => m.replace(/\-/g, '/'));
+    }
   }
   
 }

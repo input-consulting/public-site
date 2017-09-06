@@ -40,13 +40,15 @@ class SiteBuilder {
   }
 
   createSite(site) {
-    const p = site.map(s => new SitePage(this.options.root, s));
+    const p = site
+      .filter( f => /md|markdown/.test(path.extname(f)) )
+      .map(s => new SitePage(this.options.root, s));
     this.pages = [...new Set(p)];
   };
 
   read(dir) {
     return fs.readdirSync(dir)
-      .filter(d => !/_layout/.test(d) && ! /.DS_Store/.test(d))
+      .filter(d => !/_layout/.test(d) && !/.DS_Store/.test(d) )
       .reduce((files, file) =>
         fs.statSync(path.join(dir, file)).isDirectory() ?
           files.concat(this.read(path.join(dir, file))) :
