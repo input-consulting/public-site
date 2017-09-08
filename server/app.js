@@ -1,5 +1,5 @@
 const path = require('path');
-const appInsights = require('applicationinsights');
+//const appInsights = require('applicationinsights');
 const Koa = require('koa');
 const sb = require('./modules/site-builder');
 const md = require('marked');
