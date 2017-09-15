@@ -1,55 +1,35 @@
-<!doctype html>
-<html lang="sv">
-<head>
-    <meta charset="utf-8">
-    <title>Input Consulting AB - @Model.Meta.Title</title>
-    
-    <meta name="title" content="Input Consulting - Nyheter" />
-    <meta name="description" content="Input Consulting Stockholm AB" />
-    <meta name="author" content="Input Consulting" />
-    <meta name="Copyright" content="Input Consulting" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    
-    <meta property="og:title" content="@Model.Meta.Title" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="@Model.Meta.ResourceName" />
-    
-    <link href="@Path['~/assets/css/site.css']" rel="stylesheet"/>
-    <script type="text/javascript">
-        var appInsights=window.appInsights||function(config){
-            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
-        }({
-            instrumentationKey:"99e84c77-b1e7-4069-8bdc-cc30c2b9fce6"
-        });
+{% set title = title + ' - ' + page.title %}
+{% extends "_layout/_master.html" %}
 
-        window.appInsights=appInsights;
-        appInsights.trackPageView();
-    </script>
-</head>
-    <body>
-        @Partial['_layout/partial/partial-news-top-header.html'];
-                
-        <section class="full-page input-news">
-           
-            <section class="container single-article">
-                <article>
-                    <time>@Model.Meta.FriendlyDate</time>
-                    <header>@Model.Meta.Title</header>
-                    @Section['Content'];
-                    <footer>
-                       <nav>
-                            <a href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
-                            <a href="/nyheter"><span class="glyphicon glyphicon-th-list"></span> Mer nyheter</a>            
-                       </nav>
-                       <nav>
-                            @Partial['_layout/partial/share-article-linkedin.html'];
-                            @Partial['_layout/partial/share-article-twitter.html'];
-                            @Partial['_layout/partial/share-article-facebook.html'];
-                       </nav>
-                    </footer>
-                </article>
-            </section>                
-        </section>
-        
-    </body>
-</html>
+{% block body %}
+<section class="full-page input-news">
+
+    <div class="container with logo">
+        <a href="/">
+            <img src="/img/logo/logo_3.png" alt="">
+        </a>
+    </div>
+
+    <section class="full-page input-news">
+        <section class="container single-article">
+            <article>
+                <time>{{ page.date | date}}</time>
+                <header>{{ page.title }}</header>
+                {{ page.body | md }}
+                <footer>
+                    <nav>
+                        <a href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
+                        <a href="/nyheter"><span class="glyphicon glyphicon-th-list"></span> Mer nyheter</a>            
+                    </nav>
+                    <nav>
+                        {% include "_layout/_includes/_share-article-linkedin.html" %}
+                        {% include "_layout/_includes/_share-article-twitter.html" %}
+                        {% include "_layout/_includes/_share-article-facebook.html" %}                        
+                    </nav>
+                </footer>
+            </article>
+        </section>                
+    </section>
+
+</section>
+{% endblock %}

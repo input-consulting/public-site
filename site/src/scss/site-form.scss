@@ -1,0 +1,64 @@
+﻿.glyphicon {
+    color : #d9d9d9;
+}
+
+button {
+    span.glyphicon {
+            color : #fff !important;
+            margin-right : 4px;
+        }
+}
+
+.input-group  {
+    
+    .form-control:first-child {
+        border-right : none;
+    }
+}
+
+.label-column {
+    @include make-sm-column(4);
+
+    padding-left : 0;
+    padding-right : 4px;
+
+    label {
+        margin-bottom : 8px !important;
+    }
+}
+
+.entry-column {
+    @include make-sm-column(4);
+
+    padding-left : 0;
+    padding-right : 4px;
+
+    label {
+        margin-bottom : 8px !important;
+    }
+}
+
+/* Mobile devices (phones, 480px and less) */
+@media (max-width: 480px)
+{
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px)
+{
+   
+   
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px)
+{
+     
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) 
+{
+     
+}
+
