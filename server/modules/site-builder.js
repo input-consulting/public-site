@@ -1,4 +1,3 @@
-const router = require('koa-router')();
 const fs = require('fs');
 const path = require('path');
 const SitePage = require('./site-page');
@@ -7,7 +6,6 @@ const config = require('../../config');
 class SiteBuilder {
 
   constructor() {
-    this.dateRoutes = [];
     this.pages = [];
 
     this.options = {

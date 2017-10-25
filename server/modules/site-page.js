@@ -34,62 +34,45 @@ module.exports = class SitePage {
     }
   }
 
-  
+
   readMeta(fileContent) {
-    // backward compability
-    let header = fileContent.match(/@Meta([\s\S]*?)@EndMeta/);
-    if (!header) {
-      header = fileContent.match(/---([\s\S]*?)---/);
-    }
-    
+    const header = fileContent.match(/---([\s\S]*?)---/);
     if (header) {
       this._meta = header[1]
-      .split('\n')
-      .filter(m => m.length > 0)
-      .reduce((prev, item) => {
-        const kv = item.split(':');
-        const key = kv[0].toLowerCase().trim();
-        let value = kv[1];
-        if (kv.length > 2) {
-          kv.shift();
-          value = kv.join(':');
-        }
-        
-        if (key && value) {
-          if (key === 'date') {
-            prev[key] = new Date(value.trim());
-          } else {
-            prev[key] = value.trim();
+        .split('\n')
+        .filter(m => m.length > 0)
+        .reduce((prev, item) => {
+          const kv = item.split(':');
+          const key = kv[0].toLowerCase().trim();
+          let value = kv[1];
+          if (kv.length > 2) {
+            kv.shift();
+            value = kv.join(':');
           }
-        }
-        return prev;
-      }, {});
-    }
-    
-    // backward compability
-    const layout = fileContent.match(/@Master\[\'([\s\S]*?)\'\]/);
-    if (layout) {
-      this._meta.layout = layout[1];
+
+          if (key && value) {
+            if (key === 'date') {
+              prev[key] = new Date(value.trim());
+            } else {
+              prev[key] = value.trim();
+            }
+          }
+          return prev;
+        }, {});
     }
   }
-  
+
   readContent(fileContent) {
-    // backward compability
-    let data = fileContent.match(/@Section\[\'(.*)\'\]([\s\S]*?)@EndSection/);
+    const data = fileContent.replace(/---([\s\S]*?)---/, '').trim();
     if (data) {
-      this._content.body = data[2].trim();
+      this._content.body = data;
     } else {
-      data = fileContent.replace(/---([\s\S]*?)---/, '').trim();
-      if (data) {
-        this._content.body = data;
-      } else {
-        this._content.body = fileContent;
-      }
+      this._content.body = fileContent;
     }
   }
 
   makePageRoute() {
-    if ( !this._meta.route ) {
+    if (!this._meta.route) {
       // remove absolute path
       this._meta.route = this.file.replace(this.root.toLowerCase(), '');
       // remove file ext
@@ -100,5 +83,5 @@ module.exports = class SitePage {
       this._meta.route = this._meta.route.replace(/[/](\d+)[-](\d+)[-](\d+)[-]/, (m) => m.replace(/\-/g, '/'));
     }
   }
-  
+
 }
