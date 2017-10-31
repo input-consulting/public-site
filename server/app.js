@@ -50,7 +50,7 @@ const nunjucksOptions = {
   ext: '.html'
 };
 
-app.use(nunjucks(path.join(path.resolve("."), `${config.root}/views`), nunjucksOptions));
+app.use(nunjucks(path.join(path.resolve("."), `${config.root}/${config.site}`), nunjucksOptions));
 
 app.use(require('./controllers/home').routes());
 app.use(require('./controllers/default').routes());

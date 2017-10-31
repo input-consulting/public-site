@@ -1,4 +1,5 @@
 /*  */
+const buildRoot = 'web';
 const siteRoot = 'site';
 
 /* */
@@ -9,15 +10,16 @@ module.exports = {
     title: 'Input Consulting Stockholm AB',
 
     /* */
-    root: siteRoot,
+    root: buildRoot,
     public: sitePublic,
+    site : siteRoot,
 
     /* used by build tasks */
     build: {
 
         static: {
             source: [
-                siteRoot + '/static/**/*.*'
+                buildRoot + '/static/**/*.*'
             ],
             target: sitePublic
         },
@@ -26,7 +28,7 @@ module.exports = {
             source: [
                 './node_modules/jquery/dist/jquery.min.js',
                 './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
-                siteRoot + '/src/js/*.js'
+                buildRoot + '/src/js/*.js'
             ],
             target: sitePublic + '/js'
         },
@@ -40,7 +42,7 @@ module.exports = {
 
         styles: {
             source: [
-                siteRoot + '/src/scss/site.scss'
+                buildRoot + '/src/scss/site.scss'
             ],
             target: sitePublic + '/css'
         }

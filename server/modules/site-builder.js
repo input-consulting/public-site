@@ -9,7 +9,7 @@ class SiteBuilder {
     this.pages = [];
 
     this.options = {
-      root: path.join(path.resolve("."), `${config.root}/views`)
+      root: path.join(path.resolve("."), `${config.root}/${config.site}`)
     };
 
     this.build(this.options);
