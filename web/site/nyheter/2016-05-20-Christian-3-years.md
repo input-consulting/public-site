@@ -1,5 +1,5 @@
 ---
-layout: _layout/article-page
+layout: _layout/news-page
 Author : Hendrik Ellert
 Title: 3 frågor till en 3-åring
 Date: 2016-05-20

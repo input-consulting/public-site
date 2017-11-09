@@ -1,5 +1,5 @@
 ---
-layout: _layout/article-page
+layout: _layout/news-page
 Author : Hendrik Ellert
 Title: Input är en utmärkt arbetsplats!
 Date: 2016-12-15

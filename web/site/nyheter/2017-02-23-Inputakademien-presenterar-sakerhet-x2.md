@@ -1,5 +1,5 @@
 ---
-layout: _layout/article-page
+layout: _layout/news-page
 Author : Hendrik Ellert
 Title: Input Akademien presenterar - Säkerhet x2
 Date: 2017-02-23

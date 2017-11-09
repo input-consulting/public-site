@@ -1,5 +1,5 @@
 ---
-layout: _layout/article-page
+layout: _layout/news-page
 id: gptw-2017
 Author : Hendrik Ellert
 Title: Input - en av Sveriges bästa arbetsplatser

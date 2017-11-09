@@ -2,29 +2,32 @@
 {% extends "_layout/_master.html" %}
 
 {% block body %}
-<section class="full-page input-news">
+<section class="news-list">
 
-    <div class="container with logo">
-        <a href="/">
-            <img src="/img/logo/logo_3.png" alt="">
-        </a>
-    </div>
+    <header class="news-list-header">
+      <a href="/">
+          <img src="/img/logo/logo_3.png" alt="">
+      </a>
+    </header>
 
-    <section class="full-page container list-of-news">
-        <header>Aktuellt på Input</header>
-        {% for page in pages %}
-        <article>
-        <a href="{{ page.route }}">
-                <time>{{ page.date | date }}</time>
-                <header>{{ page.title }}</header>
-                {{ page.body | md | truncate(200, true, ' ...') }}
-        </a>
+    <section class="news-list-content">
+        <h2>Aktuellt på Input</h2>
+        <ul>        
+          {% for page in pages %}
+          <li>
+            <a href="{{ page.route }}">
+              <time>{{ page.date | date }}</time>
+              <header>{{ page.title }}</header>
+              {{ page.body | md | truncate(200, true, ' ...') }}
+            </a>
             <footer>
                 <a href="{{ page.route }}">Läs mer <span class="glyphicon glyphicon-play"></span></a>
             </footer>
-        </article>
-        {% endfor  %}
+          </li>
+          {% endfor  %}
+        </ul>
         <div class="divider"></div>
+      </div>
     </section>
 
 </section>

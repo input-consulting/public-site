@@ -1,0 +1,33 @@
+{% set title = title + ' - ' + page.title %}
+{% extends "_layout/_master.html" %}
+
+{% block body %}
+<section class="news-article">
+
+    <header class="news-article-page-header">
+        <a href="/">
+            <img src="/img/logo/logo_3.png" alt="">
+        </a>
+    </header>
+
+    <section class="news-article-body">
+      <article>
+          <time>{{ page.date | date}}</time>
+          <header>{{ page.title }}</header>
+          {{ page.body | md }}
+          <footer>
+              <nav>
+                  <a href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
+                  <a href="/nyheter"><span class="glyphicon glyphicon-th-list"></span> Mer nyheter</a>            
+              </nav>
+              <nav>
+                  {% include "_layout/_includes/_share-article-linkedin.html" %}
+                  {% include "_layout/_includes/_share-article-twitter.html" %}
+                  {% include "_layout/_includes/_share-article-facebook.html" %}                        
+              </nav>
+          </footer>
+      </article>
+    </section>
+    
+</section>
+{% endblock %}

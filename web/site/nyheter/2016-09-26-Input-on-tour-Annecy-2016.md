@@ -1,5 +1,5 @@
 ---
-layout: _layout/article-page
+layout: _layout/news-page
 Author : Hendrik Ellert
 Title: Input on tour - Annecy 22-25 september 2016
 Date: 2016-09-26

@@ -1,5 +1,5 @@
 ---
-layout: _layout/article-page
+layout: _layout/news-page
 Author : Hendrik Ellert
 Title: Inputkonsulter till Regeringskansliet
 Date: 2015-09-25

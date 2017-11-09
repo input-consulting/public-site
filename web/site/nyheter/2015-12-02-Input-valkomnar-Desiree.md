@@ -1,5 +1,5 @@
 ---
-layout: _layout/article-page
+layout: _layout/news-page
 Author : Sanaz Bakhtiari
 Title: Input välkomnar Desirée Engholm!
 Date: 2015-12-02

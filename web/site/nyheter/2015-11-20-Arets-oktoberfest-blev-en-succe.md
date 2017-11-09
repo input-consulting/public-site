@@ -1,5 +1,5 @@
 ---
-layout: _layout/article-page
+layout: _layout/news-page
 Author : Hendrik Ellert
 Title: Inputs Oktoberfest - Årets höjdpunkt!
 Date: 2015-10-16

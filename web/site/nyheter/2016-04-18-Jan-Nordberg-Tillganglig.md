@@ -1,5 +1,5 @@
 ---
-layout: _layout/article-page
+layout: _layout/news-page
 Author : Hendrik Ellert
 Title: Nu finns Jan Nordberg tillgänglig för nytt uppdrag
 Date: 2016-04-18
