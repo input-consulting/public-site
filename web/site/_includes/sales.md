@@ -13,4 +13,4 @@ På Input är det våra konsultchefer och kundansvariga som jobbar med försälj
 
 Du som kund får en dedikerad kundansvarig som är aktiv, håller sig informerad om din verksamhet och är insatt i era projekt och behov. Att den personen dessutom arbetar som konsultchef och känner konsulterna utan och innan och vet i vilka projekt deras styrkor framhävs och bidrar med ett mervärde resulterar i att du som kund kan vara trygg i att det blir en bra match. 
 
-Det som skiljer oss från andra är vårt engagemang och sätt att arbeta. Många pratar om att bygga långsiktiga relationer, samarbeten och nära kontakt, vi tillämpar det! Som kund får du jobba med David, Hendrik, Linda, Sanaz eller Sara som blir er dedikerade kundansvarig.
+Det som skiljer oss från andra är vårt engagemang och sätt att arbeta. Många pratar om att bygga långsiktiga relationer, samarbeten och nära kontakt, vi tillämpar det! Som kund får du jobba med Hendrik, Linda eller Sara som blir er dedikerade kundansvarig.
