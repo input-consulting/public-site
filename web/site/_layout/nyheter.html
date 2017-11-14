@@ -2,15 +2,16 @@
 {% extends "_layout/_master.html" %}
 
 {% block body %}
-<section class="news-list">
 
-    <header class="news-list-header">
+<section class="news-page">
+
+    <header class="news-page-header">
       <a href="/">
           <img src="/img/logo/logo_3.png" alt="">
       </a>
     </header>
 
-    <section class="news-list-content">
+    <section class="news-page-content">
         <h2>Aktuellt på Input</h2>
         <ul>        
           {% for page in pages %}
@@ -31,4 +32,5 @@
     </section>
 
 </section>
+
 {% endblock %}

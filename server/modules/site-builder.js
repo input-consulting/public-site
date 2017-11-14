@@ -23,7 +23,7 @@ class SiteBuilder {
   build(config = {}) {
     this.options = Object.assign({}, this.options, config);
 
-    let site = this.read(this.options.root);
+    let site = this.crawlSite(this.options.root);
     this.createSite(site);
   }
 
@@ -44,12 +44,12 @@ class SiteBuilder {
     this.pages = [...new Set(p)];
   };
 
-  read(dir) {
+  crawlSite(dir) {
     return fs.readdirSync(dir)
-      .filter(d => !/_layout/.test(d) && !/.DS_Store/.test(d) )
+      .filter(d => !/_layout/.test(d) && !/.DS_Store/.test(d) && d[0] !== '!'  )
       .reduce((files, file) =>
         fs.statSync(path.join(dir, file)).isDirectory() ?
-          files.concat(this.read(path.join(dir, file))) :
+          files.concat(this.crawlSite(path.join(dir, file))) :
           files.concat(path.join(dir, file).toLowerCase()), []);
   }
 
