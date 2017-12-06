@@ -73,30 +73,26 @@
       <div class="col-sm-6 col-sm-offset-3 text-center"></div>
     </section>
 
-    {# Tjänster #}
-    <section class="services">
-        <div class="divider" id="services"></div>
+    {# Karriär #}
+    <section class="jobs">
+        {% set jobs = sb.getPageById('jobs') %}
+        <div class="divider" id="jobs"></div>
         <section class="container">
-          {% set service = sb.getPageById('services') %}
-          <article>
-              <header>{{service.title}}</header>
-              {{ service.body | md }}
-          </article>
-        </section>
-        <section class="container clickables">
-        {% for item in sb.getPagesByRoute('services/') %}
-            <div class="box">
-                <a href="{{item.route}}" data-toggle="modal" data-target="#clickables-{{item.title | replace(' ','-') }}">
-                    {{ item.title }}
+          <div class="row">
+            <div class="col-sm-7">
+              <article>
+                  <header>{{jobs.title}}</header>
+                  {{ jobs.body | md }}
+              </article>
+            </div>
+            <div class="col-sm-5">
+              <img src="/img/team-input-2.jpg" class="jobs-image" alt="">
+                <a href="/jobs" class="btn btn-action btn-big btn-block">
+                  Se lediga jobb
                 </a>
             </div>
-            <div class="modal" id="clickables-{{item.title | replace(' ','-') }}" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content"></div>
-              </div>
-            </div>    
-        {% endfor %}        
         </section>
+          </div>
         <div class="divider"></div>
     </section>
 

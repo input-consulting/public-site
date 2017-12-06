@@ -1,7 +1,6 @@
 ---
 id : crew
 title: Inputtare
-date: 2014-08-01 00:01
 tags: crew
 ---
 

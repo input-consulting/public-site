@@ -1,0 +1,64 @@
+.jobs-article {
+    @extend .page;
+    @extend .container;
+
+    .jobs-article-header {
+        @extend .page-header;
+    }
+
+    .jobs-article-body {
+        @extend .page-content;
+
+        margin-top: 5rem;
+        border-radius: 4px;
+        background: #fff;
+
+        article {
+            border-radius: 4px;
+            font-size: 1.2em;
+            margin: 10px;
+            color: #333333;
+
+            time {
+                color: $theme-color-5;
+                font-weight: 600;
+            }
+            header {
+                font-size: 1.5em;
+                text-transform: none;
+                color: $theme-color-5;
+            }
+            img {
+                max-width: 100%;
+                margin-bottom: .5em;
+                margin-top: .5em;
+            }
+            footer {
+                margin-top: 20px;
+                border-top: solid 1px $theme-color-5;
+                nav {
+                    margin-top: 1rem;
+                    display: block;
+                    &:first-child {
+                        float: left;
+                    }
+                    &:last-child {
+                        float: right;
+                    }
+                    a {
+                        margin: 5px;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        color: $theme-color-1;
+                        .glyphicon {
+                            color: $theme-color-1;
+                        }
+                        &:hover {
+                            color: $theme-color-5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

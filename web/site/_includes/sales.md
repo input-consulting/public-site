@@ -1,7 +1,6 @@
 ---
 Id : sales
 Title: Sälj
-Date: 2014-08-01 00:01
 Tags: sales
 BgImage : /assets/images/bg1.jpg
 Image : http://placehold.it/340x206

@@ -1,0 +1,32 @@
+{% set title = title + ' - Lediga jobb ' %}
+{% extends "_layout/_master.html" %}
+
+{% block body %}
+
+<section class="page-jobs">
+
+    <header class="page-header">
+      <a href="/">
+          <img src="/img/logo/logo_3.png" alt="">
+      </a>
+    </header>
+
+    <section class="page-content-jobs">
+        <h2>Lediga jobb på Input</h2>
+        <ul class="jobs-list">
+          {% for page in pages %}
+          <li class="jobs-list-item">
+            <a class="jobs-list-item-link" href="{{ page.route }}">
+              <h3>{{ page.title }}</h3>
+              <strong class="button"> 
+                <span>Läs mer</span>
+              </strong>
+            </a>
+          </li>
+          {% endfor  %}
+        </ul>
+    </section>
+
+</section>
+
+{% endblock %}

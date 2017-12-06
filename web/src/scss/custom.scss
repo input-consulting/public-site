@@ -19,7 +19,7 @@ $body-bg : $theme-color-1;
 // buttons
 $brand-primary: $base-header-background-color;
 
-
+$bootstrap-sass-asset-helper: false !default;
 $font-path:      "/fonts/";
 $icon-font-path: if($bootstrap-sass-asset-helper, "/", "../fonts/");
 
@@ -28,4 +28,3 @@ $icon-font-path: if($bootstrap-sass-asset-helper, "/", "../fonts/");
 $font-family-sans-serif: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
 
 $font-size-base: 12px;
-//$font-size-base: 2em; 

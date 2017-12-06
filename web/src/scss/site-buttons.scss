@@ -1,0 +1,11 @@
+$btn-action-color : $theme-color-1;
+$btn-action-bg : #fff;
+$btn-action-border : darken($btn-action-bg, 15%);
+
+.btn-action {
+  @include button-variant($btn-action-color, $btn-action-bg, $btn-action-border);
+
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 4px;
+}

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const config = require('../../config');
 
 module.exports = class SitePage {
 
@@ -8,6 +9,7 @@ module.exports = class SitePage {
 
     this._meta = {};
     this._content = {};
+    this._haveLayout = false;
 
     this.init();
   }
@@ -22,20 +24,23 @@ module.exports = class SitePage {
   get bgImage() { return this._meta.bgimage || ''; }
   get body() { return this._content.body || ''; }
   get layout() { return this._meta.layout || null; }
+  get haveLayout() { return this._haveLayout; }
 
   init() {
     try {
       let content = fs.readFileSync(this.file, 'utf-8');
-      this.readMeta(content);
-      this.readContent(content);
+      this.readPageMeta(content);
+      this.readPageContent(content);
       this.makePageRoute();
+      this.validatePageLayout();
+      this.validatePageDate();
     } catch (error) {
       console.error(`unable to read: ${this.file}`, error);
     }
   }
 
 
-  readMeta(fileContent) {
+  readPageMeta(fileContent) {
     const header = fileContent.match(/---([\s\S]*?)---/);
     if (header) {
       this._meta = header[1]
@@ -62,7 +67,7 @@ module.exports = class SitePage {
     }
   }
 
-  readContent(fileContent) {
+  readPageContent(fileContent) {
     const data = fileContent.replace(/---([\s\S]*?)---/, '').trim();
     if (data) {
       this._content.body = data;
@@ -82,6 +87,20 @@ module.exports = class SitePage {
       // make composite routes into 'real' ones
       this._meta.route = this._meta.route.replace(/[/](\d+)[-](\d+)[-](\d+)[-]/, (m) => m.replace(/\-/g, '/'));
     }
+  }
+
+  validatePageLayout() {
+    this._haveLayout = this.layout && fs.existsSync(`${config.root}/${config.site}/${this.layout}.html`);
+  }
+
+  validatePageDate() {
+    if ( this._meta.date ) return;
+
+    const match = this._meta.route.match(/[/](\d+)[/](\d+)[/](\d+)/);
+    if ( match ) {
+      this._meta.date = new Date(`${match[1]}-${match[2]}-${match[3]}`);
+    }
+
   }
 
 }

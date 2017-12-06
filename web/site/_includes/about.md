@@ -1,7 +1,6 @@
 ---
 id : about
 title: Starten
-date: 2014-08-01 00:01
 ---
 
 Input Consulting grundades 1997 av ett fåtal kollegor som tyckte att konsultmarknaden under dåtidens internetyra allt mer kom att fokusera på flotta hemsidor istället för att se kundernas stora reella behov, IT-system som säkrade kundernas kärnverksamhet. 

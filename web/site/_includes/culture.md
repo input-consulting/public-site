@@ -1,7 +1,6 @@
 ---
 id : culture
 title: Kultur
-date: 2014-08-01 00:01
 tags: culture
 ---
 

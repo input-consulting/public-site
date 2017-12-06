@@ -33,7 +33,7 @@ class SiteBuilder {
 
   getPagesByRoute(route) {
     return this.pages
-      .filter(p => p.route.includes(route))
+      .filter(p => p.route.includes(route) && p.date )
       .sort((a, b) => -1 * ((a.date > b.date) - (a.date < b.date)));
   }
 
