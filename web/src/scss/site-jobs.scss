@@ -1,7 +1,19 @@
+section[class="jobs"] {
+  padding-top: 0;
+  background: $theme-color-1;
+}
+
+.jobs-photo {
+  background: #9299a4;
+  background-image: url(/img/team-input-2.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover !important  
+}
+
+
 .page-jobs {
   @extend .page;
-
- // background: #fff;
 }
 
 .page-content-jobs {
@@ -10,6 +22,27 @@
   @include breakpoint(sm) {
     width: 700px !important;
   }
+
+  .job-list-header {
+    color: #444444 !important;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  a {
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $theme-color-1;
+    .glyphicon {
+        color: $theme-color-1;
+    }
+    &:hover {
+        color: $theme-color-5;
+    }
+  }
+
 
   .jobs-list {
     padding: 0;
@@ -41,8 +74,25 @@
         }
 
         color: $theme-color-5;
+        
       }
-
+      
+      blockquote {
+        color: #939da3;
+        @include font-size(12);
+        @include breakpoint(sm) {
+          @include font-size(14);
+        }
+        font-weight: 400;
+        margin: 0;
+        font-style: italic;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        border: none;
+        padding: 0;
+      }      
+      
       .button {
         position: absolute;
         right: 31px;
@@ -54,7 +104,7 @@
         color: #fff;
         border-radius: 4px;
         text-shadow: 0 -1px 0 rgba(0, 0, 0, .1);
-        background: $theme-color-1;
+        background: $theme-color-5;
         display: block;
         height: 37px;
         line-height: 37px;

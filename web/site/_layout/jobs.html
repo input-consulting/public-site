@@ -12,12 +12,16 @@
     </header>
 
     <section class="page-content-jobs">
-        <h2>Lediga jobb på Input</h2>
+        <a href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
+        <h3 class="job-list-header">Lediga jobb på Input</h3>
         <ul class="jobs-list">
           {% for page in pages %}
           <li class="jobs-list-item">
             <a class="jobs-list-item-link" href="{{ page.route }}">
               <h3>{{ page.title }}</h3>
+              {% if page._meta.ingress %}
+                <blockquote>{{ page._meta.ingress }}</blockquote>
+              {% endif %}
               <strong class="button"> 
                 <span>Läs mer</span>
               </strong>

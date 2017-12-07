@@ -24,8 +24,7 @@
     </section>
 
     {# Om input #}
-    <section class="about">
-      <div class="divider" id="about"></div>
+    <section class="about" id="about">
       <section class="container">
         {% set about = sb.getPageById('about') %}
         <article>
@@ -42,8 +41,7 @@
     </section>
 
     {# Kultur #}
-    <section class="culture">
-      <div class="divider" id="culture"></div>
+    <section class="culture" id="culture">
       <section class="container">
         {% set culture = sb.getPageById('culture') %}
         <article>
@@ -68,37 +66,27 @@
       <div class="divider"></div>
     </section>
 
-    {# divider #}
-    <section class="team-input-2">
-      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
-    </section>
+    {# Jobs #}
+    {% set jobs = sb.getPageById('jobs') %}
+    <section class="jobs" id="jobs">
+      <div class="row has-columns">
+        <div class="col-sm-6 col jobs-photo">
+        </div>
+        <div class="col-sm-6 col col-text">
+          <article>
+              <header>{{jobs.title}}</header>
+              {{ jobs.body | md }}
+            <a href="/jobs" class="btn btn-action btn-big space-above">
+              Se lediga jobb
+            </a>
+          </article>
+        </div>
+      </div>
 
-    {# Karriär #}
-    <section class="jobs">
-        {% set jobs = sb.getPageById('jobs') %}
-        <div class="divider" id="jobs"></div>
-        <section class="container">
-          <div class="row">
-            <div class="col-sm-7">
-              <article>
-                  <header>{{jobs.title}}</header>
-                  {{ jobs.body | md }}
-              </article>
-            </div>
-            <div class="col-sm-5">
-              <img src="/img/team-input-2.jpg" class="jobs-image" alt="">
-                <a href="/jobs" class="btn btn-action btn-big btn-block">
-                  Se lediga jobb
-                </a>
-            </div>
-        </section>
-          </div>
-        <div class="divider"></div>
     </section>
 
     {# Sälj #}
-    <section class="input-sales-team">
-        <div class="divider" id="sales"></div>
+    <section class="input-sales-team" id="sales">
         <section class="container">
            {% set sale = sb.getPageById('sales') %}
             <article>
@@ -132,8 +120,7 @@
     </section>
 
     {# Inputtare  #}
-    <section class="input-crew">
-        <div class="divider" id="crew"></div>
+    <section class="input-crew" id="crew">
         <section class="container">
             {% set crew = sb.getPageById('crew') %}
             <article>
@@ -144,9 +131,14 @@
         <div class="divider"></div>
     </section>
 
+    {# divider #}
+    <section class="team-input-2">
+      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+    </section>
+   
+
     {# Kontakta oss  #}
     <section class="contact-us" id="contact">
-      
         <section class="container">
             <article>
                 <header>kontakta oss</header>
@@ -155,7 +147,7 @@
             </article>
         </section>
 
-        <div class="container">
+        <div class="container space-above">
             <div class="col-sm-9 pull-left social-media">
                 <a href="https://www.linkedin.com/company/input-consulting-stockholm-ab" target="_blank">
                   <img src="/img/social/li.png" alt="Linkedin">

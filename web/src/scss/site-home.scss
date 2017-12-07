@@ -1,41 +1,46 @@
 
 section {
-    
+  
+    // & > *+* { 
+    //   margin-top: 1rem 
+    // }
+
     margin-left:0px;
     margin-right:0px;
 
     &.input-news {
-        background: $theme-color-3;        
+        background: $theme-color-3;
+        padding-bottom: 30px;
     }
     
     &.about {        
         background: $theme-color-1;
+        padding-bottom: 30px;
     }    
     
     &.culture {
-        background: $theme-color-4;
+        background: $theme-color-3;
+        padding-bottom: 30px;
     }
     
     &.services {
         background: $theme-color-1;
+        padding-bottom: 30px;
     }
     
     &.input-crew {
         background: $theme-color-3;
+        padding-bottom: 30px;
     }
     
     &.input-sales-team {
         background: $theme-color-4;
+        padding-bottom: 30px;
     }
     
     &.contact-us {
         background: $theme-color-4;
+        padding-bottom: 30px;
     }
     
-}
-
-
-.jobs-image {
-  max-width: 100%;
-  margin: 1rem 0;
 }

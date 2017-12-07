@@ -1,7 +1,7 @@
 #nav {
   width: 100%;
   position:static;
-  top:-32px;
+  top:0;
 }
 
 #nav.affix {
@@ -72,5 +72,5 @@
 }
 
 .divider {
-	height:60px;
+  height:0px;
 }

@@ -12,13 +12,47 @@ body {
     -webkit-background-size: 1200px 800px;
     
     color: #333;
-    background-color: #0284a6    
+    background: #fff;
+//    background-color: #0284a6    
 }
+
+
 
 a:focus { 
     border: none;
     outline: none;
 }
+
+.has-columns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  box-sizing: border-box;
+  min-height: 350px;
+
+  .col-text > * {
+    box-sizing:border-box;
+    padding:0 20px;
+  }
+    
+}
+
+.col {
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+
+.space-above {
+  margin-top: 20px;
+}
+
 
 .full-page {
     padding-top: 0;
