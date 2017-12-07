@@ -105,8 +105,7 @@
 
 
 .sales-team {
-//    .make-row();
-        
+
     .modal {
         
         padding: 0 !important;
@@ -142,20 +141,6 @@
                 position: relative;
                 z-index: 1;
                 width: 100%;
-
-
-//                &::after {
-//                  content: "";
-//                  background: #000;
-//                  opacity: 0.5;
-//                  top: 0;
-//                  left: 0;
-//                  bottom: 0;
-//                  right: 0;
-//                  position: absolute;
-//                  z-index: -1;                   
-//                }
-
             }
         }
         
@@ -190,6 +175,10 @@
     }
     
     .sales-team {
+
+      display: flex;
+      justify-content: center;
+            
         article {
             width: 32.222%;
             display: inline-block;
