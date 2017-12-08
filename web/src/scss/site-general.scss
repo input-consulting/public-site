@@ -1,168 +1,158 @@
-html, body {
-  /* The html and body elements cannot have any padding or margin. */
-  height: 100%;
+html,
+body {
+    /* The html and body elements cannot have any padding or margin. */
+    height: 100%;
 }
 
 body {
     font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    @include font-size(14);
+    @include breakpoint(sm) {
+      @include font-size(16);
+    }
     font-weight: 300;
     line-height: 1.42857143;
     -webkit-font-smoothing: antialiased;
     -webkit-background-size: 1200px 800px;
-    
-    color: #333;
+    color: #333333;
     background: #fff;
-//    background-color: #0284a6    
 }
 
-
-
-a:focus { 
-    border: none;
-    outline: none;
+a {
+    &:focus {
+        border: none;
+        outline: none;
+    }
+    
+    &.page-navigation-link {
+        display: inline-block;
+        margin: 1rem 0;
+        text-decoration: none;
+        @include font-size(16);
+        font-weight: 500;
+        color: #fff;
+        .glyphicon {
+            color: #fff;
+        }
+        &:hover {
+            color: $theme-color-5;
+        }
+    }
 }
 
 .has-columns {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -o-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  box-sizing: border-box;
-  min-height: 350px;
-
-  .col-text > * {
-    box-sizing:border-box;
-    padding:0 20px;
-  }
-    
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    box-sizing: border-box;
+    min-height: 200px;
+    @include breakpoint(sm) {
+      min-height: 400px;
+    }
+    .col-text>* {
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
 }
 
 .col {
-  padding: 80px 0;
-  box-sizing: border-box;
+    padding: 80px 0;
+    box-sizing: border-box;
 }
 
 .space-above {
-  margin-top: 20px;
+    margin-top: 20px;
 }
-
 
 .full-page {
     padding-top: 0;
 }
 
 .row {
-  margin-left:0px;
-  margin-right:0px;
-}
-
-/* Wrapper for page content to push down footer */
-#input-site {
-  min-height: 100%;
-  height: 100%;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
-
-#input-site > .container {
-  padding: 60px 15px 0;
-}
-
-/* Set the fixed height of the footer here */
-#footer {
-  height: 60px;
-  background-color: #f5f5f5;
-  margin-top:50px;
-  padding-top:20px;
-  padding-bottom:20px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #map-canvas {
-  	width: 100%; 
-  	height: 300px;
-	margin: 0;
-	padding: 15px;
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    padding: 15px;
 }
 
 .container .credit {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 article {
-    font-size: 1.5em;
     font-weight: 400;
-    
-    header {
-        font-size: 2.5em;
-        font-weight: 600;
-        text-transform: uppercase;
+
+    h1 {
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: left;
+      margin-bottom: 20px;
+
+      text-align: center;
+      @include breakpoint(sm) {
         text-align: left;
-        margin-bottom: 20px;
+      }
+
+    }
+
+    h3 {
+      @include font-size(16);
+      @include breakpoint(sm) {
+        @include font-size(18);
+      }
     }
 
     nav {
-        
         div {
-            
             .thumbnail {
                 width: 220px;
                 height: 220px;
-                                                
                 &.thumbnail:hover {
                     border-width: 10px;
                     border-color: #2e2e2e;
                 }
-                
-                h3 {
-                    font-size: 16px;
-                }
             }
-                    
             a {
-                color :#333333;
-                
+                color: #333333;
                 &:hover {
-                    color : #333333;
+                    color: #333333;
                     text-decoration: none;
                 }
             }
         }
-        
     }
-
 }
 
-/* Since positioning the image, we need to help out the caption */
 /* Declare heights because of positioning of img element */
+
 #input-header {
     position: relative;
     height: 260px;
-    
     &.item {
-        background-color:#bbb;
+        background-color: #bbb;
     }
-            
     img {
-      position: absolute;
-      top: 4px;
-      right: 4px;
-      max-width: 90%;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        max-width: 90%;
     }
-    
     blockquote {
-        font-size: 12px;
+        @include font-size(12);
         border: 0;
-        padding : 40px 17px;
-        
+        padding: 40px 17px;
         &::after {
             content: "";
             background: #0284a6;
@@ -172,7 +162,7 @@ article {
             bottom: 10px;
             right: 0;
             position: absolute;
-            z-index: -1;       
+            z-index: -1;
         }
     }
 }
@@ -180,21 +170,19 @@ article {
 @media (min-width: 49em) {
     #input-header {
         height: 600px;
-        
         blockquote {
-            font-size: 16px;
-            padding : 8.5px 17px;
-            
+            @include font-size(16);
+            padding: 8.5px 17px;
             &::after {
-              content: "";
-              background: $theme-color-1;
-              opacity: 0.5;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
-              position: absolute;
-              z-index: -1;   
+                content: "";
+                background: $theme-color-1;
+                opacity: 0.5;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                z-index: -1;
             }
         }
     }
@@ -210,9 +198,8 @@ article {
     padding-top: 20px;
     padding-bottom: 20px;
     color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);    
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-
 
 @media (min-width: 31em) {
     .header-caption {
@@ -226,60 +213,59 @@ article {
     .header-caption {
         left: 45%;
         right: 10%;
-        bottom: 20px;        
+        bottom: 20px;
         top: auto;
     }
 }
 
-
 section {
-    margin : 0;
+    margin: 0;
     padding: 0;
     height: auto;
-    padding-top:30px;    
+    padding-top: 30px;
 }
 
 header {
     &.hendrik {
-        background: url('/img/hendrik-header.jpg'); 
+        background: url('/img/hendrik-header.jpg');
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover;        
+        background-size: cover;
     }
 }
 
 @media (min-width: 19em) {
-    background-position : top;
+    background-position: top;
 }
 
 .team-input-1 {
-	background: url('/img/team-input-2.jpg'); 
-    -webkit-background-size: cover; 
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
+    background: url('/img/team-input-2.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 20%;
     min-height: 200px;
-    
 }
+
 .team-input-2 {
-	background: url('/img/team-input-4.jpg');
-    -webkit-background-size: cover; 
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
+    background: url('/img/team-input-4.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-position: 50% 20%;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 200px;
-    
 }
+
 .team-input-3 {
-	background: url('/img/team-input-3.jpg'); 
-    -webkit-background-size: cover; 
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
+    background: url('/img/team-input-3.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 20%;
@@ -299,7 +285,6 @@ header {
     }
 }
 
-
 .gotham {
     font-family: 'Gotham A', 'Gotham B', sans-serif;
     font-weight: 500
@@ -311,9 +296,12 @@ header {
 }
 
 .social-media {
-
     a {
-        margin-right: 10px;    
+        margin-right: 10px;
     }
 
+    text-align: left;
+    @include breakpoint(sm) {
+      text-align: right;
+    }
 }

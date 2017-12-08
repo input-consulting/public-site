@@ -1,5 +1,4 @@
 .news-article {
-  font-size: 1em;
   background: $theme-color-3;
   height: 100%;
   overflow: overlay;
@@ -9,7 +8,6 @@
       top: 0;
       left: 0;
       width: 100%;
-      font-size: 2.5em;
       font-weight: 500;
       color: $theme-color-1;
       background-color: #fff;
@@ -21,11 +19,14 @@
   }
   .news-article-body {
       @extend .container;
+
+      @include breakpoint(xs) {
+        margin: 0 1rem 1rem 0;
+      }
   }
   article {
       border-radius: 4px;
-      font-size: 1.2em;
-      margin: 10px;
+//      margin: 10px;
       background: #f8f8f8;
       color: #333333;
       padding: 20px;
@@ -35,7 +36,6 @@
           font-weight: 600;
       }
       header {
-          font-size: 1.5em;
           text-transform: none;
           color: $theme-color-1;
       }
@@ -59,7 +59,6 @@
               a {
                   margin: 5px;
                   text-decoration: none;
-                  font-size: 1.5rem;
                   color: $theme-color-1;
                   .glyphicon {
                       color: $theme-color-1;

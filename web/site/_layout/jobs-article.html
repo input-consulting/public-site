@@ -11,8 +11,9 @@
     </header>
 
     <section class="jobs-article-body">
+      <a class="page-navigation-link" href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
       <article>
-          <header>{{ page.title }}</header>
+          <h2>{{ page.title }}</h2>
           <blockquote>{{ page._meta.ingress }}</blockquote>
           {{ page.body | md }}
           <footer>

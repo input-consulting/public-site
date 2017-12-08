@@ -28,7 +28,7 @@
       <section class="container">
         {% set about = sb.getPageById('about') %}
         <article>
-            <header>{{ about.title }}</header>
+            <h1>{{ about.title }}</h1>
             {{ about.body | md }}
         </article>
       </section>
@@ -36,16 +36,14 @@
     </section>    
     
     {# divider  #}
-    <section class="team-input-1">
-      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
-    </section>
+    <section class="team-input-1"></section>
 
     {# Kultur #}
     <section class="culture" id="culture">
       <section class="container">
         {% set culture = sb.getPageById('culture') %}
         <article>
-            <header>{{ culture.title }}</header>
+            <h1>{{ culture.title }}</h1>
             {{ culture.body | md }}
         </article>
       </section>
@@ -63,7 +61,6 @@
           </div>    
       {% endfor %}
       </section>
-      <div class="divider"></div>
     </section>
 
     {# Jobs #}
@@ -74,7 +71,7 @@
         </div>
         <div class="col-sm-6 col col-text">
           <article>
-              <header>{{jobs.title}}</header>
+              <h1>{{jobs.title}}</h1>
               {{ jobs.body | md }}
             <a href="/jobs" class="btn btn-action btn-big space-above">
               Se lediga jobb
@@ -90,7 +87,7 @@
         <section class="container">
            {% set sale = sb.getPageById('sales') %}
             <article>
-                <header>{{sale.title}}</header>
+                <h1>{{sale.title}}</h1>
                 {{ sale.body | md }}
             </article>
             <section class="sales-team">
@@ -115,16 +112,14 @@
     </section>
     
     {# divider  #}
-    <section class="team-input-3">
-      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
-    </section>
+    <section class="team-input-3"></section>
 
     {# Inputtare  #}
     <section class="input-crew" id="crew">
         <section class="container">
             {% set crew = sb.getPageById('crew') %}
             <article>
-                <header>{{crew.title}}</header>
+                <h1>{{crew.title}}</h1>
                 {{crew.body | md}}
             </article>
         </section>
@@ -132,31 +127,20 @@
     </section>
 
     {# divider #}
-    <section class="team-input-2">
-      <div class="col-sm-6 col-sm-offset-3 text-center"></div>
-    </section>
+    <section class="team-input-2"></section>
    
 
     {# Kontakta oss  #}
     <section class="contact-us" id="contact">
-        <section class="container">
-            <article>
-                <header>kontakta oss</header>
-                <div id="map-canvas"></div>
-                <div class="divider"></div>
-            </article>
-        </section>
+      <div class="container">
+        <article>
+            <h1>kontakta oss</h1>
+            <div id="map-canvas"></div>
+            <div class="divider"></div>
+        </article>
 
-        <div class="container space-above">
-            <div class="col-sm-9 pull-left social-media">
-                <a href="https://www.linkedin.com/company/input-consulting-stockholm-ab" target="_blank">
-                  <img src="/img/social/li.png" alt="Linkedin">
-                </a>
-                <a href="https://www.instagram.com/inputconsulting/" target="_blank">
-                  <img src="/img/social/ig.png" alt="Instagram">
-                </a>
-            </div>
-            <div class="col-sm-3 pull-right">
+        <div class="space-above">
+            <div class="col-xs-12 col-sm-6 pull-left">
                 <address>
                   <span id="map-input">
                     Input Consulting Stockholm AB<br>
@@ -169,7 +153,16 @@
                     <a href="mailto:inputinfo@input-consulting.se">inputinfo@input-consulting.se</a>
                 </address>
             </div>
+            <div class="col-xs-12 col-sm-6 pull-right social-media">
+                <a href="https://www.linkedin.com/company/input-consulting-stockholm-ab" target="_blank">
+                  <img src="/img/social/li.png" alt="Linkedin">
+                </a>
+                <a href="https://www.instagram.com/inputconsulting/" target="_blank">
+                  <img src="/img/social/ig.png" alt="Instagram">
+                </a>
+            </div>
         </div>
+      </div>
         
     </section>    
 

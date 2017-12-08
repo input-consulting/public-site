@@ -1,84 +1,88 @@
 .jobs-article {
     @extend .page;
-    @extend .container;
+
+    background: $theme-color-3;
+    height: 100%;
+    overflow: overlay;
 
     .jobs-article-header {
         @extend .page-header;
     }
 
     .jobs-article-body {
-        @extend .page-content;
-
-        margin-top: 5rem;
-        border-radius: 4px;
-        background: #fff;
-        //border: 1px solid rgba(102, 118, 142, .15);
-        
-        article {
-            border-radius: 4px;
-            font-size: 1.2em;
-            margin: 10px;
-            color: #333333;
-
-            time {
-                color: $theme-color-5;
-                font-weight: 600;
-            }
-            header {
-                font-size: 1.5em;
-                text-transform: none;
-                color: $theme-color-5;
-                margin-bottom: 0;
-            }
-            blockquote {
-              color: #939da3;
-              @include font-size(12);
-              @include breakpoint(sm) {
-                @include font-size(14);
-              }
-              font-weight: 400;
-              margin: 0;
-              font-style: italic;
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-              text-rendering: optimizeLegibility;
-              border: none;
-              padding: 0;
-
-              margin-bottom: 20px;
-            }
-
-            img {
-                max-width: 100%;
-                margin-bottom: .5em;
-                margin-top: .5em;
-            }
-            footer {
-                margin-top: 20px;
-                border-top: solid 1px $theme-color-5;
-                nav {
-                    margin-top: 1rem;
-                    display: block;
-                    &:first-child {
-                        float: left;
-                    }
-                    &:last-child {
-                        float: right;
-                    }
-                    a {
-                        margin: 5px;
-                        text-decoration: none;
-                        font-size: 1.5rem;
-                        color: $theme-color-1;
-                        .glyphicon {
-                            color: $theme-color-1;
-                        }
-                        &:hover {
-                            color: $theme-color-5;
-                        }
-                    }
-                }
-            }
-        }
+      @extend .container;
+      
+      @include breakpoint(xs) {
+        margin: 0 1rem 1rem 0;
+      }
+      
     }
+
+    article {
+      color: #333333;
+      border-radius: 4px;
+      background: #fff;
+      border: 1px solid rgba(102, 118, 142, .15);
+      padding: 20px;
+      overflow: auto;
+
+      time {
+          color: $theme-color-5;
+          font-weight: 600;
+      }
+      h2 {
+          text-transform: none;
+          color: $theme-color-5;
+          margin-bottom: 0;
+      }
+      blockquote {
+        color: #939da3;
+        @include font-size(12);
+        @include breakpoint(sm) {
+          @include font-size(14);
+        }
+        font-weight: 400;
+        margin: 0;
+        font-style: italic;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        border: none;
+        padding: 0;
+
+        margin-bottom: 20px;
+      }
+
+      img {
+          max-width: 100%;
+          margin-bottom: .5em;
+          margin-top: .5em;
+      }
+      footer {
+          margin-top: 20px;
+          border-top: solid 1px $theme-color-5;
+          nav {
+              margin-top: 1rem;
+              display: block;
+              &:first-child {
+                  float: left;
+              }
+              &:last-child {
+                  float: right;
+              }
+              a {
+                  margin: 5px;
+                  text-decoration: none;
+                  color: $theme-color-1;
+                  .glyphicon {
+                      color: $theme-color-1;
+                  }
+                  &:hover {
+                      color: $theme-color-5;
+                  }
+              }
+          }
+      }
+  }
+
 }

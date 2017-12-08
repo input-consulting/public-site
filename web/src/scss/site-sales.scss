@@ -44,7 +44,6 @@
                 width: 99.9%;
                 
                 h1 {
-                    font-size: 1em;
                     text-align: center;
                 }
 
@@ -68,9 +67,6 @@
             color : $highlight-text-color;
         }
         
-        p {
-            font-size: 1em;
-        }
     }
     
     nav {
@@ -97,7 +93,6 @@
 
             span {
                 color:  $highlight-text-color !important;
-                font-size: 20px;
             }
         }
     }
@@ -134,7 +129,10 @@
             }
 
             h2 {
-                font-size: 1em;
+                @include font-size(16);
+                @include breakpoint(sm) {
+                  @include font-size(20);
+                }
                 text-align: center;
                 height: 1.5em;
                 margin-top: -1.5em;
@@ -163,13 +161,7 @@
             }
             .profile {
                 width: 50%;
-                
-                .content {
-                    h1 {
-                        font-size: 1em;
-                    }
-                }
-                
+               
             }
         }
     }
@@ -190,11 +182,6 @@
                 max-width: 350px;
                 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
                 margin: auto;            
-            }
-            a {
-                h2 {
-                    font-size: 1.4em;
-                }
             }
         }
     }

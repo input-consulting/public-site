@@ -39,7 +39,6 @@
               background: #fff;
               border-radius: 4px;
               color: #333333;
-              font-size: 1.5rem;
               a {
                   text-decoration: none;
                   color: inherit;
@@ -48,7 +47,6 @@
                       font-weight: 600;
                   }
                   header {
-                      font-size: 1.5em;
                       font-weight: 500;
                       text-transform: none;
                       color: $theme-color-1;
@@ -65,14 +63,12 @@
               }
               footer {
                   color: $theme-color-5;
-                  font-size: 1rem;
                   border-top: solid 1px $theme-color-5;
                   margin-top: 20px;
                   padding-top: 10px;
                   a {
                       margin: 5px;
                       text-decoration: none;
-                      font-size: 1.5rem;
                       color: $theme-color-1;
                       .glyphicon {
                           color: $theme-color-1;

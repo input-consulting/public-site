@@ -10,7 +10,6 @@ section {
         }
     }
     &.news {
-        font-size: 1.5em;
         font-weight: 400;
         a {
             float: left;
@@ -23,14 +22,18 @@ section {
                 margin: 4px;
                 padding: 8px;
                 background: inherit;
-                min-height: 200px; //border-left: solid 2px @theme-color-1;
-                &:hover {
-//                    background: inherit;
-                }
+                min-height: 200px; 
+//                border-left: solid 2px $theme-color-1;
+
                 h4 {
                     color: $theme-color-1;
-                    font-size: 1.5em;
+                    margin-bottom: 1.5rem;
                 }
+
+                h5 {
+                  color: $theme-color-5;
+                }
+                
                 img {
                     display: none;
                 }
