@@ -35,6 +35,28 @@
         display: none;
     }
 }
+
+.menu-btn {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 2px
+}
+
+.mobile-menu-wrap {
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+}
   
 .navbar-nav {
   margin: 1px 1px; 

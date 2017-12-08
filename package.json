@@ -11,6 +11,7 @@
     "node": "8.1.4"
   },
   "dependencies": {
+    "@cmyee/pushy": "^1.1.2",
     "applicationinsights": "^0.21.0",
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.18.13",

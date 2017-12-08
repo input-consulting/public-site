@@ -28,6 +28,7 @@ module.exports = {
             source: [
                 './node_modules/jquery/dist/jquery.min.js',
                 './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+                './node_modules/@cmyee/pushy/js/pushy.min.js',
                 buildRoot + '/src/js/*.js'
             ],
             target: sitePublic + '/js'

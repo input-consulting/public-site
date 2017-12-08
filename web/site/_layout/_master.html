@@ -16,9 +16,12 @@
 </head>
 <body>
     {% block body %}
-      {% include "_layout/_includes/_header.html" %}
-      {% include "_layout/_includes/_menu.html" %}
-      {% block content %}{% endblock %}
+        <div class="site-overlay"></div>
+        {% include "_layout/_includes/_header.html" %}
+        {% include "_layout/_includes/_menu.html" %}
+        <div id="container">
+          {% block content %}{% endblock %}
+        </div>
     {% endblock %}
     <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
     <script async src="/js/site.js"></script>

@@ -34,7 +34,10 @@ $(document).ready(function () {
         }, 600);
     });    
 
-    // $('#nav').on('affixed.bs.affix', function () {
-    //   $('body').scrollspy('refresh');
-    // });    
+    /* auto close mobile menu when an item is clicked */
+    $('.mobile-menu-wrap a').on('click', function() {
+      $('body').toggleClass('pushy-open-left');
+  });    
+    
+
 });
