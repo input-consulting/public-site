@@ -2,9 +2,7 @@
 layout: _layout/jobs-article
 date: 2017-12-11
 title: Säljande Konsultchef till Input
-ingress: Bli en Inputtare! Input befinner sig i en spännande fas och vi behöver förstärkning i vår organisation. Vi söker en driven och engagerad, säljande konsultchef med ett genuint intresse för människor och att göra affärer. Tillsammans med dina kollegor arbetar du för att skapa nya kundrelationer såväl som stärka befintliga, samtidigt som du är ytterst ansvarig för en grupp konsulter och deras uppdrag. Du arbetar för att skaffa spännande uppdrag till konsulterna, coachar och agerar rådgivande under löpande uppdrag, samt håller uppföljnings- och utvecklingssamtal.
-
-Du arbetar tillsammans med oss för att fortsätta bygga det bästa IT-konsultbolaget i Sverige.
+ingress: Bli en Inputtare! Input befinner sig i en spännande fas och vi behöver förstärkning i vår organisation. Vi söker en driven och engagerad, säljande konsultchef med ett genuint intresse för människor och att göra affärer. Tillsammans med dina kollegor arbetar du för att skapa nya kundrelationer såväl som stärka befintliga, samtidigt som du är ytterst ansvarig för en grupp konsulter och deras uppdrag. Du arbetar för att skaffa spännande uppdrag till konsulterna, coachar och agerar rådgivande under löpande uppdrag, samt håller uppföljnings- och utvecklingssamtal. Du arbetar tillsammans med oss för att fortsätta bygga det bästa IT-konsultbolaget i Sverige.
 ---
 
 ### Vem söker vi?
