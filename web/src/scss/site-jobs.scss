@@ -74,10 +74,11 @@
                   padding: 0;
               }
               .button {
-                  position: absolute;
-                  right: 31px;
-                  top: 50%;
-                  margin-top: -18px;
+//                  position: absolute;
+//                  right: 31px;
+//                  top: 50%;
+//                  margin-top: -18px;
+                  margin-top: 2rem;
                   padding: 1px;
                   border: 0;
                   font-weight: 500;
@@ -85,7 +86,7 @@
                   border-radius: 4px;
                   text-shadow: 0 -1px 0 rgba(0, 0, 0, .1);
                   background: $theme-color-5;
-                  display: block;
+                  display: inline-block;
                   height: 37px;
                   line-height: 37px;
                   padding: 0 14px;
