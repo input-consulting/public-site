@@ -34,6 +34,7 @@ module.exports = class SitePage {
       this.makePageRoute();
       this.validatePageLayout();
       this.validatePageDate();
+      this.validatePageTitle();
     } catch (error) {
       console.error(`unable to read: ${this.file}`, error);
     }
@@ -96,6 +97,7 @@ module.exports = class SitePage {
   validatePageDate() {
     if ( this._meta.date ) return;
 
+    // use date in filename if date is not provided
     const match = this._meta.route.match(/[/](\d+)[/](\d+)[/](\d+)/);
     if ( match ) {
       this._meta.date = new Date(`${match[1]}-${match[2]}-${match[3]}`);
@@ -103,4 +105,16 @@ module.exports = class SitePage {
 
   }
 
+  validatePageTitle() {
+    if ( this._meta.title ) return;
+
+    // use filename if title is not provided
+    const index = this._meta.route.lastIndexOf('/');
+    let title = this._meta.route.substring(index + 1 )
+                .replace( /[-_]+/g, ' ')
+                .replace( /[Öö]+/g, 'o')
+                .replace( /[ÅåÄä]+/g, 'a')
+    this._meta.title = title.substring( 0, 1 ).toUpperCase() + title.substr( 1 );
+  }
+  
 }
