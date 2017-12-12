@@ -37,6 +37,13 @@ class SiteBuilder {
       .sort((a, b) => -1 * ((a.date > b.date) - (a.date < b.date)));
   }
 
+  getPagesByTags(tags) {
+    return this.pages
+      .filter(p => p.tags.includes(tags) && p.date )
+      .sort((a, b) => -1 * ((a.date > b.date) - (a.date < b.date)));
+  }
+  
+
   createSite(site) {
     const p = site
       .filter( f => /md|markdown/.test(path.extname(f)) )

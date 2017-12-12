@@ -1,0 +1,47 @@
+.q-and-a {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.q-and-a-item {
+  display: inline-block;
+  width: 100%;
+
+  
+  &-card {
+    text-align: center;
+    padding: 1rem 0;
+
+    &-image {
+      background: #fff;
+      max-width: 45%; 
+      padding : 1rem;
+    }
+
+    &-title {
+      color: $theme-color-1;
+    }
+
+    &-body {
+      text-align: center;
+      p {
+        text-align: left;
+      }
+    }
+
+  }
+
+  ol {
+    display: inline-block;
+  }
+
+  li {
+    @include font-size(12);
+  }
+
+  @include breakpoint(sm) {
+    width: 39%;
+     
+  }
+
+}
