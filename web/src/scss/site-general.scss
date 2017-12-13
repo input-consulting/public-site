@@ -45,15 +45,7 @@ a {
     display: block;
 
     @include breakpoint(sm) {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: box;
       display: flex;
-      -webkit-box-orient: horizontal;
-      -o-box-orient: horizontal;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
       flex-direction: row;
       box-sizing: border-box;
         

@@ -3,12 +3,19 @@ var concat = require("gulp-concat");
 var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+const autoprefixer = require('gulp-autoprefixer');
 
 const config = require('../../config');
 
 gulp.task('build:sass', function () {
     return gulp.src(config.build.styles.source)
-        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(sass({ 
+          outputStyle: 'compressed' 
+        }).on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
         .pipe(gulp.dest(config.build.styles.target));
 });
 
@@ -21,6 +28,7 @@ gulp.task('build:js', function () {
     return gulp.src(config.build.js.source)
         .pipe(plumber())
         .pipe(concat('site.js'))
+        .pipe(uglify())
         .pipe(gulp.dest(config.build.js.target));
 });
 
