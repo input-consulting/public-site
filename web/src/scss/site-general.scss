@@ -41,19 +41,22 @@ a {
 }
 
 .has-columns {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -o-box-orient: horizontal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    box-sizing: border-box;
     min-height: 200px;
+    display: block;
+
     @include breakpoint(sm) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -o-box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      box-sizing: border-box;
+        
       min-height: 400px;
     }
     .col-text>* {
@@ -63,8 +66,11 @@ a {
 }
 
 .col {
+  padding: 40px 0;
+  box-sizing: border-box;
+  @include breakpoint(sm) {
     padding: 80px 0;
-    box-sizing: border-box;
+  }
 }
 
 .space-above {
