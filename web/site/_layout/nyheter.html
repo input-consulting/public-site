@@ -19,8 +19,8 @@
           <li>
             <a href="{{ page.route }}">
               <time>{{ page.date | date }}</time>
-              <header>{{ page.title }}</header>
-              {{ page.body | md | truncate(200, true, ' ...') }}
+              <h3>{{ page.title }}</h3>
+              {{ page.body | md | sanitize | truncate(300, true, ' ...') }}
             </a>
             <footer>
                 <a href="{{ page.route }}">Läs mer <span class="glyphicon glyphicon-play"></span></a>

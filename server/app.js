@@ -41,7 +41,8 @@ const nunjucksOptions = {
     date: d => moment(d).format('LL'),
     md: x => md(x),
     json: x => JSON.stringify(x, null, 2),
-    ucfirst: e => typeof e === 'string' && e.toLowerCase() && e[0].toUpperCase() + e.slice(1)
+    ucfirst: e => typeof e === 'string' && e.toLowerCase() && e[0].toUpperCase() + e.slice(1),
+    sanitize : x  => x.replace(/(<([^>]+)>)/ig, "")
   },
   globals: {
     title: config.title,

@@ -16,7 +16,7 @@
                   <div class="news-item">
                         <h5>{{ item.date | date }}</h5>
                         <h4>{{ item.title }}</h4>
-                        {{ item.body | md | truncate(200, false, ' ...') }}
+                        {{ item.body | md | sanitize | truncate(200, false, ' ...')  }}
                     </div>
                 </a>        
             {% endfor %}
