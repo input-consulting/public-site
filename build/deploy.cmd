@@ -47,7 +47,6 @@ IF NOT DEFINED KUDU_SYNC_CMD (
   :: Locally just running "kuduSync" would also work
   SET KUDU_SYNC_CMD=%appdata%\npm\kuduSync.cmd
 )
-goto Deployment
 
 IF NOT DEFINED GULP_CMD (
   :: Install gulp
@@ -61,6 +60,9 @@ IF NOT DEFINED GULP_CMD (
 
 echo Installing Yarn
 call npm --registry "http://registry.npmjs.org/" install yarn -g --silent
+
+
+goto Deployment
 
 :: Utility Functions
 :: -----------------
