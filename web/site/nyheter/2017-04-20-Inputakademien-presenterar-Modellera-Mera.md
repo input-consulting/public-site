@@ -10,9 +10,7 @@ Image : /img/thumbs/input-6.jpg
 
 Vår egen Göran Mejergren höll i april en intresant och lärorik kvällsaktivitet på kontoret då han delade med sig av sin långa och djupa erfarenhet kring modellering.
 
-
-Kvällen blev en blandning av intressant föreläsning om verksamhetsmodellering och roliga grupparbeten kring ett verkligt case från en av våra kunder.
-Mycket att tänka på och väldigt intressant. 
+Kvällen blev en blandning av intressant föreläsning om verksamhetsmodellering och roliga grupparbeten kring ett verkligt case från en av våra kunder. Mycket att tänka på och väldigt intressant. 
 
 ![image alt](/img/nyheter/Modellering.png)
 
