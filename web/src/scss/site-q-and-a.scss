@@ -48,6 +48,9 @@
     .q-and-a-card {
       width: 49%;
     }
+    .q-and-a-card-image { 
+      max-width: 70%;
+    } 
   }
 
   @include breakpoint(md) {
