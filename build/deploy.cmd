@@ -59,14 +59,8 @@ IF NOT DEFINED GULP_CMD (
   SET GULP_CMD="%appdata%\npm\gulp.cmd"
 )
 
-IF NOT DEFINED YARN_CMD (
-  :: Install gulp
-  echo Installing Yarn
-  call npm --registry "http://registry.npmjs.org/" install yarn -g --silent
-  IF !ERRORLEVEL! NEQ 0 goto error
-
-  SET YARN_CMD="yarn"
-)
+echo Installing Yarn
+call npm --registry "http://registry.npmjs.org/" install yarn -g --silent
 
 :: Utility Functions
 :: -----------------
@@ -112,7 +106,7 @@ call :SelectNodeVersion
 
 :: 1. Install build dependencies
 pushd "%DEPLOYMENT_SOURCE%"
-  call :ExecuteCmd !YARN_CMD! install
+  call :ExecuteCmd yarn install
   IF !ERRORLEVEL! NEQ 0 goto error
 popd
 
