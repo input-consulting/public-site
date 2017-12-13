@@ -8,7 +8,7 @@
     "build": "gulp build"
   },
   "engines": {
-    "node": "8.1.4"
+    "node": "8.9.0"
   },
   "dependencies": {
     "@cmyee/pushy": "^1.1.2",
