@@ -125,13 +125,13 @@
 
             <div class="q-and-a">
               {% for qa in sb.getPagesByRoute('q-and-a/') %}
-                  <div class="q-and-a-item">
-                    <div class="q-and-a-item-card">
-                      <img class="q-and-a-item-card-image" src="{{qa.image}}" alt="">
-                      <h4 class="q-and-a-item-card-title">{{qa.title}}</h4>
+                  <div class="q-and-a-card">
+                    <div class="q-and-a-card-header">
+                      <img class="q-and-a-card-image" src="{{qa.image}}" alt="">
+                      <h4 class="q-and-a-card-title">{{qa.title}}</h4>
                     </div>
-                    <div class="q-and-a-item-card-body">
-                      <p class="q-and-a-item-card-body-text">{{qa.body | md}}</p>
+                    <div class="q-and-a-card-body">
+                      <p class="q-and-a-card-body-text">{{qa.body | md}}</p>
                     </div>
                   </div>
               {% endfor %}

@@ -1,24 +1,28 @@
 .q-and-a {
   margin-top: 4rem;
   text-align: center;
-}
-
-.q-and-a-item {
-  display: inline-block;
-  width: 100%;
-
+  
   
   &-card {
-    text-align: center;
-    padding: 1rem 0;
+    display: inline-block;
+    width: 100%;
+      
+    &-header {
+      text-align: center;
+      padding: 1rem 0;
+    }
 
     &-image {
       background: #fff;
       max-width: 45%; 
       padding : 1rem;
+      border-bottom: 1.8rem solid #fff;
+      box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
     }
 
     &-title {
+      margin-top: -2rem;
+      @include font-size(12);
       color: $theme-color-1;
     }
 
@@ -27,21 +31,36 @@
       p {
         text-align: left;
       }
+
+      ol, ul {
+        display: inline-block;
+      }
+    
+      li {
+        @include font-size(12);
+        font-weight: 400;
+      }
     }
 
   }
 
-  ol {
-    display: inline-block;
-  }
-
-  li {
-    @include font-size(12);
-  }
-
   @include breakpoint(sm) {
-    width: 39%;
-     
+    .q-and-a-card {
+      width: 49%;
+    }
   }
+
+  @include breakpoint(md) {
+    .q-and-a-card {
+      width: 29%;
+    }
+  }
+  
+  @include breakpoint(lg) {
+    .q-and-a-card {
+      width: 24%;     
+    }
+  }
+    
 
 }
