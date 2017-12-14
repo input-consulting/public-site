@@ -12,7 +12,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -webkit-background-size: 1200px 800px;
     color: #333333;
-    background: #fff;
+    //background: #fff;
+    background: $theme-color-3;
+
 }
 
 a {
