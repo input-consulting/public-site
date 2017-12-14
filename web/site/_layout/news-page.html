@@ -4,23 +4,22 @@
 {% block body %}
 <section class="news-article">
 
-    <header class="news-article-page-header">
+    <header class="news-article-header">
+      <div class="page-header-navigation">
+        <a class="page-navigation-link" href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
         <a href="/">
             <img src="/img/logo/logo_3.png" alt="">
         </a>
+        <a class="page-navigation-link" href="/nyheter"><span class="glyphicon glyphicon-th-list"></span> Nyheter</a>
+      </div>
     </header>
 
     <section class="news-article-body">
-      <a class="page-navigation-link" href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
       <article>
           <time>{{ page.date | date}}</time>
-          <header>{{ page.title }}</header>
+          <h2>{{ page.title }}</h2>
           {{ page.body | md }}
           <footer>
-              <nav>
-                  <a href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
-                  <a href="/nyheter"><span class="glyphicon glyphicon-th-list"></span> Mer nyheter</a>            
-              </nav>
               <nav>
                   {% include "_layout/_includes/_share-article-linkedin.html" %}
                   {% include "_layout/_includes/_share-article-twitter.html" %}

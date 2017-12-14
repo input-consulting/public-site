@@ -7,9 +7,6 @@ body {
 body {
     font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
     @include font-size(14);
-    @include breakpoint(sm) {
-      @include font-size(16);
-    }
     font-weight: 300;
     line-height: 1.42857143;
     -webkit-font-smoothing: antialiased;
@@ -30,9 +27,9 @@ a {
         text-decoration: none;
         @include font-size(16);
         font-weight: 500;
-        color: #fff;
+        color: $theme-color-1;
         .glyphicon {
-            color: #fff;
+          color: $theme-color-5;
         }
         &:hover {
             color: $theme-color-5;
@@ -226,9 +223,6 @@ section {
 header {
     &.hendrik {
         background: url('/img/hendrik-header.jpg');
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
         background-size: cover;
     }
 }
@@ -239,9 +233,6 @@ header {
 
 .team-input-1 {
     background: url('/img/team-input-2.jpg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 20%;
@@ -250,9 +241,6 @@ header {
 
 .team-input-2 {
     background: url('/img/team-input-4.jpg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-position: 50% 20%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -261,9 +249,6 @@ header {
 
 .team-input-3 {
     background: url('/img/team-input-3.jpg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 20%;

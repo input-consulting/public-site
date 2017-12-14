@@ -3,24 +3,26 @@
 
 {% block body %}
 
-<section class="news-page">
+<section class="page-news">
 
-    <header class="news-page-header">
-      <a href="/">
-          <img src="/img/logo/logo_3.png" alt="">
-      </a>
+    <header class="page-news-header">
+      <div class="page-header-navigation">
+        <a class="page-navigation-link" href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
+        <a href="/">
+            <img src="/img/logo/logo_3.png" alt="">
+        </a>
+      </div>
     </header>
 
-    <section class="news-page-content">
-        <a class="page-navigation-link" href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
-        <h3>Aktuellt på Input</h3>
+    <section class="page-news-content">
+        <h3 class="text-center">Aktuellt på Input</h3>
         <ul>        
           {% for page in pages %}
           <li>
             <a href="{{ page.route }}">
               <time>{{ page.date | date }}</time>
               <h3>{{ page.title }}</h3>
-              {{ page.body | md | sanitize | truncate(300, true, ' ...') }}
+              <p>{{ page.body | md | sanitize | truncate(300, true, ' ...') }}</p>
             </a>
             <footer>
                 <a href="{{ page.route }}">Läs mer <span class="glyphicon glyphicon-play"></span></a>

@@ -1,76 +1,90 @@
 // news list pgae
-.news-page {
-  background: $theme-color-3;
+.page-news {
+  @extend .page;
 
-  .news-page-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: #f8f8f8;
-      width: 100%;
-      text-align: center;
-      z-index: 100;
-      border-bottom: 1px solid #eee;
-      padding: .5rem 0;
-  }
+    background: $theme-color-3;
 
-  .news-page-content {
-      @extend .container;
-      h3 {
-          text-align: center;
-          margin-bottom: 3rem;
-          color: $theme-color-1;
+    .page-news-header {
+      @extend .page-header; 
+
+      .page-header-navigation {
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+      }      
+
+      a:first-child {
+        position: absolute;
+        left: 0;
       }
-      ul {
-          margin: 0;
-          padding: 0;
-          li {
-              padding: 1rem;
-              margin: 1rem 0;
-              list-style: none;
-              background: #fff;
-              border-radius: 4px;
-              color: #333333;
-              a {
-                  text-decoration: none;
-                  color: inherit;
-                  time {
-                      color: $theme-color-5;
-                      font-weight: 600;
-                  }
-                  header {
-                      font-weight: 500;
-                      text-transform: none;
-                      color: $theme-color-1;
-                      margin: .5rem 0;
-                  }
-                  img {
-                      max-width: 100%;
-                      margin-bottom: .5em;
-                      margin-top: .5em;
-                  }
-                  p {
-                      margin: .5rem 0;
-                  }
-              }
-              footer {
-                  color: $theme-color-5;
-                  border-top: solid 1px $theme-color-5;
-                  margin-top: 20px;
-                  padding-top: 10px;
-                  a {
-                      margin: 5px;
-                      text-decoration: none;
-                      color: $theme-color-1;
-                      .glyphicon {
-                          color: $theme-color-1;
-                      }
-                      &:hover {
-                          color: $theme-color-5;
-                      }
-                  }
-              }
-          }
-      }
-  }
+    }
+
+    .page-news-content {
+        @extend .page-content;
+
+        h3 {
+            margin-bottom: 3rem;
+            color: $theme-color-1;
+            @include font-size(16);
+            @include breakpoint(sm) {
+                @include font-size(22);
+            }
+        }
+        p {
+            line-height: 2.2rem;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                padding: 1rem;
+                margin: 1rem 0;
+                list-style: none;
+                background: #fff;
+                border-radius: 4px;
+                color: #333333;
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    time {
+                        color: $theme-color-5;
+                        font-weight: 600;
+                    }
+                    header {
+                        font-weight: 500;
+                        text-transform: none;
+                        color: $theme-color-1;
+                        margin: .5rem 0;
+                    }
+                    img {
+                        max-width: 100%;
+                        margin-bottom: .5em;
+                        margin-top: .5em;
+                    }
+                    p {
+                        margin: .5rem 0;
+                    }
+                }
+                footer {
+                    color: $theme-color-5;
+                    border-top: solid 1px $theme-color-5;
+                    margin-top: 20px;
+                    padding-top: 10px;
+                    a {
+                        margin: 5px;
+                        text-decoration: none;
+                        color: $theme-color-1;
+                        .glyphicon {
+                            color: $theme-color-5;
+                        }
+                        &:hover {
+                            color: $theme-color-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

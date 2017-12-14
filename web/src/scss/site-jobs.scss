@@ -13,13 +13,35 @@
 
   .page-jobs {
       @extend .page;
+
       background: $theme-color-3;
-      height: 100%;
-      overflow: overlay;
+      height: 100%;        
+  }
+
+  .page-jobs-header {
+    @extend .page-header;
+
+    .page-header-navigation {
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      @include breakpoint(sm) {
+        width: 700px;
+      }
+    }
+
+    a:first-child {
+      position: absolute;
+      left: 0;
+    }
+    
   }
 
   .page-content-jobs {
       @extend .page-content;
+
       @include breakpoint(sm) {
           width: 700px !important;
       }
@@ -46,16 +68,16 @@
               display: block;
               border: 1px solid rgba(102, 118, 142, .15);
               border-radius: 5px;
-              padding: 25px 30px;
+              padding: 2rem 2rem;
               margin-bottom: 15px;
               background: #fff;
+              &:hover {
+                text-decoration: none;
+              }
               h3 {
                   margin-right: 120px;
                   margin-top: 12px;
-                  @include font-size(12);
-                  @include breakpoint(sm) {
-                      @include font-size(16);
-                  }
+                  @include font-size(16);
                   color: $theme-color-5;
               }
               blockquote {
