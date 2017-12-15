@@ -1,11 +1,67 @@
 $btn-action-color : #fff;
-$btn-action-bg :$theme-color-5;
-$btn-action-border : darken($btn-action-bg, 15%);
-
+$btn-action-bg : $theme-color-5;
+$btn-action-border : darken($btn-action-bg, 10%);
 .btn-action {
   @include button-variant($btn-action-color, $btn-action-bg, $btn-action-border);
 
   text-transform: uppercase;
   font-weight: 600;
   border-radius: 4px;
+}
+
+$btn-culture-color : #fff;
+$btn-culture-bg : $theme-color-1;
+$btn-culture-border : darken($btn-culture-bg, 10%);
+.btn-culture {
+  @include button-variant($btn-culture-color, $btn-culture-bg, $btn-culture-border);
+
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+
+@mixin make-btn-ghost($ghost-color) {
+  border: 1px solid $ghost-color;
+  background: transparent;
+  color: $ghost-color;
+
+  &:hover,
+  &.btn:hover,
+  &:focus,
+  &:active {
+    color: $ghost-color;
+    text-decoration: none;
+    background: rgba($ghost-color, .2);
+  }
+
+  &:active {
+    background: transparent;
+
+    &:focus,
+    &:hover {
+      background: rgba($ghost-color, .2);
+    }
+  }
+}
+
+$btn-ghost-color : #fff;
+.btn-ghost {
+  @include make-btn-ghost($btn-ghost-color);
+
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+
+
+.btn-mobile-block {
+  display: block;
+  width: 100%;
+  
+  @include breakpoint(sm) {
+    display: inline-block;
+    width: unset;
+  }
 }

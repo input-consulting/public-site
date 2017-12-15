@@ -10,67 +10,17 @@
           height : 100%;
         }
     }
+
+    .btn {
+      width: 100%;
+      float: none;
+      margin: .5rem .5rem;
+
+      @include breakpoint(sm) {
+        width: 31.33%;
+        float: left;
+      }
+
+    }
     
-    div {
-        
-        &.box {
-            
-            width: 33.3333%;
-            float: left;
-            margin-top: 0;
-            padding-left: 15px;
-            padding-right: 15px;    
-
-
-            a {
-                text-decoration: none;
-                color: #0284A6;
-                background: #f8f8f8;
-                font-weight: 500;            
-                border: solid 1px #0284A6;
-
-                text-align: center;
-                display: block;
-                margin-bottom: 10px;
-                padding: 20px;
-
-                z-index: 1;
-                
-                &:hover {
-                    background: #fff;
-                }
-            }
-
-
-            img {
-                max-width: 100%;
-                width: 100%;
-            }            
-        }
-        
-    }    
-}
-
-
-
-
-@media (max-width: 1000px) {
-    .clickables {        
-        div {
-            &.box {
-                width: 50%;
-            }
-        }
-    }    
-}
-
-@media (max-width: 650px) {
-    .clickables {        
-        div {
-            &.box {
-                width: 100%;
-                float: none;
-            }
-        }
-    }    
 }

@@ -1,0 +1,107 @@
+// jobs list page
+.page-jobs {
+    @extend .page;
+}
+
+.page-jobs-header {
+  @extend .page-header;
+
+  .page-header-navigation {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include breakpoint(sm) {
+      width: 700px;
+    }
+  }
+
+  a:first-child {
+    position: absolute;
+    left: 10px;
+  }
+  
+}
+
+.page-content-jobs {
+    @extend .page-content;
+
+    @include breakpoint(sm) {
+        width: 700px !important;
+    }
+
+    h3 {
+      color: $theme-color-1;
+    }
+
+    .job-list-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .jobs-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            padding: 0 !important;
+            border-radius: 0;
+            background: transparent !important;
+        }
+        a {
+            position: relative;
+            display: block;
+            border: 1px solid rgba(102, 118, 142, .15);
+            border-radius: 5px;
+            padding: 2rem 2rem;
+            margin-bottom: 15px;
+            background: #fff;
+            &:hover {
+              text-decoration: none;
+            }
+            h3 {
+                margin-right: 120px;
+                margin-top: 12px;
+                @include font-size(16);
+                color: $theme-color-5;
+            }
+            blockquote {
+                color: #939da3;
+                @include font-size(12);
+                @include breakpoint(sm) {
+                    @include font-size(14);
+                }
+                font-weight: 400;
+                margin: 0;
+                font-style: italic;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-rendering: optimizeLegibility;
+                border: none;
+                padding: 0;
+            }
+            .button {
+                margin-top: 2rem;
+                padding: 1px;
+                border: 0;
+                font-weight: 500;
+                color: #fff;
+                border-radius: 4px;
+                text-shadow: 0 -1px 0 rgba(0, 0, 0, .1);
+                background: $theme-color-5;
+                display: inline-block;
+                height: 37px;
+                line-height: 37px;
+                padding: 0 14px;
+                span {
+                    height: 33px;
+                    line-height: 33px;
+                    @include font-size(12);
+                    @include breakpoint(sm) {
+                        @include font-size(14);
+                    }
+                }
+            }
+        }
+    }
+}
