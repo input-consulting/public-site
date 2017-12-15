@@ -91,6 +91,11 @@ a {
 /* Declare heights because of positioning of img element */
 
 #input-header {
+  margin-top: 60px;
+  @include breakpoint(sm) {
+    margin-top: 0;
+  }
+  
     position: relative;
     height: 260px;
     &.item {
@@ -101,6 +106,10 @@ a {
         top: 4px;
         right: 4px;
         max-width: 90%;
+        display: none;
+        @include breakpoint(sm) {
+          display: inline-block;
+        }
     }
     blockquote {
         @include font-size(12);

@@ -1,15 +1,6 @@
-<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+{# Desktop menu #}
+<div class="navbar navbar-custom navbar-inverse navbar-static-top hidden-xs" id="nav">
     <div class="container">
-        <div class="navbar-header">
-           <div class="navbar-text">
-               <span>Input Consulting</span>    
-           </div>
-           <button class="menu-btn visible-xs navbar-toggle">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav nav-justified">
                 <li><a href="#home"><span class="glyphicon glyphicon-home"></span><div>Hem</div></a></li>
@@ -23,6 +14,23 @@
         </div>
     </div>
 </div>
+
+
+{# mobile navigation menu #}
+<div class="mobile-header visible-xs">
+  <div class="mobile-header-navigation">
+    <div>
+      <button class="menu-btn navbar-toggle page-navigation-link">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+          <span class="icon-text">Menu</span>
+      </button>
+    </div>
+      <a href="/">
+          <img src="/img/logo/logo_3.png" alt="">
+      </a>
+  </div>
+</div>
+
 
 {# Mobile menu #}
 <div class="mobile-menu-wrap">
