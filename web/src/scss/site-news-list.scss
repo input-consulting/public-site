@@ -39,7 +39,7 @@
             margin: 0;
             padding: 0;
             li {
-                padding: 1rem;
+                padding: 2rem;
                 margin: 1rem 0;
                 list-style: none;
                 background: #fff;
@@ -72,6 +72,7 @@
                     border-top: solid 1px $theme-color-5;
                     margin-top: 20px;
                     padding-top: 10px;
+                    font-weight: 500;
                     a {
                         margin: 5px;
                         text-decoration: none;

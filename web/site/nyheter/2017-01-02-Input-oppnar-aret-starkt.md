@@ -17,7 +17,12 @@ Många IT-konsultbolag påstår att man arbetar med jämställdhetsmål. Vi gör
 
 Vi öppnar året starkt genom att presentera två mycket vassa nyförvärv; Lina Krantz och Lena Jonsson.
 
-![image alt](/img/nyheter/LinaKrantz.jpg)  ![image alt](/img/nyheter/LenaJonsson.jpg)
+<div class="row">
+  <div class="col-xs-12 text-center">
+    ![image alt](/img/nyheter/LinaKrantz.jpg)
+    ![image alt](/img/nyheter/LenaJonsson.jpg)  
+  </div>
+</div>
 
 Lina är en mycket skicklig javautvecklare som gärna arbetar både back- och frontend. Hon söker ständig utveckling och söker alltid efter utmaningar som ligger lite utanför hennes comfort zone. En varm, lugn och analytisk teamspelare som passar i alla miljöer.
 

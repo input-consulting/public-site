@@ -10,11 +10,21 @@ Image : /img/thumbs/input-6.jpg
 
 Inputs höstkonferens 2016 ägde rum i den lilla medeltida staden Annecy i Frankrike. Vid stranden av en gnistrande blågrön sjö och omgiven av höga alptoppar fanns alla förutsättningar för härliga naturupplevelser och kreativ och aktiv konferens.
 
-![image alt](/img/nyheter/ViaFerrata.jpg)       ![image alt](/img/nyheter/AnnecyLake.jpg)
+<div class="row">
+  <div class="col-xs-12 text-center">
+    ![image alt](/img/nyheter/ViaFerrata.jpg)
+    ![image alt](/img/nyheter/AnnecyLake.jpg)
+  </div>
+</div>
 
 Konferensen handlade om hur vi bygger ett redan otroligt bra bolag ännu bättre. Förbättringsområdena vi fokuserade på var Delaktighet, Förväntningar och Stolthet, där arbetet bedrevs gruppvis i form av bl.a. walk-and-talk möten. Redovisningarna visade prov på sällan skådat engagemang i form av sketcher, reklamfilmer och parlamentet debatter. Vi har genom denna konferens fått in massor med riktigt bra förslag om hur vi skall vidareutveckla Input.
 
-![image alt](/img/nyheter/AnnecyOldTown.jpg)       ![image alt](/img/nyheter/AnnecyPark.jpg)
+<div class="row">
+  <div class="col-xs-12 text-center">
+    ![image alt](/img/nyheter/AnnecyOldTown.jpg)
+    ![image alt](/img/nyheter/AnnecyPark.jpg)
+  </div>
+</div>
 
 Sammantaget rankas denna konferensen in som en av de absolut bästa i Inputs historia.
 

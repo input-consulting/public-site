@@ -8,9 +8,16 @@ BgImage : /assets/images/bg1.jpg
 Image : /img/thumbs/input-6.jpg
 ---
 
-![image alt](/img/nyheter/FredrikFilmis.png) ![image alt](/img/nyheter/JennyFilmis.png) ![image alt](/img/nyheter/MatsHFilmis.png)
-
 Vi välkomnar en triss i ess till Input-familjen! Det är med stor glädje vi nu presenterar 3 högkvalitativa nyförvärv.
+
+<div class="row">
+  <div class="col-xs-12 text-center">
+    ![image alt](/img/nyheter/FredrikFilmis.png) 
+    ![image alt](/img/nyheter/JennyFilmis.png) 
+    ![image alt](/img/nyheter/MatsHFilmis.png)
+  </div>
+</div>
+
 
 Fredrik är en riktigt vass javautvecklare med stenkoll på transaktionsintensiva lösningar, en kunskap som han förvärvat från bl.a Nasdaq och Orc. Fredrik är en jäkligt ödmjuk och trevlig kille ständigt på jakt efter ny kunskap. 
 

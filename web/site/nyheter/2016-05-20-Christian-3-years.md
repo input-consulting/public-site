@@ -26,6 +26,13 @@ Tiden har gått otroligt fort samtidigt som det känns som jag jobbat mycket lä
 
 Om man bortser från köttfärsen + såsen som är ett måste så får jag nog lägga min röst på majs. Det är nog en av de få maträtter där jag käkar majs men just i tacos så lyfter det rätten till nya höjder. En sak är dock säkert och det är att ananas inte har något att göra i Tacos oavsett vad som sägs :) 
 
-![image](/img/nyheter/ChristianFest.jpg) ![image](/img/nyheter/ChristianPaulinCake.jpg)
+<div class="row">
+  <div class="col-xs-12 text-center">
+    ![image](/img/nyheter/ChristianFest.jpg)
+    ![image](/img/nyheter/ChristianPaulinCake.jpg)
+  </div>
+</div>
+
+
 
 #### Grattis Christian!
