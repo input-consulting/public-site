@@ -76,7 +76,10 @@
             text-transform: none;
             color: $theme-color-1;
             margin-bottom: 1rem;
-            text-align: left;
+            //text-align: left;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: solid 1px $theme-color-5;
         }
         blockquote {
           color: #939da3;
@@ -98,7 +101,15 @@
             @include font-size(14);
           }
         }
-  
+
+        p {
+          img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+          }
+        }
+
         img {
             max-width: 100%;
             margin-bottom: .5em;

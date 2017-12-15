@@ -1,5 +1,5 @@
 ---
-title: Lena Jönsson
+title: Lena Jonsson
 date: 2017-12-12
 image: /img/inputtare/lena-jonsson.jpg
 note: resiza bilden till 320×479
