@@ -108,7 +108,7 @@ call :SelectNodeVersion
 
 :: 1. Install build dependencies
 pushd "%DEPLOYMENT_SOURCE%"
-  call :ExecuteCmd yarn install
+  call :ExecuteCmd yarn install --ignore-engines
   IF !ERRORLEVEL! NEQ 0 goto error
 popd
 
