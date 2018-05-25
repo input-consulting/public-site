@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "watch": "gulp watch",
     "build": "gulp build"
   },
   "engines": {

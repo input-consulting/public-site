@@ -1,182 +1,179 @@
-{% extends "_layout/_master.html" %}
+{% extends "_layout/_master.html" %} {% block content %} {# Nyheter #}
+<section class="input-news">
+  <section class="container with award">
+    {% set gptw = sb.getPageById('gptw-2017') %}
+    <a href="{{ gptw.route }}">
+      <img src="/img/awards/gptw_2017.png" alt="">
+    </a>
+  </section>
+  <section class="container with news">
+    {% for item in sb.getPagesByRoute('nyheter/').slice(0,2) %}
+    <a href="/nyheter">
+      <div class="news-item">
+        <h5>{{ item.date | date }}</h5>
+        <h4>{{ item.title }}</h4>
+        {{ item.body | md | sanitize | truncate(200, false, ' ...') }}
+      </div>
+    </a>
+    {% endfor %}
+  </section>
+</section>
 
-{% block content %}
+{# Om input #}
+<section class="about" id="about">
+  <section class="container">
+    {% set about = sb.getPageById('about') %}
+    <article>
+      <h1>{{ about.title }}</h1>
+      {{ about.body | md }}
+    </article>
+  </section>
+  <div class="divider"></div>
+</section>
 
-    {# Nyheter  #}
-    <section class="input-news">
-        <section class="container with award">
-           {% set gptw = sb.getPageById('gptw-2017') %}
-            <a href="{{ gptw.route }}">
-                <img src="/img/awards/gptw_2017.png" alt="">
-            </a>
-        </section>
-        <section class="container with news">
-            {% for item in sb.getPagesByRoute('nyheter/').slice(0,2) %}
-                <a href="/nyheter">
-                  <div class="news-item">
-                        <h5>{{ item.date | date }}</h5>
-                        <h4>{{ item.title }}</h4>
-                        {{ item.body | md | sanitize | truncate(200, false, ' ...')  }}
-                    </div>
-                </a>        
-            {% endfor %}
-        </section>
-    </section>
+{# divider #}
+<section class="team-input-1"></section>
 
-    {# Om input #}
-    <section class="about" id="about">
-      <section class="container">
-        {% set about = sb.getPageById('about') %}
-        <article>
-            <h1>{{ about.title }}</h1>
-            {{ about.body | md }}
-        </article>
-      </section>
-      <div class="divider"></div>
-    </section>    
-    
-    {# divider  #}
-    <section class="team-input-1"></section>
+{# Kultur #}
+<section class="culture" id="culture">
+  <section class="container">
+    {% set culture = sb.getPageById('culture') %}
+    <article>
+      <h1>{{ culture.title }}</h1>
+      {{ culture.body | md }}
+    </article>
+  </section>
+  <section class="container clickables">
+    {% for item in sb.getPagesByRoute('culture/') %}
+    <a class="btn btn-culture btn-lg btn-mobile-block" href="{{item.route}}" data-toggle="modal" data-target="#clickables-{{item.title | replace(' ','-') }}">
+      {{ item.title }}
+    </a>
+    <div class="modal" id="clickables-{{item.title | replace(' ','-') }}" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"></div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+</section>
 
-    {# Kultur #}
-    <section class="culture" id="culture">
-      <section class="container">
-        {% set culture = sb.getPageById('culture') %}
-        <article>
-            <h1>{{ culture.title }}</h1>
-            {{ culture.body | md }}
-        </article>
-      </section>
-      <section class="container clickables">
-      {% for item in sb.getPagesByRoute('culture/') %}
-          <a class="btn btn-culture btn-lg btn-mobile-block" href="{{item.route}}" data-toggle="modal" data-target="#clickables-{{item.title | replace(' ','-') }}">
-              {{ item.title }}
-          </a>
-          <div class="modal" id="clickables-{{item.title | replace(' ','-') }}" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content"></div>
-            </div>
-          </div>    
+{# Jobs #} {% set jobs = sb.getPageById('jobs') %}
+<section class="jobs" id="jobs">
+  <div class="row has-columns">
+    <div class="col-sm-6 col jobs-photo">
+    </div>
+    <div class="col-sm-6 col col-text">
+      <article>
+        <h1>{{jobs.title}}</h1>
+        {{ jobs.body | md }}
+        <a href="/jobs" class="btn btn-action btn-lg btn-mobile-block space-above">
+          Se lediga jobb
+        </a>
+      </article>
+    </div>
+  </div>
+
+</section>
+
+{# Sälj #}
+<section class="input-sales-team" id="sales">
+  <section class="container">
+    {% set sale = sb.getPageById('sales') %}
+    <article>
+      <h1>{{sale.title}}</h1>
+      {{ sale.body | md }}
+    </article>
+    <section class="sales-team">
+      {% for item in sb.getPagesByRoute('sales/') %}
+      <article>
+        <a href="{{item.route}}" data-toggle="modal" data-target="#sale-heroes-{{item.title | replace(' ','-') }}">
+          <img src="{{item.image}}" alt="">
+          <h2>{{item.title}}</h2>
+        </a>
+      </article>
+
+      <div class="modal" id="sale-heroes-{{item.title | replace(' ','-') }}" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content"></div>
+        </div>
+      </div>
       {% endfor %}
-      </section>
     </section>
+    <div class="divider"></div>
+  </section>
+  <div class="divider"></div>
+</section>
 
-    {# Jobs #}
-    {% set jobs = sb.getPageById('jobs') %}
-    <section class="jobs" id="jobs">
-      <div class="row has-columns">
-        <div class="col-sm-6 col jobs-photo">
+{# divider #}
+<section class="team-input-3"></section>
+
+{# Inputtare #}
+<section class="input-crew" id="crew">
+  <section class="container">
+    {% set crew = sb.getPageById('crew') %}
+    <article>
+      <h1>{{crew.title}}</h1>
+      {{crew.body | md}}
+    </article>
+
+    <div class="q-and-a">
+      {% for qa in sb.getPagesByRoute('q-and-a/') %}
+      <div class="q-and-a-card">
+        <div class="q-and-a-card-header">
+          <img class="q-and-a-card-image" src="{{qa.image}}" alt="">
+          <h4 class="q-and-a-card-title">{{qa.title}}</h4>
         </div>
-        <div class="col-sm-6 col col-text">
-          <article>
-              <h1>{{jobs.title}}</h1>
-              {{ jobs.body | md }}
-            <a href="/jobs" class="btn btn-action btn-lg btn-mobile-block space-above">
-              Se lediga jobb
-            </a>
-          </article>
-        </div>
-      </div>
-
-    </section>
-
-    {# Sälj #}
-    <section class="input-sales-team" id="sales">
-        <section class="container">
-           {% set sale = sb.getPageById('sales') %}
-            <article>
-                <h1>{{sale.title}}</h1>
-                {{ sale.body | md }}
-            </article>
-            <section class="sales-team">
-            {% for item in sb.getPagesByRoute('sales/') %}
-              <article>
-                  <a href="{{item.route}}"  data-toggle="modal" data-target="#sale-heroes-{{item.title | replace(' ','-') }}">
-                      <img src="{{item.image}}" alt="">
-                      <h2>{{item.title}}</h2>    
-                  </a>
-              </article>
-              
-              <div class="modal" id="sale-heroes-{{item.title | replace(' ','-') }}" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content"></div>
-                </div>
-              </div>
-            {% endfor %}
-            </section>
-            <div class="divider"></div>
-        </section>
-        <div class="divider"></div>
-    </section>
-    
-    {# divider  #}
-    <section class="team-input-3"></section>
-
-    {# Inputtare  #}
-    <section class="input-crew" id="crew">
-        <section class="container">
-            {% set crew = sb.getPageById('crew') %}
-            <article>
-                <h1>{{crew.title}}</h1>
-                {{crew.body | md}}
-            </article>
-
-            <div class="q-and-a">
-              {% for qa in sb.getPagesByRoute('q-and-a/') %}
-                  <div class="q-and-a-card">
-                    <div class="q-and-a-card-header">
-                      <img class="q-and-a-card-image" src="{{qa.image}}" alt="">
-                      <h4 class="q-and-a-card-title">{{qa.title}}</h4>
-                    </div>
-                    <div class="q-and-a-card-body">
-                      <p class="q-and-a-card-body-text">{{qa.body | md}}</p>
-                    </div>
-                  </div>
-              {% endfor %}
-            </div>
-            
-        </section>
-        <div class="divider"></div>
-    </section>
-
-    {# divider #}
-    <section class="team-input-2"></section>
-   
-
-    {# Kontakta oss  #}
-    <section class="contact-us" id="contact">
-      <div class="container">
-        <article>
-            <h1>kontakta oss</h1>
-            <div id="map-canvas"></div>
-            <div class="divider"></div>
-        </article>
-
-        <div class="space-above">
-            <div class="col-xs-12 col-sm-6 pull-left">
-                <address>
-                  <span id="map-input">
-                    Input Consulting Stockholm AB<br>
-                    Kungsgatan 62<br>
-                    111 22 Stockholm</span><br>
-                    +46 (8) 700 00 80
-                </address>
-                <address>
-                    <strong>E-Post</strong><br>
-                    <a href="mailto:inputinfo@input-consulting.se">inputinfo@input-consulting.se</a>
-                </address>
-            </div>
-            <div class="col-xs-12 col-sm-6 pull-right social-media">
-                <a href="https://www.linkedin.com/company/input-consulting-stockholm-ab" target="_blank">
-                  <img src="/img/social/li.png" alt="Linkedin">
-                </a>
-                <a href="https://www.instagram.com/inputconsulting/" target="_blank">
-                  <img src="/img/social/ig.png" alt="Instagram">
-                </a>
-            </div>
+        <div class="q-and-a-card-body">
+          <p class="q-and-a-card-body-text">{{qa.body | md}}</p>
         </div>
       </div>
-        
-    </section>    
+      {% endfor %}
+    </div>
+
+  </section>
+  <div class="divider"></div>
+</section>
+
+{# divider #}
+<section class="team-input-2"></section>
+
+
+{# Kontakta oss #}
+<section class="contact-us" id="contact">
+  <div class="container">
+    <article>
+      <h1>kontakta oss</h1>
+      <div id="map-canvas"></div>
+      <div class="divider"></div>
+    </article>
+
+    <div class="space-above">
+      <div class="col-xs-12 col-sm-6 pull-left">
+        <address>
+          <span id="map-input">
+            Input Consulting Stockholm AB
+            <br> Kungsgatan 62
+            <br> 111 22 Stockholm</span>
+          <br> +46 (8) 700 00 80
+        </address>
+        <address>
+          <strong>E-Post</strong>
+          <br>
+          <a href="mailto:inputinfo@input-consulting.se">inputinfo@input-consulting.se</a>
+        </address>
+        <a href="/files/gdpr/input-integritetsskyddspolicy.pdf" target="_blank">Läs om vår Integritetsskyddspolicy</a>
+      </div>
+      <div class="col-xs-12 col-sm-6 pull-right social-media">
+        <a href="https://www.linkedin.com/company/input-consulting-stockholm-ab" target="_blank">
+          <img src="/img/social/li.png" alt="Linkedin">
+        </a>
+        <a href="https://www.instagram.com/inputconsulting/" target="_blank">
+          <img src="/img/social/ig.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
 
 {% endblock %}
