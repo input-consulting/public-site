@@ -1,59 +1,59 @@
 body {
-    font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
-    @include font-size(14);
-    font-weight: 300;
-    line-height: 1.42857143;
-    -webkit-font-smoothing: antialiased;
-    -webkit-background-size: 1200px 800px;
-    color: #333333;
-    //background: #fff;
-    background: $theme-color-3;
+  font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+  @include font-size(14);
+  font-weight: 300;
+  line-height: 1.42857143;
+  -webkit-font-smoothing: antialiased;
+  -webkit-background-size: 1200px 800px;
+  color: #333333;
+  //background: #fff;
+  background: $theme-color-3;
 }
 
 a {
-    &:hover,
-    &.btn:hover,
-    &:focus,
-    &:active {
-      text-decoration: none;
-    }  
+  &:hover,
+  &.btn:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
 
-    &:focus {
-        border: none !important; 
-        outline: none !important;
+  &:focus {
+    border: none !important;
+    outline: none !important;
+  }
+
+  &.page-navigation-link {
+    display: inline-block;
+    margin: 1rem 0;
+    text-decoration: none;
+    @include font-size(16);
+    font-weight: 500;
+    color: $theme-color-1;
+    .glyphicon {
+      color: $theme-color-5;
     }
-    
-    &.page-navigation-link {
-        display: inline-block;
-        margin: 1rem 0;
-        text-decoration: none;
-        @include font-size(16);
-        font-weight: 500;
-        color: $theme-color-1;
-        .glyphicon {
-          color: $theme-color-5;
-        }
-        &:hover {
-            color: $theme-color-5;
-        }
+    &:hover {
+      color: $theme-color-5;
     }
+  }
 }
 
 .has-columns {
-    min-height: 200px;
-    display: block;
+  min-height: 200px;
+  display: block;
 
-    @include breakpoint(sm) {
-      display: flex;
-      flex-direction: row;
-      box-sizing: border-box;
-        
-      min-height: 400px;
-    }
-    .col-text>* {
-        box-sizing: border-box;
-        padding: 0 20px;
-    }
+  @include breakpoint(sm) {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+
+    min-height: 400px;
+  }
+  .col-text > * {
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
 }
 
 .col {
@@ -65,27 +65,27 @@ a {
 }
 
 .space-above {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .full-page {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .row {
-    margin-left: 0px;
-    margin-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 #map-canvas {
-    width: 100%;
-    height: 300px;
-    margin: 0;
-    padding: 15px;
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  padding: 15px;
 }
 
 .container .credit {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 /* Declare heights because of positioning of img element */
@@ -95,165 +95,170 @@ a {
   @include breakpoint(sm) {
     margin-top: 0;
   }
-  
-    position: relative;
-    height: 260px;
-    &.item {
-        background-color: #bbb;
+
+  position: relative;
+  height: 260px;
+  &.item {
+    background-color: #bbb;
+  }
+  img {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    max-width: 90%;
+    display: none;
+    @include breakpoint(sm) {
+      display: inline-block;
     }
-    img {
-        position: absolute;
-        top: 4px;
-        right: 4px;
-        max-width: 90%;
-        display: none;
-        @include breakpoint(sm) {
-          display: inline-block;
-        }
+  }
+  blockquote {
+    @include font-size(12);
+    border: 0;
+    padding: 10px 17px;
+    &::after {
+      content: "";
+      background: $theme-color-1;
+      opacity: 0.5;
+      top: 10px;
+      left: 0;
+      bottom: 10px;
+      right: 0;
+      position: absolute;
+      z-index: -1;
     }
-    blockquote {
-        @include font-size(12);
-        border: 0;
-        padding: 40px 17px;
-        &::after {
-            content: "";
-            background: #0284a6;
-            opacity: 0.5;
-            top: 50px;
-            left: 0;
-            bottom: 10px;
-            right: 0;
-            position: absolute;
-            z-index: -1;
-        }
-    }
+  }
 }
 
 @media (min-width: 49em) {
-    #input-header {
-        height: 600px;
-        blockquote {
-            @include font-size(16);
-            padding: 8.5px 17px;
-            &::after {
-                content: "";
-                background: $theme-color-1;
-                opacity: 0.5;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                position: absolute;
-                z-index: -1;
-            }
-        }
+  #input-header {
+    height: 600px;
+    blockquote {
+      @include font-size(16);
+      padding: 8.5px 17px;
+      &::after {
+        content: "";
+        background: $theme-color-1;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+      }
     }
+  }
 }
 
 .header-caption {
-    position: absolute;
-    left: 1%;
-    right: 1%;
-    bottom: 0px;
-    top: 4px;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 1%;
+  right: 1%;
+  bottom: 0px;
+  top: 4px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 31em) {
-    .header-caption {
-        left: 45%;
-        padding-top: 10px;
-        padding-bottom: 10px;
+  .header-caption {
+    left: 45%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    blockquote {
+      padding: 0px 17px !important;
     }
+  }
 }
 
 @media (min-width: 49em) {
-    .header-caption {
-        left: 45%;
-        right: 10%;
-        bottom: 20px;
-        top: auto;
-    }
+  .header-caption {
+    left: 45%;
+    right: 10%;
+    bottom: 20px;
+    padding-top: 20px;
+    top: auto;
+  }
 }
 
 section {
-    margin: 0;
-    padding: 0;
-    height: auto;
-    padding-top: 30px;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  padding-top: 30px;
 }
 
 header {
-    &.hendrik {
-        background: url('/img/hendrik-header.jpg');
-        background-size: cover;
-    }
+  &.hendrik {
+    background: url("/img/hendrik-header.jpg");
+    background-size: cover;
+  }
 }
 
 @media (min-width: 19em) {
-    background-position: top;
+  background-position: top;
 }
 
 .team-input-1 {
-    background: url('/img/team-input-2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 20%;
-    min-height: 200px;
+  background: url("/img/team-input-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  min-height: 200px;
 }
 
 .team-input-2 {
-    background: url('/img/team-input-4.jpg');
-    background-position: 50% 20%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 200px;
+  background: url("/img/team-input-4.jpg");
+  background-position: 50% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 200px;
 }
 
 .team-input-3 {
-    background: url('/img/team-input-3.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 20%;
-    min-height: 200px;
+  background: url("/img/team-input-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  min-height: 200px;
 }
 
 @media (min-width: 49em) {
-    .team-input-1,
-    .team-input-2,
-    .team-input-3 {
-        display: block;
-        background-attachment: fixed;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 500px;
-    }
+  .team-input-1,
+  .team-input-2,
+  .team-input-3 {
+    display: block;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+  }
 }
 
 .gotham {
-    font-family: 'Gotham A', 'Gotham B', sans-serif;
-    font-weight: 500
+  font-family: "Gotham A", "Gotham B", sans-serif;
+  font-weight: 500;
 }
 
 .gotham-rounded {
-    font-family: 'Gotham Rounded A', 'Gotham Rounded B';
-    font-weight: 300
+  font-family: "Gotham Rounded A", "Gotham Rounded B";
+  font-weight: 300;
 }
 
 .social-media {
-    a {
-        margin-right: 10px;
-    }
+  a {
+    margin-right: 10px;
+  }
 
-    text-align: left;
-    @include breakpoint(sm) {
-      text-align: right;
-    }
+  text-align: left;
+  @include breakpoint(sm) {
+    text-align: right;
+  }
 }
 
 .site-footer {
@@ -264,5 +269,4 @@ header {
     list-style: none;
     padding: 0;
   }
-
 }
