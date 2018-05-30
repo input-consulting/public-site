@@ -13,6 +13,7 @@ Detta innebär fruktansvärda konsekvenser i form av bl.a. epidemier, miljöprob
 
 Solvatten är en fantastisk produkt och verksamhet.
 Läs mer på [www.solvatten.org](http://www.solvatten.org)
+
 Vi på Input försöker göra vad vi kan för att hjälpa till.
 Nu etablerar Input ett samarbete med Solvatten och blir deras tekniska partnerbolag.
 
