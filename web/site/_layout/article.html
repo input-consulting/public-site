@@ -1,0 +1,27 @@
+{% set title = title + ' - ' + page.title %}
+{% extends "_layout/_master.html" %}
+
+{% block body %}
+<section class="article-page">
+
+  <header class="page-header">
+    <div class="page-header-navigation">
+      <a class="page-navigation-link" href="/"><span class="glyphicon glyphicon-home"></span> Startsidan</a>
+      <a href="/">
+          <img src="/img/logo/logo_3.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <section class="page-content">
+    <article>
+      <h2>{{ page.title }}</h2>
+      {{ page.body | md }}
+    </article>
+  </section>
+
+</section>
+{% endblock %} 
+
+{% block footer %}
+{% endblock %}

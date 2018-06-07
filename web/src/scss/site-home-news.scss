@@ -2,7 +2,7 @@
 section {
     &.award {
         text-align: center;
-        margin-top: -60px;
+        margin-top: -50px;
         a {
             img {
                 max-width: 100%;
@@ -19,8 +19,8 @@ section {
             margin-top: 10px;
             margin-bottom: 10px;
             >.news-item {
-                margin: 4px;
-                padding: 8px;
+                margin: 4px 4px 4px 0;
+                padding: 8px 8px 8px 0;
                 background: inherit;
                 min-height: 200px; 
 

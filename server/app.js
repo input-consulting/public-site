@@ -1,5 +1,5 @@
 const path = require('path');
-//const appInsights = require('applicationinsights');
+const appInsights = require('applicationinsights');
 const Koa = require('koa');
 const sb = require('./modules/site-builder');
 const md = require('marked');
@@ -12,8 +12,7 @@ moment.locale('sv-SE');
 const app = new Koa();
 
 // application insight 
-// appInsights.setup('99e84c77-b1e7-4069-8bdc-cc30c2b9fce6').start();
-// appInsights.enableVerboseLogging(true);
+appInsights.setup('99e84c77-b1e7-4069-8bdc-cc30c2b9fce6').start();
 
 // use for local debug 
 // app.use(async function (ctx, next) {

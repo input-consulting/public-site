@@ -35,9 +35,26 @@ module.exports = class SitePage {
       this.validatePageLayout();
       this.validatePageDate();
       this.validatePageTitle();
+      this.validatePage();
     } catch (error) {
       console.error(`unable to read: ${this.file}`, error);
     }
+  }
+
+  validatePage() {
+    const messages = [];
+    if ( !this.title ) {
+      messages.push('title');
+    }
+
+    if ( !this.date ) {
+      messages.push('date');
+    }
+
+    if ( messages.length ) {
+      console.warn(`${this.file} is missing: ${messages.join(',')}`);
+    }
+
   }
 
 

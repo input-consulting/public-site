@@ -1,0 +1,45 @@
+.article-page {
+  @extend .page;
+
+  .page-header {
+    @extend .page-header;
+    padding: 0.5rem 0;
+
+    @include breakpoint(sm) {
+      padding: 0.5rem 0 0.5rem 2rem;
+    }
+
+    .page-header-navigation {
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      @include breakpoint(sm) {
+        width: $screen-sm;
+      }
+      @include breakpoint(md) {
+        width: $screen-md;
+      }
+      @include breakpoint(lg) {
+        width: $screen-lg;
+      }
+    }
+
+    a:first-child {
+      position: absolute;
+      left: 10px;
+    }
+  }
+
+  .article-body {
+    @extend .page-content;
+
+    article {
+      h2 {
+        color: $theme-color-5;
+      }
+    }
+  }
+}

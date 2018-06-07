@@ -60,6 +60,10 @@ IF NOT DEFINED GULP_CMD (
 
 echo Installing Yarn
 call npm --registry "http://registry.npmjs.org/" install yarn -g --silent
+IF !ERRORLEVEL! NEQ 0 goto error
+
+:: Locally just running "yarn" would also work
+SET YARN_CMD="%appdata%\npm\yarn.cmd"
 
 
 goto Deployment
@@ -108,7 +112,7 @@ call :SelectNodeVersion
 
 :: 1. Install build dependencies
 pushd "%DEPLOYMENT_SOURCE%"
-  call :ExecuteCmd yarn install
+  call :ExecuteCmd !YARN_CMD! install --ignore-engines
   IF !ERRORLEVEL! NEQ 0 goto error
 popd
 

@@ -2,7 +2,9 @@ const router = require('koa-router')();
 const sb = require('../modules/site-builder')
 const sd = require('../modules/site-defaults')
 
-sb.pages.forEach(page => {
+sb.pages
+.filter( x => !/\/_/.test(x.route) )
+.forEach(page => {
   router.get(page.route, async (ctx, next) => {
     const page = sb.getPagesByRoute(ctx.url)[0];
     if ( page.haveLayout ) {
