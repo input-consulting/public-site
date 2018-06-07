@@ -9,7 +9,7 @@
     "build": "gulp build"
   },
   "engines": {
-    "node": "8.9.0"
+    "node": "10.0.0"
   },
   "dependencies": {
     "@cmyee/pushy": "^1.1.2",
