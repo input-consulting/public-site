@@ -58,14 +58,12 @@ IF NOT DEFINED GULP_CMD (
   SET GULP_CMD="%appdata%\npm\gulp.cmd"
 )
 
-IF NOT DEFINED YARN_CMD (
   echo Installing Yarn
   call npm --registry "http://registry.npmjs.org/" install yarn -g --silent
   IF !ERRORLEVEL! NEQ 0 goto error
 
   :: Locally just running "gulp" would also work
-  SET YARN_CMD="%appdata%\npm\yarn.js"
-)
+  SET YARN_CMD="%appdata%\npm\yarn.cmd"
 
 
 goto Deployment
