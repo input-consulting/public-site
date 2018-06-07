@@ -48,9 +48,6 @@ IF NOT DEFINED KUDU_SYNC_CMD (
   SET KUDU_SYNC_CMD=%appdata%\npm\kuduSync.cmd
 )
 
-echo Installing latest npm
-call npm --registry "http://registry.npmjs.org/" install npm -g --silent
-
 IF NOT DEFINED GULP_CMD (
   :: Install gulp
   echo Installing Gulp
