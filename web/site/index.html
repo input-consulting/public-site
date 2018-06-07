@@ -11,7 +11,7 @@
   </section>
   <section class="container with news">
     {% for item in sb.getPagesByRoute('nyheter/').slice(0,2) %}
-    <a href="/nyheter">
+    <a href="{{ item.route }}">
       <div class="news-item">
         <h5>{{ item.date | date }}</h5>
         <h4>{{ item.title }}</h4>
@@ -20,6 +20,9 @@
     </a>
     {% endfor %}
   </section>
+  <footer class="container">
+    <a href="/nyheter" class="btn btn-lg btn-mobile-block btn-action">Fler nyheter ...</a>
+  </footer>
 </section>
 
 {# Om input #}
