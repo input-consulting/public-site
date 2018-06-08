@@ -35,6 +35,7 @@
     "koa-static": "^4.0.2",
     "marked": "^0.4.0",
     "moment": "^2.22.2",
+    "overload-protection": "^1.1.0",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.2.0",
     "vinyl-paths": "^2.1.0"

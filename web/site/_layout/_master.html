@@ -12,7 +12,7 @@
   <meta name="description" content="Input Consulting Stockholm AB, en av Sveriges bästa arbetsplatser." />
   <meta name="author" content="Input Consulting" />
   <meta name="Copyright" content="Input Consulting" />
-  <link href="/css/site.css" rel="stylesheet" /> 
+  <link href="/css/site.css?c={{cssHash}}" rel="stylesheet" /> 
   {% include "_layout/_includes/_app-insight.html" %}
 </head>
 
@@ -30,7 +30,7 @@
   {% endblock %}
 
   <script async type='text/javascript' src="https://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
-  <script async src="/js/site.js"></script>
+  <script async src="/js/site.js?c={{jsHash}}"></script>
 </body>
 
 </html>
