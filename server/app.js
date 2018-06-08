@@ -14,25 +14,26 @@ const startup = async () => {
   //
   // Overload protection, create proper responses to proxy
   // and Client-Retry header
+
   //
-  const protectionOptions = {
-    // if production is false, detailed error messages are exposed to the client
-    production: process.env.NODE_ENV === "production",
-    // Client-Retry header, in seconds (0 to disable) [default 1]
-    clientRetrySecs: 1,
-    // sample rate, milliseconds [default 5]
-    sampleInterval: 5,
-    // maximum detected delay between event loop ticks [default 42]
-    maxEventLoopDelay: 42,
-    // maximum heap used threshold (0 to disable) [default 0]
-    maxHeapUsedBytes: 0,
-    // maximum rss size threshold (0 to disable) [default 0]
-    maxRssBytes: 0,
-    // dictate behavior: take over the response
-    // or propagate an error to the framework [default false]
-    errorPropagationMode: false
-  };
-  app.use(require("overload-protection")("koa", protectionOptions));
+  // const protectionOptions = {
+  //   // if production is false, detailed error messages are exposed to the client
+  //   production: process.env.NODE_ENV === "production",
+  //   // Client-Retry header, in seconds (0 to disable) [default 1]
+  //   clientRetrySecs: 1,
+  //   // sample rate, milliseconds [default 5]
+  //   sampleInterval: 5,
+  //   // maximum detected delay between event loop ticks [default 42]
+  //   maxEventLoopDelay: 42,
+  //   // maximum heap used threshold (0 to disable) [default 0]
+  //   maxHeapUsedBytes: 0,
+  //   // maximum rss size threshold (0 to disable) [default 0]
+  //   maxRssBytes: 0,
+  //   // dictate behavior: take over the response
+  //   // or propagate an error to the framework [default false]
+  //   errorPropagationMode: false
+  // };
+  // app.use(require("overload-protection")("koa", protectionOptions));
 
   //
   // Application insight
