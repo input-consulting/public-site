@@ -18,8 +18,8 @@ Stafesten är en tävling där man springer i 5-mannalag där varje löpare spri
 Håll utkik efter våra nya gröna tröjor i spåret! =)
 
 Är Du nyfiken på Input och hur det är att jobba här eller kanske har du ett konsultbehov där vi kan hjälpa till?
+
 Hör av Dig till oss:
-08-700 00 80
-salj@input-consulting.se
+08-700 00 80 / salj@input-consulting.se
 
 ![image alt](/img/nyheter/Bellman.jpg)
