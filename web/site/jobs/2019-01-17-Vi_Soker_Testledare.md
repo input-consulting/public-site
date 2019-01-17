@@ -7,7 +7,7 @@ ingress: Bli en Inputtare! Input befinner sig i en spännande fas och vi behöve
 
 ### Vem söker vi?
 
-Du letar efter känslan av att vara egen, att känna dig fri hur du disponerar din tid mellan arbete och fritid. Fri att kunna styra över din egen lön, att själv styra över din pension, samt fri att välja förmåner. Samtidigt är du en lagspelare som vill ha människor runt dig. Kollegor som stöttar dig i din kompetensutveckling och ett grymt vasst sälj.
+Du letar efter känslan av att vara egen, att känna dig fri hur du disponerar din tid mellan arbete och fritid. Fri att kunna styra över din egen lön, att själv styra över din pension, samt fri att välja förmåner. Samtidigt är du en lagspelare som vill ha människor runt dig, kollegor som stöttar dig i din kompetensutveckling och ett grymt vasst sälj.
 
 ### Du vill ha friheten som det innebär att vara egen, men tryggheten som en anställning ger dig. Då är vi rätt för varandra!
 
