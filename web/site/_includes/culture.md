@@ -25,4 +25,6 @@ Vår vision är att bygga eller fortsätta vara det bästa IT-konsultbolaget i S
 
 Input är ett helt och hållet personalägt företag där alla arbetar väldigt nära tillsammans. Det finns en transparens i allt som beslutas och utförs i bolaget. Det är livsviktigt att alla medarbetare känner sig delaktiga i det som sker i företaget, men också att man får all information så att man känner sig inspirerad att fortsätta bidra med sitt engagemang gällande Inputs uppdrag, syfte och mål, dvs. både om vart Input är på väg såväl som i det dagliga arbetet.
 
+![image alt](/img/Culture.png)
+
 
