@@ -1,3 +1,7 @@
+.pushy {
+  background-color: rgb(50, 54, 57);
+}
+
 .mobile-header {
 
   position: fixed;
@@ -125,7 +129,8 @@
   
 /* customize nav style */
 .navbar-custom {
-    background-color: #2e2e2e;
+    background-color: rgb(50, 54, 57);
+    //background-color: #2e2e2e;
     font-weight:700;
     text-transform:uppercase;
     border-width:0;
