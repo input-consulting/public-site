@@ -19,7 +19,8 @@ module.exports = {
 
         static: {
             source: [
-                buildRoot + '/static/**/*.*'
+                buildRoot + '/static/**/*.*',
+                './node_modules/leaflet/dist/images/*.*'
             ],
             target: sitePublic
         },
@@ -29,6 +30,7 @@ module.exports = {
                 './node_modules/jquery/dist/jquery.min.js',
                 './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
                 './node_modules/@cmyee/pushy/js/pushy.min.js',
+                './node_modules/leaflet/dist/leaflet.js',
                 buildRoot + '/src/js/*.js'
             ],
             target: sitePublic + '/js'
