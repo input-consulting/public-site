@@ -1,11 +1,11 @@
-{% extends "_layout/_master.html" %}
-{% block content %}
-
-{# Nyheter #}
+{% extends "_layout/_master.html" %} {% block content %} {# Nyheter #}
 <section class="input-news">
   <section class="container with award">
     <a href="https://solvatten.org/" target="_blank">
-      <img src="https://solvatten-widget-api.azurewebsites.net/badge/BadgeBlack.svg?enablerid=1063" alt="We support Solvatten">
+      <img
+        src="https://solvatten-widget-api.azurewebsites.net/badge/BadgeBlack.svg?enablerid=1063&calculationType=Total"
+        alt="We support Solvatten"
+      />
     </a>
   </section>
   <section class="container with news">
@@ -20,7 +20,9 @@
     {% endfor %}
   </section>
   <footer class="container">
-    <a href="/nyheter" class="btn btn-lg btn-mobile-block btn-action">Fler nyheter</a>
+    <a href="/nyheter" class="btn btn-lg btn-mobile-block btn-action"
+      >Fler nyheter</a
+    >
   </footer>
 </section>
 
@@ -50,10 +52,20 @@
   </section>
   <section class="container clickables">
     {% for item in sb.getPagesByRoute('culture/') %}
-    <a class="btn btn-culture btn-lg btn-mobile-block" href="{{item.route}}" data-toggle="modal" data-target="#clickables-{{item.title | replace(' ','-') }}">
+    <a
+      class="btn btn-culture btn-lg btn-mobile-block"
+      href="{{ item.route }}"
+      data-toggle="modal"
+      data-target="#clickables-{{item.title | replace(' ','-') }}"
+    >
       {{ item.title }}
     </a>
-    <div class="modal" id="clickables-{{item.title | replace(' ','-') }}" tabindex="-1" role="dialog">
+    <div
+      class="modal"
+      id="clickables-{{item.title | replace(' ','-') }}"
+      tabindex="-1"
+      role="dialog"
+    >
       <div class="modal-dialog" role="document">
         <div class="modal-content"></div>
       </div>
@@ -65,19 +77,20 @@
 {# Jobs #} {% set jobs = sb.getPageById('jobs') %}
 <section class="jobs" id="jobs">
   <div class="row has-columns">
-    <div class="col-sm-6 col jobs-photo">
-    </div>
+    <div class="col-sm-6 col jobs-photo"></div>
     <div class="col-sm-6 col col-text">
       <article>
-        <h1>{{jobs.title}}</h1>
+        <h1>{{ jobs.title }}</h1>
         {{ jobs.body | md }}
-        <a href="/jobs" class="btn btn-action btn-lg btn-mobile-block space-above">
+        <a
+          href="/jobs"
+          class="btn btn-action btn-lg btn-mobile-block space-above"
+        >
           Se lediga jobb
         </a>
       </article>
     </div>
   </div>
-
 </section>
 
 {# Sälj #}
@@ -85,19 +98,28 @@
   <section class="container">
     {% set sale = sb.getPageById('sales') %}
     <article>
-      <h1>{{sale.title}}</h1>
+      <h1>{{ sale.title }}</h1>
       {{ sale.body | md }}
     </article>
     <section class="sales-team">
       {% for item in sb.getPagesByRoute('sales/') %}
       <article>
-        <a href="{{item.route}}" data-toggle="modal" data-target="#sale-heroes-{{item.title | replace(' ','-') }}">
-          <img src="{{item.image}}" alt="">
-          <h2>{{item.title}}</h2>
+        <a
+          href="{{ item.route }}"
+          data-toggle="modal"
+          data-target="#sale-heroes-{{item.title | replace(' ','-') }}"
+        >
+          <img src="{{ item.image }}" alt="" />
+          <h2>{{ item.title }}</h2>
         </a>
       </article>
 
-      <div class="modal" id="sale-heroes-{{item.title | replace(' ','-') }}" tabindex="-1" role="dialog">
+      <div
+        class="modal"
+        id="sale-heroes-{{item.title | replace(' ','-') }}"
+        tabindex="-1"
+        role="dialog"
+      >
         <div class="modal-dialog" role="document">
           <div class="modal-content"></div>
         </div>
@@ -117,31 +139,29 @@
   <section class="container">
     {% set crew = sb.getPageById('crew') %}
     <article>
-      <h1>{{crew.title}}</h1>
-      {{crew.body | md}}
+      <h1>{{ crew.title }}</h1>
+      {{ crew.body | md }}
     </article>
 
     <div class="q-and-a">
       {% for qa in sb.getPagesByRoute('q-and-a/') %}
       <div class="q-and-a-card">
         <div class="q-and-a-card-header">
-          <img class="q-and-a-card-image" src="{{qa.image}}" alt="">
-          <h4 class="q-and-a-card-title">{{qa.title}}</h4>
+          <img class="q-and-a-card-image" src="{{ qa.image }}" alt="" />
+          <h4 class="q-and-a-card-title">{{ qa.title }}</h4>
         </div>
         <div class="q-and-a-card-body">
-          <p class="q-and-a-card-body-text">{{qa.body | md}}</p>
+          <p class="q-and-a-card-body-text">{{ qa.body | md }}</p>
         </div>
       </div>
       {% endfor %}
     </div>
-
   </section>
   <div class="divider"></div>
 </section>
 
 {# divider #}
 <section class="team-input-2"></section>
-
 
 {# Kontakta oss #}
 <section class="contact-us" id="contact">
@@ -151,34 +171,40 @@
       <div id="map"></div>
       <div class="divider"></div>
     </article>
-    
+
     <div class="space-above">
       <div class="col-xs-12 col-sm-6 pull-left">
         <address>
           <span id="map-input">
             Input Consulting Stockholm AB
-            <br> Kungsgatan 62
-            <br> 111 22 Stockholm</span>
-            <br> +46 (8) 700 00 80
-          </address>
-          <address>
-            <strong>E-Post</strong>
-            <br>
-            <a href="mailto:inputinfo@input-consulting.se">inputinfo@input-consulting.se</a>
-          </address>
-        </div>
-        <div class="col-xs-12 col-sm-6 pull-right social-media">
-          <a href="https://www.linkedin.com/company/input-consulting-stockholm-ab" target="_blank">
-            <img src="/img/social/li.png" alt="Linkedin">
-          </a>
-          <a href="https://www.instagram.com/inputconsulting/" target="_blank">
-            <img src="/img/social/ig.png" alt="Instagram">
-          </a>
-        </div>
+            <br />
+            Kungsgatan 62 <br />
+            111 22 Stockholm</span
+          >
+          <br />
+          +46 (8) 700 00 80
+        </address>
+        <address>
+          <strong>E-Post</strong>
+          <br />
+          <a href="mailto:inputinfo@input-consulting.se"
+            >inputinfo@input-consulting.se</a
+          >
+        </address>
+      </div>
+      <div class="col-xs-12 col-sm-6 pull-right social-media">
+        <a
+          href="https://www.linkedin.com/company/input-consulting-stockholm-ab"
+          target="_blank"
+        >
+          <img src="/img/social/li.png" alt="Linkedin" />
+        </a>
+        <a href="https://www.instagram.com/inputconsulting/" target="_blank">
+          <img src="/img/social/ig.png" alt="Instagram" />
+        </a>
       </div>
     </div>
-    
-
+  </div>
 </section>
 
 {% endblock %}
