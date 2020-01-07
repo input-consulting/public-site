@@ -12,5 +12,6 @@ Du som kund får en dedikerad kundansvarig som är aktiv, håller sig informerad
 
 Det som skiljer oss från andra är vårt engagemang och sätt att arbeta. Många pratar om att bygga långsiktiga relationer, samarbeten och nära kontakt, vi tillämpar det! Som kund får du jobba med Stefan, Karin, Stina eller Hendrik som er dedikerade kundansvarige.  
  
-
+<p align="center">
 ![image alt](/img/sales/inputwebb-2.jpg)
+</p>
