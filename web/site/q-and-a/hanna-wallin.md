@@ -1,6 +1,6 @@
 ---
 title: Hanna Wallin
-date: 2017-12-12
+date: 2020-01-07
 image: /img/inputtare/hannahemsida.jpg
 note: resiza bilden till 320×479
 ---
