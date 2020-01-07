@@ -1,18 +1,15 @@
 ---
-title: Johan Aschan
-date: 2017-12-12
-image: /img/inputtare/johan-aschan.jpg
+title: Henrik Thunborg
+date: 2020-01-07
+image: /img/inputtare/henrikhemsida.jpg
 note: resiza bilden till 320×479
 ---
 
-1. *Hur mycket kostar en Pucko?*
+*Konsultroll*
   
-    En peng.
+Systemutvecklare och Arkitekt.
 
-2. *Vad är hälften av en grabbhalva?*
+
+*Vad är bäst med Input?*
   
-    Resten.
-
-3. *Om du var på en öde ö ... bla bla*
-
-    Donald Trump och Anna Book.
+Har hittills på 22 år inte börjat på ett enda tråkigt uppdrag. På Input har man dessutom stor frihet, och kan exempelvis lägga tid på utbildning om man vill det.
