@@ -5,12 +5,12 @@ image: /img/inputtare/johanhemsida.jpg
 note: resiza bilden till 320×479
 ---
 
-*Konsultroll*
+**Konsultroll**
   
 Jag är en fullstacksutvecklare med fokus på frontend.
 
 
-*Vad är det bästa med att jobba på Input?*
+**Vad är det bästa med att jobba på Input?**
   
 Friheten, gemenskapen och människorna är det jag värdesätter mest på Input!
 
