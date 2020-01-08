@@ -6,6 +6,7 @@
   &-card {
     display: inline-block;
     width: 100%;
+    vertical-align: top;
       
     &-header {
       text-align: center;
@@ -28,6 +29,7 @@
 
     &-body {
       text-align: center;
+      margin: 0 20px 0 20px;
       p {
         text-align: left;
       }
@@ -49,7 +51,7 @@
       width: 49%;
     }
     .q-and-a-card-image { 
-      max-width: 70%;
+      max-width: 80%;
     } 
   }
 
