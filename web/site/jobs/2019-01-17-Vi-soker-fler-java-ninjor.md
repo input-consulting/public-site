@@ -41,4 +41,4 @@ Som Inputtare är det viktigt att man trivs. Vi jobbar mycket med personlig utve
 
 Om du känner att det här är något du är nyfiken på, eller väldigt gärna vill göra, så vore det jättekul om vi kunde träffas!
 
-Maila din profil till Hendrik Ellert: fornamn.efternamn@input-consulting.se
+Maila din profil till rekrytering@input-consulting.se
