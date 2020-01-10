@@ -18,8 +18,6 @@ Har din tyngd i backend eller frontend men hanterar hela stacken
 Har minst tre års erfarenhet inom systemutveckling 
 Talar både svenska och engelska  
 
-![image alt](/img/nyheter/Montenegro.jpeg)
-
 Friheten är högt prioriterad hos oss. Vi erbjuder dig möjligheten att själv styra över din tid, dina förmåner och din semester. Vidare så ser vi till att det finns många tillfällen att träffas för att utvecklas och ha roligt tillsammans, både på hemmaplan men också under de två konferensresor som arrangeras varje år.  
 
 Kom förbi på en kaffe!  
