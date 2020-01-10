@@ -7,7 +7,7 @@ ingress: Är du fullstack-utvecklare och letar efter ett bolag där du kan få f
 
 På Input jobbar du som konsult och deltar i ett team hos kund där du är en viktig del av utvecklingen. Vi har uppdrag i Stockholm hos både stora och små företag - välkända och mindre uppstickare. Du har stor möjlighet att påverka vilket uppdrag du tar och får stöttning och coachning av engagerade kollegor.  
 
-###Vi letar efter dig som 
+### Vi letar efter dig som 
 
 Kodar Javascript och React/Angular/Vue/Node.js 
 Kodar Java eller .NET/.NET Core  
